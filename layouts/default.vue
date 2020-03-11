@@ -22,17 +22,9 @@ export default {
   },
   data () {
     return {
-      wheigh: null,
-      wclass: {}
     }
   },
   watch: {
-    wheigh () {
-      // eslint-disable-next-line quotes
-      this.wclass = {
-        width: this.wheigh
-      }
-    }
   },
   methods: {
     meth () {
