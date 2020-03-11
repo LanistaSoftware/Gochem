@@ -13,8 +13,7 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { href: '//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css', rel: 'stylesheet', id: 'bootstrap-css' },
-      { href: '../assets/css/flaticon.css', rel: 'stylesheet' }
+      { href: '//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css', rel: 'stylesheet', id: 'bootstrap-css' }
     ]
   },
   /*
@@ -25,8 +24,8 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    '~/assets/css/style.css',
-    '../assets/css/flaticon.css'
+    '@/assets/css/style.css',
+    '@/assets/css/flaticon/flaticon.css'
   ],
   script: [
     { src: '//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js' },
@@ -47,8 +46,7 @@ module.exports = {
   */
   modules: [
     // Doc: https://bootstrap-vue.js.org
-    'bootstrap-vue/nuxt',
-    '@nuxtjs/font-awesome'
+    'bootstrap-vue/nuxt'
   ],
   /*
   ** Build configuration

@@ -1,15 +1,23 @@
 <template>
-  <div class="logo">
-    <img src="../../assets/icons/belgeler.png" alt="">
+  <div>
+    <img src="../../assets/icons/logo.png" alt="">
+    <p><small>people&silicone</small></p>
   </div>
 </template>
 <style>
-.logo{
-  width: 7rem;
-  padding: 1rem;
+p{
+  margin: -0.75rem 0;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
 }
-.logo img{
-  width: 100%;
+img{
+  width: 90%;
   height: auto;
+}
+small{
+  color: white;
+  font-size: .55rem;
+}
+[class^="flaticon-"]:before{
+  margin-left: 0;
 }
 </style>

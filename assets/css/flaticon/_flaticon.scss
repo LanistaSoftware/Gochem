@@ -1,6 +1,6 @@
     /*
     Flaticon icon font: Flaticon
-    Creation date: 11/03/2020 13:59
+    Creation date: 11/03/2020 20:41
     */
 
     @font-face {
@@ -45,6 +45,8 @@
 .flaticon-content:before { content: "\f105"; }
 .flaticon-pin:before { content: "\f106"; }
 .flaticon-play-button:before { content: "\f107"; }
+.flaticon-product:before { content: "\f108"; }
+.flaticon-deal:before { content: "\f109"; }
     
     $font-Flaticon-sydney-opera-house: "\f100";
     $font-Flaticon-contract: "\f101";
@@ -54,3 +56,5 @@
     $font-Flaticon-content: "\f105";
     $font-Flaticon-pin: "\f106";
     $font-Flaticon-play-button: "\f107";
+    $font-Flaticon-product: "\f108";
+    $font-Flaticon-deal: "\f109";

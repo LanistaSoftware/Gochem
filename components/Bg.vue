@@ -33,11 +33,12 @@ background: url(../assets/img/bg3.jpg);
   background-size: cover;
   background-position: bottom;
   height: 100vh;
+  width: 768px;
 }
 .bg-container{
-    width: 80vw;
-    padding-right: 15px;
-    padding-left: 15px;
+    width: 90%;
+    padding-right: 1rem;
+    padding-left: 1rem;
     margin-right: auto;
     margin-left: auto;
 }

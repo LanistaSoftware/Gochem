@@ -1,15 +1,13 @@
 <template>
   <div class="header clearfix">
-    <div class="logoItem">
+    <div class="logobox">
       <Logo />
     </div>
-    <div class="rightpanel">
-      <div class="navigation">
-        <Navigation />
-      </div>
-      <div class="search">
-        <Search />
-      </div>
+    <div class="navigation">
+      <Navigation />
+    </div>
+    <div class="search">
+      <Search />
     </div>
   </div>
 </template>
@@ -26,31 +24,25 @@ export default {
 }
 </script>
 <style scoped>
- .header{
+ .header {
    width: 100%;
-   border-bottom: .1rem solid white;
-    padding-top: 1rem;
-    vertical-align: middle;
+   border-bottom: 0.05rem solid white;
+   padding: 2rem 0;
+   vertical-align: middle;
  }
- .rightpanel{
-   width: 80%;
-   padding-top: 2.5rem;
-   display: inline-block;
- }
- .navigation,.logoItem,.search{
-   display: inline-block;
- }
- .navigation{
-   width: 80%;
- }
- .search{
-   width: 10;
-   float: right;
-   height: 100%;
- }
- .logoItem{
-   width: 10%;
-   height: 100%;
+ .logobox {
    float: left;
+   width: 15%;
+   text-align: center;
+ }
+ .navigation {
+   width: 70%;
+   float: left;
+
+ }
+
+ .search {
+   width: 15%;
+   float: right;
  }
 </style>

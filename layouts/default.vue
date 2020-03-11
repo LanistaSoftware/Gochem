@@ -22,18 +22,5 @@ export default {
 }
 </script>
 <style>
-clearfix::after {
-    display: block;
-    content: "";
-    clear: both;
-  }
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-html {
-  font-size: 14px;
-  font-family: Arial, Helvetica, sans-serif;
-}
+
 </style>
