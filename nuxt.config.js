@@ -12,7 +12,9 @@ module.exports = {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { href: '//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css', rel: 'stylesheet', id: 'bootstrap-css' },
+      { href: '../assets/css/flaticon.css', rel: 'stylesheet' }
     ]
   },
   /*
@@ -23,10 +25,14 @@ module.exports = {
   ** Global CSS
   */
   css: [
+    '~/assets/css/style.css',
+    '../assets/css/flaticon.css'
   ],
-  /*
-  ** Plugins to load before mounting the App
-  */
+  script: [
+    { src: '//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js' },
+    { src: '//code.jquery.com/jquery-1.11.1.min.js' },
+    { src: 'https://kit.fontawesome.com/475a188618.js', crossorigin: 'anonymous' }
+  ],
   plugins: [
   ],
   /*
@@ -41,7 +47,8 @@ module.exports = {
   */
   modules: [
     // Doc: https://bootstrap-vue.js.org
-    'bootstrap-vue/nuxt'
+    'bootstrap-vue/nuxt',
+    '@nuxtjs/font-awesome'
   ],
   /*
   ** Build configuration
