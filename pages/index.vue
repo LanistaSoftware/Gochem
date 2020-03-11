@@ -1,27 +1,14 @@
 <template>
-  <div class="bg">
-    <h1>Welcome to our project</h1>
-    <p>{{ print() }}</p>
-  </div>
+  <Bg />
 </template>
-
 <script>
-
+import Bg from '@/components/Bg'
 export default {
-  data () {
-    return {
-      windowHeigh: screen.availHeight
-    }
-  },
-  created () {
-    if (process.client) {
-      // eslint-disable-next-line no-console
-      console.log(screen.availHeight)
-    }
+  components: {
+    Bg
   }
 }
 </script>
-
-<style>
+<style scoped>
 
 </style>
