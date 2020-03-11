@@ -1,9 +1,49 @@
 <template>
   <div>
-    <nuxt />
+    <Header />
+    <Navigation />
+
+    <!-- <nuxt /> -->
+    <Logo />
+    <Footer />
   </div>
 </template>
-
+<script>
+import Logo from '@/components/globalcomponents/Logo'
+import Header from '@/components/globalcomponents/Header'
+import Footer from '@/components/globalcomponents/Footer'
+import Navigation from '@/components/globalcomponents/Navigation'
+export default {
+  components: {
+    Logo,
+    Header,
+    Footer,
+    Navigation
+  },
+  data () {
+    return {
+      wheigh: null,
+      wclass: {}
+    }
+  },
+  watch: {
+    wheigh () {
+      // eslint-disable-next-line quotes
+      this.wclass = {
+        width: this.wheigh
+      }
+    }
+  },
+  methods: {
+    meth () {
+      if (process.client) {
+        this.wheigh = window.innerHeight
+      }
+      return this.wheigh
+    }
+  }
+}
+</script>
 <style>
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
