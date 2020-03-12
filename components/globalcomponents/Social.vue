@@ -1,113 +1,69 @@
 <template>
-  <div class="col-md-12">
-    <ul class="social-network social-circle">
-      <li>
-        <a
-          href="#"
-          class="icoTwitter"
-          title="Twitter"
-        ><i
-          class="flaticon-twitter"
-        /></a>
-      </li>
-      <li>
-        <a
-          href="#"
-          class="icoGoogle"
-          title="Google +"
-        ><i
-          class="flaticon-youtube"
-        /></a>
-      </li>
-      <li>
-        <a
-          href="#"
-          class="icoLinkedin"
-          title="Linkedin"
-        ><i
-          class="flaticon-linkedin"
-        /></a>
-      </li>
-    </ul>
-  </div>
+  <ul class="social-network social-circle">
+    <li v-for="sosyal in social" :key="sosyal.id">
+      <a
+        :href="sosyal.href"
+        :title="sosyal.title"
+      ><i
+        :class="sosyal.icon"
+      /></a>
+    </li>
+  </ul>
 </template>
 <script>
-export default {}
+export default {
+  data () {
+    return {
+      social: [
+        {
+          href: '#',
+          title: 'Twitter',
+          icon: 'flaticon-twitter'
+        },
+        {
+          href: '#',
+          title: 'Twitter',
+          icon: 'flaticon-linkedin-1'
+        },
+        {
+          href: '#',
+          title: 'Youtube',
+          icon: 'flaticon-youtube'
+        }
+      ]
+    }
+  }
+}
 </script>
 <style scoped>
 /*=========================
   Icons
  ================= */
 
-/* footer social icons */
-ul.social-network {
-  list-style: none;
-  display: inline;
-  margin-left: 0 !important;
-  padding: 0;
-}
 ul.social-network li {
   display: inline;
-  margin: 0 5px;
+  margin-left: 1rem;
 }
-.social-network a.icoTwitter:hover {
-  background-color: #33ccff;
+[class^="flaticon-youtube"]:hover:before {
+  color:#ff0000;
 }
-.social-network a.icoVimeo:hover {
-  background-color: #0590b8;
+[class^="flaticon-twitter"]:hover:before {
+  color: #33ccff;
 }
-.social-network a.icoLinkedin:hover {
-  background-color: #007bb7;
-}
-.social-network a.icoRss:hover i,
-.social-network a.icoFacebook:hover i,
-.social-network a.icoTwitter:hover i,
-.social-network a.icoGoogle:hover i,
-.social-network a.icoVimeo:hover i,
-.social-network a.icoLinkedin:hover i {
-  color: #fff;
-}
-a.socialIcon:hover,
-.socialHoverClass {
-  color: #44bcdd;
+[class^="flaticon-linkedin-1"]:hover:before {
+  color: #007bb7;
 }
 
 .social-circle li a {
   display: inline-block;
-  position: relative;
-  margin: 0 auto 0 auto;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  text-align: center;
-  width: 50px;
-  height: 50px;
-  font-size: 20px;
 }
 .social-circle li i {
   margin: 0;
-  line-height: 50px;
+  line-height: 4rem;
   text-align: center;
 }
 
-.social-circle li a:hover i,
-.triggeredHover {
-  -moz-transform: rotate(360deg);
-  -webkit-transform: rotate(360deg);
-  -ms--transform: rotate(360deg);
-  transform: rotate(360deg);
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  -ms-transition: all 0.2s;
-  transition: all 0.2s;
-}
-.social-circle i {
-  color: #fff;
-  -webkit-transition: all 0.8s;
-  -moz-transition: all 0.8s;
-  -o-transition: all 0.8s;
-  -ms-transition: all 0.8s;
-  transition: all 0.8s;
+[class^="flaticon-"]:before {
+  font-size: 1.6rem;
 }
 </style>

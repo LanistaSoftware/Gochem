@@ -6,15 +6,25 @@
         <Social />
       </div>
     </div>
+    <div class="carousel">
+      <Carousel />
+    </div>
+    <div class="footer">
+      <Footer />
+    </div>
   </div>
 </template>
 <script>
 import Header from '@/components/globalcomponents/Header'
 import Social from '@/components/globalcomponents/Social'
+import Footer from '@/components/globalcomponents/Footer'
+import Carousel from '@/components/globalcomponents/Carousel'
 export default {
   components: {
     Header,
-    Social
+    Social,
+    Footer,
+    Carousel
   },
   data () {
     return {
@@ -50,5 +60,13 @@ background: url(../assets/img/bg3.jpg);
 .social{
   float: right;
   display: block;
+}
+.carousel{
+  padding-top: 10rem;
+}
+.footer{
+  position: absolute;
+  width: 768px;
+  bottom: 0;
 }
 </style>
