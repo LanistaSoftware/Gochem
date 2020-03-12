@@ -1,6 +1,6 @@
     /*
     Flaticon icon font: Flaticon
-    Creation date: 11/03/2020 20:41
+    Creation date: 12/03/2020 10:02
     */
 
     @font-face {
@@ -34,10 +34,10 @@
   text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
+  font-stretch: antialiased;
     }
 
-    .flaticon-sydney-opera-house:before { content: "\f100"; }
+.flaticon-sydney-opera-house:before { content: "\f100"; }
 .flaticon-contract:before { content: "\f101"; }
 .flaticon-mail:before { content: "\f102"; }
 .flaticon-support:before { content: "\f103"; }
@@ -47,6 +47,11 @@
 .flaticon-play-button:before { content: "\f107"; }
 .flaticon-product:before { content: "\f108"; }
 .flaticon-deal:before { content: "\f109"; }
+.flaticon-linkedin:before { content: "\f10a"; }
+.flaticon-linkedin-1:before { content: "\f10b"; }
+.flaticon-twitter:before { content: "\f10c"; }
+.flaticon-youtube:before { content: "\f10d"; }
+.flaticon-search:before { content: "\f10e"; }
     
     $font-Flaticon-sydney-opera-house: "\f100";
     $font-Flaticon-contract: "\f101";
@@ -58,3 +63,8 @@
     $font-Flaticon-play-button: "\f107";
     $font-Flaticon-product: "\f108";
     $font-Flaticon-deal: "\f109";
+    $font-Flaticon-linkedin: "\f10a";
+    $font-Flaticon-linkedin-1: "\f10b";
+    $font-Flaticon-twitter: "\f10c";
+    $font-Flaticon-youtube: "\f10d";
+    $font-Flaticon-search: "\f10e";

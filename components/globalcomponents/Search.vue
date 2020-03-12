@@ -4,7 +4,7 @@
       <i class="flaticon-mail" />
     </div>
     <div class="language">
-      <i class="flaticon-mail" />
+      <i class="flaticon-search" />
     </div>
   </div>
 </template>
