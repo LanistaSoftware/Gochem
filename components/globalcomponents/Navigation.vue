@@ -51,18 +51,6 @@ export default {
     }
   }
 }
-/*
-.flaticon-sydney-opera-house:before { content: "\f100"; }
-.flaticon-contract:before { content: "\f101"; }
-.flaticon-mail:before { content: "\f102"; }
-.flaticon-support:before { content: "\f103"; }
-.flaticon-info:before { content: "\f104"; }
-.flaticon-content:before { content: "\f105"; }
-.flaticon-pin:before { content: "\f106"; }
-.flaticon-play-button:before { content: "\f107"; }
-.flaticon-product:before { content: "\f108"; }
-.flaticon-deal:before { content: "\f109"; }
-*/
 </script>
 <style lang="less" scoped>
 ul {

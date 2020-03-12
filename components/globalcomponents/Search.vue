@@ -4,7 +4,10 @@
       <i class="flaticon-mail" />
     </div>
     <div class="language">
-      <i class="flaticon-search" />
+      <i class="flaticon-linkedin-1" />
+    </div>
+    <div class="language">
+      <i class="flaticon-twitter" />
     </div>
   </div>
 </template>
