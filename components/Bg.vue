@@ -2,14 +2,19 @@
   <div class="bg " :class="bgImageUrl">
     <div class="bg-container">
       <Header />
+      <div class="social">
+        <Social />
+      </div>
     </div>
   </div>
 </template>
 <script>
 import Header from '@/components/globalcomponents/Header'
+import Social from '@/components/globalcomponents/Social'
 export default {
   components: {
-    Header
+    Header,
+    Social
   },
   data () {
     return {
@@ -41,5 +46,9 @@ background: url(../assets/img/bg3.jpg);
     padding-left: 1rem;
     margin-right: auto;
     margin-left: auto;
+}
+.social{
+  float: right;
+  display: block;
 }
 </style>
