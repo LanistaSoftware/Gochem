@@ -1,6 +1,6 @@
     /*
     Flaticon icon font: Flaticon
-    Creation date: 12/03/2020 10:02
+    Creation date: 12/03/2020 10:16
     */
 
     @font-face {
@@ -34,10 +34,10 @@
   text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-stretch: antialiased;
+  font-smoothing: antialiased;
     }
 
-.flaticon-sydney-opera-house:before { content: "\f100"; }
+    .flaticon-sydney-opera-house:before { content: "\f100"; }
 .flaticon-contract:before { content: "\f101"; }
 .flaticon-mail:before { content: "\f102"; }
 .flaticon-support:before { content: "\f103"; }

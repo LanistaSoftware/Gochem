@@ -140,6 +140,10 @@ html {
   font-family: Arial, Helvetica, sans-serif;
   color: white;
 }
+[class^="flaticon-"]:before {
+  color: white;
+  margin-left: 0 !important;
+}
 /* Flaticon CSS 
 
 .flaticon-sydney-opera-house:before { content: "\f100"; }

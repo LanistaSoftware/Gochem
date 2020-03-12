@@ -2,6 +2,7 @@
   <div>
     <!-- <div class="search-language">
     <div class="search">
+<<<<<<< HEAD
       <input id="" type="text" name="">
       <span><i class="flaticon-mail" /></span>
     </div>
@@ -37,6 +38,15 @@
           </option>
         </select>
       </div>
+=======
+      <i class="flaticon-search icon" />
+    </div>
+    <div class="language">
+      <i class="flaticon-linkedin-1" />
+    </div>
+    <div class="language">
+      <i class="flaticon-twitter" />
+>>>>>>> c9c197de972df4f68e4bab077e9d374e48463387
     </div>
   </div>
 </template>
@@ -99,4 +109,10 @@ export default {}
   text-decoration: none;
   padding: 0.4rem 0.1rem;
 }
+<<<<<<< HEAD
+=======
+ .flaticon-serch{
+   color: white;
+ }
+>>>>>>> c9c197de972df4f68e4bab077e9d374e48463387
 </style>

@@ -17,7 +17,4 @@ small{
   color: white;
   font-size: .55rem;
 }
-[class^="flaticon-"]:before{
-  margin-left: 0;
-}
 </style>
