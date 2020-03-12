@@ -1,13 +1,21 @@
 <template>
-  <div class="search-language">
+  <div class="search-language-container">
     <div class="search">
-      <i class="flaticon-search icon" />
+      <div class="search-icon">
+        <i class="flaticon-search" />
+      </div>
+      <div v-if="false" class="search-input">
+        <b-form-input />
+      </div>
     </div>
     <div class="language">
-      <i class="flaticon-linkedin-1" />
-    </div>
-    <div class="language">
-      <i class="flaticon-twitter" />
+      <div class="icon-border">
+        <ul>
+          <li><i class="flaticon-global" /></li>
+          <li><span>TR</span></li>
+          <li><i class="flaticon-download" /></li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -17,20 +25,42 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-.search-language{
-  width: 100%;
-  padding-top: 1.4rem;
- text-align: right;
+.search-language-container{
+ padding-top: 1.4rem;
 }
 .search, .language{
-  padding: .6rem;
-  display: inline-block;
+  width: 50%;
+  float: left;
 }
-.search{
-  border: .04rem solid white;
-  border-radius: 50%;
+
+.search-icon{
+  margin-left: 3rem;
+  width: 2.6rem;
+  height: 2.6rem;
+  border: 0.1rem solid white;
+  border-radius: 100%;
+    i{
+      position: relative;
+      top:30%;
+      left: 30%;
+    }
 }
- .flaticon-serch{
-   color: white;
- }
+
+ul{
+  border: 0.12rem solid white;
+  text-align: center;
+  padding:.7rem;
+  border-radius: 40%;
+}
+li{
+  display: inline;
+  color: white;
+  font-size: 0.7rem;
+  i,span{
+    padding:0.2rem;
+    }
+}
+[class^="flaticon-"]:before {
+font-size: 1.1rem;
+}
 </style>

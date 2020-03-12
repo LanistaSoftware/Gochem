@@ -1,6 +1,6 @@
     /*
     Flaticon icon font: Flaticon
-    Creation date: 12/03/2020 10:16
+    Creation date: 12/03/2020 11:24
     */
 
     @font-face {
@@ -52,6 +52,10 @@
 .flaticon-twitter:before { content: "\f10c"; }
 .flaticon-youtube:before { content: "\f10d"; }
 .flaticon-search:before { content: "\f10e"; }
+.flaticon-next:before { content: "\f10f"; }
+.flaticon-download:before { content: "\f110"; }
+.flaticon-back:before { content: "\f111"; }
+.flaticon-global:before { content: "\f112"; }
     
     $font-Flaticon-sydney-opera-house: "\f100";
     $font-Flaticon-contract: "\f101";
@@ -68,3 +72,7 @@
     $font-Flaticon-twitter: "\f10c";
     $font-Flaticon-youtube: "\f10d";
     $font-Flaticon-search: "\f10e";
+    $font-Flaticon-next: "\f10f";
+    $font-Flaticon-download: "\f110";
+    $font-Flaticon-back: "\f111";
+    $font-Flaticon-global: "\f112";

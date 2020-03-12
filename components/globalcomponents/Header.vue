@@ -6,7 +6,7 @@
     <div class="navigation">
       <Navigation />
     </div>
-    <div class="search">
+    <div class="search-language">
       <Search />
     </div>
   </div>
@@ -32,7 +32,7 @@ export default {
  }
  .logobox {
    float: left;
-   width: 15%;
+   width: 10%;
    text-align: center;
  }
  .navigation {
@@ -41,8 +41,8 @@ export default {
 
  }
 
- .search {
-   width: 15%;
+ .search-language {
+   width: 20%;
    float: right;
  }
 </style>
