@@ -1,7 +1,7 @@
 <template>
   <div class="search-language">
     <div class="search">
-      <i class="flaticon-mail" />
+      <i class="flaticon-search icon" />
     </div>
     <div class="language">
       <i class="flaticon-linkedin-1" />
@@ -30,7 +30,7 @@ export default {
   border: .04rem solid white;
   border-radius: 50%;
 }
- .flaticon-mail{
+ .flaticon-serch{
    color: white;
  }
 </style>
