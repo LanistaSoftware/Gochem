@@ -61,10 +61,5 @@ li{
 [class^="flaticon-"]:before {
 font-size: 1.1rem;
 }
-.inputsearch{
-  position: relative;
-  top: 4.1rem;
-  padding-bottom: 1rem;
-}
 
 </style>

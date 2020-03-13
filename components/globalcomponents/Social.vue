@@ -22,7 +22,7 @@ export default {
         },
         {
           href: '#',
-          title: 'Twitter',
+          title: 'linkedin',
           icon: 'flaticon-linkedin-1'
         },
         {

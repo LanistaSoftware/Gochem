@@ -1,9 +1,9 @@
 <template>
   <nav>
     <ul>
-      <li v-for="nav in navItems" :key="nav.id">
-        <a :href="nav.path"><i class="naviconshow" :class="nav.icon" />{{ nav.label }}</a>
-      </li>
+      <nuxt-link v-for="nav in navItems" :key="nav.id" :to="nav.path" tag="li">
+        <a><i class="naviconshow" :class="nav.icon" />{{ nav.label }}</a>
+      </nuxt-link>
     </ul>
   </nav>
 </template>
@@ -24,7 +24,7 @@ export default {
         },
         {
           label: 'Ürünler',
-          path: '/home',
+          path: '/products',
           icon: 'flaticon-product'
         },
         {
