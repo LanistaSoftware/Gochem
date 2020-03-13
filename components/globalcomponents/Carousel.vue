@@ -5,6 +5,7 @@
  .slider{
      width: 100%;
      background-color: blue;
-     height: 10rem;
+     height: 43vh;
+     margin-top: 3vh;
  }
 </style>

@@ -1,39 +1,35 @@
 <template>
-  <div>
-    <footer class="footer-bg">
-      <div class="box">
-        <div class="footer-title">
-          <p> <i class="flaticon-pin" />  Gochem Silikon Kimya San. Tic. Ltd. Şti</p>
-        </div>
-      </div>
-      <div class="box">
-        <div class="footer-slogan">
-          <img src="../../assets/img/welove.png">
-        </div>
-      </div>
-      <div class="box">
-        <div class="footer-title">
-          <div class="footer-copyright text-center py-3">
-            © 2020 Copyright
-            <a href="https://lanista.com.tr/">  <img src="../../assets/img/beyaz.png"></a>
-          </div>
-        </div>
-      </div>
-    </footer>
+  <div class="footer-bg">
+    <div class="box">
+      <p>a</p>
+    </div>
+    <div class="box">
+      <p>a</p>
+    </div>
+    <div class="box">
+      <p>a</p>
+    </div>
   </div>
 </template>
 <style scoped>
  .footer-bg{
    color: #939393;
    width: 100%;
+   height: 5vh;
+   vertical-align: middle;
+ }
+ footer,p{
+   display: inline-block;
+   text-align: center;
+   vertical-align: middle;
  }
  .box{
-   text-align: center;
-   width: 33%;
    display: inline-block;
-  vertical-align: middle;
+   width: 33%;
+   vertical-align: middle;
  }
- [class^="flaticon-"]:before {
+
+ /* [class^="flaticon-"]:before {
    font-size: 1.4rem;
 }
 .footer-slogan img{
@@ -44,5 +40,6 @@
 }
 .footer-title img {
   width: 5rem;
-}
+} */
+
 </style>

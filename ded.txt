@@ -1,16 +1,9 @@
+
 <template>
-  <div class="bg " :class="bgImageUrl">
+  <div class="bg" :class="bgImageUrl">
     <div class="bg-container">
-      <Header class="row" />
-      <div class="social clearfix">
-        <Social />
-      </div>
-      <div class="slider">
-        <Carousel />
-      </div>
-      <div class="boxes container row clearfix">
-        <Box v-for="box in 4" :key="box" />
-      </div>
+      <Header />
+      <nuxt />
     </div>
     <div class="footer">
       <Footer />
@@ -19,17 +12,17 @@
 </template>
 <script>
 import Header from '@/components/globalcomponents/Header'
-import Social from '@/components/globalcomponents/Social'
+// import Social from '@/components/globalcomponents/Social'
 import Footer from '@/components/globalcomponents/Footer'
-import Carousel from '@/components/globalcomponents/Carousel'
-import Box from '@/components/Box'
+// import Carousel from '@/components/globalcomponents/Carousel'
+// import Box from '@/components/Box'
 export default {
   components: {
     Header,
-    Social,
-    Footer,
-    Carousel,
-    Box
+    // Social,
+    Footer
+    // Carousel,
+    // Box
   },
   data () {
     return {
@@ -38,7 +31,8 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style>
+
 .bgUrl1{
 background: url(../assets/img/bg1.jpg);
 }
@@ -63,11 +57,11 @@ background: url(../assets/img/bg3.jpg);
     margin-left: auto;
 }
 .social{
-  float: right;
+  text-align: right;
 }
 .boxes{
-  display: inline-block;
   width: 75%;
+  height: 17vh;
   text-align: center;
 }
 .footer{
@@ -75,4 +69,32 @@ background: url(../assets/img/bg3.jpg);
   width: 768px;
   bottom: 0;
 }
+@media (min-width: 576px) {
+    .naviconshow{
+        display: inline !important;
+
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 700px) {
+    .naviconshow{
+        display: none !important;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .naviconshow{
+        display: none !important;
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px){
+ .naviconshow{
+         display: none !important;
+    }
+}
 </style>
+

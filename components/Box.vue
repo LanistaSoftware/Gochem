@@ -1,13 +1,14 @@
 <template>
-  <div class="box-item bg-container">
+  <div class="box-item">
     <div class="box" />
   </div>
 </template>
 <style scoped>
  .box{
-     width: 25%;
-     height: 10rem;
+     width: 24%;
+     height: 20vh;
      border: 1px solid #fff;
      float: left;
+     margin: .1rem;
  }
 </style>

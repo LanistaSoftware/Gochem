@@ -23,9 +23,7 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-.search-language-container{
- padding-top: 1.4rem;
-}
+
 .search, .language{
   width: 50%;
   float: left;
