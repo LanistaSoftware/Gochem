@@ -1,13 +1,16 @@
 <template>
   <div class="bg " :class="bgImageUrl">
     <div class="bg-container">
-      <Header />
-      <div class="social">
+      <Header class="row" />
+      <div class="social clearfix">
         <Social />
       </div>
-    </div>
-    <div class="carousel">
-      <Carousel />
+      <div class="slider">
+        <Carousel />
+      </div>
+      <div class="boxes container row clearfix">
+        <Box v-for="box in 4" :key="box" />
+      </div>
     </div>
     <div class="footer">
       <Footer />
@@ -19,12 +22,14 @@ import Header from '@/components/globalcomponents/Header'
 import Social from '@/components/globalcomponents/Social'
 import Footer from '@/components/globalcomponents/Footer'
 import Carousel from '@/components/globalcomponents/Carousel'
+import Box from '@/components/Box'
 export default {
   components: {
     Header,
     Social,
     Footer,
-    Carousel
+    Carousel,
+    Box
   },
   data () {
     return {
@@ -59,10 +64,11 @@ background: url(../assets/img/bg3.jpg);
 }
 .social{
   float: right;
-  display: block;
 }
-.carousel{
-  padding-top: 10rem;
+.boxes{
+  display: inline-block;
+  width: 75%;
+  text-align: center;
 }
 .footer{
   position: absolute;

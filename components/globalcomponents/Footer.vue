@@ -8,14 +8,15 @@
       </div>
       <div class="box">
         <div class="footer-slogan">
-          <h4>We &#10084; Silicone</h4>
+          <img src="../../assets/img/welove.png">
         </div>
       </div>
       <div class="box">
         <div class="footer-title">
-          <span>
-            Logo
-          </span>
+          <div class="footer-copyright text-center py-3">
+            © 2020 Copyright
+            <a href="https://lanista.com.tr/">  <img src="../../assets/img/beyaz.png"></a>
+          </div>
         </div>
       </div>
     </footer>
@@ -25,7 +26,6 @@
  .footer-bg{
    color: #939393;
    width: 100%;
-   padding: 1rem;
  }
  .box{
    text-align: center;
@@ -35,5 +35,14 @@
  }
  [class^="flaticon-"]:before {
    font-size: 1.4rem;
+}
+.footer-slogan img{
+  width: 10rem;
+}
+.footer-title p{
+  color: #939393;
+}
+.footer-title img {
+  width: 5rem;
 }
 </style>
