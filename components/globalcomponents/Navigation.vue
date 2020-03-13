@@ -2,7 +2,7 @@
   <nav>
     <ul>
       <li v-for="nav in navItems" :key="nav.id">
-        <a :href="nav.path"><i :class="nav.icon" />{{ nav.label }}</a>
+        <a :href="nav.path"><i class="naviconshow" :class="nav.icon" />{{ nav.label }}</a>
       </li>
     </ul>
   </nav>
@@ -53,26 +53,23 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+nav, ul, li, a{
+  display: inline-block;
+  vertical-align: middle;
+}
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   text-align: center;
-  padding-top: 1.4rem;
-
-}
-
-li {
-  display: inline-block;
 }
 
 li a {
-  font-size: .8rem;
-  display: inline-block;
+  font-size: 1.1rem;
   color: white;
   text-align: center;
-  padding: .5rem 1.2rem;
+  padding: .5rem .8rem;
   text-decoration: none;
 }
 
@@ -89,9 +86,9 @@ li:not(:last-child) {
 }
 [class^="flaticon-"]:before{
 
-    font-size: .6rem;
-    padding-right: .3rem;
-    font-style: normal;
+    font-size: 1.1rem;
+    padding-right: .2rem;
+    font-style:normal;
     margin-left: 0;
     color: white;
 }

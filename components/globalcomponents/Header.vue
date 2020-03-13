@@ -1,5 +1,5 @@
 <template>
-  <div class="header clearfix">
+  <div class="header  ">
     <div class="logobox">
       <Logo />
     </div>
@@ -7,42 +7,49 @@
       <Navigation />
     </div>
     <div class="search-language">
-      <Search />
+      <Language />
     </div>
   </div>
 </template>
 <script>
 import Logo from '@/components/globalcomponents/Logo'
 import Navigation from '@/components/globalcomponents/Navigation'
-import Search from '@/components/globalcomponents/Search'
+import Language from '@/components/globalcomponents/Language'
 export default {
   components: {
     Logo,
     Navigation,
-    Search
+    Language
   }
 }
 </script>
 <style scoped>
  .header {
+   display: inline-block;
    width: 100%;
-   border-bottom: 0.05rem solid white;
-   padding: 2rem 0;
-   vertical-align: middle;
+   border-bottom: 0.03rem solid white;
+   padding: 1rem 0;
+   text-align: center;
+
  }
+
  .logobox {
-   float: left;
-   width: 10%;
+   display: inline-block;
+   width: 9%;
+   vertical-align: middle;
    text-align: center;
  }
- .navigation {
-   width: 70%;
-   float: left;
 
+ .navigation {
+   display: inline-block;
+   width: 81.1%;
+   vertical-align: middle;
  }
 
  .search-language {
-   width: 20%;
-   float: right;
+   display: inline-block;
+   width: 9%;
+   vertical-align: middle;
+   text-align: right;
  }
 </style>

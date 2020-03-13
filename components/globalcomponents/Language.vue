@@ -1,26 +1,26 @@
 <template>
   <div class="search-language-container">
-    <div class="search">
-      <div class="search-icon">
-        <i class="flaticon-search" />
-      </div>
-      <div v-if="false" class="search-input">
-        <b-form-input />
-      </div>
-    </div>
-    <div class="language">
-      <div class="icon-border">
-        <ul>
-          <li><i class="flaticon-global" /></li>
-          <li><span>TR</span></li>
-          <li><i class="flaticon-download" /></li>
-        </ul>
-      </div>
-    </div>
+    a
   </div>
 </template>
 <script>
-export default {}
+export default {
+  data () {
+    return {
+      showInput: false,
+      searchText: null
+    }
+  },
+  methods: {
+    isNull () {
+      if (this.searchText == null) {
+        this.showInput = false
+      } else {
+        this.showInput = true
+      }
+    }
+  }
+}
 </script>
 <style lang="less" scoped>
 .search-language-container{
@@ -61,4 +61,10 @@ li{
 [class^="flaticon-"]:before {
 font-size: 1.1rem;
 }
+.inputsearch{
+  position: relative;
+  top: 4.1rem;
+  padding-bottom: 1rem;
+}
+
 </style>

@@ -25,6 +25,7 @@ module.exports = {
   */
   css: [
     '@/assets/css/style.css',
+    '@/assets/css/media.css',
     '@/assets/css/flaticon/flaticon.css'
   ],
   script: [
