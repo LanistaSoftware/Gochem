@@ -1,8 +1,8 @@
 <template>
   <nav>
     <ul>
-      <nuxt-link v-for="nav in navItems" :key="nav.id" :to="nav.path" tag="li">
-        <a><i class="naviconshow" :class="nav.icon" />{{ nav.label }}</a>
+      <nuxt-link v-for="nav in navItems" :key="nav.id" :to="nav.path" tag="li" class="navli">
+        <a><i class="naviconshow" :class="nav.icon" /><span class="nav-text">{{ nav.label }}</span></a>
       </nuxt-link>
     </ul>
   </nav>
@@ -56,6 +56,7 @@ export default {
 nav, ul, li, a{
   display: inline-block;
   vertical-align: middle;
+    font-size: 1.2rem;
 }
 ul {
   list-style-type: none;
@@ -66,11 +67,13 @@ ul {
 }
 
 li a {
-  font-size: 1.1rem;
+
   color: white;
   text-align: center;
-  padding: .5rem .8rem;
   text-decoration: none;
+}
+.navli{
+  padding: 0.5rem 2rem 0.5rem 2rem;
 }
 
 /* Change the link color to #111 (black) on hover */
@@ -82,14 +85,14 @@ color: darkred;
 }
 
 li:not(:last-child) {
-  border-right: 0.5px solid white;
-}
-[class^="flaticon-"]:before{
+   border-right: 0.5px solid white;
 
-    font-size: 1.1rem;
-    padding-right: .2rem;
-    font-style:normal;
-    margin-left: 0;
+ }
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+    font-size: 1.5rem;
     color: white;
+    margin-left:0px;
+    margin-right: 0.5rem;
 }
 </style>

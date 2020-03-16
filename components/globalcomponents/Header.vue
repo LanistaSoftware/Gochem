@@ -1,5 +1,5 @@
 <template>
-  <div class="header  ">
+  <div class="header">
     <div class="logobox">
       <Logo />
     </div>
@@ -28,9 +28,9 @@ export default {
    display: inline-block;
    width: 100%;
    border-bottom: 0.03rem solid white;
-   padding: 1rem 0;
+   padding: 1.5vh 0;
    text-align: center;
-
+   height: 10vh;
  }
 
  .logobox {
