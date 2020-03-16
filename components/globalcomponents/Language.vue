@@ -1,63 +1,100 @@
 <template>
-  <div class="search-language-container">
-    a
+  <div class="language-container">
+    <table @mouseleave="show=false" @click="show=false">
+      <tbody>
+        <tr>
+          <td>
+            <button @click="selectLang()">
+              {{ selectedLang }}
+            </button>
+          </td><td rowspan="2">
+            <button @mouseover="show=true" @click="show=true">
+              <i class="flaticon-global" />
+            </button>
+          </td>
+        </tr>
+        <transition name="fade">
+          <tr v-if="show">
+            <td>
+              <button @click="selectLang()">
+                {{ otherLang }}
+              </button>
+            </td>
+          </tr>
+        </transition>
+      </tbody>
+    </table>
   </div>
 </template>
 <script>
 export default {
   data () {
     return {
-      showInput: false,
-      searchText: null
+      show: false,
+      lang: ['EN', 'TR'],
+      selectedLang: null,
+      otherLang: null
     }
   },
+  created () {
+    this.selectLang()
+  },
   methods: {
-    isNull () {
-      if (this.searchText == null) {
-        this.showInput = false
+    selectLang () {
+      if (this.selectedLang == null) {
+        this.selectedLang = this.lang[1]
+        this.otherLang = this.lang[0]
+      } else if (this.selectedLang === this.lang[0]) {
+        this.selectedLang = this.lang[1]
+        this.otherLang = this.lang[0]
       } else {
-        this.showInput = true
+        this.selectedLang = this.lang[0]
+        this.otherLang = this.lang[1]
       }
     }
   }
 }
 </script>
 <style lang="less" scoped>
-
-.search, .language{
-  width: 50%;
-  float: left;
+.language-container{
+  float: right;
 }
-
-.search-icon{
-  margin-left: 3rem;
-  width: 2.6rem;
-  height: 2.6rem;
-  border: 0.1rem solid white;
-  border-radius: 100%;
-    i{
-      position: relative;
-      top:30%;
-      left: 30%;
-    }
-}
-
-ul{
-  border: 0.12rem solid white;
-  text-align: center;
-  padding:.7rem;
-  border-radius: 40%;
-}
-li{
-  display: inline;
+table tr td{
+  padding-top: .1rem;
+  padding-bottom: .1rem;
+  padding-left: .4rem;
   color: white;
-  font-size: 0.7rem;
-  i,span{
-    padding:0.2rem;
-    }
+  text-align: center;
+  justify-content: center;
+  vertical-align: middle;
+  font-size: 1.2rem;
 }
-[class^="flaticon-"]:before {
-font-size: 1.1rem;
+button{
+  background-color: transparent;
+  border: none;
+}
+button:hover{
+  color:lightgreen;
+  transition: 0.4s;
+}
+table:hover{
+.flaticon-global:before {
+    color: lightgreen;
+     transition: 0.4s !important;
+}
+}
+button:active{
+  color: coral;
+  transition: 0.1s;
+}
+.flaticon-global:before {
+  font-size: 1.5rem;
 }
 
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .6s ;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0 ;
+}
 </style>
