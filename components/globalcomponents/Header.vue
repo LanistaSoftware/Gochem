@@ -30,7 +30,7 @@ export default {
    border-bottom: 0.03rem solid white;
    padding: 1.5vh 0;
    text-align: center;
-   height: 10vh;
+   height: 11vh;
  }
 
  .logobox {

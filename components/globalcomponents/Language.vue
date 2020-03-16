@@ -59,17 +59,17 @@ export default {
 .language-container{
   float: right;
 }
-table tr td{
+table, tr, td{
   padding-top: .1rem;
   padding-bottom: .1rem;
   padding-left: .4rem;
-  color: white;
   text-align: center;
   justify-content: center;
   vertical-align: middle;
   font-size: 1.2rem;
 }
 button{
+   color: white;
   background-color: transparent;
   border: none;
 }
