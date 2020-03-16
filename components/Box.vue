@@ -1,12 +1,20 @@
+/* eslint-disable vue/require-default-prop */
 <template>
-  <div class="box">
-    <div v-for="item in slideList" :key="item.id" :item="item" class="box-group">
-      <div class="box-item">
-        <h3>{{ item.page }} / <sup>{{ item.pageTwo }}</sup></h3>
-        <p>
-          {{ item.content }}
-        </p>
-      </div>
+  <div class="box-container">
+    <div class="box-border">
+      <!--  <div v-for="item in slideSets" :key="item.id" :item="item" class="box-group">
+        <div class="box-item">
+          <h3>{{ item.page }} / <sup>{{ item.pageTwo }}</sup></h3>
+          <p>
+            {{ item.content }}
+          </p>
+          <button class="btn btn-primary" @click="counterShow">
+            tıkla
+          </button>
+          <p>{{ counterGet }}</p>
+        </div>
+      </div>-->
+      <slot />
     </div>
   </div>
 </template>
@@ -14,36 +22,22 @@
 export default {
   data () {
     return {
-      slideList: [
-        {
-          page: '02',
-          pageTwo: '03',
-          title: 'Doğa',
-          titleTwo: 'Dostu Üretim',
-          content: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris... Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore magnam quas maxime. Optio, expedita quidem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, neque corrupti ut atque pariatur odit? Minus exercitationem adipisci nobis quam.'
-        },
-        {
-          page: '02',
-          pageTwo: '03',
-          title: 'Doğa',
-          titleTwo: 'Dostu Üretim',
-          content: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris... Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore magnam quas maxime. Optio, expedita quidem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, neque corrupti ut atque pariatur odit? Minus exercitationem adipisci nobis quam.'
-        },
-        {
-          page: '02',
-          pageTwo: '03',
-          title: 'Doğa',
-          titleTwo: 'Dostu Üretim',
-          content: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris... Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore magnam quas maxime. Optio, expedita quidem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, neque corrupti ut atque pariatur odit? Minus exercitationem adipisci nobis quam.'
-        },
-        {
-          page: '02',
-          pageTwo: '03',
-          title: 'Doğa',
-          titleTwo: 'Dostu Üretim',
-          content: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris... Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore magnam quas maxime. Optio, expedita quidem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, neque corrupti ut atque pariatur odit? Minus exercitationem adipisci nobis quam.'
-        }
-      ]
+    }
+  },
+  computed: {
+    slideSets () {
+      return this.$store.getters.getSlideSets
+    },
+    counterGet () {
+      return this.$store.getters.getCounter
+    },
+    counter () {
+      return this.$store.dispatch.counter
+    }
+  },
+  methods: {
+    counterShow () {
+      this.$store.dispatch('counter')
     }
   }
 }
@@ -64,13 +58,19 @@ export default {
    margin-top: 1vh;
    margin-bottom: .6vh;
  }
- .box-item{
-   position: relative;
-   width: 24%;
-   display: inline-block;
+ .box-container{
+    width: 24%;
+    display: block;
+    margin: .1rem;
+    color: #fff;
+    height: 20vh;
+    padding: .8vh;
+    background-image: linear-gradient(to bottom, rgba(22, 98, 150,.6), rgba(23, 104, 31,.4));
+    float: left;
+    overflow: hidden;
+}
+ .box-border{
+   height: 100%;
    border: 1px solid #fff;
-   color: #fff;
-   padding: 1vh;
-   background-image: linear-gradient(to bottom, rgba(22, 98, 150,.6), rgba(23, 104, 31,.4));
  }
 </style>

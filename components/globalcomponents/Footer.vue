@@ -9,7 +9,7 @@
       </div>
       <div class="box">
         <div class="footer-copyright text-center py-3">
-          © 2020 Copyright:
+          © Copyright 2020
           <img class="lanista" src="../../assets/img/beyaz.png">
         </div>
       </div>
@@ -36,20 +36,20 @@ export default {
    display: table;
    color: #939393;
    width: 100%;
-   height: 5vh;
+   height: 3vh;
    vertical-align: middle;
    text-align: center;
  }
  .box{
-   display: table-cell;
+   display: inline-block;
    width: 33%;
    vertical-align: middle;
  }
 .box .slikonLogo{
-   width: 20%;
+   width: 10vh;
  }
  .box .lanista{
-   width: 10%;
+   width: 3vh;
  }
  [class^="flaticon-"]:before {
   color: white;

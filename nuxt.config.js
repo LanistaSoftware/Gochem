@@ -1,4 +1,4 @@
-
+const bodyParser = require('body-parser')
 module.exports = {
   mode: 'universal',
   /*
@@ -26,7 +26,9 @@ module.exports = {
   css: [
     '@/assets/css/style.css',
     '@/assets/css/media.css',
-    '@/assets/css/flaticon/flaticon.css'
+    '@/assets/css/flaticon/flaticon.css',
+    'bootstrap-css-only/css/bootstrap.min.css',
+    'mdbvue/lib/css/mdb.min.css'
   ],
   script: [
     { src: '//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js' },
@@ -56,7 +58,13 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
-    extend (config, ctx) {
-    }
-  }
+    extend (config, ctx) {},
+    transpile: [
+      'mdbvue/lib/components'
+    ]
+  },
+  serverMiddleware: [
+    bodyParser.json(),
+    '~api'
+  ]
 }
