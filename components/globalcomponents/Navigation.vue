@@ -14,12 +14,12 @@ export default {
       navItems: [
         {
           label: 'Anasayfa',
-          path: '/home',
+          path: '/',
           icon: 'flaticon-sydney-opera-house'
         },
         {
           label: 'Hakkımızda',
-          path: '/home',
+          path: '/',
           icon: 'flaticon-info'
         },
         {
@@ -29,22 +29,22 @@ export default {
         },
         {
           label: 'Sektörler',
-          path: '/home',
+          path: '/',
           icon: 'flaticon-support'
         },
         {
           label: 'Belgeler',
-          path: '/home',
+          path: '/',
           icon: 'flaticon-deal'
         },
         {
           label: 'Makaleler',
-          path: '/home',
+          path: '/',
           icon: 'flaticon-content'
         },
         {
           label: 'İletişim',
-          path: '/home',
+          path: '/',
           icon: 'flaticon-mail'
         }
       ]

@@ -1,45 +1,59 @@
 <template>
-  <div class="footer-bg">
-    <div class="box">
-      <p>a</p>
-    </div>
-    <div class="box">
-      <p>a</p>
-    </div>
-    <div class="box">
-      <p>a</p>
+  <div>
+    <div v-for="item in footerList" :key="item.id" class="footer-bg">
+      <div class="box">
+        <p> <i class="flaticon-pin" /> {{ item.company }}</p>
+      </div>
+      <div class="box">
+        <img class="slikonLogo" src="../../assets/img/welove.png" alt="" srcset="">
+      </div>
+      <div class="box">
+        <div class="footer-copyright text-center py-3">
+          © 2020 Copyright:
+          <img class="lanista" src="../../assets/img/beyaz.png">
+        </div>
+      </div>
     </div>
   </div>
 </template>
+<script>
+export default {
+  data () {
+    return {
+      footerList: [
+        {
+          company: 'Gochem Slikon Kimya San. Tic. Ltd. Şti',
+          logo: '../../assets/img/welove.png',
+          lanistaLogo: '../../assets/img/beyaz.png'
+        }
+      ]
+    }
+  }
+}
+</script>
 <style scoped>
  .footer-bg{
+   display: table;
    color: #939393;
    width: 100%;
    height: 5vh;
    vertical-align: middle;
- }
- footer,p{
-   display: inline-block;
    text-align: center;
-   vertical-align: middle;
  }
  .box{
-   display: inline-block;
+   display: table-cell;
    width: 33%;
    vertical-align: middle;
  }
+.box .slikonLogo{
+   width: 20%;
+ }
+ .box .lanista{
+   width: 10%;
+ }
+ [class^="flaticon-"]:before {
+  color: white;
+  font-size: 1.2rem;
 
- /* [class^="flaticon-"]:before {
-   font-size: 1.4rem;
 }
-.footer-slogan img{
-  width: 10rem;
-}
-.footer-title p{
-  color: #939393;
-}
-.footer-title img {
-  width: 5rem;
-} */
-
 </style>

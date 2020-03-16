@@ -7,7 +7,7 @@
       <Carousel />
     </div>
     <div class="boxes">
-      <Box v-for="box in 4" :key="box" />
+      <Box />
     </div>
   </div>
 </template>

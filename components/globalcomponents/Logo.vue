@@ -1,10 +1,35 @@
 <template>
   <div class="logo-container">
-    <img src="../../assets/icons/logo.png" alt="Logo">
-    <p><small>people & silicone</small></p>
+    <!-- <nuxt-link v-for="logo in logoUrl" :key="logo" :to="logo.path" tag="li">
+      <a>
+        <img :src="logo.imgUrl" :alt="logo.alt">
+        <p><small>{{ logo.slogan }}</small></p>
+      </a>
+    </nuxt-link> -->
+    <ul>
+      <nuxt-link v-for="logo in logoUrl" :key="logo.id" :to="logo.path" tag="li">
+        <a><img src="../../assets/icons/logo.png"> <p><small>{{ logo.slogan }}</small></p></a>
+      </nuxt-link>
+    </ul>
   </div>
 </template>
-<style>
+
+<script>
+export default {
+  data () {
+    return {
+      logoUrl: [
+        {
+          slogan: 'people & silicone',
+          path: '/'
+        }
+      ]
+    }
+  }
+}
+</script>
+
+<style scoped>
 .logo-container{
   display: inline-block;
 }
