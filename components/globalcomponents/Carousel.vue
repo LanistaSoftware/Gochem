@@ -20,6 +20,10 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore magnam quas maxime. Optio, expedita quidem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, neque corrupti ut atque pariatur odit? Minus exercitationem adipisci nobis quam.
       </p>
     </div>
+    <ol>
+      <li>1</li>
+      <li>2</li>
+    </ol>
   </div>
 </template>
 <style scoped>
