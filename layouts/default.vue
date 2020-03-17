@@ -62,6 +62,7 @@ export default {
 }
 
 .social {
+  padding-top: 1rem;
   text-align: right;
 }
 
@@ -76,7 +77,16 @@ export default {
   width: 100%;
   bottom: 0;
 }
-
+[class^="flaticon-"]:before,
+[class*=" flaticon-"]:before,
+[class^="flaticon-"]:after,
+[class*=" flaticon-"]:after {
+  font-size: 2.5vmin;
+  cursor: pointer;
+}
+input {
+outline: none;
+}
 @media (min-width: 0px) {
   html{
     font-size: 8px;
@@ -96,10 +106,10 @@ export default {
   padding: 0.5rem 1.3rem 0.5rem 1.3rem !important;
 }
  .navigation {
-   width: 74.1% !important;
+   width: 80.1% !important;
  }
  .search-language {
-   width: 15% !important;
+   width: 10% !important;
  }
 }
 @media (min-width: 576px) {
@@ -121,10 +131,10 @@ export default {
   padding: 0.5rem 2rem 0.5rem 2rem !important;
 }
  .navigation {
-   width: 76.1%;
+   width: 80.1%;
  }
  .search-language {
-   width: 15%;
+   width: 10%;
  }
 }
 
@@ -171,13 +181,13 @@ export default {
     display: inline !important;
   }
   .navli{
-  padding: 0.5rem 1.3rem 0.5rem 1.3rem !important;
+  padding: 0.5rem 1rem 0.5rem 1rem !important;
 }
  .navigation {
-   width: 76.1%;
+   width: 80.1%;
  }
  .search-language {
-   width: 15%;
+   width: 10%;
  }
 }
 

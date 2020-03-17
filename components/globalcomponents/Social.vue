@@ -1,5 +1,11 @@
 <template>
   <ul class="social-network social-circle">
+    <li>
+      <div class="search-bar">
+        <input type="text">
+        <i class="flaticon-search" i />
+      </div>
+    </li>
     <li v-for="sosyal in social" :key="sosyal.id">
       <a
         :href="sosyal.href"
@@ -35,7 +41,7 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style lang="less" scoped>
 /*=========================
   Icons
  ================= */
@@ -59,11 +65,28 @@ ul.social-network li {
 }
 .social-circle li i {
   margin: 0;
-  line-height: 4rem;
   text-align: center;
 }
+.search-bar{
+  padding-right: 1rem;
+  border-radius: 3em;
+  display: inline-block;
+  background-color:gray;
+  height: 2.4rem;
+  vertical-align: middle;
+// [class^="flaticon-search"]:before {
 
-[class^="flaticon-"]:before {
-  font-size: 1.6rem;
+// }
+[class^="flaticon-search"]:hover:before {
+  color:lightgreen;
+
+}
+  input{
+    width: 80%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    font-size: 2.4vmin;
+  }
 }
 </style>

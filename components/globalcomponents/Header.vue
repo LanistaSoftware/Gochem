@@ -28,9 +28,9 @@ export default {
    display: inline-block;
    width: 100%;
    border-bottom: 0.03rem solid white;
-   padding: 1.5vh 0;
+   padding: 1.5vmin 0;
    text-align: center;
-   height: 11vh;
+   height: 11vmin;
  }
 
  .logobox {

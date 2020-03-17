@@ -3,9 +3,9 @@
     <div class="social clearfix">
       <Social />
     </div>
-    <div class="slider">
+    <!-- <div class="slider">
       <Carousel />
-    </div>
+    </div> -->
     <div class="boxes">
       <Box
         v-for="item in slideSets"
@@ -28,21 +28,19 @@
         </div>
       </Box>
       <Box>
-        <mdb-container>
-          <button class="videoBtn">
-            Slayt alanında göstermek için tıkla..
-          </button>
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/Acnr15Nli7Q"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            />
-          </div>
-        </mdb-container>
+        <button class="videoBtn">
+          Slayt alanında göstermek için tıkla..
+        </button>
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/Acnr15Nli7Q"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          />
+        </div>
       </Box>
       <Box>
         <h1>Referans </h1>
@@ -52,12 +50,12 @@
 </template>
 <script>
 import Social from '@/components/globalcomponents/Social'
-import Carousel from '@/components/globalcomponents/Carousel'
+// import Carousel from '@/components/globalcomponents/Carousel'
 import Box from '@/components/Box'
 export default {
   components: {
     Social,
-    Carousel,
+    // Carousel,
     Box
   },
   data () {

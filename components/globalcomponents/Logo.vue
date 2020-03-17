@@ -29,10 +29,10 @@ export default {
 }
 p{
   margin: -0.60rem 0;
-  text-shadow: 0px 4px 3.5px rgba(0, 0, 0, 0.7);
+  text-shadow: 0px .4rem .35rem rgba(0, 0, 0, 0.7);
 }
 img{
-  width: 13vh;
+  width: 13vmin;
   height: auto;
 }
 small{

@@ -66,7 +66,7 @@ table, tr, td{
   text-align: center;
   justify-content: center;
   vertical-align: middle;
-  font-size: 1.2rem;
+  font-size: 2.5vmin;
 }
 button{
    color: white;
@@ -86,9 +86,6 @@ table:hover{
 button:active{
   color: coral;
   transition: 0.1s;
-}
-.flaticon-global:before {
-  font-size: 1.5rem;
 }
 
 .fade-enter-active, .fade-leave-active {

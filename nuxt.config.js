@@ -12,8 +12,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { href: '//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css', rel: 'stylesheet', id: 'bootstrap-css' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
   /*
@@ -26,12 +25,9 @@ module.exports = {
   css: [
     '@/assets/css/style.css',
     '@/assets/css/media.css',
-    '@/assets/css/flaticon/flaticon.css',
-    'bootstrap-css-only/css/bootstrap.min.css',
-    'mdbvue/lib/css/mdb.min.css'
+    '@/assets/css/flaticon/flaticon.css'
   ],
   script: [
-    { src: '//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js' },
     { src: '//code.jquery.com/jquery-1.11.1.min.js' },
     { src: 'https://kit.fontawesome.com/475a188618.js', crossorigin: 'anonymous' }
   ],
