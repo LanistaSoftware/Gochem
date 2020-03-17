@@ -3,9 +3,9 @@
     <div class="social clearfix">
       <Social />
     </div>
-    <!-- <div class="slider">
+    <div class="slider">
       <Carousel />
-    </div> -->
+    </div>
     <div class="boxes">
       <Box
         v-for="item in slideSets"

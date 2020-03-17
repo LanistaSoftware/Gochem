@@ -18,7 +18,7 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: 'blue' },
   /*
   ** Global CSS
   */
@@ -28,11 +28,10 @@ module.exports = {
     '@/assets/css/flaticon/flaticon.css'
   ],
   script: [
-    { src: '//code.jquery.com/jquery-1.11.1.min.js' },
     { src: 'https://kit.fontawesome.com/475a188618.js', crossorigin: 'anonymous' }
   ],
   plugins: [
-    { src: '~/plugins/jquery.min.js', ssr: false }
+
   ],
   /*
   ** Nuxt.js dev-modules
