@@ -36,6 +36,7 @@ module.exports = {
     { src: 'https://kit.fontawesome.com/475a188618.js', crossorigin: 'anonymous' }
   ],
   plugins: [
+    { src: '~/plugins/jquery.min.js', ssr: false }
   ],
   /*
   ** Nuxt.js dev-modules

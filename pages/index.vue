@@ -28,10 +28,7 @@
         </div>
       </Box>
       <Box>
-        <mdb-container>
-          <button class="videoBtn">
-            Slayt alanında göstermek için tıkla..
-          </button>
+        <mdb-container name="slider">
           <div class="embed-responsive embed-responsive-16by9">
             <iframe
               width="560"
@@ -51,14 +48,17 @@
   </div>
 </template>
 <script>
+import { mdbContainer } from 'mdbvue'
 import Social from '@/components/globalcomponents/Social'
 import Carousel from '@/components/globalcomponents/Carousel'
 import Box from '@/components/Box'
 export default {
+  name: 'Slider',
   components: {
     Social,
     Carousel,
-    Box
+    Box,
+    'mdb-container': mdbContainer
   },
   data () {
     return {
