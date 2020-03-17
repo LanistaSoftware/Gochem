@@ -72,14 +72,8 @@ export default {
   name: 'Slider',
   components: {
     Social,
-<<<<<<< HEAD
     // Carousel,
     Box
-=======
-    Carousel,
-    Box,
-    'mdb-container': mdbContainer
->>>>>>> afee8db8bc1dd881f59bb45d2b80e735c240bb46
   },
   data () {
     return {
