@@ -53,11 +53,15 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-nav, ul, li, a{
+nav,
+ul,
+li,
+a {
   display: inline-block;
   vertical-align: middle;
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -72,27 +76,35 @@ li a {
   text-align: center;
   text-decoration: none;
 }
-.navli{
+
+.navli {
   padding: 0.5rem 2rem 0.5rem 2rem;
 }
 
 /* Change the link color to #111 (black) on hover */
 li a:hover {
-color: darkred;
- [class^="flaticon-"]:before{
-color: darkred;
+  color: lightgreen;
+
+  [class^="flaticon-"]:before,
+  [class*=" flaticon-"]:before,
+  [class^="flaticon-"]:after,
+  [class*=" flaticon-"]:after {
+    color: lightgreen;
   }
 }
 
 li:not(:last-child) {
-   border-right: 0.5px solid white;
+  border-right: 0.5px solid white;
 
- }
+}
 
-[class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
-    font-size: 1.5rem;
-    color: white;
-    margin-left:0px;
-    margin-right: 0.5rem;
+[class^="flaticon-"]:before,
+[class*=" flaticon-"]:before,
+[class^="flaticon-"]:after,
+[class*=" flaticon-"]:after {
+  font-size: 1.5rem;
+  color: white;
+  margin-left: 0px;
+  margin-right: 0.5rem;
 }
 </style>

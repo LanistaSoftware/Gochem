@@ -32,12 +32,15 @@ p{
   text-shadow: 0px 4px 3.5px rgba(0, 0, 0, 0.7);
 }
 img{
-  width: 92%;
+  width: 13vh;
   height: auto;
 }
 small{
   letter-spacing: 0.07rem;
   color: white;
   font-size: .55rem;
+}
+a{
+  text-decoration: none;
 }
 </style>
