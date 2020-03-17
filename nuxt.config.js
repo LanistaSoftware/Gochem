@@ -55,10 +55,7 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
-    extend (config, ctx) {},
-    transpile: [
-      'mdbvue/lib/components'
-    ]
+    extend (config, ctx) {}
   },
   serverMiddleware: [
     bodyParser.json(),
