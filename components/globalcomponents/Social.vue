@@ -117,6 +117,6 @@ ul.social-network li {
 
 /* .fade-leave-active below version 2.1.8 */
   {
-  transition: opacity 5s;
+  transition: opacity .5s;
 }
 </style>
