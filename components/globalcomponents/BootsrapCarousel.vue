@@ -1,49 +1,32 @@
 <template>
-  <div>
-    <button class="sliderBtn left-btn rt" @click="prev()">
-      <i class="flaticon-next" />
-    </button>
-    <button class="sliderBtn right-btn" @click="next()">
-      <i class="flaticon-next" />
-    </button>
+  <div class="carousel-container">
+    <i class="sliderBtn left-btn rt flaticon-next" @click="prev()" />
+    <i class="sliderBtn right-btn flaticon-next" @click="next()" />
     <b-carousel
       id="carousel-1"
       ref="myCarousel"
       v-model="slide"
-      :interval="4000"
-      controls
-      indicators
+      :interval="2000"
       img-width="1024"
       img-height="480"
     >
       <b-carousel-slide
-        caption="Blank Image"
-        background="transparent"
-        img-blank
-        img-alt="Blank image"
+        v-for="(slayt,index) in slideSets"
+        :key="index.id"
       >
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eros felis, tincidunt
-          a tincidunt eget, convallis vel est. Ut pellentesque ut lacus vel interdum.
-        </p>
-      </b-carousel-slide>
-      <b-carousel-slide
-        caption="Blank Image"
-        background="transparent"
-        img-blank
-        img-alt="Blank image"
-      >
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eros felis, tincidunt
-          a tincidunt eget, convallis vel est. Ut pellentesque ut lacus vel interdum.
-        </p>
+        <template v-slot:img>
+          <div class="carousel-content">
+            <div class="carousel-items">
+              <h4> <strong> 0{{ index+1 }}/ </strong>  <sup> 0{{ slideSets.length }} </sup></h4>
+              <h2>{{ slayt.header }} </h2>
+              <p class="content">
+                {{ slayt.content }}
+              </p>
+            </div>
+          </div>
+        </template>
       </b-carousel-slide>
     </b-carousel>
-
-    <p class="mt-4">
-      Slide #: {{ slide }}<br>
-      Sliding: {{ sliding }}
-    </p>
   </div>
 </template>
 
@@ -53,6 +36,11 @@ export default {
     return {
       slide: 0,
       sliding: null
+    }
+  },
+  computed: {
+    slideSets () {
+      return this.$store.getters.getSlideSets
     }
   },
   methods: {
@@ -72,15 +60,18 @@ export default {
 }
 </script>
 <style lang="less">
-
 .sliderBtn {
   position: absolute;
-  margin-top: 20%;
+  margin-top: 20vh;
   background-color: transparent;
-  border: 1px solid #fff;
-  border-radius: 100%;
   padding: .6vh;
-
+  z-index: 2000;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+.sliderBtn::before {
+  margin-left: 0;
 }
 .rt{
    transform: rotate(180deg) !important;
@@ -88,17 +79,41 @@ export default {
 .right-btn{
     right: 0;
  }
-.carousel-caption h3{
-  margin-bottom: 20rem;
+ .carousel-content{
+   width: 80%;
+   margin-left: auto;
+   margin-right: auto;
+  }
+  .carousel-items{
+    padding: 3vh;
+    color: #fff;
+    text-align: left;
+    height: 45vh;
+    vertical-align: middle;
+    display: table-cell;
+  }
+  .carousel-content h4{
     font-size: 2rem;
-    display: flex;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+    padding-bottom: 1.2vh;
+    font-family: utopia-std-headline, serif;
+  }
+  .carousel-content h2{
+    font-family: utopia-std, serif;
+    font-size: 5.2rem;
+    font-weight: bold;
+    padding-bottom: 1vh;
+  }
+  .carousel-content p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:1rem;
+    font-weight: bold;
+  }
+  .carousel-items {
+    color: #fff;
+    text-align: left;
+    padding-bottom: 10vh;
+    padding: 0;
 }
 
-[class^="carousel-control-next-icon"] {
-display: none;
-}
-[class^="carousel-control-prev-icon"] {
-display: none;
-}
 </style>

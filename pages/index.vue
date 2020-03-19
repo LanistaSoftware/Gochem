@@ -13,9 +13,7 @@
         :item="item"
       > -->
       <Box>
-        <div class="box-header">
-          <h4> <strong> 03/ </strong>  <sup> 03 </sup></h4>
-        </div>
+        <div class="box-header" />
       </Box>
       <Box>
         <div class="embed-responsive embed-responsive-16by9">

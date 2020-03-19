@@ -2,14 +2,14 @@ import Vuex from 'vuex'
 
 const createStore = () => {
   return new Vuex.Store({
-    state: {
+    state: () => ({
       slideSets: [
         {
           header: 'Doğa Dostu Üretim',
           content: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris... Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore magnam quas maxime. Optio, expedita quidem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, neque corrupti ut atque pariatur odit? Minus exercitationem adipisci nobis quam.'
         },
         {
-          header: 'Doğa Dostu Üretim',
+          header: 'Korona Dostu Üretim',
           content: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris... Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore magnam quas maxime. Optio, expedita quidem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, neque corrupti ut atque pariatur odit? Minus exercitationem adipisci nobis quam.'
         },
         {
@@ -32,7 +32,7 @@ const createStore = () => {
         // }
       ],
       counter: 0
-    },
+    }),
     mutations: {
       setSlideSets (state, slide) {
         state.slideSets = slide

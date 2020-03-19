@@ -1,0 +1,156 @@
+Utopia
+<link rel="stylesheet" href="https://use.typekit.net/eps6ttz.css">
+
+Utopia Std Regular
+
+font-family: utopia-std, serif;
+
+font-weight: 400;
+
+font-style: normal;
+
+
+Utopia Std Italic
+
+font-family: utopia-std, serif;
+
+font-weight: 400;
+
+font-style: italic;
+
+
+Utopia Std Bold
+
+font-family: utopia-std, serif;
+
+font-weight: 700;
+
+font-style: normal;
+
+
+Utopia Std Bold Italic
+
+font-family: utopia-std, serif;
+
+font-weight: 700;
+
+font-style: italic;
+
+
+Utopia Std Bold Caption
+
+font-family: utopia-std-caption, serif;
+
+font-weight: 700;
+
+font-style: normal;
+
+
+Utopia Std Bold Caption Italic
+
+font-family: utopia-std-caption, serif;
+
+font-weight: 700;
+
+font-style: italic;
+
+
+Utopia Std Caption Italic
+
+font-family: utopia-std-caption, serif;
+
+font-weight: 400;
+
+font-style: italic;
+
+
+Utopia Std Caption
+
+font-family: utopia-std-caption, serif;
+
+font-weight: 400;
+
+font-style: normal;
+
+
+Utopia Std Bold Display
+
+font-family: utopia-std-display, serif;
+
+font-weight: 700;
+
+font-style: normal;
+
+
+Utopia Std Bold Display Italic
+
+font-family: utopia-std-display, serif;
+
+font-weight: 700;
+
+font-style: italic;
+
+
+Utopia Std Display Italic
+
+font-family: utopia-std-display, serif;
+
+font-weight: 400;
+
+font-style: italic;
+
+
+Utopia Std Display
+
+font-family: utopia-std-display, serif;
+
+font-weight: 400;
+
+font-style: normal;
+
+
+Utopia Std Black Headline
+
+font-family: utopia-std-headline, serif;
+
+font-weight: 400;
+
+font-style: normal;
+
+
+Utopia Std Bold Subhead
+
+font-family: utopia-std-subhead, serif;
+
+font-weight: 700;
+
+font-style: normal;
+
+
+Utopia Std Bold Subhead Italic
+
+font-family: utopia-std-subhead, serif;
+
+font-weight: 700;
+
+font-style: italic;
+
+
+Utopia Std Subhead Italic
+
+font-family: utopia-std-subhead, serif;
+
+font-weight: 400;
+
+font-style: italic;
+
+
+Utopia Std Subhead
+
+font-family: utopia-std-subhead, serif;
+
+font-weight: 400;
+
+font-style: normal;
+
+Savoye LET
