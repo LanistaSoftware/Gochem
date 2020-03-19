@@ -3,34 +3,21 @@
     <div class="social clearfix">
       <Social />
     </div>
-    <div class="slider">
-      <Carousel />
+    <div class="carousel">
+      <BootsrapCarousel />
     </div>
     <div class="boxes">
-      <Box
+      <!-- <Box
         v-for="item in slideSets"
         :key="item.id"
         :item="item"
-      >
-        <div
-          class="box-group"
-        >
-          <div class="box-item">
-            <h3>{{ item.page }} / <sup>{{ item.pageTwo }}</sup></h3>
-            <p>
-              {{ item.content }}
-            </p>
-            <button class="btn btn-primary" @click="counterShow">
-              tıkla
-            </button>
-            <p>{{ counterGet }}</p>
-          </div>
+      > -->
+      <Box>
+        <div class="box-header">
+          <h4> <strong> 03/ </strong>  <sup> 03 </sup></h4>
         </div>
       </Box>
       <Box>
-        <button class="videoBtn">
-          Slayt alanında göstermek için tıkla..
-        </button>
         <div class="embed-responsive embed-responsive-16by9">
           <iframe
             width="560"
@@ -50,12 +37,13 @@
 </template>
 <script>
 import Social from '@/components/globalcomponents/Social'
+import BootsrapCarousel from '@/components/globalcomponents/BootsrapCarousel'
 import Box from '@/components/Box'
 export default {
   name: 'Slider',
   components: {
     Social,
-    // Carousel,
+    BootsrapCarousel,
     Box
   },
   data () {
@@ -84,14 +72,14 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style lang="less" scoped>
 .embed-responsive{
   height: 100%;
 }
-.videoBtn{
-  position: absolute;
-  z-index: 20000;
-  font-weight: bold;
-  color: blue;
+.box-header{
+  text-align: center;
+  h4{
+    background-color: tomato;
+  }
 }
 </style>

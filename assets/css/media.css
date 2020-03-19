@@ -1,0 +1,115 @@
+@media (min-width: 0px) {
+  html {
+    font-size: 8px;
+  }
+  .bg-container {
+    width: 100%;
+  }
+  .naviconshow {
+    display: inline !important;
+  }
+  .nav-text {
+    display: none !important;
+  }
+  .navli {
+    padding: 0.5rem 1.3rem 0.5rem 1.3rem !important;
+  }
+  .navigation {
+    width: 80.1% !important;
+  }
+  .search-language {
+    width: 10% !important;
+  }
+}
+@media (min-width: 576px) {
+  html {
+    font-size: 9px;
+  }
+  .bg-container {
+    width: 95%;
+  }
+  .naviconshow {
+    display: inline !important;
+  }
+  .nav-text {
+    display: none !important;
+  }
+  .navli {
+    padding: 0.5rem 2rem 0.5rem 2rem !important;
+  }
+  .navigation {
+    width: 80.1%;
+  }
+  .search-language {
+    width: 10%;
+  }
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 10px;
+  }
+  .naviconshow {
+    display: none !important;
+  }
+  .nav-text {
+    display: inline !important;
+  }
+  .bg-container {
+    width: 90%;
+  }
+  .navli {
+    padding: 0.5rem 1.3rem 0.5rem 1.3rem !important;
+  }
+  .navigation {
+    width: 80.1% !important;
+  }
+  .search-language {
+    width: 9% !important;
+  }
+}
+@media (min-width: 992px) {
+  html {
+    font-size: 11px;
+  }
+  .naviconshow {
+    display: inline !important;
+  }
+  .bg-container {
+    width: 85%;
+  }
+  .nav-text {
+    display: inline !important;
+  }
+  .navli {
+    padding: 0.5rem 1rem 0.5rem 1rem !important;
+  }
+  .navigation {
+    width: 80.1%;
+  }
+  .search-language {
+    width: 10%;
+  }
+}
+@media (min-width: 1200px) {
+  html {
+    font-size: 12px;
+  }
+  .naviconshow {
+    display: inline !important;
+  }
+  .bg-container {
+    width: 80%;
+  }
+  .nav-text {
+    display: inline !important;
+  }
+  .navli {
+    padding: 0.5rem 1rem 0.5rem 1rem !important;
+  }
+  .navigation {
+    width: 76.1%;
+  }
+  .search-language {
+    width: 15%;
+  }
+}

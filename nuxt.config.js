@@ -24,15 +24,13 @@ module.exports = {
   */
   css: [
     '@/assets/css/style.css',
-    '@/assets/css/media.css',
-    '@/assets/css/flaticon/flaticon.css'
+    '@/assets/css/flaticon/flaticon.css',
+    '@/assets/css/media.css'
   ],
   script: [
     { src: 'https://kit.fontawesome.com/475a188618.js', crossorigin: 'anonymous' }
   ],
-  plugins: [
-
-  ],
+  plugins: [{ src: '~plugins/vue-carousel.js', ssr: false }],
   /*
   ** Nuxt.js dev-modules
   */
