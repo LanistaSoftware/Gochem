@@ -1,4 +1,3 @@
-
 <template>
   <div class="bg" :class="bgImageUrl">
     <div class="bg-container">
@@ -23,12 +22,6 @@ export default {
     Footer
     // Carousel,
     // Box
-  },
-  props: {
-    slayt: {
-      type: Object,
-      required: false
-    }
   },
   data () {
     return {
