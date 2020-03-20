@@ -1,10 +1,16 @@
 <template>
+<transition
+        enter-class=""
+        enter-active-class="animated shake rollIn"
+        leave-class=""
+        leave-active-class="animated swing"
+        appear
+        name="fade"
+        >
   <ul class="social-network social-circle">
     <li>
-      <span class="search-bar" @mouseover="show=true" @mouseleave="show=false">
-        <transition name="fade">
+      <span class="search-bar" @mouseover="show=true"         @mouseleave="show=false">
           <input v-if="show" type="text">
-        </transition>
         <i class="flaticon-search" i />
       </span>
     </li>
@@ -12,11 +18,13 @@
       <a
         :href="sosyal.href"
         :title="sosyal.title"
-      ><i
+      >
+      <i
         :class="sosyal.icon"
       /></a>
     </li>
   </ul>
+</transition>
 </template>
 <script>
 export default {

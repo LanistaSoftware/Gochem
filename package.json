@@ -12,6 +12,7 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
+    "@neneos/nuxt-animate.css": "0.0.1",
     "axios": "^0.19.2",
     "body-parser": "^1.19.0",
     "bootstrap": "^4.1.3",

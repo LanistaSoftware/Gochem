@@ -24,6 +24,12 @@ export default {
     // Carousel,
     // Box
   },
+  props: {
+    slayt: {
+      type: Object,
+      required: false
+    }
+  },
   data () {
     return {
       bgImageUrl: 'bgUrl1'

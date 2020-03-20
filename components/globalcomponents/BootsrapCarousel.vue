@@ -10,10 +10,7 @@
       img-width="1024"
       img-height="480"
     >
-      <b-carousel-slide
-        v-for="(slayt,index) in slideSets"
-        :key="index.id"
-      >
+      <b-carousel-slide v-for="(slayt,index) in slideSets" :key="index.id">
         <template v-slot:img>
           <div class="carousel-content">
             <div class="carousel-items">

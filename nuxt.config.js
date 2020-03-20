@@ -44,7 +44,8 @@ module.exports = {
   */
   modules: [
     // Doc: https://bootstrap-vue.js.org
-    'bootstrap-vue/nuxt'
+    'bootstrap-vue/nuxt',
+    '@neneos/nuxt-animate.css'
   ],
   /*
   ** Build configuration
