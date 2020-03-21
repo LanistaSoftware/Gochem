@@ -19,50 +19,35 @@ const createStore = () => {
           header: 'Doğa Dostu Üretim',
           content: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris... Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore magnam quas maxime. Optio, expedita quidem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, neque corrupti ut atque pariatur odit? Minus exercitationem adipisci nobis quam.'
         }
-        // {
-        //   page: '02',
-        //   pageTwo: '03',
-        //   title: 'Doğa',
-        //   titleTwo: 'Dostu Üretim',
-        //   content: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris... Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore magnam quas maxime. Optio, expedita quidem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, neque corrupti ut atque pariatur odit? Minus exercitationem adipisci nobis quam.'
-        // },
-        // {
-        //   page: '02',
-        //   pageTwo: '03',
-        //   title: 'Doğa',
-        //   titleTwo: 'Dostu Üretim',
-        //   content: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris... Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore magnam quas maxime. Optio, expedita quidem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, neque corrupti ut atque pariatur odit? Minus exercitationem adipisci nobis quam.'
-        // }
       ],
-      counter: 0
+      imageUrl: ['bg1.jpg', 'bg2.jpg', 'bg3.jpg'],
+      slideIndex: 0
     }),
     mutations: {
       setSlideSets (state, slide) {
         state.slideSets = slide
       },
-      setCount (state) {
-        state.counter++
+      setSlideIndex (state, index) {
+        state.slideIndex = index
       }
     },
     actions: {
-      nuxtServerInit (vuexContext, context) {
+      getImgUrl (vuexContext, imageUrl) {
+        vuexContext.commit('setImgUrl', imageUrl)
       },
-      addToSlide (vuexContext, slide) {
-
-      },
-      removeSlide (vuexContext, slide) {
-
-      },
-      counter (vuexContext, counter) {
-        vuexContext.commit('setCount', counter)
+      setSlideIndex (vuexContext, index) {
+        vuexContext.commit('setSlideIndex', index)
       }
     },
     getters: {
       getSlideSets (state) {
         return state.slideSets
       },
-      getCounter (state) {
-        return state.counter
+      getImgUrl (state) {
+        return state.imageUrl
+      },
+      getSlideIndex (state) {
+        return state.slideIndex
       }
     }
   })

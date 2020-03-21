@@ -5,28 +5,23 @@
     <b-carousel
       id="carousel-1"
       ref="myCarousel"
-      v-model="slide"
-      :interval="2000"
+      v-model="slides"
+      :interval="4000"
       img-width="1024"
       img-height="480"
     >
-      <b-carousel-slide v-for="(slayt,index) in slideSets" :key="index.id">
+      <b-carousel-slide v-for="(slide ,index) in slideSets" :key="index.id">
         <template v-slot:img>
-          <img width="100" :src="slayt.imageUrl" alt="" srcset="">
           <div class="carousel-content">
             <div class="carousel-items">
-              <h4> <strong> 0{{ index+1 }} </strong><span>/</span>  <sup> 0{{ slideSets.length }} </sup></h4>
-              <h2>{{ slayt.header }} </h2>
+              <h4> <strong> 0{{ index+1 }} </strong><span>/</span> <sup> 0{{ slideSets.length }} </sup></h4>
+              <h2>{{ slide.header }} </h2>
               <p class="content">
-                {{ slayt.content }}
+                {{ slide.content }}
               </p>
             </div>
           </div>
         </template>
-      </b-carousel-slide>
-    </b-carousel>
-  </div>
-</template>
       </b-carousel-slide>
     </b-carousel>
   </div>
@@ -36,13 +31,18 @@
 export default {
   data () {
     return {
-      slide: 0,
+      slides: 0,
       sliding: null
     }
   },
   computed: {
     slideSets () {
       return this.$store.getters.getSlideSets
+    }
+  },
+  watch: {
+    slides () {
+      this.$store.commit('setSlideIndex', this.slides)
     }
   },
   methods: {
