@@ -46,7 +46,8 @@ export default {
   },
   data () {
     return {
-      bgImageUrl: 'bgUrl1'
+      bgImageUrl: 'bgUrl1',
+      imageUrl: require('../assets/img/bg1.jpg')
     }
   },
   computed: {

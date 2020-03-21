@@ -5,17 +5,17 @@ const createStore = () => {
     state: () => ({
       slideSets: [
         {
-          imageUrl: '../assets/img/bg1.jpg',
+          imageUrl: require('../assets/img/bg1.jpg'),
           header: 'Doğa Dostu Üretim',
           content: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris... Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore magnam quas maxime. Optio, expedita quidem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, neque corrupti ut atque pariatur odit? Minus exercitationem adipisci nobis quam.'
         },
         {
-          imageUrl: '../assets/img/bg2.jpg',
+          imageUrl: require('../assets/img/bg2.jpg'),
           header: 'Korona Dostu Üretim',
           content: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris... Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore magnam quas maxime. Optio, expedita quidem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, neque corrupti ut atque pariatur odit? Minus exercitationem adipisci nobis quam.'
         },
         {
-          imageUrl: '../assets/img/bg3.jpg',
+          imageUrl: require('../assets/img/bg3.jpg'),
           header: 'Doğa Dostu Üretim',
           content: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris... Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore magnam quas maxime. Optio, expedita quidem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, neque corrupti ut atque pariatur odit? Minus exercitationem adipisci nobis quam.'
         }
