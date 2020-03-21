@@ -13,8 +13,8 @@
             </button>
           </td>
         </tr>
-        <transition name="fade">
-          <tr v-if="show">
+        <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut" appear>
+          <tr v-show="show">
             <td>
               <button @click="selectLang()">
                 {{ otherLang }}

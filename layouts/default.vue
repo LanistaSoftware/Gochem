@@ -25,10 +25,6 @@ export default {
     // Box
   },
   props: {
-    slayt: {
-      type: Object,
-      required: false
-    }
   },
   data () {
     return {
