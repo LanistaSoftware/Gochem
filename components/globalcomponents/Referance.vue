@@ -5,7 +5,6 @@
       v-model="slide"
       :interval="4000"
       controls
-      background="#ababab"
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
     >
@@ -36,9 +35,4 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-.ref{
-    background-color: red;
-    vertical-align: middle;
-    display: table;
-}
 </style>
