@@ -1,13 +1,21 @@
 <template>
-  <div class="bg" :class="bgImageUrl[getSlideIndex]">
-    <div class="bg-container">
-      <Header />
-      <nuxt />
+  <transition
+    enter-class=""
+    enter-active-class="animated zoomIn bounceInDown"
+    leave-class="hinge"
+    leave-active-c-lass="animated zoomOutUp"
+    appear
+  >
+    <div class="bg" :class="bgImageUrl[getSlideIndex]">
+      <div class="bg-container">
+        <Header />
+        <nuxt />
+      </div>
+      <div class="footer">
+        <Footer />
+      </div>
     </div>
-    <div class="footer">
-      <Footer />
-    </div>
-  </div>
+  </transition>
 </template>
 <script>
 import Header from '@/components/globalcomponents/Header'
@@ -47,7 +55,6 @@ export default {
   background: url(../assets/img/bg3.jpg);
   transition: background-image 2s ease-in-out;
 }
-
 .bg {
   background-repeat: no-repeat;
   background-size: cover;
