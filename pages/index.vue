@@ -17,9 +17,20 @@
         :item="item"
       >
         <div class="box-header">
-          <h1>{{ item.index }} / {{ slideSets.length }}</h1>
-
-          <h4>{{ item.header }}</h4>
+          <div class="title">
+            <h4> <strong> 0{{ item.index }} </strong><span>/</span> <sup> 0{{ slideSets.length }} </sup></h4>
+          </div>
+          <transition
+            enter-class=""
+            enter-active-class="animated shake bounceInDown"
+            leave-class=""
+            leave-active-c-lass="animated swing"
+            appear
+          >
+            <p class="content">
+              {{ item.content }}
+            </p>
+          </transition>
         </div>
       </Box>
       <Box>
@@ -35,7 +46,7 @@
         </div>
       </Box>
       <Box>
-        <h1>Referans </h1>
+        <Referance :referans="referans" />
       </Box>
     </div>
   </div>
@@ -43,13 +54,15 @@
 <script>
 import Social from '@/components/globalcomponents/Social'
 import BootstrapCarousel from '@/components/globalcomponents/BootsrapCarousel'
+import Referance from '@/components/globalcomponents/Referance'
 import Box from '@/components/Box'
 export default {
   name: 'Slider',
   components: {
     Social,
     BootstrapCarousel,
-    Box
+    Box,
+    Referance
   },
   data () {
     return {
@@ -64,6 +77,9 @@ export default {
     },
     slideIndex () {
       return this.$store.getters.getSlideIndex
+    },
+    referans () {
+      return this.$store.getters.getReferans
     }
   },
   watch: {
@@ -91,9 +107,32 @@ export default {
   height: 100%;
 }
 .box-header{
-  text-align: center;
-  h4{
-    background-color: tomato;
+   background-image: linear-gradient(to bottom, rgba(22, 98, 150,0.1), rgba(23, 104, 31,0.6));
+   height: 100%;
+   .title{
+     text-align: center;
+     font-family: utopia-std-headline, serif;
+     padding-top: 1.3vh;
+     padding-bottom: 1vh;
+   }
+   span{
+    font-size: 1.9rem;
   }
+  sup{
+    font-size: 1rem;
+  }
+  strong{
+    font-size: 1.5rem;
+  }
+}
+.content{
+  display: -webkit-box;
+  font-family: Helvetica, sans-serif;
+  -webkit-line-clamp: 6; /*Kaç Stırda sınırlamak istiyorsanız */
+  -webkit-box-orient: vertical;
+  overflow:hidden;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: .9rem;
 }
 </style>
