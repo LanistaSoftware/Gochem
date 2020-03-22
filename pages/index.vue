@@ -1,19 +1,26 @@
+/* eslint-disable vue/no-parsing-error */
+/* eslint-disable vue/no-use-v-if-with-v-for */
+/* eslint-disable vue/attributes-order */
+/* eslint-disable vue/no-use-v-if-with-v-for */
 <template>
   <div>
     <div class="social clearfix">
       <Social />
     </div>
     <div class="carousel">
-      <BootsrapCarousel />
+      <BootstrapCarousel />
     </div>
     <div class="boxes">
-      <!-- <Box
-        v-for="item in slideSets"
-        :key="item.id"
+      <Box
+        v-for="(item, index) in filteredSlideSets"
+        :key="index"
         :item="item"
-      > -->
-      <Box>
-        <div class="box-header" />
+      >
+        <div class="box-header">
+          <h1>{{ item.index }} / {{ slideSets.length }}</h1>
+
+          <h4>{{ item.header }}</h4>
+        </div>
       </Box>
       <Box>
         <div class="embed-responsive embed-responsive-16by9">
@@ -35,36 +42,44 @@
 </template>
 <script>
 import Social from '@/components/globalcomponents/Social'
-import BootsrapCarousel from '@/components/globalcomponents/BootsrapCarousel'
+import BootstrapCarousel from '@/components/globalcomponents/BootsrapCarousel'
 import Box from '@/components/Box'
 export default {
   name: 'Slider',
   components: {
     Social,
-    BootsrapCarousel,
+    BootstrapCarousel,
     Box
   },
   data () {
     return {
       bgImageUrl: 'bgUrl1',
-      imageUrl: require('../assets/img/bg1.jpg')
+      imageUrl: require('../assets/img/bg1.jpg'),
+      filteredSlideSets: []
     }
   },
   computed: {
     slideSets () {
       return this.$store.getters.getSlideSets
     },
-    counterGet () {
-      return this.$store.getters.getCounter
-    },
-    counter () {
-      return this.$store.dispatch.counter
+    slideIndex () {
+      return this.$store.getters.getSlideIndex
     }
   },
+  watch: {
+    slideIndex () {
+      this.filteredSlideSets = []
+      this.slideSets.forEach((element, index) => {
+        if (this.slideIndex !== index) {
+          this.filteredSlideSets.push(element)
+        }
+      })
+    }
+  },
+  created () {
+    this.filteredSlideSets = [this.slideSets[1], this.slideSets[2]]
+  },
   methods: {
-    counterShow () {
-      this.$store.dispatch('counter')
-    },
     video () {
       alert('messa')
     }

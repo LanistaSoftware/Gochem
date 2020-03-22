@@ -6,7 +6,7 @@
       id="carousel-1"
       ref="myCarousel"
       v-model="slides"
-      :interval="4000"
+      :interval="5000"
       img-width="1024"
       img-height="480"
     >
