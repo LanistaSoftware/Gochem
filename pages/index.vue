@@ -1,7 +1,3 @@
-/* eslint-disable vue/no-parsing-error */
-/* eslint-disable vue/no-use-v-if-with-v-for */
-/* eslint-disable vue/attributes-order */
-/* eslint-disable vue/no-use-v-if-with-v-for */
 <template>
   <div>
     <div class="social clearfix">
@@ -21,7 +17,7 @@
         </div>
         <div class="content">
           <p>
-            {{ item.content }}
+            {{ item.content | filterBoxContent }}
           </p>
         </div>
       </Box>
@@ -53,6 +49,11 @@ export default {
     BootstrapCarousel,
     Box,
     References
+  },
+  filters: {
+    filterBoxContent (value) {
+      return value.split(' ').slice(0, 20).join(' ') + '...'
+    }
   },
   data () {
     return {
@@ -94,6 +95,9 @@ export default {
   text-align: center;
   font-family: utopia-std-headline, serif;
   margin: 1vh
+}
+.boxes{
+  cursor: pointer;
 }
 
 span {

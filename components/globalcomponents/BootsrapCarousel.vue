@@ -56,6 +56,9 @@ export default {
 }
 </script>
 <style lang="less">
+.header{
+  width: 100%;
+}
 .sliderBtn {
   position: absolute;
   margin-top: 20vh;
