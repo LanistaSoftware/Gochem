@@ -25,7 +25,7 @@ const createStore = () => {
       ],
       imageUrl: ['bg1.jpg', 'bg2.jpg', 'bg3.jpg'],
       slideIndex: 0,
-      referance: [
+      references: [
         {
           id: 1,
           photo: require('../assets/img/beyaz.png')
@@ -51,8 +51,8 @@ const createStore = () => {
       setSlideIndex (state, index) {
         state.slideIndex = index
       },
-      setReferance (state, referans) {
-        state.referance = referans
+      setReferences (state, reference) {
+        state.referance = reference
       }
     },
     actions: {
@@ -62,8 +62,8 @@ const createStore = () => {
       setSlideIndex (vuexContext, index) {
         vuexContext.commit('setSlideIndex', index)
       },
-      addReferans (vuexContext, referans) {
-        vuexContext.commit('setReferance', referans)
+      addReferences (vuexContext, reference) {
+        vuexContext.commit('setReferance', reference)
       }
     },
     getters: {
@@ -76,8 +76,8 @@ const createStore = () => {
       getSlideIndex (state) {
         return state.slideIndex
       },
-      getReferans (state) {
-        return state.referance
+      getReferences (state) {
+        return state.references
       }
     }
   })

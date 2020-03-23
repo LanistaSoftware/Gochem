@@ -5,13 +5,11 @@
       v-model="slide"
       :interval="4000"
       controls
-      @sliding-start="onSlideStart"
-      @sliding-end="onSlideEnd"
     >
       <!-- Text slides with image -->
       <b-carousel-slide
-        v-for="ref in referans"
-        :key="ref"
+        v-for="(ref, index) in getReferences"
+        :key="index"
         :img-src="ref.photo"
       />
     </b-carousel>
@@ -20,17 +18,22 @@
 
 <script>
 export default {
-  props: {
-    referans: {
-      type: Object,
-      required: true
-    }
-  },
   data () {
     return {
-      slides: 0,
-      sliding: null
+      slide: 0,
+      sliding: null,
+      slideSets: []
     }
+  },
+  computed: {
+    getReferences () {
+      // eslint-disable-next-line no-console
+      console.log(this.$store.getters.getReferences)
+      return this.$store.getters.getReferences
+    }
+  },
+  created () {
+    this.slideSets = this.getReferences
   }
 }
 </script>
