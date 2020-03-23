@@ -16,28 +16,18 @@
         :key="index"
         :item="item"
       >
-        <div class="box-header">
-          <div class="title">
-            <h4> <strong> 0{{ item.index }} </strong><span>/</span> <sup> 0{{ slideSets.length }} </sup></h4>
-          </div>
-          <transition
-            enter-class=""
-            enter-active-class="animated shake bounceInDown"
-            leave-class=""
-            leave-active-c-lass="animated swing"
-            appear
-          >
-            <p class="content">
-              {{ item.content }}
-            </p>
-          </transition>
+        <div class="title">
+          <h4> <strong> 0{{ item.index }} </strong><span>/</span> <sup> 0{{ slideSets.length }} </sup></h4>
+        </div>
+        <div class="content">
+          <p>
+            {{ item.content }}
+          </p>
         </div>
       </Box>
       <Box>
         <div class="embed-responsive embed-responsive-16by9">
           <iframe
-            width="560"
-            height="315"
             src="https://www.youtube.com/embed/Acnr15Nli7Q"
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -46,7 +36,7 @@
         </div>
       </Box>
       <Box>
-        <Referance :referans="referans" />
+        <References />
       </Box>
     </div>
   </div>
@@ -54,7 +44,7 @@
 <script>
 import Social from '@/components/globalcomponents/Social'
 import BootstrapCarousel from '@/components/globalcomponents/BootsrapCarousel'
-import Referance from '@/components/globalcomponents/Referance'
+import References from '@/components/globalcomponents/References'
 import Box from '@/components/Box'
 export default {
   name: 'Slider',
@@ -62,12 +52,11 @@ export default {
     Social,
     BootstrapCarousel,
     Box,
-    Referance
+    References
   },
   data () {
     return {
       bgImageUrl: 'bgUrl1',
-      imageUrl: require('../assets/img/bg1.jpg'),
       filteredSlideSets: []
     }
   },
@@ -77,9 +66,6 @@ export default {
     },
     slideIndex () {
       return this.$store.getters.getSlideIndex
-    },
-    referans () {
-      return this.$store.getters.getReferans
     }
   },
   watch: {
@@ -94,45 +80,42 @@ export default {
   },
   created () {
     this.filteredSlideSets = [this.slideSets[1], this.slideSets[2]]
-  },
-  methods: {
-    video () {
-      alert('messa')
-    }
   }
 }
+
 </script>
 <style lang="less" scoped>
 .embed-responsive{
   height: 100%;
 }
-.box-header{
-   background-image: linear-gradient(to bottom, rgba(22, 98, 150,0.1), rgba(23, 104, 31,0.6));
-   height: 100%;
-   .title{
-     text-align: center;
-     font-family: utopia-std-headline, serif;
-     padding-top: 1.3vh;
-     padding-bottom: 1vh;
-   }
-   span{
-    font-size: 1.9rem;
-  }
-  sup{
-    font-size: 1rem;
-  }
-  strong{
-    font-size: 1.5rem;
-  }
+.title {
+  height: 20%;
+  text-align: center;
+  font-family: utopia-std-headline, serif;
+  margin: 1vh
 }
-.content{
-  display: -webkit-box;
+
+span {
+  font-size: 1.9rem;
+}
+
+sup {
+  font-size: 1rem;
+}
+
+strong {
+  font-size: 1.5rem;
+}
+
+.content {
+  height: 70%;
   font-family: Helvetica, sans-serif;
-  -webkit-line-clamp: 6; /*Kaç Stırda sınırlamak istiyorsanız */
-  -webkit-box-orient: vertical;
-  overflow:hidden;
-  padding-left: 1rem;
-  padding-right: 1rem;
   font-size: .9rem;
+  overflow:hidden; /* Verilen genişlikten (150px) artanı gizlemesini istiyoruz */
+  text-overflow:ellipsis; /* Yazının kesildiği yerden üç nokta vermesini sağlıyoruz*/
+  p{
+  margin: 0 1rem;
+  margin-bottom: 1rem;
+  }
 }
 </style>

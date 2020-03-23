@@ -14,7 +14,7 @@
         <template v-slot:img>
           <div class="carousel-content">
             <div class="carousel-items">
-              <h4> <strong> 0{{ index+1 }} </strong><span>/</span> <sup> 0{{ slideSets.length }} </sup></h4>
+              <h4><strong> 0{{ index+1 }} </strong><span>/</span> <sup> 0{{ slideSets.length }} </sup></h4>
               <h2>{{ slide.header }} </h2>
               <p class="content">
                 {{ slide.content }}
@@ -46,12 +46,6 @@ export default {
     }
   },
   methods: {
-    onSlideStart (slide) {
-      this.sliding = true
-    },
-    onSlideEnd (slide) {
-      this.sliding = false
-    },
     prev () {
       this.$refs.myCarousel.prev()
     },
@@ -100,7 +94,7 @@ export default {
     font-family: utopia-std-headline, serif;
   }
   .carousel-content span{
-    font-size: 3.2rem;
+    font-size: 4rem;
   }
   .carousel-content sup{
     font-size: 2rem;
