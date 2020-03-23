@@ -32,7 +32,9 @@
         </div>
       </Box>
       <Box>
-        <References />
+        <div class="ref">
+          <References />
+        </div>
       </Box>
     </div>
   </div>
@@ -89,6 +91,11 @@ export default {
 .embed-responsive{
   height: 100%;
   width: 100%;
+}
+.ref{
+display: table;
+height: 100%;
+width: 100%;
 }
 .title {
   height: 20%;

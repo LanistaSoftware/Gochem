@@ -67,7 +67,6 @@ export default {
     padding: .8vh;
     background-image: linear-gradient(to bottom, rgba(22, 98, 150,.6), rgba(23, 104, 31,.4));
     float: left;
-    overflow: hidden;
 }
  .box-border{
    height: 100%;

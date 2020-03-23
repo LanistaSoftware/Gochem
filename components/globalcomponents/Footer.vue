@@ -46,10 +46,10 @@ export default {
    vertical-align: middle;
  }
 .box .slikonLogo{
-   width: 10vh;
+   width: 12vh;
  }
  .box .lanista{
-   width: 3vh;
+   width: 6vh;
  }
  [class^="flaticon-"]:before {
   color: white;
