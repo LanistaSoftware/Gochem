@@ -24,8 +24,6 @@
       <Box>
         <div class="embed-responsive embed-responsive-16by9">
           <iframe
-            width="560"
-            height="315"
             src="https://www.youtube.com/embed/Acnr15Nli7Q"
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -34,7 +32,9 @@
         </div>
       </Box>
       <Box>
-        <References :referans="referans" />
+        <div class="ref">
+          <References />
+        </div>
       </Box>
     </div>
   </div>
@@ -59,6 +59,7 @@ export default {
   },
   data () {
     return {
+      bgImageUrl: 'bgUrl1',
       filteredSlideSets: []
     }
   },
@@ -84,8 +85,18 @@ export default {
     this.filteredSlideSets = [this.slideSets[1], this.slideSets[2]]
   }
 }
+
 </script>
 <style lang="less" scoped>
+.embed-responsive{
+  height: 100%;
+  width: 100%;
+}
+.ref{
+display: table;
+height: 100%;
+width: 100%;
+}
 .title {
   height: 20%;
   text-align: center;

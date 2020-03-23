@@ -28,19 +28,31 @@ const createStore = () => {
       references: [
         {
           id: 1,
-          photo: require('../assets/img/beyaz.png')
+          name: 'lanista',
+          photo: require('../assets/img/beyaz.png'),
+          webLink: 'https://www.lanista.com.tr/',
+          title: 'lanista'
         },
         {
           id: 2,
-          photo: require('../assets/img/ref.png')
+          name: 'referansımız',
+          photo: require('../assets/img/ref.png'),
+          webLink: 'https://www.lanista.com.tr/',
+          title: 'linke git'
         },
         {
           id: 3,
-          photo: require('../assets/img/ref2.png')
+          name: 'son durum',
+          photo: require('../assets/img/ref2.png'),
+          webLink: 'https://www.lanista.com.tr/',
+          title: 'lanista sitesine git'
         },
         {
           id: 4,
-          photo: require('../assets/img/welove.png')
+          name: 'slogann',
+          photo: require('../assets/img/play-button.png'),
+          webLink: 'https://www.lanista.com.tr/',
+          title: 'lanista.com.tr'
         }
       ]
     }),
