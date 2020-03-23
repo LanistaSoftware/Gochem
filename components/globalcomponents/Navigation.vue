@@ -27,12 +27,12 @@ export default {
         },
         {
           label: 'Hakkımızda',
-          path: '/products',
+          path: '/',
           icon: 'flaticon-info'
         },
         {
           label: 'Ürünler',
-          path: '/urunler',
+          path: '/products',
           icon: 'flaticon-product'
         },
         {

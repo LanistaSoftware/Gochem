@@ -28,18 +28,22 @@ const createStore = () => {
       referance: [
         {
           id: 1,
+          name: 'lanista',
           photo: require('../assets/img/beyaz.png')
         },
         {
           id: 2,
+          name: 'referansımız',
           photo: require('../assets/img/ref.png')
         },
         {
           id: 3,
+          name: 'son durum',
           photo: require('../assets/img/ref2.png')
         },
         {
           id: 4,
+          name: 'slogann',
           photo: require('../assets/img/welove.png')
         }
       ]
