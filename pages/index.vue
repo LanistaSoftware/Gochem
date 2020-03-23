@@ -87,6 +87,7 @@ export default {
 <style lang="less" scoped>
 .embed-responsive{
   height: 100%;
+  width: 100%;
 }
 .title {
   height: 20%;
