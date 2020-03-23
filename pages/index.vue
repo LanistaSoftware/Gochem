@@ -1,7 +1,3 @@
-/* eslint-disable vue/no-parsing-error */
-/* eslint-disable vue/no-use-v-if-with-v-for */
-/* eslint-disable vue/attributes-order */
-/* eslint-disable vue/no-use-v-if-with-v-for */
 <template>
   <div>
     <div class="social clearfix">
@@ -21,7 +17,7 @@
         </div>
         <div class="content">
           <p>
-            {{ item.content }}
+            {{ item.content | filterBoxContent }}
           </p>
         </div>
       </Box>
@@ -56,10 +52,13 @@ export default {
     Box,
     References
   },
+  filters: {
+    filterBoxContent (value) {
+      return value.split(' ').slice(0, 20).join(' ') + '...'
+    }
+  },
   data () {
     return {
-      bgImageUrl: 'bgUrl1',
-      imageUrl: require('../assets/img/bg1.jpg'),
       filteredSlideSets: []
     }
   },
@@ -69,9 +68,6 @@ export default {
     },
     slideIndex () {
       return this.$store.getters.getSlideIndex
-    },
-    referans () {
-      return this.$store.getters.getReferans
     }
   },
   watch: {
@@ -86,11 +82,6 @@ export default {
   },
   created () {
     this.filteredSlideSets = [this.slideSets[1], this.slideSets[2]]
-  },
-  methods: {
-    video () {
-      alert('messa')
-    }
   }
 }
 </script>
@@ -100,6 +91,9 @@ export default {
   text-align: center;
   font-family: utopia-std-headline, serif;
   margin: 1vh
+}
+.boxes{
+  cursor: pointer;
 }
 
 span {

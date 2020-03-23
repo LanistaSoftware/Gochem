@@ -5,6 +5,8 @@
       v-model="slide"
       :interval="4000"
       controls
+      img-width="1024"
+      img-height="100"
     >
       <!-- Text slides with image -->
       <b-carousel-slide
@@ -27,8 +29,6 @@ export default {
   },
   computed: {
     getReferences () {
-      // eslint-disable-next-line no-console
-      console.log(this.$store.getters.getReferences)
       return this.$store.getters.getReferences
     }
   },

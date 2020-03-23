@@ -14,7 +14,9 @@
         <template v-slot:img>
           <div class="carousel-content">
             <div class="carousel-items">
-              <h4> <strong> 0{{ index+1 }} </strong><span>/</span> <sup> 0{{ slideSets.length }} </sup></h4>
+              <div class="header">
+                <h4> <strong> 0{{ index+1 }}</strong></h4><h4><span>/</span> <sup> 0{{ slideSets.length }} </sup></h4>
+              </div>
               <h2>{{ slide.header }} </h2>
               <p class="content">
                 {{ slide.content }}
@@ -46,12 +48,6 @@ export default {
     }
   },
   methods: {
-    onSlideStart (slide) {
-      this.sliding = true
-    },
-    onSlideEnd (slide) {
-      this.sliding = false
-    },
     prev () {
       this.$refs.myCarousel.prev()
     },
@@ -62,6 +58,9 @@ export default {
 }
 </script>
 <style lang="less">
+.header{
+  width: 100%;
+}
 .sliderBtn {
   position: absolute;
   margin-top: 20vh;
