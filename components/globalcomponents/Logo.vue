@@ -38,7 +38,7 @@ img{
 small{
   letter-spacing: 0.07rem;
   color: white;
-  font-size: .55rem;
+  font-size: .6rem;
 }
 a{
   text-decoration: none;

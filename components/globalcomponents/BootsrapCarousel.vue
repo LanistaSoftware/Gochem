@@ -116,7 +116,7 @@ export default {
   .carousel-content p{
     font-family: Helvetica, sans-serif;
     font-size: 1rem;
-    font-weight: bold;
+    letter-spacing: .09rem;
   }
   .carousel-items {
     color: #fff;
