@@ -47,7 +47,7 @@ export default {
 a{
   text-decoration: none;
 }
- h2:hover{
+ .referance h2:hover{
   color: lightgreen;
 }
  .ref-container{
