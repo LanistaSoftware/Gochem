@@ -71,9 +71,6 @@ const createStore = () => {
       getImgUrl (vuexContext, imageUrl) {
         vuexContext.commit('setImgUrl', imageUrl)
       },
-      setSlideIndex (vuexContext, index) {
-        vuexContext.commit('setSlideIndex', index)
-      },
       addReferences (vuexContext, reference) {
         vuexContext.commit('setReferance', reference)
       }

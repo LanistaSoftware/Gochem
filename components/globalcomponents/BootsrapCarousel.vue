@@ -70,7 +70,9 @@ export default {
   border-radius: 50%;
 }
 .sliderBtn::before {
-  margin-left: 0;
+    margin-left: 0;
+    font-size: 1rem;
+    padding: 0 0 0 0.1rem;
 }
 .rt{
    transform: rotate(180deg) !important;

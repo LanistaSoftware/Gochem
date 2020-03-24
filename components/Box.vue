@@ -43,10 +43,6 @@ export default {
 }
 </script>
 <style scoped>
-.box-group{
-  max-width: 24%;
-  display: inline;
-}
  h3{
    color: #fff;
    font-weight: bold;

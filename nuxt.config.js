@@ -45,8 +45,12 @@ module.exports = {
   modules: [
     // Doc: https://bootstrap-vue.js.org
     'bootstrap-vue/nuxt',
-    '@neneos/nuxt-animate.css'
+    '@neneos/nuxt-animate.css',
+    '@nuxtjs/axios'
   ],
+  axios: { // burda da ax,os ,ile ilgili öz
+    baseURL: 'http://localhost:3000/api'
+  },
   /*
   ** Build configuration
   */
