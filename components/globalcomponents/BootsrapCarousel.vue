@@ -14,7 +14,7 @@
         <template v-slot:img>
           <div class="carousel-content">
             <div class="carousel-items">
-              <h4><strong> 0{{ index+1 }} </strong><span>/</span> <sup> 0{{ slideSets.length }} </sup></h4>
+              <h4><strong> 0{{ index+1 }} </strong><span class="slash">/</span> <sup> 0{{ slideSets.length }} </sup></h4>
               <h2>{{ slide.header }} </h2>
               <p class="content">
                 {{ slide.content }}
@@ -114,15 +114,19 @@ export default {
     padding-bottom: 1vh;
   }
   .carousel-content p{
-    font-family: Helvetica, sans-serif;
+    font-family: Helvetica , sans-serif;
+    font-weight:200;
     font-size: 1rem;
-    letter-spacing: .09rem;
+    letter-spacing: 0.1rem;
   }
   .carousel-items {
     color: #fff;
     text-align: left;
     padding-bottom: 10vh;
     padding: 0;
+}
+.slash{
+  font-weight:100 !important ;
 }
 
 </style>
