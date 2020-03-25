@@ -66,10 +66,10 @@ table, tr, td{
   text-align: center;
   justify-content: center;
   vertical-align: middle;
-  font-size: 2.5vmin;
+  font-size: 1.2rem;
 }
 button{
-   color: white;
+  color: white;
   background-color: transparent;
   border: none;
 }
@@ -80,7 +80,7 @@ button:hover{
 table:hover{
 .flaticon-global:before {
     color: lightgreen;
-     transition: 0.4s !important;
+    transition: 0.4s !important;
 }
 }
 button:active{

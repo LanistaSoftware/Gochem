@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 <template>
   <div class="carousel-container">
     <i class="sliderBtn left-btn rt flaticon-next" @click="prev()" />
@@ -15,7 +16,8 @@
           <div class="carousel-content">
             <div class="carousel-items">
               <h4><strong> 0{{ index+1 }} </strong><span class="slash">/</span> <sup> 0{{ slideSets.length }} </sup></h4>
-              <h2>{{ slide.header }} </h2>
+              <h2>{{ slide.header | firstWord }} </h2>
+              <h2>{{ slide.header |otherWord }} </h2>
               <p class="content">
                 {{ slide.content }}
               </p>
@@ -29,6 +31,20 @@
 
 <script>
 export default {
+  filters: {
+    firstWord (header) {
+      return header.split(' ', 1).join()
+    },
+    otherWord (header) {
+      const arr = []
+      header.split(' ').forEach((element, index) => {
+        if (index !== 0) {
+          arr.push(element)
+        }
+      })
+      return arr.join(' ')
+    }
+  },
   data () {
     return {
       slides: 0,
@@ -39,6 +55,7 @@ export default {
     slideSets () {
       return this.$store.getters.getSlideSets
     }
+
   },
   watch: {
     slides () {

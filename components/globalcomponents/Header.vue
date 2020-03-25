@@ -28,9 +28,9 @@ export default {
    display: inline-block;
    width: 100%;
    border-bottom: 0.03rem solid white;
-   padding: 1.5vmin 0;
+   padding: 1rem 0;
    text-align: center;
-   height: 11vmin;
+   height: 5.5rem;
  }
 
  .logobox {
@@ -42,13 +42,13 @@ export default {
 
  .navigation {
    display: inline-block;
-   width: 81.1%;
+   width: 83.1%;
    vertical-align: middle;
  }
 
  .search-language {
    display: inline-block;
-   width: 9%;
+   width: 7%;
    vertical-align: middle;
    text-align: right;
  }

@@ -41,7 +41,7 @@ p{
   text-shadow: 0px .4rem .35rem rgba(0, 0, 0, 0.7);
 }
 img{
-  width: 13vmin;
+  width: 6rem;
   height: auto;
 }
 small{
