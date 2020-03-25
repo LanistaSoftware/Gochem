@@ -1,154 +1,7 @@
-.VueCarousel-navigation-button {
-  position: absolute;
-  top: 50%;
-  box-sizing: border-box;
-  color: red;
-  text-decoration: none;
-  appearance: none;
-  border: none;
-  background-color: transparent;
-  padding: 0;
-  cursor: pointer;
-  outline: none;
-}
-/* 
-  RESET.CSS Örneği // Example
-*/
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-button {
-  outline: none !important;
-}
 .clearfix::after {
   display: block;
   content: "";
   clear: both;
-}
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 html {
   font-size: 10px;
@@ -167,29 +20,6 @@ html {
 .footer-bg {
   background-image: linear-gradient(to bottom, rgba(24, 25, 26, 0.4), rgba(0, 0, 0, 0.3));
 }
-/* Flaticon CSS 
-
-.flaticon-sydney-opera-house:before { content: "\f100"; }
-.flaticon-contract:before { content: "\f101"; }
-.flaticon-mail:before { content: "\f102"; }
-.flaticon-support:before { content: "\f103"; }
-.flaticon-info:before { content: "\f104"; }
-.flaticon-content:before { content: "\f105"; }
-.flaticon-pin:before { content: "\f106"; }
-.flaticon-play-button:before { content: "\f107"; }
-.flaticon-product:before { content: "\f108"; }
-.flaticon-deal:before { content: "\f109"; }
-.flaticon-linkedin:before { content: "\f10a"; }
-.flaticon-linkedin-1:before { content: "\f10b"; }
-.flaticon-twitter:before { content: "\f10c"; }
-.flaticon-youtube:before { content: "\f10d"; }
-.flaticon-search:before { content: "\f10e"; }
-.flaticon-next:before { content: "\f10f"; }
-.flaticon-download:before { content: "\f110"; }
-.flaticon-back:before { content: "\f111"; }
-.flaticon-global:before { content: "\f112"; }
-
-*/
 .bg-container {
   width: 90%;
   padding-right: 1rem;
@@ -215,9 +45,6 @@ html {
 [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after,
 [class*=" flaticon-"]:after {
-  font-size: 2.5vmin;
+  font-size: 1rem;
   cursor: pointer;
-}
-input {
-  outline: none;
 }

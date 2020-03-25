@@ -1,0 +1,23 @@
+/*Media Sorgularımız.*/
+/* Extra small devices (phones, 600px and down) */
+/* Extra small devices (phones, 480px and down) */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  html {
+    font-size: 10px;
+  }
+  .nav-text {
+    display: inline !important;
+  }
+  .bg-container {
+    width: 95%;
+  }
+  .navli {
+    padding: 0.5rem 1.3rem 0.5rem 1.3rem !important;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* Portrait */
+/* Landscape */

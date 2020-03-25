@@ -23,10 +23,11 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    '@/assets/css/style.css',
+    '@/assets/css/utopia.css',
     '@/assets/css/flaticon/flaticon.css',
-    '@/assets/css/media.css',
-    '@/assets/css/utopia.css'
+    '@/assets/css/reset.css',
+    '@/assets/css/style.css',
+    '@/assets/css/responsive.css'
   ],
   script: [
     { src: 'https://kit.fontawesome.com/475a188618.js', crossorigin: 'anonymous' }

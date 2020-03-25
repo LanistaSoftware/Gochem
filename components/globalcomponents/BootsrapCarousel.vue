@@ -99,34 +99,29 @@ export default {
     font-family: utopia-std-headline, serif;
   }
   .carousel-content span{
-    font-size: 4rem;
+    font-size: 3rem;
   }
   .carousel-content sup{
-    font-size: 2rem;
+    font-size: 1.3rem;
   }
   .carousel-content strong{
-    font-size: 3rem;
+    font-size: 2.2rem;
   }
   .carousel-content h2{
     font-family: Arial, serif;
-    font-size: 5.7rem;
-    font-weight: bold;
+    font-size: 4.5rem;
+    font-weight: 800;
     padding-bottom: 1vh;
   }
   .carousel-content p{
     font-family: Helvetica , sans-serif;
     font-weight:200;
-    font-size: 1rem;
-    letter-spacing: 0.1rem;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    // letter-spacing: 0.1rem;
   }
   .carousel-items {
     color: #fff;
     text-align: left;
-    padding-bottom: 10vh;
-    padding: 0;
 }
-.slash{
-  font-weight:100 !important ;
-}
-
 </style>
