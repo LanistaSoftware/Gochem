@@ -67,7 +67,7 @@ li,
 a {
   display: inline-block;
   vertical-align: middle;
-  font-size: 2vmin;
+  font-size: 1rem;
 }
 
 ul {
@@ -86,7 +86,7 @@ li a {
 }
 
 .navli {
-  padding: 0.5rem 1vmin 0.5rem 1vmin;
+  padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
 /* Change the link color to #111 (black) on hover */
@@ -102,7 +102,7 @@ li a:hover {
 }
 
 li:not(:last-child) {
-  border-right: 0.5px solid white;
+  border-right: 0.01rem solid white;
 
 }
 

@@ -49,16 +49,21 @@ export default {
 /*=========================
   Icons
  ================= */
+ ul{
+   height: 3rem;
+ }
 ul.social-network li {
   display: inline-block;
   vertical-align: middle;
   margin-left: 1rem;
 }
 
-ul li{
+ul li {
   cursor: pointer !important;
 }
-
+[class^="flaticon-twitter"]:before,[class^="flaticon-linkedin-1"]:before,[class^="flaticon-search"]:before,[class^="flaticon-youtube"]:before {
+  font-size: 1.3rem;
+}
 [class^="flaticon-youtube"]:hover:before {
   color: #ff0000;
 }
@@ -80,22 +85,24 @@ ul li{
   vertical-align: middle;
   transition: 1.3s;
 
-      [class^="flaticon-search"]:hover:before {
-        color: lightgreen;
-      }
+  [class^="flaticon-search"]:hover:before {
+    color: lightgreen;
+  }
 
-      input {
-        color:white;
-        width: 80%;
-        height: 100%;
-        border: none;
-        background: transparent;
-        vertical-align: middle;
-      }
+  input {
+    color: white;
+    width: 80%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    vertical-align: middle;
+  }
 }
-.search-bar:hover{
-  background-color: rgba(144,238,144,0.3);
+
+.search-bar:hover {
+  background-color: rgba(144, 238, 144, 0.3);
 }
+
 // .fade-enter-active,
 // .fade-leave-active {
 //   transition: opacity 1s;
