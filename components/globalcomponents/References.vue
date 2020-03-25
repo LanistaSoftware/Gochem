@@ -61,7 +61,6 @@ a{
  .ref-img{
    width: 70%;
    height: 10vh;
-   margin-bottom: 3vh;
    object-fit:contain;
  }
  .referance h2 {
@@ -69,12 +68,11 @@ a{
    font-weight: 600;
    color: #fff;
    font-family: Arial, Helvetica, sans-serif;
-   margin-top: 1.4vh;
-   margin-bottom: .2vh;
+   margin-bottom: .2rem;
  }
  hr{
-    margin-top: 0.5vh;
-    margin-bottom: .5vh;
+    margin-top: .2rem;
+    margin-bottom: .3rem;
     width: 70%;
     display: inline-block;
     background-color: rgba(255, 255, 255,.3 );

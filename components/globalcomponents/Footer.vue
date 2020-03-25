@@ -36,7 +36,6 @@ export default {
    display: table;
    color: #939393;
    width: 100%;
-   height: 3vh;
    vertical-align: middle;
    text-align: center;
  }
@@ -44,15 +43,16 @@ export default {
    display: inline-block;
    width: 33%;
    vertical-align: middle;
+   font-size: .7rem;
  }
 .box .slikonLogo{
-   width: 14vh;
+   width: 6rem;
  }
  .box .lanista{
-   width: 6vh;
+   width: 2rem;
  }
  [class^="flaticon-"]:before {
   color: white;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 </style>
