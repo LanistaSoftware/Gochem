@@ -1,8 +1,8 @@
 /* eslint-disable vue/require-default-prop */
 <template>
-  <div class="box-container">
-    <div class="box-border">
-      <!--  <div v-for="item in slideSets" :key="item.id" :item="item" class="box-group">
+  <div class="box-container clearfix">
+    <div class="box-border clearfix">
+      <!--<div v-for="item in slideSets" :key="item.id" :item="item" class="box-group">
         <div class="box-item">
           <h3>{{ item.page }} / <sup>{{ item.pageTwo }}</sup></h3>
           <p>
@@ -61,6 +61,7 @@ export default {
     color: #fff;
     height: 20vh;
     padding: .8vh;
+    margin-bottom: 3vh;
     background-image: linear-gradient(to bottom, rgba(22, 98, 150,.6), rgba(23, 104, 31,.4));
     float: left;
 }

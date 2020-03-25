@@ -8,8 +8,6 @@
       ref="myCarousel"
       v-model="slides"
       :interval="5000"
-      img-width="1024"
-      img-height="480"
     >
       <b-carousel-slide v-for="(slide ,index) in slideSets" :key="index.id">
         <template v-slot:img>
@@ -98,7 +96,7 @@ export default {
     right: 0;
  }
  .carousel-content{
-   width: 80%;
+   width: 90%;
    margin-left: auto;
    margin-right: auto;
   }
