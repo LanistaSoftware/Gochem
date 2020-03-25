@@ -1,8 +1,8 @@
 <template>
   <div class="logo-container">
-    <ul>
+    <ul @mouseover="mouseover" @mouseleave="mouseleave">
       <nuxt-link v-for="logo in logoUrl" :key="logo.id" :to="logo.path" tag="li">
-        <a><img src="../../assets/icons/logo.png"> <p><small>{{ logo.slogan }}</small></p></a>
+        <a><img :src="logom"> <p><small>{{ logo.slogan }}</small></p></a>
       </nuxt-link>
     </ul>
   </div>
@@ -17,7 +17,16 @@ export default {
           slogan: 'people & silicone',
           path: '/'
         }
-      ]
+      ],
+      logom: require('../../assets/icons/logo.png')
+    }
+  },
+  methods: {
+    mouseover () {
+      this.logom = require('../../assets/img/logo.png')
+    },
+    mouseleave () {
+      this.logom = require('../../assets/icons/logo.png')
     }
   }
 }
