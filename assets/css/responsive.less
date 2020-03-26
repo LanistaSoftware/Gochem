@@ -1,15 +1,23 @@
 
   /*Media Sorgularımız.*/
   /* Extra small devices (phones, 600px and down) */
-  @media only screen and (max-width: 320px) {}
+  @media only screen and (max-width: 320px) {
+    html{
+      font-size: 6px!important;
+    }
+    .box-container{
+      width: 90%!important;
+      height: 18vh!important;
+  }
+  .boxes {
+    margin-top:-2rem ;
+  }
+  }
 
   /* Extra small devices (phones, 480px and down) */
-@media only screen and (max-width: 480px) {}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 568px) {
+@media only screen and (max-width: 480px) and (min-width: 330px) {
   html{
-    font-size: 8px!important;
+    font-size: 7px!important;
   }
   .box-container{
     width: 45%!important;
@@ -18,6 +26,11 @@
 .boxes {
   margin-top:-2rem ;
 }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 568px) {
+
 }
 /* Medium devices (landscape tablets, 768px*432px and up) */
 @media only screen and (min-width: 768px) {
