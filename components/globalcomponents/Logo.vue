@@ -1,10 +1,15 @@
 <template>
-  <div class="logo-container">
-    <ul @mouseover="mouseover" @mouseleave="mouseleave">
-      <nuxt-link v-for="logo in logoUrl" :key="logo.id" :to="logo.path" tag="li">
-        <a><img :src="logom"> <p><small class="slogan">{{ logo.slogan }}</small></p></a>
-      </nuxt-link>
-    </ul>
+  <div class="all">
+    <div class="logo-container">
+      <ul @mouseover="mouseover" @mouseleave="mouseleave">
+        <nuxt-link v-for="logo in logoUrl" :key="logo.id" :to="logo.path" tag="li">
+          <transition :name="activeEffect">
+            <a>
+              <img width="300" :src="logom"><p><small class="slogan">{{ logo.slogan }}</small></p></a>
+          </transition>
+        </nuxt-link>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -23,16 +28,44 @@ export default {
   },
   methods: {
     mouseover () {
-      this.logom = require('../../assets/img/coloredlogo.png')
+      setTimeout(() => {
+        this.logom = require('../../assets/img/coloredlogo.png')
+      }, 600)
     },
     mouseleave () {
-      this.logom = require('../../assets/img/whitelogo.png')
+      setTimeout(() => {
+        this.logom = require('../../assets/img/whitelogo.png')
+      }, 600)
     }
   }
 }
 </script>
 
-<style lang="less" scoped>
+<style lang="less" scoped>.all {
+  display: flex;
+  perspective: 10px;
+  transform: perspective(300px) rotateX(30deg);
+  will-change: perspective;
+  perspective-origin: center center;
+  transition: all 1.3s ease-out;
+  justify-content: center;
+  transform-style: preserve-3d;
+}
+.all:hover {
+  perspective: 1000px;
+  transition: all 1.3s ease-in;
+  transform: perspective(10000px) rotateX(0deg);
+  .text {
+    opacity: 1;
+  }
+  & > div {
+    opacity: 1;
+    transition-delay: 0s;
+  }
+  .explainer {
+    opacity: 0;
+  }
+}
 .logo-container{
   display: inline-block;
   p{
