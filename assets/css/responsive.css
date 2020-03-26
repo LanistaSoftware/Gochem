@@ -1,6 +1,32 @@
 /*Media Sorgularımız.*/
 /* Extra small devices (phones, 600px and down) */
+/*Media Sorgularımız.*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 320px) {
+  html {
+    font-size: 6px!important;
+  }
+  .box-container {
+    width: 90%!important;
+    height: 18vh!important;
+  }
+  .boxes {
+    margin-top: -2rem;
+  }
+}
 /* Extra small devices (phones, 480px and down) */
+@media only screen and (max-width: 480px) and (min-width: 330px) {
+  html {
+    font-size: 7px!important;
+  }
+  .box-container {
+    width: 45%!important;
+    height: 18vh!important;
+  }
+  .boxes {
+    margin-top: -2rem;
+  }
+}
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /* Medium devices (landscape tablets, 768px*432px and up) */
 @media only screen and (min-width: 768px) {
@@ -29,13 +55,13 @@
 /* Large devices (laptops/desktops, 992px*558px and up) */
 @media only screen and (min-width: 992px) {
   html {
-    font-size: 13px;
+    font-size: 12px;
   }
   .nav-text {
     display: inline !important;
   }
   .bg-container {
-    width: 88%;
+    width: 90%;
   }
   .navli {
     padding: 0.5rem 1.3rem 0.5rem 1.3rem !important;
@@ -44,7 +70,7 @@
 /* Extra large devices (large laptops and desktops, 1200px*675px and up) */
 @media only screen and (min-width: 1200px) {
   html {
-    font-size: 14px;
+    font-size: 15px;
   }
   .nav-text {
     display: inline !important;
@@ -57,4 +83,80 @@
   }
 }
 /* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: portrait) {
+  html {
+    font-size: 9px;
+    color: seagreen!important;
+  }
+  .carousel-content {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .carousel-content {
+    width: 90%!important;
+  }
+  .carousel-content h2 {
+    font-size: 4rem!important;
+  }
+  .carousel-content p {
+    font-size: 1.1rem !important;
+  }
+  .carousel-content span {
+    font-size: 3rem!important;
+  }
+  .carousel-content sup {
+    font-size: 1.5rem !important;
+  }
+  .carousel-content strong {
+    font-size: 2.4rem !important;
+  }
+  [class^="flaticon-"]:before,
+  [class*=" flaticon-"]:before,
+  [class^="flaticon-"]:after,
+  [class*=" flaticon-"]:after {
+    font-size: 1rem!important;
+  }
+  nav,
+  ul,
+  li,
+  a {
+    font-size: 1rem!important;
+  }
+}
 /* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: landscape) {
+  html {
+    font-size: 8px;
+  }
+  .carousel-content {
+    width: 90%!important;
+  }
+  .carousel-content h2 {
+    font-size: 4.6rem !important;
+  }
+  .carousel-content p {
+    font-size: 1.2rem !important;
+  }
+  .carousel-content span {
+    font-size: 3.6rem !important;
+  }
+  .carousel-content sup {
+    font-size: 1.8rem !important;
+  }
+  .carousel-content strong {
+    font-size: 3rem!important;
+  }
+  [class^="flaticon-"]:before,
+  [class*=" flaticon-"]:before,
+  [class^="flaticon-"]:after,
+  [class*=" flaticon-"]:after {
+    font-size: 1.5rem !important;
+  }
+  nav,
+  ul,
+  li,
+  a {
+    font-size: 1.3rem !important;
+  }
+}
