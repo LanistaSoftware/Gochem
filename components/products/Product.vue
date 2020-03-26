@@ -6,6 +6,7 @@
       <p class="content">
         {{ slide.content }}
       </p>
+      <small>dede </small>
     </div>
   </div>
 </template>
@@ -46,5 +47,7 @@ export default {
     font-family: Arial, Helvetica, sans-serif;
     font-size:1rem;
     font-weight: bold;
+    text-align-last:inherit;
+    caret-color: lawngreen;
   }
 </style>
