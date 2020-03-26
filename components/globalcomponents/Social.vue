@@ -61,7 +61,10 @@ ul.social-network li {
 ul li {
   cursor: pointer !important;
 }
-[class^="flaticon-twitter"]:before,[class^="flaticon-linkedin-1"]:before,[class^="flaticon-search"]:before,[class^="flaticon-youtube"]:before {
+[class^="flaticon-twitter"]:before,[class^="flaticon-linkedin-1"]:before,[class^="flaticon-youtube"]:before {
+  font-size: 1.5rem;
+}
+[class^="flaticon-search"]:before{
   font-size: 1.3rem;
 }
 [class^="flaticon-youtube"]:hover:before {
@@ -77,8 +80,7 @@ ul li {
 }
 
 .search-bar {
-  padding: .5rem;
-  border: 0.1rem solid white;
+  padding: 0.5rem 0.4rem;
   border-radius: 3em;
   display: inline-block;
   background-color: transparent;

@@ -1,10 +1,15 @@
 <template>
-  <div class="logo-container">
-    <ul @mouseover="mouseover" @mouseleave="mouseleave">
-      <nuxt-link v-for="logo in logoUrl" :key="logo.id" :to="logo.path" tag="li">
-        <a><img :src="logom"></a>
-      </nuxt-link>
-    </ul>
+  <div class="all">
+    <div class="logo-container">
+      <ul @mouseover="mouseover" @mouseleave="mouseleave">
+        <nuxt-link v-for="logo in logoUrl" :key="logo.id" :to="logo.path" tag="li">
+          <transition :name="activeEffect">
+            <a>
+              <img width="300" :src="logom"><p><small class="slogan">{{ logo.slogan }}</small></p></a>
+          </transition>
+        </nuxt-link>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -18,33 +23,61 @@ export default {
           path: '/'
         }
       ],
-      logom: require('../../assets/img/beyazlogo.png')
+      logom: require('../../assets/img/whitelogo.png')
     }
   },
   methods: {
     mouseover () {
-      this.logom = require('../../assets/img/renkli.png')
+      setTimeout(() => {
+        this.logom = require('../../assets/img/coloredlogo.png')
+      }, 600)
     },
     mouseleave () {
-      this.logom = require('../../assets/img/beyazlogo.png')
+      setTimeout(() => {
+        this.logom = require('../../assets/img/whitelogo.png')
+      }, 600)
     }
   }
 }
 </script>
 
-<style scoped>
+<style lang="less" scoped>.all {
+  display: flex;
+  perspective: 10px;
+  transform: perspective(300px) rotateX(30deg);
+  will-change: perspective;
+  perspective-origin: center center;
+  transition: all 1.3s ease-out;
+  justify-content: center;
+  transform-style: preserve-3d;
+}
+.all:hover {
+  perspective: 1000px;
+  transition: all 1.3s ease-in;
+  transform: perspective(10000px) rotateX(0deg);
+  .text {
+    opacity: 1;
+  }
+  & > div {
+    opacity: 1;
+    transition-delay: 0s;
+  }
+  .explainer {
+    opacity: 0;
+  }
+}
 .logo-container{
   display: inline-block;
-}
-p{
-  margin: -0.60rem 0;
+  p{
   text-shadow: 0px .4rem .35rem rgba(0, 0, 0, 0.7);
 }
+}
+
 img{
-  width: 7rem;
+  width: 6rem;
   height: auto;
 }
-small{
+.slogan{
   letter-spacing: 0.07rem;
   color: white;
   font-size: .6rem;

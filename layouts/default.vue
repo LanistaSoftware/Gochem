@@ -7,10 +7,13 @@
     appear
   >
     <div class="bg" :class="bgImageUrl[getSlideIndex]">
-      <div class="bg-container">
-        <Header />
-        <nuxt />
+      <div class="overlay">
+        <div class="bg-container">
+          <Header />
+          <nuxt />
+        </div>
       </div>
+
       <div class="footer">
         <Footer />
       </div>
@@ -61,5 +64,10 @@ export default {
   background-position: bottom;
   height: 100vh;
   width: 100%;
+}
+.overlay{
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 </style>

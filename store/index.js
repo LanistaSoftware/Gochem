@@ -13,13 +13,13 @@ const createStore = () => {
         {
           index: 2,
           imageUrl: require('../assets/img/bg2.jpg'),
-          header: 'Korona Dostu Üretim',
+          header: 'Uzman Üretim kadrosu.',
           content: ' Corona virüsü nedeniyle 1 haftalık tatil yapan öğrenciler yarından itibaren uzaktan eğitime geçiyor. Milli Eğitim Bakanlığı konuyla ilgili detaylı bir açıklama yaparak TRT EBA TV (ilkokul-ortaöğretim-lise) uydu frekans bilgilerini paylaştı. MEB aynı zamanda TRT EBA TV kurulumu nasıl yapılır? sorusuna da cevap verdi..'
         },
         {
           index: 3,
           imageUrl: require('../assets/img/bg3.jpg'),
-          header: 'Ne Kadar Enteresan Üretim',
+          header: 'Silikonda Çözüm ortağınız',
           content: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris... Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore magnam quas maxime. Optio, expedita quidem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, neque corrupti ut atque pariatur odit? Minus exercitationem adipisci nobis quam.'
         }
       ],
@@ -36,14 +36,14 @@ const createStore = () => {
         {
           id: 2,
           name: 'referansımız',
-          photo: require('../assets/img/ref.png'),
+          photo: require('../assets/img/whitelogo.png'),
           webLink: 'https://www.lanista.com.tr/',
           title: 'linke git'
         },
         {
           id: 3,
           name: 'son durum',
-          photo: require('../assets/img/ref2.png'),
+          photo: require('../assets/img/coloredlogo.png'),
           webLink: 'https://www.lanista.com.tr/',
           title: 'lanista sitesine git'
         },
