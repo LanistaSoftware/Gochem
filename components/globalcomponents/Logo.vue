@@ -2,7 +2,7 @@
   <div class="logo-container">
     <ul @mouseover="mouseover" @mouseleave="mouseleave">
       <nuxt-link v-for="logo in logoUrl" :key="logo.id" :to="logo.path" tag="li">
-        <a><img :src="logom"></a>
+        <a><img :src="logom"> <p><small class="slogan">{{ logo.slogan }}</small></p></a>
       </nuxt-link>
     </ul>
   </div>
@@ -18,33 +18,33 @@ export default {
           path: '/'
         }
       ],
-      logom: require('../../assets/img/beyazlogo.png')
+      logom: require('../../assets/img/whitelogo.png')
     }
   },
   methods: {
     mouseover () {
-      this.logom = require('../../assets/img/renkli.png')
+      this.logom = require('../../assets/img/coloredlogo.png')
     },
     mouseleave () {
-      this.logom = require('../../assets/img/beyazlogo.png')
+      this.logom = require('../../assets/img/whitelogo.png')
     }
   }
 }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 .logo-container{
   display: inline-block;
-}
-p{
-  margin: -0.60rem 0;
+  p{
   text-shadow: 0px .4rem .35rem rgba(0, 0, 0, 0.7);
 }
+}
+
 img{
-  width: 7rem;
+  width: 6rem;
   height: auto;
 }
-small{
+.slogan{
   letter-spacing: 0.07rem;
   color: white;
   font-size: .6rem;

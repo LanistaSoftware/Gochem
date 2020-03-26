@@ -2,47 +2,15 @@
 <template>
   <div class="box-container clearfix">
     <div class="box-border clearfix">
-      <!--<div v-for="item in slideSets" :key="item.id" :item="item" class="box-group">
-        <div class="box-item">
-          <h3>{{ item.page }} / <sup>{{ item.pageTwo }}</sup></h3>
-          <p>
-            {{ item.content }}
-          </p>
-          <button class="btn btn-primary" @click="counterShow">
-            tıkla
-          </button>
-          <p>{{ counterGet }}</p>
-        </div>
-      </div>-->
       <slot />
     </div>
   </div>
 </template>
 <script>
 export default {
-  data () {
-    return {
-    }
-  },
-  computed: {
-    slideSets () {
-      return this.$store.getters.getSlideSets
-    },
-    counterGet () {
-      return this.$store.getters.getCounter
-    },
-    counter () {
-      return this.$store.dispatch.counter
-    }
-  },
-  methods: {
-    counterShow () {
-      this.$store.dispatch('counter')
-    }
-  }
 }
 </script>
-<style scoped>
+<style lang="less" scoped>
  h3{
    color: #fff;
    font-weight: bold;

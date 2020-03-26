@@ -60,7 +60,8 @@ export default {
   data () {
     return {
       bgImageUrl: 'bgUrl1',
-      filteredSlideSets: []
+      filteredSlideSets: [],
+      boxAnimated: false
     }
   },
   computed: {
