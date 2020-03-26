@@ -6,8 +6,49 @@
 }
 /* Extra small devices (phones, 480px and down) */
 @media only screen and (max-width: 480px) and (min-width: 330px) {
+  .box-container {
+    height: 15vh;
+    width: 100%!important;
+  }
+  /*arkaplan*/
+  .bg {
+    position: fixed!important;
+    overflow: scroll;
+  }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 568px) {
+  /*navigasyon*/
+  .nav-text {
+    display: none;
+  }
+  .navigation {
+    width: 78%!important;
+  }
+  [class^="flaticon-"]:before,
+  [class*=" flaticon-"]:before,
+  [class^="flaticon-"]:after,
+  [class*=" flaticon-"]:after {
+    font-size: 1rem!important;
+  }
+  /*navigasyon bitiş*/
+}
+@media only screen and (min-width: 480px) and (max-width: 700px) {
+  /*nav-text*/
+  .nav-text {
+    display: none;
+  }
+  .navigation {
+    width: 78%!important;
+  }
+  /*nav-bitiş*/
+  /*Box**/
+  .box-container {
+    height: 15vh;
+    width: 45%!important;
+  }
+  /*Boz bitiş*/
+}
 /* Medium devices (landscape tablets, 768px*432px and up) */
 @media only screen and (min-width: 768px) {
   html {
@@ -63,4 +104,75 @@
   }
 }
 /* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: portrait) {
+  html {
+    font-size: 10px;
+  }
+  .bg-container {
+    width: 95%!important;
+  }
+  /*Carousel dikey*/
+  .carousel-content {
+    width: 90%!important;
+  }
+  .carousel-content span {
+    font-size: 2.3rem !important;
+  }
+  .carousel-content sup {
+    font-size: 1.3rem !important;
+  }
+  .carousel-content strong {
+    font-size: 2.2rem !important;
+  }
+  .carousel-content h2 {
+    font-size: 2.6rem !important;
+  }
+  .carousel-content p {
+    font-size: 1.2rem !important;
+  }
+  /*Carousel dikey bitiş*/
+  /** carousel içeriği pozisyon için*/
+  .sliderBtn {
+    margin-top: 10vh!important;
+  }
+  .carousel-items {
+    height: 30vh!important;
+  }
+  /** bitiş*/
+  /*Box */
+  .box-container p {
+    font-size: 1.3rem;
+  }
+  /*box bitiş*/
+}
 /* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: landscape) {
+  html {
+    font-size: 8px;
+  }
+  /*Carousel yatay*/
+  .carousel-content {
+    width: 85%!important;
+  }
+  .carousel-content span {
+    font-size: 3rem!important;
+  }
+  .carousel-content sup {
+    font-size: 1.5rem !important;
+  }
+  .carousel-content strong {
+    font-size: 2.4rem !important;
+  }
+  .carousel-content h2 {
+    font-size: 4rem!important;
+  }
+  .carousel-content p {
+    font-size: 1rem!important;
+  }
+  /*Carousel yatay bitiş*/
+  /*box boyutu*/
+  .box-container {
+    height: 22vh!important;
+  }
+  /*box bitiş*/
+}

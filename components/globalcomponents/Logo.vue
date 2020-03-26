@@ -1,12 +1,10 @@
 <template>
   <div class="all">
     <div class="logo-container">
-      <ul @mouseover="mouseover" @mouseleave="mouseleave">
+      <ul>
         <nuxt-link v-for="logo in logoUrl" :key="logo.id" :to="logo.path" tag="li">
-          <transition :name="activeEffect">
-            <a>
-              <img width="300" :src="logom"><p><small class="slogan">{{ logo.slogan }}</small></p></a>
-          </transition>
+          <a @mouseover="mouseover" @mouseleave="mouseleave">
+            <img width="300" :src="logom"><p><small class="slogan">{{ logo.slogan }}</small></p></a>
         </nuxt-link>
       </ul>
     </div>
@@ -41,10 +39,11 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>.all {
+<style lang="less" scoped>
+.all {
   display: flex;
   perspective: 10px;
-  transform: perspective(300px) rotateX(30deg);
+  transform: perspective(300px) rotateX(20deg);
   will-change: perspective;
   perspective-origin: center center;
   transition: all 1.3s ease-out;
