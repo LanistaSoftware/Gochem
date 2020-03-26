@@ -11,15 +11,22 @@
         v-for="(item, index) in filteredSlideSets"
         :key="index"
         :item="item"
+        @click.native="changeIndex(item.index-1)"
       >
-        <div class="title">
-          <h4> <strong> 0{{ item.index }} </strong><span>/</span> <sup> 0{{ slideSets.length }} </sup></h4>
-        </div>
-        <div class="content">
-          <p>
-            {{ item.content | filterBoxContent }}
-          </p>
-        </div>
+        <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
+          <div v-show="boxAnimated" class="title">
+            <h4>
+              <strong> 0{{ item.index }} </strong><span>/</span> <sup> 0{{ slideSets.length }} </sup>
+            </h4>
+          </div>
+        </transition>
+        <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
+          <div v-show="boxAnimated" class="content">
+            <p>
+              {{ item.content | filterBoxContent }}
+            </p>
+          </div>
+        </transition>
       </Box>
       <Box>
         <div class="embed-responsive embed-responsive-16by9">
@@ -74,16 +81,32 @@ export default {
   },
   watch: {
     slideIndex () {
-      this.filteredSlideSets = []
-      this.slideSets.forEach((element, index) => {
-        if (this.slideIndex !== index) {
-          this.filteredSlideSets.push(element)
-        }
-      })
+      setTimeout(() => {
+        this.animateInterval(0)
+        this.filteredSlideSets = []
+        this.slideSets.forEach((element, index) => {
+          if (this.slideIndex !== index) {
+            this.filteredSlideSets.push(element)
+          }
+        })
+      }, 700)
+      this.animateInterval(400)
     }
   },
   created () {
+    this.animateInterval(500)
     this.filteredSlideSets = [this.slideSets[1], this.slideSets[2]]
+  },
+  methods: {
+    animateInterval (int) {
+      setTimeout(() => {
+        this.boxAnimated = !this.boxAnimated
+      }, int)
+      return this.boxAnimated
+    },
+    changeIndex (index) {
+      this.$store.commit('changeSlideIndex', index)
+    }
   }
 }
 

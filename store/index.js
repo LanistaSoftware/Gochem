@@ -54,7 +54,8 @@ const createStore = () => {
           webLink: 'https://www.lanista.com.tr/',
           title: 'lanista.com.tr'
         }
-      ]
+      ],
+      customSlideIndex: null
     }),
     mutations: {
       setSlideSets (state, slide) {
@@ -65,6 +66,9 @@ const createStore = () => {
       },
       setReferences (state, reference) {
         state.referance = reference
+      },
+      changeSlideIndex (state, customSlideIndex) {
+        state.customSlideIndex = customSlideIndex
       }
     },
     actions: {
@@ -87,6 +91,9 @@ const createStore = () => {
       },
       getReferences (state) {
         return state.references
+      },
+      getCustomIndex (state) {
+        return state.customSlideIndex
       }
     }
   })

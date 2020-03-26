@@ -7,7 +7,7 @@
       id="carousel-1"
       ref="myCarousel"
       v-model="slides"
-      :interval="5000"
+      :interval="10000"
     >
       <b-carousel-slide v-for="(slide ,index) in slideSets" :key="index.id">
         <template v-slot:img>
@@ -52,12 +52,18 @@ export default {
   computed: {
     slideSets () {
       return this.$store.getters.getSlideSets
+    },
+    customSlideIndex () {
+      return this.$store.getters.getCustomIndex
     }
 
   },
   watch: {
     slides () {
       this.$store.commit('setSlideIndex', this.slides)
+    },
+    customSlideIndex () {
+      this.setSlides(this.customSlideIndex)
     }
   },
   methods: {
@@ -66,6 +72,9 @@ export default {
     },
     next () {
       this.$refs.myCarousel.next()
+    },
+    setSlides (index) {
+      this.$refs.myCarousel.setSlide(index)
     }
   }
 }
