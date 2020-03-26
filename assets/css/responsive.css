@@ -1,29 +1,9 @@
 /*Media Sorgularımız.*/
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 320px) {
-  html {
-    font-size: 6px!important;
-  }
-  .box-container {
-    width: 90%!important;
-    height: 18vh!important;
-  }
-  .boxes {
-    margin-top: -2rem;
-  }
 }
 /* Extra small devices (phones, 480px and down) */
 @media only screen and (max-width: 480px) and (min-width: 330px) {
-  html {
-    font-size: 7px!important;
-  }
-  .box-container {
-    width: 45%!important;
-    height: 18vh!important;
-  }
-  .boxes {
-    margin-top: -2rem;
-  }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /* Medium devices (landscape tablets, 768px*432px and up) */
@@ -51,13 +31,19 @@
         // } */
 }
 /* Large devices (laptops/desktops, 992px*558px and up) */
+@media only screen and (max-width: 992px) {
+  html {
+    font-size: 12px!important;
+  }
+}
 /* Extra large devices (large laptops and desktops, 1200px*675px and up) */
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 15px!important;
+  }
+}
 /* Portrait */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: portrait) {
-  html {
-    font-size: 9px;
-    color: seagreen!important;
-  }
   .carousel-content {
     width: 90%;
     margin-left: auto;
@@ -96,9 +82,6 @@
 }
 /* Landscape */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: landscape) {
-  html {
-    font-size: 8px;
-  }
   .carousel-content {
     width: 90%!important;
   }
