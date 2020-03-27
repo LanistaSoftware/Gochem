@@ -120,7 +120,7 @@ export default {
 display: table;
 height: 100%;
 width: 100%;
-background-color: rgba(147, 147, 147,.5);
+background-color: rgba(255, 255, 255,.2);
 }
 .title {
   height: 20%;
