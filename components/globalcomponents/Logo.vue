@@ -1,6 +1,6 @@
 <template>
   <div class="all">
-    <div class="logo-container">
+    <div class="logo-container" @mousemove="mouseover" @mouseleave="mouseleave">
       <ul>
         <nuxt-link v-for="logo in logoUrl" :key="logo.id" :to="logo.path" tag="li">
           <a>
