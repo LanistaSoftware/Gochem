@@ -16,7 +16,7 @@
         </p>
         <div class="imza">
           <h2> {{ aboutUs.ownername }} </h2>
-          <img width="100" :src="aboutUs.autograph" alt="">
+          <img width="120" :src="aboutUs.autograph" alt="">
         </div>
       </div>
     </div>
@@ -44,33 +44,15 @@ export default {
   object-fit: fill;
 }
 
-.about::before {
-    content: "";
-    position: absolute;
-    background: inherit;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    box-shadow: inset 1000px 1000px 1000px #354b50;
-    filter: blur(20px);
-}
 .about{
   width: 100%;
+  height:70vh;
   margin-left: auto;
   margin-right: auto;
   padding: 2rem;
-  margin-top: 4rem;
-  float: left;
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
-  border-radius: 5px;
-  position: relative;
-  z-index: 1;
-  background: inherit;
-  overflow: hidden;
+  margin-top: 5rem;
+  font-family: Arial, sans-serif;
 }
-/* Create three equal columns that floats next to each other */
 .about-profile {
   float: left;
   text-align: center;
@@ -86,6 +68,7 @@ export default {
   }
   p{
     padding-top: .5rem;
+    font-size: 1rem;
   }
   img {
     border-radius: 10%;
@@ -101,17 +84,21 @@ export default {
  column-rule-width: 1px;
  -webkit-column-rule-width: 1px;
  -moz-column-rule-width: 1px;
+ column-rule: 1px solid #fff;
+ column-gap: 4rem;
  p{
-   padding-right: 2rem;
-   padding-left: 2rem;
+   font-size:.9rem ;
+   line-height: 1.4rem;
  }
 }
 .imza{
   padding-top: 3rem;
   float: right;
   img{
-    padding-top: 2rem;
+    padding-top: 1.2rem;
+  }
+  h2{
+    font-size: 1.6rem;
   }
 }
-
 </style>
