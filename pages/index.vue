@@ -119,9 +119,7 @@ export default {
   font-family: Helvetica, sans-serif;
   font-size: .9rem;
   overflow: hidden;
-  /* Verilen genişlikten (150px) artanı gizlemesini istiyoruz */
   text-overflow: ellipsis;
-  /* Yazının kesildiği yerden üç nokta vermesini sağlıyoruz*/
   p {
     margin: 0 1rem;
     margin-bottom: 1rem;

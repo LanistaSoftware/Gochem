@@ -1,23 +1,22 @@
 <template>
   <div>
-    <div v-for="(item,index) in aboutUs" :key="index.id" class="about">
+    <div class="about">
       <div class="about-profile">
         <div class="profile fill">
-          <img :src="item.itemImgUrl" alt="">
+          <img :src="aboutUs.profileImg" alt="">
         </div>
-        <h2>{{ item.username }}</h2>
-        <span>{{ item.company }}</span>
+        <h2>{{ aboutUs.ownername }}</h2>
+        <span>{{ aboutUs.company }}</span>
         <br>
-        <p>{{ item.auth }}</p>
+        <p>{{ aboutUs.title }}</p>
       </div>
-
-      <div class="about-left">
+      <div class="about-content">
         <p>
-          {{ item.content }}
+          {{ aboutUs.content }}
         </p>
         <div class="imza">
-          <h2> {{ item.username }} </h2>
-          <img width="100" :src="item.autograph" alt="">
+          <h2> {{ aboutUs.ownername }} </h2>
+          <img width="100" :src="aboutUs.autograph" alt="">
         </div>
       </div>
     </div>
@@ -45,7 +44,7 @@ export default {
   object-fit: fill;
 }
 
-.about:before {
+.about::before {
     content: "";
     position: absolute;
     background: inherit;
@@ -55,8 +54,6 @@ export default {
     right: 0;
     bottom: 0;
     box-shadow: inset 1000px 1000px 1000px #354b50;
-    /* -webkit-filter: blur(10px); */
-    -webkit-filter: blur(10px);
     filter: blur(20px);
 }
 .about{
@@ -94,7 +91,7 @@ export default {
     border-radius: 10%;
   }
 }
-.about-left {
+.about-content {
  column-count: 2;
  -webkit-column-count: 2;
  -moz-column-count: 2;
