@@ -17,7 +17,20 @@ font-size: 10px;
 font-family: Arial, Helvetica, sans-serif;
 color: white;
 }
-
+/***** Background & Container ****/
+.bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  transition: background-image 2s ease-in-out;
+  height: 100vh;
+  width: 100%;
+}
+.overlay{
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
 .bg-container {
   width: 90%;
   padding-right: 1rem;
@@ -74,8 +87,18 @@ color: white;
   width: 80%;
   margin: auto;
   margin-top: 10vh;
+  cursor: pointer;
 }
-
+.embed-responsive {
+  height: 100%;
+  width: 100%;
+}
+.references-container {
+  display: table;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(147, 147, 147, .5);
+}
 
 /***** FOOTER ******/
 .footer {

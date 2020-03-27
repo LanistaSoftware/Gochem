@@ -23,7 +23,6 @@ const createStore = () => {
           content: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris... Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore magnam quas maxime. Optio, expedita quidem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, neque corrupti ut atque pariatur odit? Minus exercitationem adipisci nobis quam.'
         }
       ],
-      imageUrl: ['bg1.jpg', 'bg2.jpg', 'bg3.jpg'],
       slideIndex: 0,
       references: [
         {
@@ -72,9 +71,6 @@ const createStore = () => {
       }
     },
     actions: {
-      getImgUrl (vuexContext, imageUrl) {
-        vuexContext.commit('setImgUrl', imageUrl)
-      },
       addReferences (vuexContext, reference) {
         vuexContext.commit('setReferance', reference)
       }
@@ -82,9 +78,6 @@ const createStore = () => {
     getters: {
       getSlideSets (state) {
         return state.slideSets
-      },
-      getImgUrl (state) {
-        return state.imageUrl
       },
       getSlideIndex (state) {
         return state.slideIndex

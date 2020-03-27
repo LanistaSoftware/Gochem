@@ -39,7 +39,7 @@
         </div>
       </Box>
       <Box>
-        <div class="ref">
+        <div class="references-container">
           <References />
         </div>
       </Box>
@@ -112,15 +112,20 @@ export default {
 
 </script>
 <style lang="less" scoped>
-.embed-responsive{
-  height: 100%;
-  width: 100%;
-}
-.ref{
-display: table;
-height: 100%;
-width: 100%;
-background-color: rgba(147, 147, 147,.5);
+
+/***  Slider Box CSS ****/
+.content {
+  height: 70%;
+  font-family: Helvetica, sans-serif;
+  font-size: .9rem;
+  overflow: hidden;
+  /* Verilen genişlikten (150px) artanı gizlemesini istiyoruz */
+  text-overflow: ellipsis;
+  /* Yazının kesildiği yerden üç nokta vermesini sağlıyoruz*/
+  p {
+    margin: 0 1rem;
+    margin-bottom: 1rem;
+  }
 }
 .title {
   height: 20%;
@@ -128,31 +133,14 @@ background-color: rgba(147, 147, 147,.5);
   font-family: utopia-std-headline, serif;
   margin: 1vh
 }
-.boxes{
-  cursor: pointer;
-}
-
 span {
   font-size: 1.9rem;
 }
-
 sup {
   font-size: 1rem;
 }
-
 strong {
   font-size: 1.5rem;
 }
 
-.content {
-  height: 70%;
-  font-family: Helvetica, sans-serif;
-  font-size: .9rem;
-  overflow:hidden; /* Verilen genişlikten (150px) artanı gizlemesini istiyoruz */
-  text-overflow:ellipsis; /* Yazının kesildiği yerden üç nokta vermesini sağlıyoruz*/
-  p{
-  margin: 0 1rem;
-  margin-bottom: 1rem;
-  }
-}
 </style>
