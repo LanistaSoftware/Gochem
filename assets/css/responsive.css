@@ -29,7 +29,7 @@
   [class*=" flaticon-"]:before,
   [class^="flaticon-"]:after,
   [class*=" flaticon-"]:after {
-    font-size: 1rem!important;
+    font-size: 1rem !important;
   }
   /*navigasyon bitiş*/
 }
@@ -133,10 +133,10 @@
   /*Carousel dikey bitiş*/
   /** carousel içeriği pozisyon için*/
   .sliderBtn {
-    margin-top: 10vh!important;
+    margin-top: 10vh !important;
   }
   .carousel-items {
-    height: 30vh!important;
+    height: 30vh !important;
   }
   /** bitiş*/
   /*Box */
