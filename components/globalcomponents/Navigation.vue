@@ -27,7 +27,7 @@ export default {
         },
         {
           label: 'Hakkımızda',
-          path: '/',
+          path: '/about',
           icon: 'flaticon-info'
         },
         {

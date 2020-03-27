@@ -27,7 +27,7 @@ export default {
  .header {
    display: inline-block;
    width: 100%;
-   border-bottom: 0.03rem solid white;
+   border-bottom: 0.003rem solid white;
    padding: 1rem 0;
    text-align: center;
    height: 5.5rem;

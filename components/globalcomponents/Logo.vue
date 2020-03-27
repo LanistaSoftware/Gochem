@@ -1,7 +1,7 @@
 <template>
   <div class="all">
     <div class="logo-container">
-      <ul @mouseover="mouseover" @mouseleave="mouseleave">
+      <ul>
         <nuxt-link v-for="logo in logoUrl" :key="logo.id" :to="logo.path" tag="li">
           <a>
             <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
@@ -48,7 +48,6 @@ export default {
 </script>
 
 <style lang="less" scoped>
-
 .logo-container{
   display: inline-block;
   p{

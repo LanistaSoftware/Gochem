@@ -3,7 +3,7 @@
     <li>
       <span class="search-bar" @mouseover="show=true" @mouseleave="show=false">
         <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
-          <input v-if="show" type="text">
+          <input v-show="show" type="text">
         </transition>
         <i class="flaticon-search" i />
       </span>
@@ -98,6 +98,7 @@ ul li {
     border: none;
     background: transparent;
     vertical-align: middle;
+  z-index: 1000;
   }
 }
 
