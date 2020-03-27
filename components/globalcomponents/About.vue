@@ -1,58 +1,120 @@
 <template>
   <div>
-    <div id="container">
-      <img src="https://images.unsplash.com/photo-1513854541033-8fa2f80efbdf?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=99fc5e14bfc047ed58ee5a22fd44fc86">
-      <div id="overlay">
-        weafs.py
+    <div v-for="(ceo,index) in aboutUs" :key="index.id" class="about">
+      <div class="about-profile">
+        <div class="profile fill">
+          <img :src="ceo.ceoImgUrl" alt="">
+        </div>
+        <h2>{{ ceo.username }}</h2>
+        <span>{{ ceo.company }}</span>
+        <br>
+        <p>{{ ceo.auth }}</p>
       </div>
-      <svg viewBox="0 0 450 100" style="position: absolute; left:-3px;top: 0;">
-        <defs>
-          <filter id="blur">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="3" />
-          </filter>
-        </defs>
-        <image
-          filter="url(#blur)"
-          xlink:href="https://images.unsplash.com/photo-1513854541033-8fa2f80efbdf?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=99fc5e14bfc047ed58ee5a22fd44fc86"
-          x="0"
-          y="-10"
-          height="300px"
-          width="460px"
-        />
-      </svg>
+
+      <div class="about-left">
+        <p>
+          {{ ceo.content }}
+        </p>
+        <div class="imza">
+          <h2> {{ ceo.username }} </h2>
+          <img width="100" :src="ceo.autograph" alt="">
+        </div>
+      </div>
     </div>
   </div>
 </template>
+<script>
+export default {
+  computed: {
+    aboutUs () {
+      return this.$store.getters.getAboutUs
+    }
+  }
+}
+</script>
 <style lang="less" scoped>
+*{
+  color:white
+}
 
-body, html {
-  height: 100%;
-  margin: 0;
-  background: rgba(47, 79, 79, 0.7);
-}
-#container {
-    padding-top: 60rem;
-  position: relative;
-  width: 450px;
-  top: 50%;
-  transform: translateY(-50%);
-  margin: 0 auto;
-}
-img {
-  height: 300px;
-  box-shadow: 0 0 10px 0 #222;
-}
-#overlay {
-  position: absolute;
-  left: 0;
-  top: 0;
+.profile img {
   width: 100%;
-  z-index: 1;
-  color: rgba(209, 206, 209, 0.4);
-  font-family: Inconsolata, monospace;
-  font-size: 50px;
-  text-align: center;
-  line-height: 100px;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
 }
+
+.fill img {
+  object-fit: fill;
+}
+
+.about:before {
+    content: "";
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 1000px 1000px 1000px #354b50;
+    /* -webkit-filter: blur(10px); */
+    -webkit-filter: blur(10px);
+    filter: blur(20px);
+}
+.about{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+  margin-top: 4rem;
+  float: left;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+  background: inherit;
+  overflow: hidden;
+}
+/* Create three equal columns that floats next to each other */
+.about-profile {
+  float: left;
+  text-align: center;
+  width: 22%;
+  h2{
+    font-size: 1.6rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  span{
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  p{
+    padding-top: .5rem;
+  }
+  img {
+    border-radius: 10%;
+  }
+}
+.about-left {
+ column-count: 2;
+ -webkit-column-count: 2;
+ -moz-column-count: 2;
+ column-rule-style: solid;
+ -webkit-column-rule-style: solid;
+ -moz-column-rule-style: solid;
+ column-rule-width: 1px;
+ -webkit-column-rule-width: 1px;
+ -moz-column-rule-width: 1px;
+ p{
+   padding-right: 2rem;
+   padding-left: 2rem;
+ }
+}
+.imza{
+  padding-top: 3rem;
+  float: right;
+  img{
+    padding-top: 2rem;
+  }
+}
+
 </style>
