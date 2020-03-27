@@ -24,15 +24,6 @@ export default {
 }
 </script>
 <style scoped>
- .header {
-   display: inline-block;
-   width: 100%;
-   border-bottom: 0.003rem solid white;
-   padding: 1rem 0;
-   text-align: center;
-   height: 5.5rem;
- }
-
  .logobox {
    display: inline-block;
    width: 9%;

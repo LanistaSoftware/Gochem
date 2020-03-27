@@ -6,16 +6,16 @@
     leave-active-c-lass="animated zoomOutUp"
     appear
   >
-    <div class="bg" :class="bgImageUrl[getSlideIndex]">
+    <div class="bg" :style="{ backgroundImage: 'url(' + bgImageUrl + ')' }">
       <div class="overlay">
         <div class="bg-container">
           <Header />
           <nuxt />
         </div>
-      </div>
 
-      <div class="footer">
-        <Footer />
+        <div class="footer">
+          <Footer />
+        </div>
       </div>
     </div>
   </transition>
@@ -33,41 +33,21 @@ export default {
   },
   data () {
     return {
-      bgImageUrl: ['bgUrl1', 'bgUrl2', 'bgUrl3']
+      bgImageUrl: require('../assets/img/bg1.jpg')
     }
   },
   computed: {
     getSlideIndex () {
       return this.$store.getters.getSlideIndex
+    },
+    getSlideSets () {
+      return this.$store.getters.getSlideSets
+    }
+  },
+  watch: {
+    getSlideIndex () {
+      this.bgImageUrl = this.getSlideSets[this.getSlideIndex].imageUrl
     }
   }
 }
 </script>
-<style lang="less" scoped>
-.bgUrl1 {
-  background: url(../assets/img/bg1.jpg);
-  transition: background-image 2s ease-in-out;
-}
-
-.bgUrl2 {
-  background: url(../assets/img/bg2.jpg);
-  transition: background-image 2s ease-in-out;
-}
-
-.bgUrl3 {
-  background: url(../assets/img/bg3.jpg);
-  transition: background-image 2s ease-in-out;
-}
-.bg {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  height: 100vh;
-  width: 100%;
-}
-.overlay{
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-</style>

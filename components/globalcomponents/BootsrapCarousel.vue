@@ -119,7 +119,7 @@ export default {
   }
   .carousel-content h4{
     font-weight: bold;
-    padding-bottom: 1.2vh;
+    padding-bottom: 1.4vh;
     font-family: utopia-std-headline, serif;
   }
   .carousel-content span{
@@ -135,7 +135,7 @@ export default {
     font-family: Arial, serif;
     font-size: 4.5rem;
     font-weight: 800;
-    padding-bottom: 1vh;
+    padding-bottom: 1.4vh;
   }
   .carousel-content p{
     font-family: Helvetica , sans-serif;
