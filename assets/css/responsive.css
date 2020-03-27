@@ -50,13 +50,13 @@
 /* Extra large devices (large laptops and desktops, 1200px*675px and up) */
 @media only screen and (min-width: 1200px) {
   html {
-    font-size: 15px;
+    font-size: 14px;
   }
   .nav-text {
     display: inline !important;
   }
   .bg-container {
-    width: 90%;
+    width: 85%;
   }
   .navli {
     padding: 0.5rem 1.3rem 0.5rem 1.3rem !important;
