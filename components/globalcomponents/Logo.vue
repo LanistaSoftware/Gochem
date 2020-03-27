@@ -3,7 +3,7 @@
     <div class="logo-container">
       <ul>
         <nuxt-link v-for="logo in logoUrl" :key="logo.id" :to="logo.path" tag="li">
-          <a>
+          <a @mouseover="mouseover" @mouseleave="mouseleave">
             <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
               <img v-show="showColor" width="300" :src="logom">
             </transition>
