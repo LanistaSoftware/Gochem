@@ -1,23 +1,22 @@
 <template>
-  <div>
-    <div class="about">
-      <div class="about-profile">
-        <div class="profile fill">
-          <img :src="aboutUs.profileImg" alt="">
-        </div>
-        <h2>{{ aboutUs.ownername }}</h2>
-        <span>{{ aboutUs.company }}</span>
-        <br>
-        <p>{{ aboutUs.title }}</p>
+  <div class="about">
+    <div class="about-profile">
+      <div class="profile-img">
+        <img :src="aboutUs.profileImg" alt="">
       </div>
-      <div class="about-content">
-        <p>
-          {{ aboutUs.content }}
-        </p>
-        <div class="imza">
-          <h2> {{ aboutUs.ownername }} </h2>
-          <img width="100" :src="aboutUs.autograph" alt="">
-        </div>
+      <h2>{{ aboutUs.ownername }}</h2>
+      <span>{{ aboutUs.company }}</span>
+      <br>
+      <p>{{ aboutUs.title }}</p>
+    </div>
+    <div class="about-content">
+      <p>
+        {{ aboutUs.content }}
+        Lorem ipsum
+      </p>
+      <div class="imza">
+        <h2> {{ aboutUs.ownername }} </h2>
+        <img width="100" :src="aboutUs.autograph" alt="">
       </div>
     </div>
   </div>
@@ -32,86 +31,71 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-*{
-  color:white
-}
-
-.profile img {
-  width: 100%;
-}
-
-.fill img {
-  object-fit: fill;
-}
-
-.about::before {
-    content: "";
-    position: absolute;
-    background: inherit;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    box-shadow: inset 1000px 1000px 1000px #354b50;
-    filter: blur(20px);
-}
 .about{
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 2rem;
-  margin-top: 4rem;
-  float: left;
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
-  border-radius: 5px;
-  position: relative;
-  z-index: 1;
-  background: inherit;
-  overflow: hidden;
+color:white;
+background-color: rgba(0, 0, 0, .01);
+backdrop-filter: blur(15px);
+-webkit-backdrop-filter: blur(10px);
+width: 100%;
+height: 70vh;
+padding: 2rem;
+margin-top: 4rem;
+border-radius: 1em;
 }
+
 /* Create three equal columns that floats next to each other */
 .about-profile {
-  float: left;
-  text-align: center;
-  width: 22%;
-  h2{
-    font-size: 1.6rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-  span{
-    font-size: 1rem;
-    padding: 1rem;
-  }
-  p{
-    padding-top: .5rem;
-  }
-  img {
-    border-radius: 10%;
-  }
+float: left;
+text-align: center;
+width: 22%;
+height: 100%;
+h2 {
+font-size: 1.6rem;
+padding-top: 1rem;
+padding-bottom: 1rem;
+}
+span {
+font-size: 1rem;
+padding: 1rem;
+}
+p {
+padding-top: .5rem;
+}
+.profile-img img {
+width: 100%;
+border-radius: 10%;
+}
 }
 .about-content {
- column-count: 2;
- -webkit-column-count: 2;
- -moz-column-count: 2;
- column-rule-style: solid;
- -webkit-column-rule-style: solid;
- -moz-column-rule-style: solid;
- column-rule-width: 1px;
- -webkit-column-rule-width: 1px;
- -moz-column-rule-width: 1px;
- p{
-   padding-right: 2rem;
-   padding-left: 2rem;
- }
+height: 50rem;
+column-count: 2;
+-webkit-column-count: 2;
+-moz-column-count: 2;
+column-rule-style: solid;
+-webkit-column-rule-style: solid;
+-moz-column-rule-style: solid;
+column-rule-width: 1px;
+-webkit-column-rule-width: 1px;
+-moz-column-rule-width: 1px;
+padding: 1rem;
+p{
+
+padding-right: 2rem;
+padding-left: 2rem;
+font: menu;
+font-size: 1.06rem;
+}
+overflow: hidden;
 }
 .imza{
-  padding-top: 3rem;
-  float: right;
-  img{
-    padding-top: 2rem;
-  }
+padding-left: 6rem;
+text-align: center;
+padding-top: 3rem;
+h2{
+font-size: 2rem;
 }
-
+img{
+padding-top: 2rem;
+}
+}
 </style>
