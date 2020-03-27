@@ -16,18 +16,6 @@ html {
   font-family: Arial, Helvetica, sans-serif;
   color: white;
 }
-[class^="flaticon-"]:before {
-  color: white;
-  margin-left: 0 !important;
-}
-[class^="carousel-control-next-icon"],
-[class^="carousel-control-prev-icon"] {
-  width: 40%;
-}
-/** footer*/
-.footer-bg {
-  background-color: rgba(0, 0, 0, 0.6);
-}
 .bg-container {
   width: 90%;
   padding-right: 1rem;
@@ -35,19 +23,10 @@ html {
   margin-right: auto;
   margin-left: auto;
 }
-.social {
-  padding-top: 1rem;
-  text-align: right;
-}
-.boxes {
-  width: 80%;
-  margin: auto;
-  margin-top: 6vh;
-}
-.footer {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
+/***** Global Icon's ****/
+[class^="flaticon-"]:before {
+  color: white;
+  margin-left: 0 !important;
 }
 [class^="flaticon-"]:before,
 [class*=" flaticon-"]:before,
@@ -55,4 +34,46 @@ html {
 [class*=" flaticon-"]:after {
   font-size: 1.1rem;
   cursor: pointer;
+}
+/* HEADER  */
+.header {
+  display: inline-block;
+  width: 100%;
+  border-bottom: 0.003rem solid white;
+  padding: 1rem 0;
+  text-align: center;
+  height: 5.5rem;
+}
+/***** SOCIAL ******/
+.social {
+  height: 2rem;
+  padding-top: 1rem;
+  text-align: right;
+}
+/***** CAROUSEL ******/
+.carousel {
+  margin-top: 3vh;
+}
+[class^="carousel-control-next-icon"],
+[class^="carousel-control-prev-icon"] {
+  width: 40%;
+}
+/***** BOXES ******/
+.boxes {
+  width: 80%;
+  margin: auto;
+  margin-top: 10vh;
+}
+/***** FOOTER ******/
+.footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+.footer-bg {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #939393;
+  height: 2rem;
+  width: 100%;
+  text-align: center;
 }

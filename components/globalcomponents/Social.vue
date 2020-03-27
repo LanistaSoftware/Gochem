@@ -4,7 +4,7 @@
       <li class="icon-container first-li" @mouseover="show=true" @mouseleave="show=false">
         <span class="search-input">
           <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
-            <input v-show="show" type="text" size="20" height="48">
+            <input v-if="show" type="text" size="20" height="48">
           </transition>
           <i class="flaticon-search" i />
         </span>
@@ -51,9 +51,7 @@ export default {
 /*=========================
   Icons
  ================= */
- social-container{
-   height: 2rem;
- }
+
 ul.social-network li {
   display: inline-block;
   vertical-align: middle;

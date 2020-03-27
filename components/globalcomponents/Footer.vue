@@ -42,38 +42,35 @@ export default {
 }
 </script>
 <style lang="less" scoped>
- .footer-bg{
-   color: #939393;
-   height: 2rem;
-   width: 100%;
-   text-align: center;
- }
- .box{
+.box {
 
-    width: 33.3%;
+  width: 33.3%;
+  height: 100%;
+  float: left;
+  text-align: center;
+
+  .companydesc {
+    position: relative;
+    top: 25%;
+
+  }
+
+  .imgcontainer {
+    width: 100%;
     height: 100%;
-    float: left;
     text-align: center;
+    padding: 0.4rem;
 
-    .companydesc{
-      position: relative;
-      top: 25%;
-
-    }
-    .imgcontainer{
-      width: 100%;
+    img {
       height: 100%;
-      text-align: center;
-      padding: 0.4rem;
-      img{
-        height:100%;
-        width: auto;
-      }
-      .copyright{
-        display: inline-block;
-        margin-right: 0.5rem;
-      }
+      width: auto;
     }
+
+    .copyright {
+      display: inline-block;
+      margin-right: 0.5rem;
+    }
+  }
 
 }
 </style>
