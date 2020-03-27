@@ -68,7 +68,7 @@ html {
 .boxes {
   width: 80%;
   margin: auto;
-  margin-top: 6vh;
+  margin-top: 10vh;
   cursor: pointer;
 }
 .embed-responsive {

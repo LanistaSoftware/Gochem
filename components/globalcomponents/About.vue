@@ -1,23 +1,23 @@
 <template>
   <div>
-    <div v-for="(ceo,index) in aboutUs" :key="index.id" class="about">
+    <div v-for="(item,index) in aboutUs" :key="index.id" class="about">
       <div class="about-profile">
         <div class="profile fill">
-          <img :src="ceo.ceoImgUrl" alt="">
+          <img :src="item.itemImgUrl" alt="">
         </div>
-        <h2>{{ ceo.username }}</h2>
-        <span>{{ ceo.company }}</span>
+        <h2>{{ item.username }}</h2>
+        <span>{{ item.company }}</span>
         <br>
-        <p>{{ ceo.auth }}</p>
+        <p>{{ item.auth }}</p>
       </div>
 
       <div class="about-left">
         <p>
-          {{ ceo.content }}
+          {{ item.content }}
         </p>
         <div class="imza">
-          <h2> {{ ceo.username }} </h2>
-          <img width="100" :src="ceo.autograph" alt="">
+          <h2> {{ item.username }} </h2>
+          <img width="100" :src="item.autograph" alt="">
         </div>
       </div>
     </div>
