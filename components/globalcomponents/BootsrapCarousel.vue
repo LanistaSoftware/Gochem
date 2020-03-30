@@ -16,7 +16,7 @@
               <h4><strong> 0{{ index+1 }} </strong><span class="slash">/</span> <sup> 0{{ slideSets.length }} </sup></h4>
               <h2>{{ slide.header | firstWord }} </h2>
               <h2>{{ slide.header |otherWord }} </h2>
-              <p class="content">
+              <p class="content-text">
                 {{ slide.content }}
               </p>
             </div>
