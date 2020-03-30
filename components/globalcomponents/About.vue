@@ -41,10 +41,12 @@ height: 70vh;
 padding: 2rem;
 margin-top: 4rem;
 border-radius: 1em;
+font-family: Arial, sans-serif;
 }
 
 /* Create three equal columns that floats next to each other */
 .about-profile {
+
 float: left;
 text-align: center;
 width: 22%;
@@ -59,6 +61,7 @@ font-size: 1rem;
 padding: 1rem;
 }
 p {
+  font-size: 1rem;
 padding-top: .5rem;
 }
 .profile-img img {
@@ -67,7 +70,6 @@ border-radius: 10%;
 }
 }
 .about-content {
-height: 50rem;
 column-count: 2;
 -webkit-column-count: 2;
 -moz-column-count: 2;
