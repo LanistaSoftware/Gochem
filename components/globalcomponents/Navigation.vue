@@ -79,10 +79,7 @@ ul {
 }
 
 li a {
-
-  color: white;
   text-align: center;
-  text-decoration: none;
 
 }
 

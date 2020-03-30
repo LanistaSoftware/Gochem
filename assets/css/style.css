@@ -8,6 +8,15 @@ html {
   font-family: Arial, Helvetica, sans-serif;
   color: white;
 }
+html a {
+  color: white;
+  text-decoration: none;
+}
+html a:hover,
+html button:hover {
+  color: lightgreen;
+  text-decoration: none;
+}
 /* Content */
 .content {
   color: white;

@@ -21,7 +21,7 @@
           </div>
         </transition>
         <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
-          <div v-show="boxAnimated" class="content">
+          <div v-show="boxAnimated" class="box-content">
             <p>
               {{ item.content | filterBoxContent }}
             </p>
@@ -114,7 +114,7 @@ export default {
 <style lang="less" scoped>
 
 /***  Slider Box CSS ****/
-.content {
+.box-content {
   height: 70%;
   font-family: Helvetica, sans-serif;
   font-size: .9rem;
