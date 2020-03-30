@@ -13,11 +13,27 @@ html {
   color: white;
   width: 100%;
   height: 70vh;
-  padding: 2rem;
-  margin-top: 4rem;
+  padding: 1rem;
+  margin-top: 2.5rem;
   border-radius: 1em;
   font-family: Arial, sans-serif;
 }
+/* scroll bar ayarları  */
+::-webkit-scrollbar {
+  width: 0.3rem;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 30px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+/* scrollbar bitiş */
 @supports (backdrop-filter: none) {
   .content-background {
     background-color: rgba(0, 0, 0, 0.01);

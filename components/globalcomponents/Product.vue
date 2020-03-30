@@ -1,6 +1,7 @@
 <template>
-  <div>
-    <div class="product">
+  <section>
+    <Social class="social" />
+    <div class="content content-background">
       <div class="sidenav">
         <h1> Slikon Pigment</h1>
         <div class="head rtv-1">
@@ -50,24 +51,37 @@
         </div>
         <div class="product-link">
           <div class="btn-product">
-            <i>icon</i>
-            <button>tıkla</button>
+            <i class="flaticon-product" />
+            <br>
+            <button class="btn">
+              Online sipariş çok yakında
+            </button>
           </div>
           <div class="btn-product">
-            <i>icon</i>
-            <button>tıkla</button>
+            <i class="flaticon-deal" />
+            <br>
+            <button class="btn">
+              Hemen teklif alın
+            </button>
           </div>
           <div class="btn-product">
-            <i>icon</i>
-            <button>tıkla</button>
+            <i class="flaticon-info" />
+            <br>
+            <button class="btn">
+              Daha fazla bilgi alın
+            </button>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 <script>
+import Social from '@/components/globalcomponents/Social'
 export default {
+  components: {
+    Social
+  },
   computed: {
     slideSets () {
       return this.$store.getters.getSlideSets
@@ -79,15 +93,6 @@ export default {
 *{
   color: #fff;
   font-family: Arial, sans-serif;
-}
-.product{
-  width: 100%;
-  height: 70vh;
-  padding: 2rem;
-  margin-top: 5rem;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: rgba(0, 0, 0, .4);
 }
 .sidenav {
   height: 100%;
@@ -107,20 +112,6 @@ export default {
 
   }
 }
-::-webkit-scrollbar {
-  width: .3rem;
-}
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px rgba(255, 255, 255, .4);
-  border-radius: 10px;
-}
-::-webkit-scrollbar-thumb {
-  background: #fff;
-  border-radius: 10px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #b30000;
-}
 .sidenav a {
   padding: .3rem .3rem .3rem 1rem;
   text-decoration: none;
@@ -130,6 +121,9 @@ export default {
   background: none;
   width: 100%;
   cursor: pointer;
+  &:hover{
+    color: lightgreen;
+  }
 }
 .product-content{
   width: 70%;
@@ -138,10 +132,42 @@ export default {
   padding-top:2rem ;
 }
 .product-item{
+  height: 40vh;
   h2{
     font-size: 2rem;
     padding-bottom: 2rem;
     line-height:initial;
   }
+  p{
+    text-indent: 2rem;
+    font-size: 1.3rem;
+  }
+}
+.product-link{
+  width: 100%;
+  text-align: center;
+  .btn-product{
+    width: 30%;
+    float: left;
+    .btn{
+      width: 80%;
+      border: 1px solid;
+      border-radius: .6rem;
+      margin-top: 1.3rem;
+      font-size: 1.2rem;
+      padding: 0 2rem 0 2rem;
+      text-align: center;
+    }
+    .btn:hover{
+      background-color: lightgreen;
+    }
+  }
+  [class^="flaticon-"]:before,
+[class*=" flaticon-"]:before,
+[class^="flaticon-"]:after,
+[class*=" flaticon-"]:after {
+  font-size: 3rem;
+  cursor: pointer;
+}
 }
 </style>

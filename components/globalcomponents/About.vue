@@ -1,27 +1,34 @@
 <template>
-  <div class="content content-background">
-    <div class="about-profile">
-      <div class="profile-img">
-        <img :src="aboutUs.profileImg" alt="">
+  <section>
+    <Social class="social" />
+    <div class="content content-background">
+      <div class="about-profile">
+        <div class="profile-img">
+          <img :src="aboutUs.profileImg" alt="">
+        </div>
+        <h2>{{ aboutUs.ownername }}</h2>
+        <span>{{ aboutUs.company }}</span>
+        <br>
+        <p>{{ aboutUs.title }}</p>
       </div>
-      <h2>{{ aboutUs.ownername }}</h2>
-      <span>{{ aboutUs.company }}</span>
-      <br>
-      <p>{{ aboutUs.title }}</p>
-    </div>
-    <div class="about-content">
-      <p>
-        {{ aboutUs.content }}
-      </p>
-      <div class="imza">
-        <h2> {{ aboutUs.ownername }} </h2>
-        <img :src="aboutUs.autograph" alt="Signature">
+      <div class="about-content">
+        <p>
+          {{ aboutUs.content }}
+        </p>
+        <div class="imza">
+          <h2> {{ aboutUs.ownername }} </h2>
+          <img :src="aboutUs.autograph" alt="Signature">
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 <script>
+import Social from '@/components/globalcomponents/Social'
 export default {
+  components: {
+    Social
+  },
   computed: {
     aboutUs () {
       return this.$store.getters.getAboutUs
