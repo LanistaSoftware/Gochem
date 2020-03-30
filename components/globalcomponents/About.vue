@@ -1,5 +1,5 @@
 <template>
-  <div class="about about-background">
+  <div class="about content-background">
     <div class="about-profile">
       <div class="profile-img">
         <img :src="aboutUs.profileImg" alt="">
@@ -31,18 +31,17 @@ export default {
 </script>
 <style lang="less" scoped>
   @supports (backdrop-filter: none) {
-    .about-background {
+    .content-background {
       background-color: rgba(0, 0, 0, .01);
       backdrop-filter: blur(15px);
     }
   }
 /* Tarayıcı desteği olmadığında seçilecek resim buraya gelecek.*/
   @supports not (backdrop-filter: none) {
-    .about-background {
+    .content-background {
       background-image: red;
     }
   }
-
   .about {
     color: white;
     width: 100%;

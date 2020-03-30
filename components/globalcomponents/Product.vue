@@ -2,47 +2,45 @@
   <div>
     <div class="product">
       <div class="sidenav">
-        <div class="dene">
-          <h1> Slikon Pigment</h1>
-          <div class="head rtv-1">
-            <h2> RTV 1</h2>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#clients">Clients</a>
-            <a href="#contact">Contact</a>
-            <a href="#contact">Search</a>
-          </div>
-          <div class="head rtv-2">
-            <h2> RTV 2</h2>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#clients">Clients</a>
-            <a href="#contact">Contact</a>
-            <a href="#contact">Search</a>
-          </div>
-          <div class="head lsr">
-            <h2> LSR </h2>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#clients">Clients</a>
-            <a href="#contact">Contact</a>
-            <a href="#contact">Search</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#clients">Clients</a>
-            <a href="#contact">Contact</a>
-            <a href="#contact">Search</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#clients">Clients</a>
-            <a href="#contact">Contact</a>
-            <a href="#contact">Search</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#clients">Clients</a>
-            <a href="#contact">Contact</a>
-            <a href="#contact">Search</a>
-          </div>
+        <h1> Slikon Pigment</h1>
+        <div class="head rtv-1">
+          <h2> RTV 1</h2>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#clients">Clients</a>
+          <a href="#contact">Contact</a>
+          <a href="#contact">Search</a>
+        </div>
+        <div class="head rtv-2">
+          <h2> RTV 2</h2>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#clients">Clients</a>
+          <a href="#contact">Contact</a>
+          <a href="#contact">Search</a>
+        </div>
+        <div class="head lsr">
+          <h2> LSR </h2>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#clients">Clients</a>
+          <a href="#contact">Contact</a>
+          <a href="#contact">Search</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#clients">Clients</a>
+          <a href="#contact">Contact</a>
+          <a href="#contact">Search</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#clients">Clients</a>
+          <a href="#contact">Contact</a>
+          <a href="#contact">Search</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#clients">Clients</a>
+          <a href="#contact">Contact</a>
+          <a href="#contact">Search</a>
         </div>
       </div>
       <div class="product-content">
@@ -110,10 +108,10 @@ export default {
   }
 }
 ::-webkit-scrollbar {
-  width: 2px;
+  width: .3rem;
 }
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey;
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, .4);
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
