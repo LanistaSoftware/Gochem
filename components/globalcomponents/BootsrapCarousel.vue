@@ -134,14 +134,13 @@ export default {
   }
   .carousel-content h2{
     font-family: Arial, serif;
-    font-size: 4.5rem;
+    font-size: 4rem;
     font-weight: 800;
     padding-bottom: 1.8vh;
   }
   .carousel-content p{
     font-family: Helvetica , sans-serif;
     font-weight:200;
-    font-size: 0.9rem;
     margin-top: 1.5rem;
     // letter-spacing: 0.1rem;
   }
