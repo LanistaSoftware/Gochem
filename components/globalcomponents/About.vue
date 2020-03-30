@@ -1,5 +1,5 @@
 <template>
-  <div class="about content-background">
+  <div class="content content-background">
     <div class="about-profile">
       <div class="profile-img">
         <img :src="aboutUs.profileImg" alt="">
@@ -30,27 +30,6 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-  @supports (backdrop-filter: none) {
-    .content-background {
-      background-color: rgba(0, 0, 0, .01);
-      backdrop-filter: blur(15px);
-    }
-  }
-/* Tarayıcı desteği olmadığında seçilecek resim buraya gelecek.*/
-  @supports not (backdrop-filter: none) {
-    .content-background {
-      background-image: red;
-    }
-  }
-  .about {
-    color: white;
-    width: 100%;
-    height: 70vh;
-    padding: 2rem;
-    margin-top: 4rem;
-    border-radius: 1em;
-    font-family: Arial, sans-serif;
-  }
 
   /* Create three equal columns that floats next to each other */
   .about-profile {
