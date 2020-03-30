@@ -27,7 +27,7 @@ html {
 /* Tarayıcı desteği olmadığında seçilecek resim buraya gelecek.*/
 @supports not (backdrop-filter: none) {
   .content-background {
-    background-image: red;
+    background-color: rgba(0, 0, 0, 0.2);
   }
 }
 /***** Background & Container ****/

@@ -1,68 +1,66 @@
 <template>
-  <div>
-    <div class="product">
-      <div class="sidenav">
-        <div class="dene">
-          <h1> Slikon Pigment</h1>
-          <div class="head rtv-1">
-            <h2> RTV 1</h2>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#clients">Clients</a>
-            <a href="#contact">Contact</a>
-            <a href="#contact">Search</a>
-          </div>
-          <div class="head rtv-2">
-            <h2> RTV 2</h2>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#clients">Clients</a>
-            <a href="#contact">Contact</a>
-            <a href="#contact">Search</a>
-          </div>
-          <div class="head lsr">
-            <h2> LSR </h2>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#clients">Clients</a>
-            <a href="#contact">Contact</a>
-            <a href="#contact">Search</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#clients">Clients</a>
-            <a href="#contact">Contact</a>
-            <a href="#contact">Search</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#clients">Clients</a>
-            <a href="#contact">Contact</a>
-            <a href="#contact">Search</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#clients">Clients</a>
-            <a href="#contact">Contact</a>
-            <a href="#contact">Search</a>
-          </div>
+  <div class="content content-background">
+    <div class="sidenav">
+      <div class="dene">
+        <h1> Slikon Pigment</h1>
+        <div class="head rtv-1">
+          <h2> RTV 1</h2>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#clients">Clients</a>
+          <a href="#contact">Contact</a>
+          <a href="#contact">Search</a>
+        </div>
+        <div class="head rtv-2">
+          <h2> RTV 2</h2>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#clients">Clients</a>
+          <a href="#contact">Contact</a>
+          <a href="#contact">Search</a>
+        </div>
+        <div class="head lsr">
+          <h2> LSR </h2>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#clients">Clients</a>
+          <a href="#contact">Contact</a>
+          <a href="#contact">Search</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#clients">Clients</a>
+          <a href="#contact">Contact</a>
+          <a href="#contact">Search</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#clients">Clients</a>
+          <a href="#contact">Contact</a>
+          <a href="#contact">Search</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#clients">Clients</a>
+          <a href="#contact">Contact</a>
+          <a href="#contact">Search</a>
         </div>
       </div>
-      <div class="product-content">
-        <div class="product-item">
-          <h2>SS 9852</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quia ab possimus, consequatur repudiandae eveniet vitae velit dolorum sint fugiat necessitatibus est obcaecati cumque, eos iste neque, sapiente eum consequuntur exercitationem ullam culpa soluta. Minima optio eaque soluta ipsam, quia quidem dicta et fugiat quisquam sapiente, explicabo dignissimos iusto adipisci? Ratione aut laboriosam error repudiandae debitis saepe eligendi quos natus, nemo non architecto consequatur cum autem culpa maxime necessitatibus a. Enim, nemo reprehenderit exercitationem odio harum blanditiis illum, sint fuga impedit eligendi asperiores, minus accusamus ullam cum. Eos, nostrum nihil? Sed ullam deserunt cum aut vero corporis dicta atque quos?</p>
+    </div>
+    <div class="product-content">
+      <div class="product-item">
+        <h2>SS 9852</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quia ab possimus, consequatur repudiandae eveniet vitae velit dolorum sint fugiat necessitatibus est obcaecati cumque, eos iste neque, sapiente eum consequuntur exercitationem ullam culpa soluta. Minima optio eaque soluta ipsam, quia quidem dicta et fugiat quisquam sapiente, explicabo dignissimos iusto adipisci? Ratione aut laboriosam error repudiandae debitis saepe eligendi quos natus, nemo non architecto consequatur cum autem culpa maxime necessitatibus a. Enim, nemo reprehenderit exercitationem odio harum blanditiis illum, sint fuga impedit eligendi asperiores, minus accusamus ullam cum. Eos, nostrum nihil? Sed ullam deserunt cum aut vero corporis dicta atque quos?</p>
+      </div>
+      <div class="product-link">
+        <div class="btn-product">
+          <i>icon</i>
+          <button>tıkla</button>
         </div>
-        <div class="product-link">
-          <div class="btn-product">
-            <i>icon</i>
-            <button>tıkla</button>
-          </div>
-          <div class="btn-product">
-            <i>icon</i>
-            <button>tıkla</button>
-          </div>
-          <div class="btn-product">
-            <i>icon</i>
-            <button>tıkla</button>
-          </div>
+        <div class="btn-product">
+          <i>icon</i>
+          <button>tıkla</button>
+        </div>
+        <div class="btn-product">
+          <i>icon</i>
+          <button>tıkla</button>
         </div>
       </div>
     </div>
