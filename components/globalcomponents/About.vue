@@ -33,7 +33,7 @@ export default {
 </script>
 <style lang="less" scoped>
 *{
-  color:white
+  color:white;
 }
 
 .profile img {
