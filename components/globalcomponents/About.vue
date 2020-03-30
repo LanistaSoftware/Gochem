@@ -69,9 +69,9 @@ export default {
 
   .about-content {
     height: 100%;
-    column-count: 2;
-    column-rule-style: solid;
-    column-rule-width: 1px;
+    // column-count: 2;
+    // column-rule-style: solid;
+    // column-rule-width: 1px;
     padding: 1rem;
     overflow: hidden;
 
@@ -100,21 +100,4 @@ export default {
     }
   }
 
-  #style-4::-webkit-scrollbar-track
-{
-    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    background-color: #F5F5F5;
-}
-
-#style-4::-webkit-scrollbar
-{
-    width: 10px;
-    background-color: #F5F5F5;
-}
-
-#style-4::-webkit-scrollbar-thumb
-{
-    background-color: #000000;
-    border: 2px solid #555555;
-}
 </style>

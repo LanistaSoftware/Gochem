@@ -8,6 +8,15 @@ html {
   font-family: Arial, Helvetica, sans-serif;
   color: white;
 }
+html a {
+  color: white;
+  text-decoration: none;
+}
+html a:hover,
+html button:hover {
+  color: lightgreen;
+  text-decoration: none;
+}
 /* Content */
 .content {
   color: white;
@@ -43,7 +52,7 @@ html {
 /* Tarayıcı desteği olmadığında seçilecek resim buraya gelecek.*/
 @supports not (backdrop-filter: none) {
   .content-background {
-    background-image: red;
+    background-color: rgba(0, 0, 0, 0.2);
   }
 }
 /***** Background & Container ****/

@@ -107,25 +107,14 @@ export default {
 }
 .sidenav a {
   padding: .3rem .3rem .3rem 1rem;
-  text-decoration: none;
-  font-size: 1rem;
   display: block;
-  border: none;
-  background: none;
-  width: 100%;
-  cursor: pointer;
-  &:hover{
-    color: lightgreen;
-  }
 }
 .product-container{
-  width: 70%;
+  width: 80%;
   float: left;
-  padding-left: 6rem;
-  padding-top:2rem ;
+  padding: 2rem 5rem;
 }
 .product-content{
-  height: 40vh;
   h2{
     font-size: 2rem;
     padding-bottom: 2rem;
@@ -133,7 +122,7 @@ export default {
   }
   p{
     text-indent: 2rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   h4{
     background-color: lightgrey;
@@ -143,21 +132,12 @@ export default {
   width: 100%;
   text-align: center;
   .btn-product{
-    width: 30%;
+    width: 33%;
     float: left;
     .btn{
-      width: 80%;
-      border: 1px solid;
-      border-radius: .6rem;
       margin-top: 1.3rem;
-      font-size: 1.2rem;
-      padding: 0 2rem 0 2rem;
       text-align: center;
     }
-    .btn:hover{
-      background-color: lightgreen;
-    }
-  }
   [class^="flaticon-"]:before,
 [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after,

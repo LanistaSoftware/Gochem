@@ -40,7 +40,7 @@ export default {
         {
           href: '#',
           title: 'Youtube',
-          icon: 'flaticon-youtube'
+          icon: 'flaticon-youtube-rounded-square-logo'
         }
       ]
     }

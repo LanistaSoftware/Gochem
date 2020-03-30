@@ -114,7 +114,7 @@ export default {
 <style lang="less" scoped>
 
 /***  Slider Box CSS ****/
-.content {
+.box-content {
   height: 70%;
   font-family: Helvetica, sans-serif;
   font-size: .9rem;

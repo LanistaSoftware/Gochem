@@ -1,28 +1,7 @@
 	/*
   	Flaticon icon font: Flaticon
-  	Creation date: 12/03/2020 11:24
+  	Creation date: 30/03/2020 12:22
   	*/
-/* Flaticon CSS 
-.flaticon-sydney-opera-house
-.flaticon-contract
-.flaticon-mail
-.flaticon-support
-.flaticon-info
-.flaticon-content
-.flaticon-pin
-.flaticon-play-button
-.flaticon-product
-.flaticon-deal
-.flaticon-linkedin
-.flaticon-linkedin-1
-.flaticon-twitter
-.flaticon-youtube
-.flaticon-search
-.flaticon-next
-.flaticon-download
-.flaticon-back
-.flaticon-global
-*/
 
 @font-face {
   font-family: "Flaticon";
@@ -58,15 +37,22 @@ margin-left: 20px;
 .flaticon-info:before { content: "\f104"; }
 .flaticon-content:before { content: "\f105"; }
 .flaticon-pin:before { content: "\f106"; }
-.flaticon-play-button:before { content: "\f107"; }
-.flaticon-product:before { content: "\f108"; }
-.flaticon-deal:before { content: "\f109"; }
-.flaticon-linkedin:before { content: "\f10a"; }
-.flaticon-linkedin-1:before { content: "\f10b"; }
-.flaticon-twitter:before { content: "\f10c"; }
-.flaticon-youtube:before { content: "\f10d"; }
-.flaticon-search:before { content: "\f10e"; }
-.flaticon-next:before { content: "\f10f"; }
-.flaticon-download:before { content: "\f110"; }
-.flaticon-back:before { content: "\f111"; }
-.flaticon-global:before { content: "\f112"; }
+.flaticon-product:before { content: "\f107"; }
+.flaticon-deal:before { content: "\f108"; }
+.flaticon-twitter:before { content: "\f109"; }
+.flaticon-search:before { content: "\f10a"; }
+.flaticon-next:before { content: "\f10b"; }
+.flaticon-download:before { content: "\f10c"; }
+.flaticon-global:before { content: "\f10d"; }
+.flaticon-loupe:before { content: "\f10e"; }
+.flaticon-contract-1:before { content: "\f10f"; }
+.flaticon-customer-service:before { content: "\f110"; }
+.flaticon-right:before { content: "\f111"; }
+.flaticon-back:before { content: "\f112"; }
+.flaticon-down-arrow:before { content: "\f113"; }
+.flaticon-youtube-rounded-square-logo:before { content: "\f114"; }
+.flaticon-question:before { content: "\f115"; }
+.flaticon-chevron:before { content: "\f116"; }
+.flaticon-support-1:before { content: "\f117"; }
+.flaticon-linkedin:before { content: "\f118"; }
+.flaticon-linkedin-1:before { content: "\f119"; }

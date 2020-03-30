@@ -67,8 +67,43 @@ const createStore = () => {
       products: [
         {
           id: 1,
-          productName: 'SS 9852',
-          productContent: 'bb'
+          categoryName: 'Slikon Pigment',
+          productGroup: [
+            {
+              productName: '',
+              productDescription: ''
+            }
+          ]
+        },
+        {
+          id: 4,
+          categoryName: 'RTV 1',
+          productGroup: [
+            {
+              productName: 'SS 9852',
+              productDescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quia ab possimus, consequatur  repudiandae eveniet vitae velit dolorum sint fugiat necessitatibus est obcaecati cumque, eos iste neque, sapiente eum consequuntur exercitationem ullam culpa soluta. Minima optio eaque soluta ipsam, quia quidem dicta et fugiat quisquam sapiente, explicabo dignissimos iusto adipisci? Ratione aut laboriosam error  repudiandae debitis saepe eligendi quos natus, nemo non architecto consequatur cum autem culpa maxime necessitatibus a. Enim, nemo reprehenderit exercitationem odio harum blanditiis illum, sint fuga impedit eligendi asperiores, minus accusamus ullam cum. Eos, nostrum nihil? Sed ullam deserunt cum aut vero corporis dicta atque quos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore inventore nobis possimus non quaerat sed. Impedit dignissimos sint eligendi eaque?  Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti modi inventore nesciunt consequatur unde! Sapiente, pariatur sunt ut architecto ipsum velit unde, iure beatae tempora, inventore suscipit ab  repellendus nobis!'
+            }
+          ]
+        },
+        {
+          id: 2,
+          categoryName: 'RTV 2',
+          productGroup: [
+            {
+              productName: 'SS 9852',
+              productDescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quia ab possimus, consequatur  repudiandae eveniet vitae velit dolorum sint fugiat necessitatibus est obcaecati cumque, eos iste neque, sapiente eum consequuntur exercitationem ullam culpa soluta. Minima optio eaque soluta ipsam, quia quidem dicta et fugiat quisquam sapiente, explicabo dignissimos iusto adipisci? Ratione aut laboriosam error  repudiandae debitis saepe eligendi quos natus, nemo non architecto consequatur cum autem culpa maxime necessitatibus a. Enim, nemo reprehenderit exercitationem odio harum blanditiis illum, sint fuga impedit eligendi asperiores, minus accusamus ullam cum. Eos, nostrum nihil? Sed ullam deserunt cum aut vero corporis dicta atque quos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore inventore nobis possimus non quaerat sed. Impedit dignissimos sint eligendi eaque?  Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti modi inventore nesciunt consequatur unde! Sapiente, pariatur sunt ut architecto ipsum velit unde, iure beatae tempora, inventore suscipit ab  repellendus nobis!'
+            }
+          ]
+        },
+        {
+          id: 3,
+          categoryName: 'LSR',
+          productGroup: [
+            {
+              productName: 'SS 9852',
+              productDescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quia ab possimus, consequatur  repudiandae eveniet vitae velit dolorum sint fugiat necessitatibus est obcaecati cumque, eos iste neque, sapiente eum consequuntur exercitationem ullam culpa soluta. Minima optio eaque soluta ipsam, quia quidem dicta et fugiat quisquam sapiente, explicabo dignissimos iusto adipisci? Ratione aut laboriosam error  repudiandae debitis saepe eligendi quos natus, nemo non architecto consequatur cum autem culpa maxime necessitatibus a. Enim, nemo reprehenderit exercitationem odio harum blanditiis illum, sint fuga impedit eligendi asperiores, minus accusamus ullam cum. Eos, nostrum nihil? Sed ullam deserunt cum aut vero corporis dicta atque quos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore inventore nobis possimus non quaerat sed. Impedit dignissimos sint eligendi eaque?  Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti modi inventore nesciunt consequatur unde! Sapiente, pariatur sunt ut architecto ipsum velit unde, iure beatae tempora, inventore suscipit ab  repellendus nobis!'
+            }
+          ]
         }
       ]
     }),
@@ -87,6 +122,9 @@ const createStore = () => {
       },
       setAboutUs (state, about) {
         state.aboutUs = about
+      },
+      setProducts (state, product) {
+        state.products = product
       }
     },
     actions: {
@@ -95,6 +133,9 @@ const createStore = () => {
       },
       addAbout (vuexContext, about) {
         vuexContext.commit('setAboutUs', about)
+      },
+      addProduct (vuexContext, product) {
+        vuexContext.commit('setProducts', product)
       }
     },
     getters: {
@@ -112,6 +153,9 @@ const createStore = () => {
       },
       getAboutUs (state) {
         return state.aboutUs
+      },
+      getProducts (state) {
+        return state.products
       }
     }
   })

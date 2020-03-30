@@ -1,8 +1,8 @@
 /* eslint-disable no-console */
 <template>
   <div class="carousel-container">
-    <i class="sliderBtn left-btn rt flaticon-next" @click="prev()" />
-    <i class="sliderBtn right-btn flaticon-next" @click="next()" />
+    <i class="sliderBtn left-btn rt flaticon-right" @click="prev()" />
+    <i class="sliderBtn right-btn flaticon-right" @click="next()" />
     <b-carousel
       id="carousel-1"
       ref="myCarousel"
@@ -90,12 +90,13 @@ export default {
   padding: .6vh;
   z-index: 2000;
   color: #fff;
-  border: 1px solid #fff;
-  border-radius: 50%;
+  // border: 1px solid #fff;
+  // border-radius: 20%;
+
 }
 .sliderBtn::before {
     margin-left: 0;
-    font-size: 1rem;
+    font-size: 2rem;
     padding: 0 0 0 0.1rem;
 }
 .rt{
