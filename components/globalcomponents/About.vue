@@ -177,7 +177,7 @@ export default {
 
   .overlay {
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.70);
     border-radius: 2em;
 
   }

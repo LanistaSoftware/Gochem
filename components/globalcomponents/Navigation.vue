@@ -14,7 +14,6 @@
           :to="nav.path"
           tag="li"
           class="navli"
-          active-class="active"
         >
           <a><i class="naviconshow" :class="nav.icon" /><span class="nav-text">{{ nav.label }}</span></a>
         </nuxt-link>
@@ -54,12 +53,12 @@ export default {
         },
         {
           label: 'Makaleler',
-          path: '/',
+          path: '/blogs',
           icon: 'flaticon-content'
         },
         {
           label: 'İletişim',
-          path: '/',
+          path: '/comunication',
           icon: 'flaticon-mail'
         }
       ]
