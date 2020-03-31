@@ -12,7 +12,6 @@
 </template>
 <script>
 export default {
-
 }
 </script>
 <style lang="less" scoped>
@@ -46,11 +45,11 @@ export default {
     border-radius: 0.5em;
     text-transform: uppercase;
     font-size: 1.5rem;
-}
-h3:hover{
+  }
+  h3:hover{
     color: lightgreen;
     border-color: lightgreen;
-}
+  }
 }
 
 </style>
