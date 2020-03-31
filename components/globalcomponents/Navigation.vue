@@ -8,7 +8,13 @@
       appear
     >
       <ul>
-        <nuxt-link v-for="nav in navItems" :key="nav.id" :to="nav.path" tag="li" class="navli">
+        <nuxt-link
+          v-for="nav in navItems"
+          :key="nav.id"
+          :to="nav.path"
+          tag="li"
+          class="navli"
+        >
           <a><i class="naviconshow" :class="nav.icon" /><span class="nav-text">{{ nav.label }}</span></a>
         </nuxt-link>
       </ul>
@@ -47,12 +53,12 @@ export default {
         },
         {
           label: 'Makaleler',
-          path: '/',
+          path: '/blogs',
           icon: 'flaticon-content'
         },
         {
           label: 'İletişim',
-          path: '/',
+          path: '/comunication',
           icon: 'flaticon-mail'
         }
       ]

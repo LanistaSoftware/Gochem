@@ -8,7 +8,7 @@
     <b-carousel-slide>
       <template v-slot:img>
         <img
-          class="img-fluid w-100"
+          class="img-fluid"
           src="../../assets/img/bg1.jpg"
           alt="image slot"
         >
@@ -17,7 +17,7 @@
     <b-carousel-slide>
       <template v-slot:img>
         <img
-          class="img-fluid w-100"
+          class="img-fluid"
           src="../../assets/img/bg2.jpg"
           alt="image slot"
         >
@@ -26,7 +26,7 @@
     <b-carousel-slide>
       <template v-slot:img>
         <img
-          class="img-fluid w-100"
+          class="img-fluid"
           src="../../assets/img/bg3.jpg"
           alt="image slot"
         >
@@ -55,8 +55,8 @@ export default {
 </script>
 <style lang="less" scoped>
 .img-fluid {
-    width: auto;
-    height: 54vh!important;
+    width: 50rem;
+    height: auto;
     background-size: cover!important;
 }
 </style>

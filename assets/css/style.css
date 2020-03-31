@@ -162,3 +162,13 @@ h4 {
   width: 100%;
   text-align: center;
 }
+/***** Navigation ******/
+.nuxt-link-exact-active a {
+  color: lightgreen;
+}
+.nuxt-link-exact-active a [class^="flaticon-"]:before,
+.nuxt-link-exact-active a [class*=" flaticon-"]:before,
+.nuxt-link-exact-active a [class^="flaticon-"]:after,
+.nuxt-link-exact-active a [class*=" flaticon-"]:after {
+  color: lightgreen;
+}

@@ -61,17 +61,14 @@ export default {
 </script>
 <style lang="less" scoped>
 .sidenav {
-  height: 55vh;
-    width: 15%;
+    width: 20%;
     float: left;
     margin-top: 4rem;
+    padding: 1rem;
   a {
     display: block;
     font-size: 1.2rem;
-    border-bottom: 1px solid;
-    border-bottom-style: groove;
-    margin-left: 1rem;
-    margin-right: 5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.7);
     padding-top: 1rem;
     line-height: 2.5rem;
 }
