@@ -42,7 +42,7 @@ export default {
         },
         {
           label: 'Belgeler',
-          path: '/',
+          path: '/portfolio',
           icon: 'flaticon-deal'
         },
         {
