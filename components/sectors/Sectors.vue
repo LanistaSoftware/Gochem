@@ -1,29 +1,31 @@
 <template>
   <section>
     <div class="content content-background">
-      <div class="sidenav overflow-scroll sektor-link">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#clients">Clients</a>
-        <a href="#contact">Contact</a>
-        <a href="#contact">Search</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#clients">Clients</a>
-        <a href="#contact">Contact</a>
-        <a href="#contact">Search</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#clients">Clients</a>
-        <a href="#contact">Contact</a>
-        <a href="#contact">Search</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#clients">Clients</a>
-        <a href="#contact">Contact</a>
-        <a href="#contact">Search</a>
-      </div>
-      <div class="sektor-container">
+      <section class="sidenav overflow-scroll">
+        <div class="sector-link">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#clients">Clients</a>
+          <a href="#contact">Contact</a>
+          <a href="#contact">Search</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#clients">Clients</a>
+          <a href="#contact">Contact</a>
+          <a href="#contact">Search</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#clients">Clients</a>
+          <a href="#contact">Contact</a>
+          <a href="#contact">Search</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#clients">Clients</a>
+          <a href="#contact">Contact</a>
+          <a href="#contact">Search</a>
+        </div>
+      </section>
+      <div class="sector-container">
         <div class="sektor-row">
           <h3>TEKSTİL</h3>
           <SectorAlbum class="skCar" />
@@ -60,74 +62,76 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-.sidenav {
-    width: 20%;
-    float: left;
-    margin-top: 4rem;
-    padding: 1rem;
+.sector-link{
   a {
     display: block;
     font-size: 1.2rem;
-    border-bottom: 1px solid rgba(255,255,255,0.7);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
     padding-top: 1rem;
     line-height: 2.5rem;
-}
-}
-.sektor-container{
-    width: 80%;
-    float: left;
-    h3{
-        text-align: center;
-    }
-    .sektor-row{
-        width: 50%;
-        float: left;
-        .skCar{
-            margin-left:3rem;
-        }
-        p{
-            font-size: 1rem;
-            margin: 4rem 0 0 3rem;
-            line-height: 1.3rem;
-        }
-    }
-}
-.carousel-sektor{
-    border: 1px solid;
-    height: 50vh;
-}
-  .btn-link-sector {
-    width: 100%;
-    text-align: center;
-    margin-top: 2rem;
-
-    .sektor-btn {
-      width: 50%;
-      float: left;
-
-      .btn {
-        margin-top: 1.3rem;
-        text-align: center;
-
-        .sektor-btn-info {
-          font-size: 1rem;
-          padding: 1rem 0.5rem;
-          text-align: center;
-          color: white;
-          border: 1px solid white;
-          border-radius: 1em;
-          display: block;
-          width: 10rem;
-          height: 4rem;
-          transition: 0.5s;
-        }
-      }
-
-      .btn:hover span:hover {
-          color: lightgreen;
-          border-color: lightgreen;
-        }
-    }
-
   }
+}
+.sector-container {
+  width: 80%;
+  float: left;
+
+  h3 {
+    text-align: center;
+  }
+
+  .sektor-row {
+    width: 50%;
+    float: left;
+
+    .skCar {
+      margin-left: 3rem;
+    }
+
+    p {
+      font-size: 1rem;
+      margin: 4rem 0 0 3rem;
+      line-height: 1.3rem;
+    }
+  }
+}
+
+.carousel-sektor {
+  border: 1px solid;
+  height: 50vh;
+}
+
+.btn-link-sector {
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem;
+
+  .sektor-btn {
+    width: 50%;
+    float: left;
+
+    .btn {
+      margin-top: 1.3rem;
+      text-align: center;
+
+      .sektor-btn-info {
+        font-size: 1rem;
+        padding: 1rem 0.5rem;
+        text-align: center;
+        color: white;
+        border: 1px solid white;
+        border-radius: 1em;
+        display: block;
+        width: 10rem;
+        height: 4rem;
+        transition: 0.5s;
+      }
+    }
+
+    .btn:hover span:hover {
+      color: lightgreen;
+      border-color: lightgreen;
+    }
+  }
+
+}
 </style>

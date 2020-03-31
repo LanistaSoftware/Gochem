@@ -105,9 +105,6 @@ export default {
 </script>
 <style lang="less" scoped>
 .sidenav {
-  height: 100%;
-  width: 20%;
-  float: left;
   padding: 3rem;
 
   h1 {

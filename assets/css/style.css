@@ -45,6 +45,12 @@ h4 {
   border-radius: 1em;
   font-family: Arial, sans-serif;
 }
+.sidenav {
+  width: 20%;
+  height: 100%;
+  float: left;
+  padding: 1rem;
+}
 /* scroll bar ayarları  */
 .overflow-scroll {
   overflow-x: hidden;
