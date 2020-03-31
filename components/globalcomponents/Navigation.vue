@@ -37,7 +37,7 @@ export default {
         },
         {
           label: 'Sektörler',
-          path: '/',
+          path: '/sektors',
           icon: 'flaticon-support'
         },
         {
