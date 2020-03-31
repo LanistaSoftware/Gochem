@@ -1,7 +1,7 @@
 <template>
   <section>
     <Social class="social" />
-    <div class="content content-background">
+    <div class="content content-background overflow-scroll">
       <div class="about-profile">
         <div class="profile-img">
           <img :src="aboutUs.profileImg" alt="">
@@ -68,14 +68,11 @@ export default {
   }
 
   .about-content {
-    height: 100%;
-    // column-count: 2;
-    // column-rule-style: solid;
-    // column-rule-width: 1px;
     padding: 1rem;
     overflow: hidden;
 
     p {
+      text-indent: 2rem;
       padding-right: 2rem;
       padding-left: 2rem;
       font: menu;
@@ -95,7 +92,8 @@ export default {
     }
 
     img {
-      width: 30%;
+      width: 15%;
+      height: auto;
       padding-top: 2rem;
     }
   }

@@ -2,7 +2,7 @@
   <section>
     <Social class="social clearfix" />
     <div class="content content-background">
-      <div class="sidenav">
+      <section class="sidenav overflow-scroll">
         <div class="product-category">
           <h2> Slikon Pigment</h2>
         </div>
@@ -45,7 +45,7 @@
           <a href="#contact">Contact</a>
           <a href="#contact">Search</a>
         </div>
-      </div>
+      </section>
       <div class="product-container">
         <div class="product-content">
           <h2>SS 9852</h2>
@@ -112,7 +112,6 @@ export default {
 .sidenav {
   height: 100%;
   width: 20%;
-  overflow-x: hidden;
   float: left;
   padding: 3rem;
 
@@ -128,11 +127,12 @@ export default {
     }
 
   }
-}
 
-.sidenav a {
-  padding: .3rem .3rem .3rem 1rem;
-  display: block;
+  a {
+    padding: .3rem .3rem .3rem 1rem;
+    display: block;
+  }
+
 }
 
 .product-container {
@@ -141,71 +141,73 @@ export default {
   text-align: left;
   padding: 2rem 5rem;
 
-}
+  .product-content {
+    h2 {
+      font-size: 2rem;
+      padding-bottom: 2rem;
 
-.product-content {
+    }
 
-  h2 {
-    font-size: 2rem;
-    padding-bottom: 2rem;
-    line-height: initial;
-  }
-
-  p {
-    text-indent: 3rem;
-    font-size: 1rem;
-  }
-  h4{
-    background-color: lightgrey;
-  }
-}
-
-.product-link {
-  width: 100%;
-  text-align: center;
-
-  .product-btn {
-    width: 33%;
-    float: left;
-
-    .btn {
-      margin-top: 1.3rem;
-      text-align: center;
+    p {
+      text-indent: 3rem;
+      font: menu;
+      font-size: 1.06rem;
     }
   }
 
-  [class^="flaticon-"]:before,
-  [class*=" flaticon-"]:before,
-  [class^="flaticon-"]:after,
-  [class*=" flaticon-"]:after {
-    font-size: 4rem;
-    transition: 0.5s;
-  }
-  .product-btn-info{
-  padding: 0.5rem;
-  text-align: center;
-  color: white;
-  border: 1px solid white;
-  border-radius: 1em;
-  display: block;
-  width: 10rem;
-  height: 4rem;
-      transition: 0.5s;
-}
-}
-.product-btn:hover{
+  .product-link {
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
 
-  [class^="flaticon-"]:before,
-  [class*=" flaticon-"]:before,
-  [class^="flaticon-"]:after,
-  [class*=" flaticon-"]:after {
-    color:lightgreen;
-  }
-  .product-btn-info:hover{
-    color:lightgreen;
-    border-color: lightgreen;
-  }
+    .product-btn {
+      width: 33%;
+      float: left;
 
+      .btn {
+        margin-top: 1.3rem;
+        text-align: center;
+
+        [class^="flaticon-"]:before,
+        [class*=" flaticon-"]:before,
+        [class^="flaticon-"]:after,
+        [class*=" flaticon-"]:after {
+          font-size: 3.5rem;
+          transition: 0.5s;
+        }
+
+        .product-btn-info {
+          font-size: 0.8rem;
+          padding: 1rem 0.5rem;
+          text-align: center;
+          color: white;
+          border: 1px solid white;
+          border-radius: 1em;
+          display: block;
+          width: 10rem;
+          height: 4rem;
+          transition: 0.5s;
+        }
+      }
+
+      .btn:hover {
+
+        [class^="flaticon-"]:before,
+        [class*=" flaticon-"]:before,
+        [class^="flaticon-"]:after,
+        [class*=" flaticon-"]:after {
+          color: lightgreen;
+        }
+
+        .product-btn-info {
+          color: lightgreen;
+          border-color: lightgreen;
+        }
+
+      }
+    }
+
+  }
 }
 
 </style>
