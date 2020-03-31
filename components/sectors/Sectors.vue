@@ -1,6 +1,5 @@
 <template>
   <section>
-    <Social class="social clearfix" />
     <div class="content content-background">
       <div class="sidenav overflow-scroll sektor-link">
         <a href="#about">About</a>
@@ -27,7 +26,7 @@
       <div class="sektor-container">
         <div class="sektor-row">
           <h3>TEKSTİL</h3>
-          <SektorCarousel class="skCar" />
+          <SectorAlbum class="skCar" />
         </div>
         <div class="sektor-row">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo provident maxime optio ea. Repellat incidunt perspiciatis eveniet in repellendus, pariatur ratione possimus deserunt vero architecto, velit minus, inventore aliquid. Labore odio alias modi eum unde, totam molestias tempore dolorum maxime, commodi inventore asperiores, atque explicabo sunt. Sint itaque neque ullam sapiente libero ducimus distinctio, ad, velit, numquam repellendus possimus a nemo quisquam? Non reprehenderit nihil quos, suscipit fuga, labore velit cumque mollitia minima eaque doloribus tenetur adipisci, accusamus ab sunt animi voluptates. Iusto recusandae, a fugit consequatur nostrum sed quibusdam ipsa facere culpa id ab eos ipsam numquam unde deserunt exercitationem enim consectetur illum consequuntur blanditiis sequi. Quidem vel porro dolorem! Ea voluptatem eveniet et quidem eos ab nisi ex.</p>
@@ -35,14 +34,14 @@
             <div class="sektor-btn">
               <button class="btn">
                 <span class="sektor-btn-info">
-                  Daha fazla teklif al !
+                  Daha fazla bilgi al !
                 </span>
               </button>
             </div>
             <div class="sektor-btn">
               <button class="btn">
                 <span class="sektor-btn-info">
-                  Uygun ürünü bul
+                  Uygun ürün bul !
                 </span>
               </button>
             </div>
@@ -53,12 +52,10 @@
   </section>
 </template>
 <script>
-import Social from '@/components/globalcomponents/Social'
-import SektorCarousel from '@/components/sektors/SektorCarousel'
+import SectorAlbum from '@/components/sectors/SectorAlbum'
 export default {
   components: {
-    Social,
-    SektorCarousel
+    SectorAlbum
   }
 }
 </script>
@@ -116,11 +113,11 @@ export default {
         text-align: center;
 
         .sektor-btn-info {
-          font-size: .9rem;
+          font-size: 1rem;
           padding: 1rem 0.5rem;
           text-align: center;
           color: white;
-          border: 1px solid dimgray;
+          border: 1px solid white;
           border-radius: 1em;
           display: block;
           width: 10rem;

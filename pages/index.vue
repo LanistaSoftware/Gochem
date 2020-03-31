@@ -1,8 +1,5 @@
 <template>
   <div>
-    <div class="social clearfix">
-      <Social />
-    </div>
     <div class="carousel">
       <BootstrapCarousel />
     </div>
@@ -47,14 +44,14 @@
   </div>
 </template>
 <script>
-import Social from '@/components/globalcomponents/Social'
+// import Social from '@/components/globalcomponents/Social'
 import BootstrapCarousel from '@/components/globalcomponents/BootsrapCarousel'
 import References from '@/components/globalcomponents/References'
 import Box from '@/components/Box'
 export default {
   name: 'Slider',
   components: {
-    Social,
+    // Social,
     BootstrapCarousel,
     Box,
     References

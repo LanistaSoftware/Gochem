@@ -55,7 +55,7 @@ export default {
 </script>
 <style lang="less" scoped>
 .img-fluid {
-    width: 100%!important;
+    width: auto;
     height: 54vh!important;
     background-size: cover!important;
 }

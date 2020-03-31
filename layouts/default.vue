@@ -10,6 +10,7 @@
       <div class="overlay">
         <div class="bg-container">
           <Header />
+          <Social />
           <nuxt />
         </div>
 
@@ -23,10 +24,11 @@
 <script>
 import Header from '@/components/globalcomponents/Header'
 import Footer from '@/components/globalcomponents/Footer'
+import Social from '@/components/globalcomponents/Social'
 export default {
   components: {
     Header,
-    // Social,
+    Social,
     Footer
     // Carousel,
     // Box

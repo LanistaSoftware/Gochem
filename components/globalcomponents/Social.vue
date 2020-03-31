@@ -1,5 +1,5 @@
 <template>
-  <div class="social-container">
+  <div class="social-container social">
     <ul class="social-network social-circle">
       <li class="icon-container first-li" @mouseover="show=true" @mouseleave="show=false">
         <span class="search-input">

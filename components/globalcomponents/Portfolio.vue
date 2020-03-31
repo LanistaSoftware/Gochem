@@ -1,10 +1,9 @@
 <template>
   <section>
-    <Social class="social clearfix" />
     <div class="content content-background overflow-scroll">
       <div class="portfolio">
-        <div v-for="item in 27" :key="item" class="portfolio-content">
-          <img src="../../assets/img/bg1.jpg" alt="Mountains" style="width:100%">
+        <div v-for="item in 6" :key="item" class="portfolio-content">
+          <img src="../../assets/img/bg1.jpg" alt="Buraya belgeler gelecek." style="width:100%">
           <a href="#"><h3>oekotex </h3></a>
         </div>
       </div>
@@ -27,6 +26,7 @@ export default {
   img {
       height: 50vh;
       object-fit: cover;
+      border-radius: 0.5em;
   }
   img:hover{
     z-index:2;
@@ -35,15 +35,15 @@ export default {
     -moz-transform: scale(1.01);
     transform: scale(1.01);
     cursor: pointer;
-    border: 1px solid lightgreen;
+    border: 1px solid white;
   }
   h3 {
-    border: 1px solid darkgray;
+    border: 1px solid white;
     margin-top: 1rem;
     margin-bottom: 1.5rem;
-    padding: .5rem 0 .5rem 0;
+    padding: .5rem 0;
     text-align: center;
-    border-radius: .6rem;
+    border-radius: 0.5em;
     text-transform: uppercase;
     font-size: 1.5rem;
 }

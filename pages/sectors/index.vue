@@ -1,11 +1,11 @@
 <template>
-  <Sektors />
+  <Sectors />
 </template>
 <script>
-import Sektors from '@/components/sektors/Sektors'
+import Sectors from '@/components/sectors/Sectors'
 export default {
   components: {
-    Sektors
+    Sectors
   }
 }
 </script>

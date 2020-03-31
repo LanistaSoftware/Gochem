@@ -1,6 +1,5 @@
 <template>
   <section>
-    <Social class="social clearfix" />
     <div class="content content-background">
       <section class="sidenav overflow-scroll">
         <div class="product-category">
@@ -96,11 +95,7 @@
   </section>
 </template>
 <script>
-import Social from '@/components/globalcomponents/Social'
 export default {
-  components: {
-    Social
-  },
   computed: {
     getProduct () {
       return this.$store.getters.getProducts
@@ -177,8 +172,8 @@ export default {
         }
 
         .product-btn-info {
-          font-size: 0.8rem;
-          padding: 1rem 0.5rem;
+          font-size: 1rem;
+          padding: 0.5rem 0.5rem;
           text-align: center;
           color: white;
           border: 1px solid white;

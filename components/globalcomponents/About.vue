@@ -1,6 +1,5 @@
 <template>
   <section>
-    <Social class="social" />
     <div class="content content-background overflow-scroll clearfix">
       <div class="about-container clearfix">
         <div class="about-profile">
@@ -94,11 +93,8 @@
   </section>
 </template>
 <script>
-import Social from '@/components/globalcomponents/Social'
 export default {
-  components: {
-    Social
-  },
+
   data () {
     return {}
   },
