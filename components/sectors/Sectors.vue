@@ -65,13 +65,11 @@ export default {
     width: 15%;
     float: left;
     margin-top: 4rem;
+    padding: 1rem;
   a {
     display: block;
     font-size: 1.2rem;
     border-bottom: 1px solid;
-    border-bottom-style: groove;
-    margin-left: 1rem;
-    margin-right: 5rem;
     padding-top: 1rem;
     line-height: 2.5rem;
 }
