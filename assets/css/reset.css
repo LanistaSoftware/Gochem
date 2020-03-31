@@ -46,10 +46,11 @@ table {
   border-spacing: 0;
 }
 
-button:focus,
-input,
-a :focus {
-  outline: 0 !important;
+button:active,
+input:focus,
+a:active {
+  outline: none !important;
+  border: none;
 }
 
 * {
