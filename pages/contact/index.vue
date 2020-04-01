@@ -1,12 +1,12 @@
 <template>
-  <Communication />
+  <Contact />
 </template>
 <script>
-import Communication from '@/components/communication/Communication'
+import Contact from '@/components/contact/Contact'
 export default {
   layout: 'footer',
   components: {
-    Communication
+    Contact
   }
 }
 </script>

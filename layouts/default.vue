@@ -1,24 +1,16 @@
 <template>
-  <transition
-    enter-class=""
-    enter-active-class="animated lightSpeedIn"
-    leave-class=""
-    leave-active-c-lass="animated"
-    appear
-  >
-    <div class="bg" :style="{ backgroundImage: 'url(' + bgImageUrl + ')' }">
-      <div class="overlay">
-        <div class="bg-container">
-          <Header />
-          <Social />
-          <nuxt />
-        </div>
-        <div class="footer">
-          <Footer />
-        </div>
+  <div class="bg" :style="{ backgroundImage: 'url(' + bgImageUrl + ')' }">
+    <div class="overlay">
+      <div class="bg-container">
+        <Header />
+        <Social />
+        <nuxt />
+      </div>
+      <div class="footer">
+        <Footer />
       </div>
     </div>
-  </transition>
+  </div>
 </template>
 <script>
 import Header from '@/components/globalcomponents/Header/Header'
