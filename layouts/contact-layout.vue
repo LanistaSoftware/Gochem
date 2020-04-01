@@ -4,18 +4,21 @@
       <div class="bg-container">
         <Header />
         <Social />
-        <nuxt />
       </div>
+      <nuxt />
+      <Footer />
     </div>
   </div>
 </template>
 <script>
 import Header from '@/components/globalcomponents/Header/Header'
 import Social from '@/components/globalcomponents/Social'
+import Footer from '@/components/globalcomponents/footer/ContactFooter'
 export default {
   components: {
     Header,
-    Social
+    Social,
+    Footer
     // Carousel,
     // Box
   },
