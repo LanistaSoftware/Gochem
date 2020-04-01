@@ -13,22 +13,17 @@
           <Social />
           <nuxt />
         </div>
-        <div class="footer">
-          <Footer />
-        </div>
       </div>
     </div>
   </transition>
 </template>
 <script>
 import Header from '@/components/globalcomponents/Header'
-import Footer from '@/components/globalcomponents/Footer'
 import Social from '@/components/globalcomponents/Social'
 export default {
   components: {
     Header,
-    Social,
-    Footer
+    Social
     // Carousel,
     // Box
   },
