@@ -1,24 +1,16 @@
 <template>
-  <transition
-    enter-class=""
-    enter-active-class="animated zoomIn bounceInDown"
-    leave-class="hinge"
-    leave-active-c-lass="animated zoomOutUp"
-    appear
-  >
-    <div class="bg" :style="{ backgroundImage: 'url(' + bgImageUrl + ')' }">
-      <div class="overlay">
-        <div class="bg-container">
-          <Header />
-          <Social />
-          <nuxt />
-        </div>
+  <div class="bg" :style="{ backgroundImage: 'url(' + bgImageUrl + ')' }">
+    <div class="overlay">
+      <div class="bg-container">
+        <Header />
+        <Social />
+        <nuxt />
       </div>
     </div>
-  </transition>
+  </div>
 </template>
 <script>
-import Header from '@/components/globalcomponents/Header'
+import Header from '@/components/globalcomponents/Header/Header'
 import Social from '@/components/globalcomponents/Social'
 export default {
   components: {

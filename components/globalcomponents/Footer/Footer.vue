@@ -8,7 +8,7 @@
       </div>
       <div class="box">
         <div class="imgcontainer">
-          <img class="slikonLogo" src="../../assets/img/welove.png" alt="We Love Slicone">
+          <img class="slikonLogo" src="../../../assets/img/welove.png" alt="We Love Slicone">
         </div>
       </div>
       <div class="box">
@@ -16,7 +16,7 @@
           <p class="copyright">
             <i>Copyright © 2020</i>
           </p>
-          <img class="lanista" src="../../assets/img/beyaz.png" alt="Created by Lanista Software">
+          <img class="lanista" src="../../../assets/img/beyaz.png" alt="Created by Lanista Software">
         </div>
         <!-- <div class="footer-copyright text-center py-3">
           © Copyright 2020

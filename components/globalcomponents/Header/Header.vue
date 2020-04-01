@@ -12,9 +12,9 @@
   </div>
 </template>
 <script>
-import Logo from '@/components/globalcomponents/Logo'
-import Navigation from '@/components/globalcomponents/Navigation'
-import Language from '@/components/globalcomponents/Language'
+import Logo from '@/components/globalcomponents/Header/Logo'
+import Navigation from '@/components/globalcomponents/Header/Navigation'
+import Language from '@/components/globalcomponents/Header/Language'
 export default {
   components: {
     Logo,

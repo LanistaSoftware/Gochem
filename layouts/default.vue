@@ -1,9 +1,9 @@
 <template>
   <transition
     enter-class=""
-    enter-active-class="animated zoomIn bounceInDown"
-    leave-class="hinge"
-    leave-active-c-lass="animated zoomOutUp"
+    enter-active-class="animated lightSpeedIn"
+    leave-class=""
+    leave-active-c-lass="animated"
     appear
   >
     <div class="bg" :style="{ backgroundImage: 'url(' + bgImageUrl + ')' }">
@@ -21,8 +21,8 @@
   </transition>
 </template>
 <script>
-import Header from '@/components/globalcomponents/Header'
-import Footer from '@/components/globalcomponents/Footer'
+import Header from '@/components/globalcomponents/Header/Header'
+import Footer from '@/components/globalcomponents/Footer/Footer'
 import Social from '@/components/globalcomponents/Social'
 export default {
   components: {

@@ -2,9 +2,9 @@
   <nav>
     <transition
       enter-class=""
-      enter-active-class="animated shake bounceInDown"
+      enter-active-class="animated fadeIn"
       leave-class=""
-      leave-active-c-lass="animated swing"
+      leave-active-class="animated fadeOut"
       appear
     >
       <ul>

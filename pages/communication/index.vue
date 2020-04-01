@@ -2,7 +2,7 @@
   <Communication />
 </template>
 <script>
-import Communication from '@/components/globalcomponents/Communication'
+import Communication from '@/components/communication/Communication'
 export default {
   layout: 'footer',
   components: {

@@ -4,7 +4,7 @@
   </div>
 </template>
 <script>
-import Product from '@/components/globalcomponents/Product'
+import Product from '@/components/products/Product'
 export default {
   components: {
     Product
