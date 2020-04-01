@@ -1,17 +1,19 @@
 <template>
   <div class="com-container">
-    <div class="com-carousel">
+    <div class="com-carousel bg-container">
       <h2>Carousel Alanı</h2>
       <b-carousel>
         <b-carousel-slide />
       </b-carousel>
     </div>
     <div class="contact">
-      <div class="contact-item">
-        <h2> Form alanı </h2>
-      </div>
-      <div class="contact-item">
-        <h2> Harita alanı </h2>
+      <div class="form-container bg-container">
+        <div class="contact-item ">
+          <h2> Form alanı </h2>
+        </div>
+        <div class="contact-item">
+          <h2> Harita alanı </h2>
+        </div>
       </div>
     </div>
     <div class="com-info">

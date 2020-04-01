@@ -58,7 +58,7 @@ export default {
         },
         {
           label: 'İletişim',
-          path: '/communication',
+          path: '/contact',
           icon: 'flaticon-mail'
         }
       ]
