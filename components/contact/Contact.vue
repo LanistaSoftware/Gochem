@@ -1,17 +1,18 @@
 <template>
   <div class="com-container">
-    <div class="com-carousel">
-      <h2>Carousel Alanı</h2>
-      <b-carousel>
-        <b-carousel-slide />
-      </b-carousel>
+    <div class="content bg-container content-background overflow-scroll clearfix">
+      <ContactCarousel />
     </div>
-    <div class="contact">
-      <div class="contact-item">
-        <h2> Form alanı </h2>
-      </div>
-      <div class="contact-item">
-        <h2> Harita alanı </h2>
+    <div class="contact-group clearfix">
+      <div class="form-container bg-container">
+        <div class="contact-item ">
+          <span>Bir sorunuz mu var ?</span>
+          <p>Bizimle iletişime geçmekten çekinmeyin.</p>
+          <ContactForm />
+        </div>
+        <div class="contact-item">
+          <h2> Harita alanı </h2>
+        </div>
       </div>
     </div>
     <div class="com-info">
@@ -19,36 +20,35 @@
       <small>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</small>
       <button>Tıklayın</button>
     </div>
-    <div class="com-footer">
-      <h2> Footer Alanı</h2>
-    </div>
   </div>
 </template>
+<script>
+import ContactCarousel from '@/components/contact/ContactCarousel'
+import ContactForm from '@/components/contact/ContactForm'
+export default {
+  components: {
+    ContactCarousel,
+    ContactForm
+  }
+}
+</script>
 <style lang="less" scoped>
- .com-container{
-     background-color: aquamarine;
-     border: 3px solid;
- }
- .com-carousel{
-     background-color: blue;
- }
- .contact{
-     background-color: brown;
+.content{
+  height: 100%!important;
+}
+ .contact-group{
+     background-color: #002239!important;
      width: 100%;
      .contact-item{
          width: 50%;
          float: left;
-         background-color: burlywood;
      }
  }
  .com-info{
-     background-color: chartreuse;
+   background-color: black;
  }
  .com-footer{
      text-align: center;
      background-color: coral;
- }
- .footer{
-     height: 20vh!important;
  }
 </style>

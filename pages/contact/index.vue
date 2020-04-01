@@ -4,7 +4,7 @@
 <script>
 import Contact from '@/components/contact/Contact'
 export default {
-  layout: 'footer',
+  layout: 'contact-layout',
   components: {
     Contact
   }
