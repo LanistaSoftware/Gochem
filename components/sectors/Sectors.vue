@@ -26,23 +26,23 @@
         </div>
       </section>
       <div class="sector-container">
-        <div class="sektor-row">
+        <div class="sector-row">
           <h3>TEKSTİL</h3>
           <SectorAlbum class="skCar" />
         </div>
-        <div class="sektor-row">
+        <div class="sector-row">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo provident maxime optio ea. Repellat incidunt perspiciatis eveniet in repellendus, pariatur ratione possimus deserunt vero architecto, velit minus, inventore aliquid. Labore odio alias modi eum unde, totam molestias tempore dolorum maxime, commodi inventore asperiores, atque explicabo sunt. Sint itaque neque ullam sapiente libero ducimus distinctio, ad, velit, numquam repellendus possimus a nemo quisquam? Non reprehenderit nihil quos, suscipit fuga, labore velit cumque mollitia minima eaque doloribus tenetur adipisci, accusamus ab sunt animi voluptates. Iusto recusandae, a fugit consequatur nostrum sed quibusdam ipsa facere culpa id ab eos ipsam numquam unde deserunt exercitationem enim consectetur illum consequuntur blanditiis sequi. Quidem vel porro dolorem! Ea voluptatem eveniet et quidem eos ab nisi ex.</p>
           <div class="btn-link-sector">
-            <div class="sektor-btn">
+            <div class="sector-btn">
               <button class="btn">
-                <span class="sektor-btn-info">
+                <span class="sector-btn-info">
                   Daha fazla bilgi al !
                 </span>
               </button>
             </div>
-            <div class="sektor-btn">
+            <div class="sector-btn">
               <button class="btn">
-                <span class="sektor-btn-info">
+                <span class="sector-btn-info">
                   Uygun ürün bul !
                 </span>
               </button>
@@ -79,7 +79,7 @@ export default {
     text-align: center;
   }
 
-  .sektor-row {
+  .sector-row {
     width: 50%;
     float: left;
 
@@ -95,7 +95,7 @@ export default {
   }
 }
 
-.carousel-sektor {
+.carousel-sector {
   border: 1px solid;
   height: 50vh;
 }
@@ -105,7 +105,7 @@ export default {
   text-align: center;
   margin-top: 2rem;
 
-  .sektor-btn {
+  .sector-btn {
     width: 50%;
     float: left;
 
@@ -113,7 +113,7 @@ export default {
       margin-top: 1.3rem;
       text-align: center;
 
-      .sektor-btn-info {
+      .sector-btn-info {
         font-size: 1rem;
         padding: 1rem 0.5rem;
         text-align: center;
