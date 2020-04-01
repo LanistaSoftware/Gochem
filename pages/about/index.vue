@@ -4,7 +4,7 @@
   </div>
 </template>
 <script>
-import About from '@/components/globalcomponents/About'
+import About from '@/components/about/About'
 export default {
   components: {
     About

@@ -24,7 +24,7 @@ export default {
           path: '/'
         }
       ],
-      logom: require('../../assets/img/whitelogo.png'),
+      logom: require('../../../assets/img/whitelogo.png'),
       showColor: true
     }
   },
@@ -33,14 +33,14 @@ export default {
       this.showColor = false
       setTimeout(() => {
         this.showColor = true
-        this.logom = require('../../assets/img/coloredlogo.png')
+        this.logom = require('../../../assets/img/coloredlogo.png')
       }, 700)
     },
     mouseleave () {
       this.showColor = false
       setTimeout(() => {
         this.showColor = true
-        this.logom = require('../../assets/img/whitelogo.png')
+        this.logom = require('../../../assets/img/whitelogo.png')
       }, 700)
     }
   }

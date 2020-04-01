@@ -4,7 +4,7 @@
   </div>
 </template>
 <script>
-import Blogs from '@/components/globalcomponents/Blogs'
+import Blogs from '@/components/blogs/Blogs'
 export default {
   components: {
     Blogs

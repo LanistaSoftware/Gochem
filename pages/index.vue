@@ -45,9 +45,9 @@
 </template>
 <script>
 // import Social from '@/components/globalcomponents/Social'
-import BootstrapCarousel from '@/components/globalcomponents/BootsrapCarousel'
-import References from '@/components/globalcomponents/References'
-import Box from '@/components/Box'
+import BootstrapCarousel from '@/components/home/BootsrapCarousel'
+import References from '@/components/home/References'
+import Box from '@/components/home/Box'
 export default {
   name: 'Slider',
   components: {
