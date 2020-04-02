@@ -13,7 +13,7 @@
               >
                 <i
                   :class="sosyal.icon"
-                />{{ sosyal.adress }}</a>
+                >  {{ sosyal.adress }}</i></a>
             </li>
           </ul>
         </div>
@@ -123,9 +123,6 @@ export default {
       margin: 1rem;
       li{
         margin: 1.6rem 0;
-        i {
-          padding-right: 1rem;
-        }
       }
     }
   }
