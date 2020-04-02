@@ -18,7 +18,7 @@
           </ul>
         </div>
         <div class="footer-row">
-          <h4>Bizi takip edin</h4>
+          <h4> Şirket </h4>
           <hr>
           <ul class="social-network social-circle">
             <li class="icon-container">
@@ -100,6 +100,9 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+.footer-row:not(:first-child){
+  text-align: center;
+}
   .footer-contact{
     background-color:#36666C!important;
     padding: 5rem 0 2rem 0;
