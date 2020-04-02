@@ -6,13 +6,13 @@
           <div class="row">
             <div class="col-sm-6">
               <div class="inputBox ">
-                <input type="text" name="" class="input">
+                <input type="text" name="" class="input" placeholder="Konu">
               </div>
             </div>
 
             <div class="col-sm-6">
               <div class="inputBox">
-                <input type="text" name="" class="input">
+                <input type="text" name="" class="input" placeholder="İsim">
               </div>
             </div>
           </div>
@@ -20,28 +20,23 @@
           <div class="row">
             <div class="col-sm-6">
               <div class="inputBox">
-                <input type="text" name="" class="input">
+                <input type="text" name="" class="input" placeholder="E-mail">
               </div>
             </div>
 
             <div class="col-sm-6">
               <div class="inputBox">
-                <input type="text" name="" class="input">
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="inputBox">
-                <textarea class="input" />
+                <input type="text" name="" class="input" placeholder="Telefon">
               </div>
             </div>
           </div>
 
           <div class="row">
             <div class="col-sm-12">
-              <input type="submit" name="" class="button" value="Send Message">
+              <div class="inputBox">
+                <textarea class="input" placeholder="Mesajınız" />
+                <input type="submit" name="" class="button" value="Gönder">
+              </div>
             </div>
           </div>
         </form>
@@ -75,22 +70,26 @@ position: relative;
 width: 100%;
 border: none;
 padding: 1rem;
+border-radius: .6rem;
 }
 .focus .inputText{
 transform: translateY(-30px);
 font-size: 18px;
 opacity: 1;
-color: #00bcd4;
+color: #9A9A9A;
 }
 textarea{
 height: 100px !important;
+margin-top: 3rem;
 }
 .button{
-width: 100%;
-border: none;
-padding: 1rem;
-    outline: none;
-    background: #03A9F4;
-    color: #fff;
+    position: absolute;
+    border: 1px solid;
+    padding: .6rem;
+    border-radius: .5rem;
+    color: #9A9A9A;
+    background: none;
+    bottom: 15%;
+    right: 4%;
 }
 </style>
