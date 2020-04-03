@@ -142,6 +142,7 @@ export default {
   border-radius: .6rem;
   text-align: center;
   padding: 1.3rem;
+  height: 80%!important;
 }
 .contact-head{
   width: 100%;

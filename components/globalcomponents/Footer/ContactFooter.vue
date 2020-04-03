@@ -20,14 +20,14 @@
         <div class="footer-row">
           <h4> Şirket </h4>
           <hr>
-          <ul class="social-network social-circle">
-            <li class="icon-container">
+          <ul class="contact-item">
+            <li>
               <a href="#">Hakkımızda</a>
             </li>
-            <li class="icon-container">
+            <li>
               <a href="#">Ekibimiz</a>
             </li>
-            <li class="icon-container">
+            <li>
               <a href="#">Makaleler</a>
             </li>
           </ul>
@@ -35,14 +35,14 @@
         <div class="footer-row">
           <h4> Müşteri </h4>
           <hr>
-          <ul class="social-network social-circle">
-            <li class="icon-container">
+          <ul class="contact-item">
+            <li>
               <a href="#">Bilgi servisi</a>
             </li>
-            <li class="icon-container">
+            <li>
               <a href="#">Lojistik</a>
             </li>
-            <li class="icon-container">
+            <li>
               <a href="#">Sipariş</a>
             </li>
           </ul>
@@ -50,11 +50,11 @@
         <div class="footer-row">
           <h4>Destek</h4>
           <hr>
-          <ul class="social-network social-circle">
-            <li class="icon-container">
+          <ul class="contact-item">
+            <li>
               <a href="#">İletişim</a>
             </li>
-            <li class="icon-container">
+            <li>
               <a href="#">Belgeler</a>
             </li>
           </ul>
@@ -100,13 +100,18 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-.footer-row:not(:first-child){
-  text-align: center;
-}
-  .footer-contact{
+.footer-contact{
     background-color:#36666C!important;
     padding: 5rem 0 2rem 0;
   }
+// .footer-row:not(:first-child){
+//   text-align: left;
+// }
+.social-network{
+  font-family: Savoye LET;
+  font-size: 1.1rem;
+  letter-spacing: .05rem;
+}
   .footer-row{
     width: 25%;
     float: left;
@@ -118,6 +123,7 @@ export default {
     h4{
       font-size: 1rem;
       text-align: center;
+      font-family: Georgia;
     }
     ul{
       margin: 1rem;
@@ -128,6 +134,9 @@ export default {
   }
   [class^="flaticon-twitter"]:before,[class^="flaticon-linkedin-1"]:before,[class^="flaticon-youtube"]:before {
   font-size: 1.8rem;
+}
+.contact-item{
+  font-family: Georgia;
 }
 .hr-copy{
   background-color: #fff;
@@ -141,6 +150,7 @@ export default {
 
     .copyright {
       display: inline-block;
+      font-family: Helvetica Neue;
       color: #939393;
       margin-right: 0.5rem;
     }
