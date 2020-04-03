@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="product">
     <div class="content content-background">
       <section class="sidenav overflow-scroll">
         <div class="product-category">

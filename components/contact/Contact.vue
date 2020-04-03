@@ -25,8 +25,8 @@
       </div>
     </div>
     <div class="com-info">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, asperiores?</p>
-      <small>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</small>
+      <p> Dünya ve Ülke çapındaki sayısız müşteri ağımız arasında sizde yerinizi alın.</p>
+      <small>Envanterimizde bulunan ürünlerle ilgili bilgi almak için</small>
       <br>
       <button class="contact-btn">
         Tıklayın
@@ -34,6 +34,7 @@
     </div>
   </div>
 </template>
+
 <script>
 import ContactCarousel from '@/components/contact/ContactCarousel'
 import ContactForm from '@/components/contact/ContactForm'
@@ -50,7 +51,7 @@ export default {
 }
 
  .contact-group{
-     background-color: #002239!important;
+         background-image: linear-gradient(rgb(37, 70, 74), rgb(47, 89, 95)) !important;
      width: 100%;
      display: table;
      height: 80vh;
@@ -62,6 +63,8 @@ export default {
          width: 50%;
          float: left;
          text-align: center;
+         font-family: Georgia;
+         letter-spacing: .1rem;
          iframe{
            width: 100%!important;
            height: 50vh;
@@ -69,7 +72,7 @@ export default {
          p,span{
            color: #fff;
            padding-bottom: 3rem;
-           font-size: 1.6rem;
+           font-size: 1.4rem;
          }
      }
  }
@@ -78,11 +81,13 @@ export default {
    background-color: #fff;
    padding: 1rem;
    text-align: center;
+   font-family: Helvetica Neue;
+   letter-spacing: .1rem;
    p{
-     font-size: 2rem;
+     font-size: 2.2rem;
    }
    small{
-     font-size: 1.5rem;
+     font-size: 1.3rem;
    }
    p,small{
      color: #166296;
@@ -96,6 +101,7 @@ export default {
      border-radius: .6rem;
      color: #FD7C7C;
      font-weight: 600;
+     font-size: 1.3rem;
      transition: 0.5s;
       &:hover{
      color: lightgreen;
