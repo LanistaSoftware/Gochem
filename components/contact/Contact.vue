@@ -1,6 +1,6 @@
 <template>
   <div class="com-container">
-    <div class="content bg-container content-background overflow-scroll clearfix">
+    <div class="content bg-container content-background">
       <ContactCarousel />
     </div>
     <div class="contact-group clearfix">
@@ -48,9 +48,7 @@ export default {
 .bg-container{
   margin-bottom: 4rem;
 }
-.content{
-  height: 100%!important;
-}
+
  .contact-group{
      background-color: #002239!important;
      width: 100%;

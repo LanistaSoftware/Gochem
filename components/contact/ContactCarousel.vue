@@ -42,12 +42,12 @@ export default {
   data () {
     return {
       carouselControls: false,
-      slideWidth: 250,
-      slideHeight: 350,
+      slideWidth: 225,
+      slideHeight: 280,
       slideBorder: 1,
-      slideSpace: 300,
+      slideSpace: 245,
       slidePerspective: 0,
-      slideScaling: 10,
+      slideScaling: 3,
       animationSpeed: 500,
       startIndex: 0,
       autoplayEnabled: false,
