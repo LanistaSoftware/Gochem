@@ -34,6 +34,7 @@
     </div>
   </div>
 </template>
+
 <script>
 import ContactCarousel from '@/components/contact/ContactCarousel'
 import ContactForm from '@/components/contact/ContactForm'

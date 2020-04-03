@@ -1,22 +1,121 @@
 /*Media Sorgularımız.*/
 /* Extra small devices (phones, 320px and down) */
-@media only screen and (max-width: 320px) {}
-
+@media only screen and (max-width: 320px) {
+   .header {
+    padding-bottom: 5.4rem;
+  }
+  .navigation {
+    width: 50%!important;
+    span {
+      display: none;
+    }
+  }
+[class^="flaticon-"]:before,
+[class*=" flaticon-"]:before,
+[class^="flaticon-"]:after,
+[class*=" flaticon-"]:after {
+  font-size: 1rem!important;
+  padding: 0!important;
+}
+  /*Carousel yatay*/
+  .carousel-content{
+    span{
+      font-size: 1.5rem!important;
+    }
+    strong {
+      font-size: 1.8rem!important;
+    }
+      h2{
+        font-size: 1.9rem!important;
+      }
+  }
+}
 
 /* Extra small devices (phones, 480px and down) */
 @media only screen and (max-width: 480px) {
+  html {
+    font-size: 7px!important;
+  }
+  .bg{
+    position: fixed;
+  }
+  .header {
+    padding-bottom: 5.4rem;
+  }
+  .logo-container{
+img{
+  width: 5rem!important;
+  height: auto;
 }
-
+  }
+  .navigation {
+    width: 70%!important;
+    span {
+      display: none;
+    }
+    [class^="flaticon-"]:before,
+[class*=" flaticon-"]:before,
+[class^="flaticon-"]:after,
+[class*=" flaticon-"]:after {
+  padding-left: .6rem;
+  padding-right: .6rem;
+}
+  }
+[class^="flaticon-"]:before,
+[class*=" flaticon-"]:before,
+[class^="flaticon-"]:after,
+[class*=" flaticon-"]:after {
+  font-size: 2rem;
+}
+  /*Carousel yatay*/
+  .carousel-content{
+      width: 85%!important;
+  }
+  /*Carousel yatay bitiş*/
+  .box-content{
+    height: 55%!important;
+  }
+}
 /* Small devices (portrait tablets and large phones, 568px and up) */
 @media only screen and (max-width: 568px) {
+  html{
+    font-size: 6px!important;
+  }
+  /*bootstrapCarousel*/
+  .carousel-content {
+  h2 {
+    font-size: 2rem!important;
+  }
+  span{
+    font-size: 1.8rem!important;
+  }
+  sup{
+    font-size: 1.2rem!important;
+  }
+  }
+  /* Product.vue */
+ #product{
+  .product-container{
+    overflow-x: auto!important;
+    height: 100%!important;
+  }
+ }
+  /*Product.vue bitiş*/
+  /************************************************/
+  /* sektors.vue */
+ #sektors{
+  .sector-container{
+    overflow-x: auto!important;
+    height: 100%!important;
+  }
+ }
+  /*sektors.vue bitiş*/
 }
 /* Medium devices (landscape tablets, 768px*432px and up) */
 @media only screen and (min-width: 768px) {
-
-  html {
-    font-size: 10px;
+   html {
+    font-size: 8px;
   }
-
   .nav-text {
     display: inline !important;
   }
@@ -95,7 +194,6 @@
       width: 95%!important;
     }
 
-
     /*Carousel dikey*/
     .carousel-content{
         width: 90%!important;
@@ -145,10 +243,6 @@ p{
 /*box bitiş*/
 
 }
-
-
-
-
 /* Landscape */
 @media only screen 
   and (min-device-width: 375px) 
@@ -158,6 +252,7 @@ p{
       font-size: 8px;
     }
 
+    /*bg arkplan*/
     /*Carousel yatay*/
     .carousel-content{
         width: 85%!important;
@@ -180,11 +275,27 @@ p{
 
 /*Carousel yatay bitiş*/
 
-
 /*box boyutu*/
 .box-container{
   height: 22vh!important;
 }
-
 /*box bitiş*/
+
+  /* Product.vue */
+  #product{
+    .product-container{
+      overflow-x: auto!important;
+      height: 100%!important;
+    }
+   }
+    /*Product.vue bitiş*/
+/*****************************************************************/
+ /* sektors.vue */
+ #sektors{
+  .sector-container{
+    overflow-x: auto!important;
+    height: 100%!important;
+  }
+ }
+  /*sektors.vue bitiş*/
   }
