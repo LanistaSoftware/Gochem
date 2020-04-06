@@ -1,13 +1,14 @@
 <template>
   <div class="bg" :style="{ backgroundImage: 'url(' + bgImageUrl + ')' }">
     <div class="overlay">
-      <div class="bg-container">
+      <div class="bg-container clearfix">
         <Header />
-        <Social />
+        <Socials />
         <nuxt />
       </div>
       <div class="footer">
-        <Footer />
+        <Footer class="footer-desktop" />
+        <MobileFooter class="mobile-footer" />
       </div>
     </div>
   </div>
@@ -15,12 +16,14 @@
 <script>
 import Header from '@/components/globalcomponents/Header/Header'
 import Footer from '@/components/globalcomponents/Footer/Footer'
-import Social from '@/components/globalcomponents/Social'
+import MobileFooter from '@/components/globalcomponents/Footer/Mobile-footer'
+import Socials from '@/components/globalcomponents/shared/Socials'
 export default {
   components: {
     Header,
-    Social,
-    Footer
+    Socials,
+    Footer,
+    MobileFooter
     // Carousel,
     // Box
   },
@@ -44,3 +47,8 @@ export default {
   }
 }
 </script>
+<style lang="less" scoped>
+.mobile-footer{
+  display: none;
+}
+</style>

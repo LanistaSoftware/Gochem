@@ -6,6 +6,7 @@
     <div class="navigation">
       <Navigation />
     </div>
+    <Search class="mobil-search" />
     <div class="search-language">
       <Language />
     </div>
@@ -14,12 +15,14 @@
 <script>
 import Logo from '@/components/globalcomponents/Header/Logo'
 import Navigation from '@/components/globalcomponents/Header/Navigation'
+import Search from '@/components/globalcomponents/shared/Search'
 import Language from '@/components/globalcomponents/Header/Language'
 export default {
   components: {
     Logo,
     Navigation,
-    Language
+    Language,
+    Search
   }
 }
 </script>
@@ -42,5 +45,8 @@ export default {
    width: 7%;
    vertical-align: middle;
    text-align: right;
+ }
+ .mobil-search{
+   display: none;
  }
 </style>

@@ -40,6 +40,9 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module'
   ],
+  router: {
+    middleware: ['mobile']
+  },
   /*
   ** Nuxt.js modules
   */

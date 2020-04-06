@@ -1,21 +1,5 @@
 <template>
-  <carousel-3d
-    :count="contactSlides.length"
-    :controls-visible="carouselControls"
-    :width="slideWidth"
-    :height="slideHeight"
-    :autoplay="autoplayEnabled"
-    :disable3d="disable3d"
-    :space="slideSpace"
-    :perspective="slidePerspective"
-    :display="visible"
-    :loop="infinite"
-    :animation-speed="animationSpeed"
-    :dir="direction"
-    :border="slideBorder"
-    :start-index="startIndex"
-    :inverse-scaling="slideScaling"
-  >
+  <carousel-3d>
     <slide v-for="(slide, i) in contactSlides" :key="i" :index="i">
       <div class="contact-slide">
         <div class="contact-head">
@@ -41,20 +25,6 @@
 export default {
   data () {
     return {
-      carouselControls: false,
-      slideWidth: 250,
-      slideHeight: 350,
-      slideBorder: 1,
-      slideSpace: 300,
-      slidePerspective: 0,
-      slideScaling: 10,
-      animationSpeed: 500,
-      startIndex: 0,
-      autoplayEnabled: false,
-      visible: 5,
-      direction: 'rtl',
-      infinite: true,
-      disable3d: false,
       contactSlides: [
         {
           icons: 'flaticon-sydney-opera-house',
@@ -142,7 +112,8 @@ export default {
   border-radius: .6rem;
   text-align: center;
   padding: 1.3rem;
-  height: 80%!important;
+  height: 100% !important;
+  width: 60% !important;
 }
 .contact-head{
   width: 100%;
