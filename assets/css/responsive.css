@@ -4,9 +4,6 @@
   .header {
     padding-bottom: 5.4rem;
   }
-  .navigation {
-    width: 50%!important;
-  }
   .navigation span {
     display: none;
   }
@@ -14,8 +11,8 @@
   [class*=" flaticon-"]:before,
   [class^="flaticon-"]:after,
   [class*=" flaticon-"]:after {
-    font-size: 1rem!important;
-    padding: 0!important;
+    font-size: 1rem !important;
+    padding: 0 !important;
   }
   /*Carousel yatay*/
   .carousel-content span {
