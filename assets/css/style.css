@@ -196,3 +196,25 @@ h4 {
   background-color: white;
   background-image: linear-gradient(rgba(0, 34, 57, 0.8), rgba(5, 69, 74, 0.8));
 }
+/* Product-carosuel*/
+.product-responsive-carousel {
+  display: none;
+}
+[class="flaticon-next"]:before {
+  color: white ;
+  padding: 0.3rem;
+  font-size: 1rem !important;
+}
+[class="flaticon-back"]:before {
+  color: white !important;
+  padding: 0.3rem;
+  font-size: 1rem !important;
+}
+.VueCarousel-navigation-next {
+  background-color: gray !important;
+  border-radius: 200%;
+}
+.VueCarousel-navigation-prev {
+  background-color: gray !important;
+  border-radius: 200%;
+}
