@@ -75,6 +75,7 @@ export default {
   padding-bottom: 1.3rem;
   position: fixed;
   bottom: 0;
+  z-index: 100;
 }
 nav,
 ul,

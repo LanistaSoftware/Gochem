@@ -106,14 +106,23 @@
   }
   /* */
   /* Footer and Footer Mobile */
-  .footer {
+  .footer,
+  .footer-contact {
     position: relative;
   }
-  .footer .footer-desktop {
+  .footer .footer-desktop,
+  .footer-contact .footer-desktop {
     display: none;
   }
-  .footer .mobile-footer {
+  .footer .mobile-footer,
+  .footer-contact .mobile-footer {
     display: block !important;
+  }
+  .mobile-contact {
+    display: block;
+  }
+  .contact-layout {
+    display: none;
   }
 }
 /* Extra small devices (phones, 480px and down) */
@@ -161,9 +170,6 @@
   }
   .carousel-content sup {
     font-size: 1.2rem !important;
-  }
-  .boxes .box-container {
-    width: 45% !important;
   }
 }
 /* Small devices (portrait tablets and large phones, 568px and up) */
