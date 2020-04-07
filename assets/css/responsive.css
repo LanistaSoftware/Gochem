@@ -100,6 +100,11 @@
     height: 15vh !important;
     padding-bottom: 2rem !important;
   }
+  /*Product */
+  .sidenav {
+    display: none;
+  }
+  /* */
   /* Footer and Footer Mobile */
   .footer {
     position: relative;
@@ -112,7 +117,7 @@
   }
 }
 /* Extra small devices (phones, 480px and down) */
-@media only screen and (min-width: 321px) and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
   html {
     font-size: 7px;
   }
