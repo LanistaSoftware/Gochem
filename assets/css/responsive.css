@@ -142,7 +142,12 @@
   [class*=" flaticon-"]:after {
     font-size: 2rem;
   }
-  /*carousel*/
+  /*Product Vue */
+  .sidenav {
+    display: none;
+  }
+  /*/*
+/*carousel*/
   .carousel-content h2 {
     font-size: 2.8rem !important;
   }
