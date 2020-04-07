@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Mobile />
     <div class="carousel">
       <BootstrapCarousel />
     </div>
@@ -7,6 +8,7 @@
       <Box
         v-for="(item, index) in filteredSlideSets"
         :key="index"
+        class="box-carousel"
         :item="item"
         @click.native="changeIndex(item.index-1)"
       >
@@ -48,13 +50,15 @@
 import BootstrapCarousel from '@/components/home/BootsrapCarousel'
 import References from '@/components/home/References'
 import Box from '@/components/home/Box'
+import Mobile from '@/components/globalcomponents/shared/Mobile'
 export default {
   name: 'Slider',
   components: {
     // Social,
     BootstrapCarousel,
     Box,
-    References
+    References,
+    Mobile
   },
   filters: {
     filterBoxContent (value) {

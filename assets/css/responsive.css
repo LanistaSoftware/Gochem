@@ -1,37 +1,120 @@
 /*Media Sorgularımız.*/
 /* Extra small devices (phones, 320px and down) */
 @media only screen and (max-width: 320px) {
+  html {
+    font-size: 6px;
+  }
+  .bg {
+    position: fixed;
+    overflow: auto;
+  }
   .header {
     padding-bottom: 5.4rem;
   }
-  .navigation span {
-    display: none;
+  /*logo*/
+  .logobox {
+    display: block !important;
+    width: 10% !important;
+    float: left;
+  }
+  /* Search */
+  .search-language {
+    float: right;
+  }
+  .mobil-search {
+    display: inline-block !important;
+  }
+  .icon-container .search-input {
+    padding-top: 2.2rem !important;
+    padding-bottom: 0.5rem;
+    background-color: #fff;
+  }
+  .icon-container .search-input input {
+    font-size: 1.8rem;
+    vertical-align: super !important;
+    padding: 1rem !important;
+  }
+  .icon-container .search-input [class^="flaticon-"]:before,
+  .icon-container .search-input [class*=" flaticon-"]:before,
+  .icon-container .search-input [class^="flaticon-"]:after,
+  .icon-container .search-input [class*=" flaticon-"]:after {
+    color: blue;
+    font-size: 2.4rem !important;
+  }
+  /*  /* Search bitiş */
+  /*llanguage-container*/
+  /*navbar*/
+  .navigation {
+    display: none !important;
   }
   [class^="flaticon-"]:before,
   [class*=" flaticon-"]:before,
   [class^="flaticon-"]:after,
   [class*=" flaticon-"]:after {
-    font-size: 1rem !important;
-    padding: 0 !important;
+    font-size: 3rem!important;
+    padding: 0!important;
+    padding: 0.6rem !important;
   }
-  /*Carousel yatay*/
-  .carousel-content span {
-    font-size: 1.5rem !important;
+  /*Carousel */
+  .carousel-content {
+    width: 95% !important;
   }
-  .carousel-content strong {
-    font-size: 1.8rem !important;
+  .carousel-content h4 {
+    display: none;
   }
   .carousel-content h2 {
-    font-size: 1.9rem !important;
+    font-size: 3.4rem !important;
+  }
+  .carousel-content .carousel-items {
+    height: 20vh;
+  }
+  .sliderBtn {
+    margin-top: 10vh !important;
+    width: 5%;
+  }
+  .sliderBtn::before {
+    font-size: 1rem !important;
+  }
+  /* Box */
+  .boxes {
+    width: 100%;
+  }
+  .boxes .box-container {
+    width: 100% !important;
+  }
+  .boxes .box-carousel {
+    display: none !important;
+  }
+  .social {
+    display: none;
+  }
+  /* mobile icons */
+  .call {
+    display: block!important;
+  }
+  .box-container {
+    height: 100% !important;
+  }
+  /*Referances*/
+  .ref-container .ref-img {
+    height: 15vh !important;
+    padding-bottom: 2rem !important;
+  }
+  /* Footer and Footer Mobile */
+  .footer {
+    position: relative;
+  }
+  .footer .footer-desktop {
+    display: none;
+  }
+  .footer .mobile-footer {
+    display: block !important;
   }
 }
 /* Extra small devices (phones, 480px and down) */
 @media only screen and (max-width: 480px) {
   html {
-    font-size: 7px!important;
-  }
-  .bg {
-    position: fixed;
+    font-size: 7px;
   }
   .header {
     padding-bottom: 5.4rem;
@@ -59,13 +142,18 @@
   [class*=" flaticon-"]:after {
     font-size: 2rem;
   }
-  /*Carousel yatay*/
-  .carousel-content {
-    width: 85%!important;
+  /*carousel*/
+  .carousel-content h2 {
+    font-size: 2.8rem !important;
   }
-  /*Carousel yatay bitiş*/
-  .box-content {
-    height: 55%!important;
+  .carousel-content span {
+    font-size: 1.8rem !important;
+  }
+  .carousel-content sup {
+    font-size: 1.2rem !important;
+  }
+  .boxes .box-container {
+    width: 40%;
   }
 }
 /* Small devices (portrait tablets and large phones, 568px and up) */
@@ -75,7 +163,7 @@
   }
   /*bootstrapCarousel*/
   .carousel-content h2 {
-    font-size: 2rem!important;
+    font-size: 2rem;
   }
   .carousel-content span {
     font-size: 1.8rem !important;

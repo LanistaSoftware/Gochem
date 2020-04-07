@@ -138,9 +138,11 @@ export default {
     }
   }
 }
-.footer-row:first-child{
+
+.footer-row:first-child {
   text-align: left;
 }
+
 [class^="flaticon-twitter"]:before,
 [class^="flaticon-linkedin-1"]:before,
 [class^="flaticon-youtube"]:before {

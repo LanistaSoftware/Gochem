@@ -3,7 +3,7 @@
     <div class="overlay">
       <div class="bg-container">
         <Header />
-        <Social />
+        <Socials />
       </div>
       <nuxt />
     </div>
@@ -11,11 +11,12 @@
 </template>
 <script>
 import Header from '@/components/globalcomponents/Header/Header'
-import Social from '@/components/globalcomponents/Social'
+import Socials from '@/components/globalcomponents/shared/Socials'
+
 export default {
   components: {
     Header,
-    Social
+    Socials
   },
   data () {
     return {
