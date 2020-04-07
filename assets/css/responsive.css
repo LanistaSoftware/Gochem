@@ -95,24 +95,16 @@
   .box-container {
     height: 100% !important;
   }
-<<<<<<< HEAD
-  /*Referances*/
-  .ref-container .ref-img {
-    height: 15vh !important;
-    padding-bottom: 2rem !important;
-  }
-  /*Product */
-  .sidenav {
-    display: none;
-  }
-  /* */
-=======
 }
+/*Product */
+.sidenav {
+  display: none;
+}
+/* */
 /* Footer and Footer Mobile */
 .footer,
 .footer-contact {
   position: relative;
->>>>>>> 0e54246286cd4fab4f288e7f3883cc6f859c14f1
   /* Footer and Footer Mobile */
 }
 .footer .footer-desktop,
@@ -168,12 +160,7 @@
   [class*=" flaticon-"]:after {
     font-size: 2rem;
   }
-  /*Product Vue */
-  .sidenav {
-    display: none;
-  }
-  /*/*
-/*carousel*/
+  /*carousel*/
   .carousel-content h2 {
     font-size: 2.8rem !important;
   }

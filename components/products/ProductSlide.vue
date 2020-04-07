@@ -19,8 +19,8 @@
     :navigation-click-target-size="2"
     :pagination-enabled="false"
   >
-    <slide class="slider" v-for="(slide,index) in 5" :key="index">
-     {{index}}
+    <slide v-for="(slide,index) in 5" :key="index" class="slider">
+      {{ index }}
     </slide>
   </carousel>
 </template>
