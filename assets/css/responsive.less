@@ -118,13 +118,12 @@
   .box-container {
     height: 100% !important;
   }
-
-  /*Referances*/
-  .ref-container {
-    .ref-img {
-      height: 15vh !important;
-      padding-bottom: 2rem !important;
-    }
+}
+/* Footer and Footer Mobile */
+.footer,.footer-contact{
+  position: relative;
+  .footer-desktop{
+    display: none;
   }
 
   /* Footer and Footer Mobile */
@@ -140,9 +139,15 @@
     }
   }
 }
+.mobile-contact {
+  display: block;
+}
+.contact-layout{
+  display: none;
+}
 
 /* Extra small devices (phones, 480px and down) */
-@media only screen and (min-width:321px) and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
   html {
     font-size: 7px;
   }
@@ -195,12 +200,11 @@
       font-size: 1.2rem !important;
     }
   }
-
-  .boxes {
-    .box-container{
-      width: 45% !important;
-    }
-  }
+  // .boxes {
+  //   .box-container{
+  //     width: 45% !important;
+  //   }
+  // }
 }
 
 /* Small devices (portrait tablets and large phones, 568px and up) */

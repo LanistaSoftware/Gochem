@@ -95,24 +95,37 @@
   .box-container {
     height: 100% !important;
   }
-  /*Referances*/
-  .ref-container .ref-img {
-    height: 15vh !important;
-    padding-bottom: 2rem !important;
-  }
+}
+/* Footer and Footer Mobile */
+.footer,
+.footer-contact {
+  position: relative;
   /* Footer and Footer Mobile */
-  .footer {
-    position: relative;
-  }
-  .footer .footer-desktop {
-    display: none;
-  }
-  .footer .mobile-footer {
-    display: block !important;
-  }
+}
+.footer .footer-desktop,
+.footer-contact .footer-desktop {
+  display: none;
+}
+.footer .footer,
+.footer-contact .footer {
+  position: relative;
+}
+.footer .footer .footer-desktop,
+.footer-contact .footer .footer-desktop {
+  display: none;
+}
+.footer .footer .mobile-footer,
+.footer-contact .footer .mobile-footer {
+  display: block !important;
+}
+.mobile-contact {
+  display: block;
+}
+.contact-layout {
+  display: none;
 }
 /* Extra small devices (phones, 480px and down) */
-@media only screen and (min-width: 321px) and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
   html {
     font-size: 7px;
   }
@@ -151,9 +164,6 @@
   }
   .carousel-content sup {
     font-size: 1.2rem !important;
-  }
-  .boxes .box-container {
-    width: 45% !important;
   }
 }
 /* Small devices (portrait tablets and large phones, 568px and up) */

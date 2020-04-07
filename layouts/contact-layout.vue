@@ -4,19 +4,28 @@
       <div class="bg-container">
         <Header />
         <Socials />
+        <nuxt />
       </div>
-      <nuxt />
+      <div class="footer-contact">
+        <Footer class="footer-desktop" />
+        <MobileFooter class="mobile-footer" />
+      </div>
     </div>
   </div>
 </template>
 <script>
 import Header from '@/components/globalcomponents/Header/Header'
 import Socials from '@/components/globalcomponents/shared/Socials'
-
+import Footer from '@/components/globalcomponents/footer/ContactFooter'
+import MobileFooter from '@/components/globalcomponents/Footer/Mobile-footer'
 export default {
   components: {
     Header,
-    Socials
+    Socials,
+    Footer,
+    MobileFooter
+    // Carousel,
+    // Box
   },
   data () {
     return {
@@ -38,6 +47,8 @@ export default {
   }
 }
 </script>
-<style lang="less" scoped>
-
+<style lang="less">
+.mobile-footer{
+  display: none;
+}
 </style>
