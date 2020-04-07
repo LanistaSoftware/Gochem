@@ -4,8 +4,8 @@
       <div class="bg-container">
         <Header />
         <Socials />
-        <nuxt />
       </div>
+      <nuxt />
       <div class="footer-contact">
         <Footer class="footer-desktop" />
         <MobileFooter class="mobile-footer" />
