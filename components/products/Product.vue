@@ -1,5 +1,6 @@
 <template>
   <section id="product">
+    <Sliderp />
     <div class="content content-background">
       <section class="sidenav overflow-scroll">
         <div class="product-category">
@@ -95,7 +96,11 @@
   </section>
 </template>
 <script>
+import Sliderp from '@/components/products/ProductSlide'
 export default {
+  components: {
+    Sliderp
+  },
   computed: {
     getProduct () {
       return this.$store.getters.getProducts
