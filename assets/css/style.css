@@ -189,3 +189,7 @@ h4 {
   color: lightgreen;
 }
 /*** Contact CSS*****/
+.colored-background {
+  background-color: white;
+  background-image: linear-gradient(rgba(0, 34, 57, 0.8), rgba(5, 69, 74, 0.8));
+}

@@ -66,15 +66,6 @@ ul li {
 [class^="flaticon-search"]:before{
   font-size: 1.5rem;
 }
-// [class^="flaticon-youtube"]:hover:before {
-//   color: #ff0000;
-// }
-// [class^="flaticon-twitter"]:hover:before {
-//   color: #33ccff;
-// }
-// [class^="flaticon-linkedin-1"]:hover:before {
-//   color: #007bb7;
-// }
 .first-li{
   position: relative;
   left: 0.6rem;
