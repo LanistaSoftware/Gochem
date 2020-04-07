@@ -6,7 +6,7 @@
         <Socials />
       </div>
       <nuxt />
-      <div class="footer-contact">
+      <div class="footer">
         <Footer class="footer-desktop" />
         <MobileFooter class="mobile-footer" />
       </div>

@@ -1,36 +1,4 @@
 <template>
-<<<<<<< HEAD
-  <div class="carousel-container">
-    <carousel-3d
-      :count="contactSlides.length"
-      :controls-visible="carouselControls"
-      :autoplay="autoplayEnabled"
-      :disable3d="disable3d"
-      :space="slideSpace"
-      :perspective="slidePerspective"
-      :loop="infinite"
-      :animation-speed="animationSpeed"
-      :dir="direction"
-      :border="slideBorder"
-      :start-index="startIndex"
-    >
-      <slide v-for="(slide, i) in contactSlides" :key="i" :index="i">
-        <div class="contact-slide">
-          <div class="contact-head">
-            <i :class="slide.icons" />
-            <h2>
-              {{ slide.title }}
-            </h2>
-          </div>
-          <hr>
-          <div class="contact-item">
-            <h3> {{ slide.info }} </h3>
-            <p> {{ slide.content }} </p>
-          </div>
-          <div class="contact-btn">
-            <button> {{ slide.contactBtn }} </button>
-          </div>
-=======
   <carousel-3d>
     <slide v-for="(slide, i) in contactSlides" :key="i" :index="i">
       <div class="contact-slide">
@@ -39,34 +7,16 @@
           <h2>
             {{ slide.title }}
           </h2>
->>>>>>> 3b36c6976790e042301014bc040e967cb4c8c343
         </div>
-      </slide>
-    </carousel-3d>
-  </div>
+      </div>
+    </slide>
+  </carousel-3d>
 </template>
 
 <script>
 export default {
   data () {
     return {
-<<<<<<< HEAD
-      carouselControls: false,
-      slideWidth: 225,
-      slideHeight: 280,
-      slideBorder: 1,
-      slideSpace: 245,
-      slidePerspective: 0,
-      slideScaling: 3,
-      animationSpeed: 500,
-      startIndex: 0,
-      autoplayEnabled: false,
-      visible: 5,
-      direction: 'rtl',
-      infinite: true,
-      disable3d: false,
-=======
->>>>>>> 3b36c6976790e042301014bc040e967cb4c8c343
       contactSlides: [
         {
           icons: 'flaticon-sydney-opera-house',
@@ -143,10 +93,6 @@ export default {
 
 </script>
 <style lang="less" scoped>
-<<<<<<< HEAD
-.carousel-container{
-  height: 60px;
-=======
 .contact-slide{
   height: 100%;
   //box-shadow: 1rem 1rem 1rem 1rem #D8EEFF;
@@ -210,7 +156,6 @@ export default {
   font-size:3rem;
   cursor: pointer;
   color: #FB5757;
->>>>>>> 3b36c6976790e042301014bc040e967cb4c8c343
 }
 // .contact-slide{
 //   height: 100%;

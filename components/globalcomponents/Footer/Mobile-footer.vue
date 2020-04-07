@@ -1,7 +1,7 @@
 <template>
   <section>
     <MobileNav />
-    <div class="footer-contact">
+    <div class="footer-mobile">
       <div class="clearfix">
         <div v-for="item in footerList" :key="item.id" class="footer-container clearfix">
           <div class="company-group">
@@ -54,7 +54,7 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-.footer-contact{
+.footer-mobile{
     background-color: rgba(0,0,0,0.6);
     padding-bottom: 8rem !important;
   }
