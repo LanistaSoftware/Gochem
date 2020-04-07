@@ -4,9 +4,12 @@
       <div class="bg-container">
         <Header />
         <Socials />
+        <nuxt />
       </div>
-      <nuxt />
-      <Footer />
+      <div class="footer-contact">
+        <Footer class="footer-desktop" />
+        <MobileFooter class="mobile-footer" />
+      </div>
     </div>
   </div>
 </template>
@@ -14,11 +17,13 @@
 import Header from '@/components/globalcomponents/Header/Header'
 import Socials from '@/components/globalcomponents/shared/Socials'
 import Footer from '@/components/globalcomponents/footer/ContactFooter'
+import MobileFooter from '@/components/globalcomponents/Footer/Mobile-footer'
 export default {
   components: {
     Header,
     Socials,
-    Footer
+    Footer,
+    MobileFooter
     // Carousel,
     // Box
   },
@@ -42,6 +47,8 @@ export default {
   }
 }
 </script>
-<style lang="less" scoped>
-
+<style lang="less">
+.mobile-footer{
+  display: none;
+}
 </style>
