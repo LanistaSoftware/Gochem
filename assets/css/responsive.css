@@ -112,7 +112,7 @@
   }
 }
 /* Extra small devices (phones, 480px and down) */
-@media only screen and (max-width: 480px) {
+@media only screen and (min-width: 321px) and (max-width: 480px) {
   html {
     font-size: 7px;
   }
@@ -158,7 +158,7 @@
     font-size: 1.2rem !important;
   }
   .boxes .box-container {
-    width: 40%;
+    width: 45% !important;
   }
 }
 /* Small devices (portrait tablets and large phones, 568px and up) */
