@@ -64,25 +64,29 @@
       display: none;
     }
       h2{
-        font-size: 2.5rem !important;
+        font-size: 3.4rem !important;
       }
       .carousel-items{
         height: 20vh;
       }
   }
   .sliderBtn {
-    margin-top: 10vh !important;  
+    margin-top: 10vh !important;
+    width: 5%;
+  }
+  .sliderBtn::before{
+    font-size: 1rem !important;
   }
   /* Box */
   .boxes{
     width: 100%;
+    .box-container{
+      width: 100% !important;
   }
-  .box-container{
-    width: 100% !important;
-}
-.box-carousel{
-  display: none !important;
-}
+  .box-carousel{
+    display: none !important;
+  }
+  }
 .social{
   display: none;
 }
@@ -116,9 +120,6 @@
   html {
     font-size: 7px;
   }
-  // .bg{
-  //   position: fixed;
-  // }
   .header {
     padding-bottom: 5.4rem;
   }
@@ -147,9 +148,23 @@ img{
 [class*=" flaticon-"]:after {
   font-size: 2rem;
 }
-  /*Carousel yatay*/
-  /*Carousel yatay bitiş*/
-
+/*carousel*/
+.carousel-content {
+  h2 {
+    font-size: 2.8rem !important;
+  }
+  span{
+    font-size: 1.8rem !important;
+  }
+  sup{
+    font-size: 1.2rem !important;
+  }
+  }
+  .boxes {
+    .box-container{
+      width: 40%;
+    }
+  }
 }
 /* Small devices (portrait tablets and large phones, 568px and up) */
 @media only screen and (max-width: 568px) {
@@ -159,13 +174,13 @@ img{
   /*bootstrapCarousel*/
   .carousel-content {
   h2 {
-    font-size: 2rem!important;
+    font-size: 2rem;
   }
   span{
-    font-size: 1.8rem!important;
+    font-size: 1.8rem !important;
   }
   sup{
-    font-size: 1.2rem!important;
+    font-size: 1.2rem !important;
   }
   }
   /* Product.vue */

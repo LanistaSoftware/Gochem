@@ -63,22 +63,26 @@
     display: none;
   }
   .carousel-content h2 {
-    font-size: 2.5rem !important;
+    font-size: 3.4rem !important;
   }
   .carousel-content .carousel-items {
     height: 20vh;
   }
   .sliderBtn {
     margin-top: 10vh !important;
+    width: 5%;
+  }
+  .sliderBtn::before {
+    font-size: 1rem !important;
   }
   /* Box */
   .boxes {
     width: 100%;
   }
-  .box-container {
+  .boxes .box-container {
     width: 100% !important;
   }
-  .box-carousel {
+  .boxes .box-carousel {
     display: none !important;
   }
   .social {
@@ -138,8 +142,19 @@
   [class*=" flaticon-"]:after {
     font-size: 2rem;
   }
-  /*Carousel yatay*/
-  /*Carousel yatay bitiş*/
+  /*carousel*/
+  .carousel-content h2 {
+    font-size: 2.8rem !important;
+  }
+  .carousel-content span {
+    font-size: 1.8rem !important;
+  }
+  .carousel-content sup {
+    font-size: 1.2rem !important;
+  }
+  .boxes .box-container {
+    width: 40%;
+  }
 }
 /* Small devices (portrait tablets and large phones, 568px and up) */
 @media only screen and (max-width: 568px) {
@@ -148,7 +163,7 @@
   }
   /*bootstrapCarousel*/
   .carousel-content h2 {
-    font-size: 2rem!important;
+    font-size: 2rem;
   }
   .carousel-content span {
     font-size: 1.8rem !important;
