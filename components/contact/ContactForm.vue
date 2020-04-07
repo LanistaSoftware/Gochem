@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <!-- <div class="container-fluid">
     <div class="container">
       <div class="formBox">
         <form>
@@ -42,54 +42,77 @@
         </form>
       </div>
     </div>
-  </div>
+  </div> -->
+  <section>
+    <div class="form-container">
+      <div class="twin-input left-inputs">
+        <div class="inputBox ">
+          <input type="text" name="" class="input" placeholder="Konu">
+        </div>
+        <div class="inputBox">
+          <input type="text" name="" class="input" placeholder="İsim">
+        </div>
+      </div>
+      <div class="twin-input right-inputs">
+        <div class="inputBox">
+          <input type="email" name="" class="input" placeholder="E-mail">
+        </div>
+        <div class="inputBox">
+          <input type="text" name="" class="input" placeholder="Telefon">
+        </div>
+      </div>
+      <div class="text-container">
+        <div class="inputBox">
+          <textarea class="input" placeholder="Mesajınız" />
+          <button class="form-btn">
+            Gönder
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 <style lang="less" scoped>
-.formBox  h1{
-margin: 0;
-padding: 0;
-text-align: center;
-margin-bottom: 50px;
-text-transform: uppercase;
-font-size: 48px;
+
+.twin-input{
+  width: 50%;
+  float: left;
+  margin-bottom: 1.2rem;
 }
-.inputBox{
-position: relative;
-box-sizing: border-box;
-margin-bottom: 1rem;
+.left-inputs{
+  padding-right: 1rem;
 }
-.inputBox .inputText{
-position: absolute;
-    font-size: 24px;
-    line-height: 50px;
-    transition: .5s;
-    opacity: .5;
+.right-inputs{
+  padding-left: 1rem;
 }
-.inputBox .input{
-position: relative;
-width: 100%;
-border: none;
-padding: 1rem;
-border-radius: .6rem;
-}
-.focus .inputText{
-transform: translateY(-30px);
-font-size: 18px;
-opacity: 1;
-color: #9A9A9A;
+
+input,textarea{
+  padding: 0.7rem;
+  width: 100%;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 0.2em;
 }
 textarea{
-height: 100px !important;
-margin-top: 3rem;
+  height: 14rem;
 }
-.button{
-    position: absolute;
-    border: 1px solid;
-    padding: .6rem;
-    border-radius: .5rem;
-    color: #9A9A9A;
-    background: none;
-    bottom: 15%;
-    right: 4%;
+.text-container{
+ position: relative;
+ .form-btn {
+  position: absolute;
+  border: 1px solid;
+  padding: .6rem;
+  border-radius: .5rem;
+  color: #9A9A9A;
+  background: none;
+  bottom: 2rem;
+  right: 1rem;
+  transition: 0.2s;
+}
+.form-btn:hover{
+    color: lightgreen;
+    border-color: lightgreen;
+}
+
 }
 </style>
