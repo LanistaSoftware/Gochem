@@ -100,59 +100,77 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-.footer-contact{
-    background-color:#36666C!important;
-    padding: 5rem 0 2rem 0;
-  }
-// .footer-row:not(:first-child){
-//   text-align: left;
-// }
-.social-network{
-  font-family: Savoye LET;
-  font-size: 1.1rem;
+.footer-contact {
+  background-color: transparent;
+  padding: 5rem 0 2rem 0;
+}
+
+.social-network {
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.2rem;
   letter-spacing: .05rem;
 }
-  .footer-row{
-    width: 25%;
-    float: left;
-    color: #fff;
-    padding: 0 3rem;
-    hr{
-      background-color: #ffffff;
-    }
-    h4{
-      font-size: 1rem;
-      text-align: center;
-      font-family: Georgia;
-    }
-    ul{
-      margin: 1rem;
-      li{
-        margin: 1.6rem 0;
-      }
-    }
+
+.footer-row {
+  width: 25%;
+  float: left;
+  color: #fff;
+  padding: 0 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+
+  hr {
+    background-color: rgba(255, 255, 255, 0.7);
   }
-  [class^="flaticon-twitter"]:before,[class^="flaticon-linkedin-1"]:before,[class^="flaticon-youtube"]:before {
-  font-size: 1.8rem;
-}
-.contact-item{
-  font-family: Georgia;
-}
-.hr-copy{
-  background-color: #fff;
-}
-.contact-footer {
+
+  h4 {
+    font-size: 1.2rem;
     text-align: center;
+    font-family: Georgia;
+  }
 
-    img {
-      height: 3vh;
-    }
+  ul {
+    margin: 1rem;
 
-    .copyright {
-      display: inline-block;
-      font-family: Helvetica Neue;
-      color: #939393;
-      margin-right: 0.5rem;
+    li {
+      margin: 1.7rem 0;
     }
   }
+}
+
+.footer-row:first-child {
+  text-align: left;
+}
+
+[class^="flaticon-twitter"]:before,
+[class^="flaticon-linkedin-1"]:before,
+[class^="flaticon-youtube"]:before {
+  font-size: 2rem;
+  margin-right: 0.3rem;
+}
+
+.contact-item {
+  font-family: Georgia;
+  font-size: 1.1rem;
+}
+
+.hr-copy {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-footer {
+  text-align: center;
+
+  img {
+    width: 7rem;
+  }
+
+  .copyright {
+    display: inline-block;
+    font-family: Helvetica Neue;
+    color: #939393;
+    margin-right: 0.5rem;
+  }
+}
 </style>

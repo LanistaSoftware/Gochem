@@ -4,104 +4,119 @@
   html {
     font-size: 6px;
   }
-  .bg{
+
+  .bg {
     position: fixed;
     overflow: auto;
   }
-   .header {
+
+  .header {
     padding-bottom: 5.4rem;
   }
+
   /*logo*/
   .logobox {
     display: block !important;
     width: 10% !important;
     float: left;
   }
+
   /* Search */
   .search-language {
     float: right;
-}
-.mobil-search{
-  display: inline-block !important;
-}
-.icon-container .search-input{
-  padding-top: 2.2rem !important;
-  padding-bottom: .5rem;
-  background-color: #fff;
-  input {
-    font-size: 1.8rem;
-    vertical-align: super !important;
-    padding: 1rem !important;
   }
-  [class^="flaticon-"]:before,
-[class*=" flaticon-"]:before,
-[class^="flaticon-"]:after,
-[class*=" flaticon-"]:after {
-  color: blue;
-  font-size: 2.4rem !important;
-}
-}
-/*  /* Search bitiş */
+
+  .mobil-search {
+    display: inline-block !important;
+  }
+
+  .icon-container .search-input {
+    padding-top: 2.2rem !important;
+    padding-bottom: .5rem;
+    background-color: #fff;
+
+    input {
+      font-size: 1.8rem;
+      vertical-align: super !important;
+      padding: 1rem !important;
+    }
+
+    [class^="flaticon-"]:before,
+    [class*=" flaticon-"]:before,
+    [class^="flaticon-"]:after,
+    [class*=" flaticon-"]:after {
+      color: blue;
+      font-size: 2.4rem !important;
+    }
+  }
+
+  /*  /* Search bitiş */
   /*llanguage-container*/
 
   /*navbar*/
   .navigation {
     display: none !important;
   }
-  
-[class^="flaticon-"]:before,
-[class*=" flaticon-"]:before,
-[class^="flaticon-"]:after,
-[class*=" flaticon-"]:after {
-  font-size: 3rem!important;
-  padding: 0!important;
-  padding: .6rem !important;
-}
+
+  [class^="flaticon-"]:before,
+  [class*=" flaticon-"]:before,
+  [class^="flaticon-"]:after,
+  [class*=" flaticon-"]:after {
+    font-size: 3rem !important;
+    padding: 0 !important;
+    padding: .6rem !important;
+  }
+
   /*Carousel */
-  .carousel-content{
+  .carousel-content {
     width: 95% !important;
-    h4{
+
+    h4 {
       display: none;
     }
-      h2{
-        font-size: 3.4rem !important;
-      }
-      .carousel-items{
-        height: 20vh;
-      }
+
+    h2 {
+      font-size: 3.4rem !important;
+    }
+
+    .carousel-items {
+      height: 20vh;
+    }
   }
+
   .sliderBtn {
     margin-top: 10vh !important;
     width: 5%;
   }
-  .sliderBtn::before{
+
+  .sliderBtn::before {
     font-size: 1rem !important;
   }
+
   /* Box */
-  .boxes{
+  .boxes {
     width: 100%;
-    .box-container{
+
+    .box-container {
       width: 100% !important;
+    }
+
+    .box-carousel {
+      display: none !important;
+    }
   }
-  .box-carousel{
-    display: none !important;
+
+  .social {
+    display: none;
   }
+
+  /* mobile icons */
+  .call {
+    display: block !important;
   }
-.social{
-  display: none;
-}
-   /* mobile icons */
-   .call{
-    display: block!important;
-}
-.box-container{
-  height: 100% !important;
-}
-/*Referances*/
-.ref-container{
-  .ref-img{
-    height: 15vh !important;
-    padding-bottom: 2rem !important;
+
+  .box-container {
+    height: 100% !important;
   }
 }
 /* Footer and Footer Mobile */
@@ -110,8 +125,18 @@
   .footer-desktop{
     display: none;
   }
-  .mobile-footer{
-    display: block !important;
+
+  /* Footer and Footer Mobile */
+  .footer {
+    position: relative;
+
+    .footer-desktop {
+      display: none;
+    }
+
+    .mobile-footer {
+      display: block !important;
+    }
   }
 }
 
@@ -121,51 +146,60 @@
 .contact-layout{
   display: none;
 }
-}
+
 /* Extra small devices (phones, 480px and down) */
 @media only screen and (max-width: 480px) {
   html {
     font-size: 7px;
   }
+
   .header {
     padding-bottom: 5.4rem;
   }
-  .logo-container{
-img{
-  width: 5rem!important;
-  height: auto;
-}
+
+  .logo-container {
+    img {
+      width: 5rem !important;
+      height: auto;
+    }
   }
+
   .navigation {
-    width: 70%!important;
+    width: 70% !important;
+
     span {
       display: none;
     }
+
     [class^="flaticon-"]:before,
-[class*=" flaticon-"]:before,
-[class^="flaticon-"]:after,
-[class*=" flaticon-"]:after {
-  padding-left: .6rem;
-  padding-right: .6rem;
-}
+    [class*=" flaticon-"]:before,
+    [class^="flaticon-"]:after,
+    [class*=" flaticon-"]:after {
+      padding-left: .6rem;
+      padding-right: .6rem;
+    }
   }
-[class^="flaticon-"]:before,
-[class*=" flaticon-"]:before,
-[class^="flaticon-"]:after,
-[class*=" flaticon-"]:after {
-  font-size: 2rem;
-}
-/*carousel*/
-.carousel-content {
-  h2 {
-    font-size: 2.8rem !important;
+
+  [class^="flaticon-"]:before,
+  [class*=" flaticon-"]:before,
+  [class^="flaticon-"]:after,
+  [class*=" flaticon-"]:after {
+    font-size: 2rem;
   }
-  span{
-    font-size: 1.8rem !important;
-  }
-  sup{
-    font-size: 1.2rem !important;
-  }
+
+  /*carousel*/
+  .carousel-content {
+    h2 {
+      font-size: 2.8rem !important;
+    }
+
+    span {
+      font-size: 1.8rem !important;
+    }
+
+    sup {
+      font-size: 1.2rem !important;
+    }
   }
   // .boxes {
   //   .box-container{
@@ -173,49 +207,59 @@ img{
   //   }
   // }
 }
+
 /* Small devices (portrait tablets and large phones, 568px and up) */
 @media only screen and (max-width: 568px) {
-  html{
-    font-size: 6px!important;
+  html {
+    font-size: 6px !important;
   }
+
   /*bootstrapCarousel*/
   .carousel-content {
-  h2 {
-    font-size: 2rem;
+    h2 {
+      font-size: 2rem;
+    }
+
+    span {
+      font-size: 1.8rem !important;
+    }
+
+    sup {
+      font-size: 1.2rem !important;
+    }
   }
-  span{
-    font-size: 1.8rem !important;
-  }
-  sup{
-    font-size: 1.2rem !important;
-  }
-  }
+
   /* Product.vue */
- #product{
-  .product-container{
-    overflow-x: auto!important;
-    height: 100%!important;
+  #product {
+    .product-container {
+      overflow-x: auto !important;
+      height: 100% !important;
+    }
   }
- }
+
   /*Product.vue bitiş*/
   /************************************************/
   /* sektors.vue */
- #sektors{
-  .sector-container{
-    overflow-x: auto!important;
-    height: 100%!important;
+  #sektors {
+    .sector-container {
+      overflow-x: auto !important;
+      height: 100% !important;
+    }
   }
- }
+
   /*sektors.vue bitiş*/
 }
+
 /* Medium devices (landscape tablets, 768px*432px and up) */
 @media only screen and (min-width: 768px) {
-   html {
+  html {
     font-size: 8px;
   }
+
   .nav-text {
     display: inline !important;
   }
+
   .bg-container {
     width: 93%;
   }
@@ -224,6 +268,7 @@ img{
     padding: 0.5rem 1.3rem 0.5rem 1.3rem !important;
   }
 }
+
 /* Large devices (laptops/desktops, 992px*558px and up) */
 @media only screen and (min-width: 992px) {
   html {
@@ -243,11 +288,13 @@ img{
     padding: 0.5rem 1.3rem 0.5rem 1.3rem !important;
   }
 }
+
 /* Extra large devices (large laptops and desktops, 1200px*675px and up) */
 @media only screen and (min-width: 1200px) {
   html {
     font-size: 14px;
   }
+
   .nav-text {
     display: inline !important;
   }
@@ -261,11 +308,13 @@ img{
     padding: 0.5rem 1.3rem 0.5rem 1.3rem !important;
   }
 }
+
 /* Extra large devices (large laptops and desktops, 1400px and up) */
 @media only screen and (min-width: 1400px) {
   html {
-    font-size: 18px;
+    font-size: 16px;
   }
+
   .nav-text {
     display: inline !important;
   }
@@ -279,120 +328,134 @@ img{
     padding: 0.5rem 1.3rem 0.5rem 1.3rem !important;
   }
 }
-/* Portrait */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (orientation: portrait) { 
-    html{
-      font-size: 10px;
-    }
-    .bg-container{
-      width: 95%!important;
-    }
 
-    /*Carousel dikey*/
-    .carousel-content{
-        width: 90%!important;
-      span{
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: portrait) {
+  html {
+    font-size: 10px;
+  }
+
+  .bg-container {
+    width: 95% !important;
+  }
+
+  /*Carousel dikey*/
+  .carousel-content {
+    width: 90% !important;
+
+    span {
       font-size: 2.3rem !important;
     }
-    sup{
+
+    sup {
       font-size: 1.3rem !important;
     }
-    strong{
+
+    strong {
       font-size: 2.2rem !important;
     }
-    h2{
+
+    h2 {
       font-size: 2.6rem !important;
     }
-    p{
+
+    p {
       font-size: 1.2rem !important;
+    }
   }
-}
-/*Carousel dikey bitiş*/
+
+  /*Carousel dikey bitiş*/
 
 
 
 
-/** carousel içeriği pozisyon için*/
+  /** carousel içeriği pozisyon için*/
 
-.sliderBtn {
-  margin-top: 10vh !important;
-}
-  .carousel-items{
+  .sliderBtn {
+    margin-top: 10vh !important;
+  }
+
+  .carousel-items {
     height: 30vh !important;
   }
-/** bitiş*/
+
+  /** bitiş*/
 
 
 
 
 
 
-/*Box */
+  /*Box */
 
-.box-container{
-p{
-  font-size: 1.3rem;
-}
-}
-/*box bitiş*/
-
-}
-/* Landscape */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (orientation: landscape) {
-    html{
-      font-size: 8px;
+  .box-container {
+    p {
+      font-size: 1.3rem;
     }
-
-    /*bg arkplan*/
-    /*Carousel yatay*/
-    .carousel-content{
-        width: 85%!important;
-      span{
-      font-size: 3rem!important;
-    }
-    sup{
-      font-size: 1.5rem!important;
-    }
-    strong{
-      font-size: 2.4rem!important;
-    }
-    h2{
-      font-size: 4rem!important;
-    }
-    p{
-      font-size: 1rem!important;
   }
+
+  /*box bitiş*/
+
 }
 
-/*Carousel yatay bitiş*/
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: landscape) {
+  html {
+    font-size: 8px;
+  }
 
-/*box boyutu*/
-.box-container{
-  height: 22vh!important;
-}
-/*box bitiş*/
+  /*bg arkplan*/
+  /*Carousel yatay*/
+  .carousel-content {
+    width: 85% !important;
+
+    span {
+      font-size: 3rem !important;
+    }
+
+    sup {
+      font-size: 1.5rem !important;
+    }
+
+    strong {
+      font-size: 2.4rem !important;
+    }
+
+    h2 {
+      font-size: 4rem !important;
+    }
+
+    p {
+      font-size: 1rem !important;
+    }
+  }
+
+  /*Carousel yatay bitiş*/
+
+  /*box boyutu*/
+  .box-container {
+    height: 22vh !important;
+  }
+
+  /*box bitiş*/
 
   /* Product.vue */
-  #product{
-    .product-container{
-      overflow-x: auto!important;
-      height: 100%!important;
+  #product {
+    .product-container {
+      overflow-x: auto !important;
+      height: 100% !important;
     }
-   }
-    /*Product.vue bitiş*/
-/*****************************************************************/
- /* sektors.vue */
- #sektors{
-  .sector-container{
-    overflow-x: auto!important;
-    height: 100%!important;
   }
- }
+
+  /*Product.vue bitiş*/
+  /*****************************************************************/
+  /* sektors.vue */
+  #sektors {
+    .sector-container {
+      overflow-x: auto !important;
+      height: 100% !important;
+    }
+  }
+
   /*sektors.vue bitiş*/
-  }
+}
