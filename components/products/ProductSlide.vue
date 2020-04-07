@@ -19,8 +19,8 @@
     :navigation-click-target-size="2"
     :pagination-enabled="false"
   >
-    <slide v-for="(slide,index) in 5" :key="index">
-      Slide 1 Content
+    <slide class="slider" v-for="(slide,index) in 5" :key="index">
+     {{index}}
     </slide>
   </carousel>
 </template>
@@ -30,20 +30,23 @@ export default {
   components: { Carousel, Slide },
   data () {
     return {
-      nexticon: '<span class="next" style="color:red">Geç</span>'
+      nexticon: '<span class="next sl" style="color:red"><i class="flaticon-right"></i></span>'
     }
   }
 }
 </script>
 <style lang="less" scoped>
 .slider{
-   background-color:rgba(0, 0, 0, 0);
+   background-color:rgba(0, 0, 0, 0.2);
    border: none;
-   text-align: center;
     height: 20rem;
+    color: white;
     opacity: 0.5;
 }
 .VueCarousel-navigation-prev{
     color: red !important;
+}
+.sl{
+    font-size: 20rem;
 }
 </style>
