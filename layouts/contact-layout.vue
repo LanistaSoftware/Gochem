@@ -5,11 +5,12 @@
         <Header />
         <Socials />
       </div>
-      <!-- <div class="footer-contact">
+      <nuxt />
+    </div>
+    <!-- <div class="footer-contact">
         <Footer class="footer-desktop" />
         <MobileFooter class="mobile-footer" />
       </div> -->
-    </div>
   </div>
 </template>
 <script>

@@ -25,13 +25,16 @@
       </section>
       <div class="sector-container">
         <div class="sector-row">
-          <h3>TEKSTİL</h3>
+          <div class="title-sektor">
+            <h3>TEKSTİL</h3>
+          </div>
           <SectorAlbum class="skCar" />
         </div>
         <div class="sector-row">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo provident maxime optio ea. Repellat incidunt perspiciatis eveniet in repellendus, pariatur ratione possimus deserunt vero architecto, velit minus, inventore aliquid. Labore odio alias modi eum unde, totam molestias tempore dolorum maxime, commodi inventore asperiores, atque explicabo sunt. Sint itaque neque ullam sapiente libero ducimus distinctio, ad, velit, numquam repellendus possimus a nemo quisquam? Non reprehenderit nihil quos, suscipit fuga, labore velit cumque mollitia minima eaque doloribus tenetur adipisci, accusamus ab sunt animi voluptates. Iusto recusandae, a fugit consequatur nostrum sed quibusdam ipsa facere culpa id ab eos ipsam numquam unde deserunt exercitationem enim consectetur illum consequuntur blanditiis sequi. Quidem vel porro dolorem! Ea voluptatem eveniet et quidem eos ab nisi ex.
           </p>
+          <SectorAlbum class="skCar-mobil" />
           <div class="btn-link-sector">
             <div class="sector-btn">
               <button class="btn">
@@ -134,5 +137,12 @@ export default {
     }
   }
 
+}
+.skCar-mobil{
+  display: none;
+}
+.title-sektor{
+  width: 30%;
+  margin: auto;
 }
 </style>

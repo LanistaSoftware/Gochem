@@ -2,7 +2,7 @@
 /* Extra small devices (phones, 320px and down) */
 @media only screen and (max-width: 320px) {
   html {
-    font-size: 6px;
+    font-size: 5px;
   }
   .bg {
     position: fixed;
@@ -13,8 +13,8 @@
   }
   /*logo*/
   .logobox {
-    display: block !important;
-    width: 10% !important;
+    display: block;
+    width: 10% ;
     float: left;
   }
   /* Search */
@@ -23,23 +23,6 @@
   }
   .mobil-search {
     display: inline-block !important;
-  }
-  .icon-container .search-input {
-    padding-top: 2.2rem !important;
-    padding-bottom: 0.5rem;
-    background-color: #fff;
-  }
-  .icon-container .search-input input {
-    font-size: 1.8rem;
-    vertical-align: super !important;
-    padding: 1rem !important;
-  }
-  .icon-container .search-input [class^="flaticon-"]:before,
-  .icon-container .search-input [class*=" flaticon-"]:before,
-  .icon-container .search-input [class^="flaticon-"]:after,
-  .icon-container .search-input [class*=" flaticon-"]:after {
-    color: blue;
-    font-size: 2.4rem !important;
   }
   /*  /* Search bitiş */
   /*llanguage-container*/
@@ -54,100 +37,57 @@
   [class*=" flaticon-"]:before,
   [class^="flaticon-"]:after,
   [class*=" flaticon-"]:after {
-    font-size: 3rem !important;
-    padding: 0 !important;
-    padding: 0.6rem !important;
+    font-size: 2rem !important ;
+    padding: 0;
+    padding: 0.4rem;
   }
   /* mobile icons */
   .call {
     display: block !important;
   }
-  .box-container {
-    height: 100% !important;
-  }
-}
-/* Footer and Footer Mobile */
-.footer,
-.footer-contact {
-  position: relative;
   /* Footer and Footer Mobile */
-}
-.footer .footer-desktop,
-.footer-contact .footer-desktop {
-  display: none;
-}
-.footer .footer,
-.footer-contact .footer {
-  position: relative;
-}
-.footer .footer .footer-desktop,
-.footer-contact .footer .footer-desktop {
-  display: none;
-}
-.footer .footer .mobile-footer,
-.footer-contact .footer .mobile-footer {
-  display: block !important;
-}
-.mobile-contact {
-  display: block;
+  .footer {
+    position: relative;
+  }
+  .footer .footer-desktop {
+    display: none;
+  }
+  .footer .mobile-footer {
+    display: block !important;
+  }
+  .footer-contact {
+    display: none;
+  }
+  .mobile-contact {
+    display: block;
+  }
 }
 /* Extra small devices (phones, 480px and down) */
 @media only screen and (max-width: 480px) {
   html {
-    font-size: 7px;
+    font-size: 6px;
   }
   .header {
     padding-bottom: 5.4rem;
   }
   .logo-container img {
-    width: 5rem !important;
-    height: auto;
-  }
-  .navigation {
-    width: 70% !important;
-  }
-  .navigation span {
-    display: none;
-  }
-  .navigation [class^="flaticon-"]:before,
-  .navigation [class*=" flaticon-"]:before,
-  .navigation [class^="flaticon-"]:after,
-  .navigation [class*=" flaticon-"]:after {
-    padding-left: 0.6rem;
-    padding-right: 0.6rem;
+    width: 4rem !important;
   }
   [class^="flaticon-"]:before,
   [class*=" flaticon-"]:before,
   [class^="flaticon-"]:after,
   [class*=" flaticon-"]:after {
-    font-size: 2rem;
+    font-size: 1rem;
   }
 }
 /* Small devices (portrait tablets and large phones, 568px and up) */
 @media only screen and (max-width: 568px) {
   html {
-    font-size: 6px !important;
+    font-size: 7px;
   }
   /*** Content Background ***/
+  /***** OVERLAY BACKGROUND ******/
   @supports (backdrop-filter: none) {
-    .mobile-content-background {
-      background-color: rgba(0, 0, 0, 0.2);
-      backdrop-filter: blur(15px);
-    }
-  }
-  @supports not (backdrop-filter: none) {
-    .mobile-content-background {
-      background-color: rgba(0, 0, 0, 0.2);
-    }
-  }
-  @supports (backdrop-filter: none) {
-    .content-background {
-      background-color: none;
-      backdrop-filter: none;
-    }
-  }
-  /* Tarayıcı desteği olmadığında seçilecek resim buraya gelecek.*/
-  @supports not (backdrop-filter: none) {
     .content-background {
       background-color: rgba(0, 0, 0, 0.2);
     }
@@ -159,7 +99,7 @@
     font-size: 8px;
   }
   .nav-text {
-    display: inline !important;
+    display: inline;
   }
   .bg-container {
     width: 93%;
@@ -173,14 +113,11 @@
   html {
     font-size: 12px;
   }
-  .nav-text {
-    display: inline !important;
-  }
   .bg-container {
     width: 90%;
   }
   .navli {
-    padding: 0.5rem 1.3rem 0.5rem 1.3rem !important;
+    padding: 0.5rem 1.3rem 0.5rem 1.3rem;
   }
 }
 /* Extra large devices (large laptops and desktops, 1200px*675px and up) */
@@ -189,13 +126,13 @@
     font-size: 14px;
   }
   .nav-text {
-    display: inline !important;
+    display: inline;
   }
   .bg-container {
     width: 90%;
   }
   .navli {
-    padding: 0.5rem 1.3rem 0.5rem 1.3rem !important;
+    padding: 0.5rem 1.3rem 0.5rem 1.3rem;
   }
 }
 /* Extra large devices (large laptops and desktops, 1400px and up) */
@@ -204,13 +141,13 @@
     font-size: 16px;
   }
   .nav-text {
-    display: inline !important;
+    display: inline;
   }
   .bg-container {
     width: 85%;
   }
   .navli {
-    padding: 0.5rem 1.3rem 0.5rem 1.3rem !important;
+    padding: 0.5rem 1.3rem 0.5rem 1.3rem;
   }
 }
 /* Portrait */
@@ -219,37 +156,46 @@
     font-size: 10px;
   }
   .bg-container {
-    width: 95% !important;
+    width: 95%;
+  }
+  .navigation {
+    width: 70% !important;
+  }
+  .navigation span {
+    display: none;
+  }
+  .navigation [class^="flaticon-"]:before,
+  .navigation [class*=" flaticon-"]:before,
+  .navigation [class^="flaticon-"]:after,
+  .navigation [class*=" flaticon-"]:after {
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
   }
   /*Carousel dikey*/
   .carousel-content {
-    width: 90% !important;
+    width: 90%;
   }
   .carousel-content span {
-    font-size: 2.3rem !important;
+    font-size: 2.3rem;
   }
   .carousel-content sup {
-    font-size: 1.3rem !important;
+    font-size: 1.3rem;
   }
   .carousel-content strong {
-    font-size: 2.2rem !important;
+    font-size: 2.2rem;
   }
   .carousel-content h2 {
-    font-size: 2.6rem !important;
+    font-size: 2.6rem;
   }
   .carousel-content p {
-    font-size: 1.2rem !important;
+    font-size: 1.2rem;
   }
-  /*Carousel dikey bitiş*/
-  /** carousel içeriği pozisyon için*/
   .sliderBtn {
     margin-top: 10vh !important;
   }
   .carousel-items {
     height: 30vh !important;
   }
-  /** bitiş*/
-  /*Box */
   .box-container p {
     font-size: 1.3rem;
   }
@@ -260,22 +206,36 @@
   html {
     font-size: 8px;
   }
+  .navigation {
+    width: 70% !important;
+  }
+  .navigation span {
+    display: none;
+  }
+  .navigation [class^="flaticon-"]:before,
+  .navigation [class*=" flaticon-"]:before,
+  .navigation [class^="flaticon-"]:after,
+  .navigation [class*=" flaticon-"]:after {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1.8rem;
+  }
   /*bg arkplan*/
   /*Carousel yatay*/
   .carousel-content {
-    width: 85% !important;
+    width: 90% !important;
   }
   .carousel-content span {
-    font-size: 3rem !important;
+    font-size: 3rem;
   }
   .carousel-content sup {
-    font-size: 1.5rem !important;
+    font-size: 1.5rem;
   }
   .carousel-content strong {
-    font-size: 2.4rem !important;
+    font-size: 2.4rem;
   }
   .carousel-content h2 {
-    font-size: 4rem !important;
+    font-size: 4rem;
   }
   .carousel-content p {
     font-size: 1rem !important;
@@ -283,23 +243,74 @@
   /*Carousel yatay bitiş*/
   /*box boyutu*/
   .box-container {
-    height: 22vh !important;
+    height: 20vh;
   }
   /*box bitiş*/
   /* Product.vue */
   #product .product-container {
-    overflow-x: auto !important;
-    height: 100% !important;
+    overflow-x: auto;
+    height: 100%;
   }
   /*Product.vue bitiş*/
   /*****************************************************************/
-  /* sektors.vue */
-  #sektors .sector-container {
-    overflow-x: auto !important;
-    height: 100% !important;
-  }
-  /*sektors.vue bitiş*/
 }
+/* ###################################### Sectors Media Queries ############################################## */
+/* Extra small devices (phones, 320px and down) */
+@media only screen and (max-width: 320px) {
+  #sektors {
+    width: 100%;
+  }
+  #sektors .sidenav {
+    display: none;
+  }
+  #sektors .sector-container {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+  #sektors .sector-container .sector-row .skCar {
+    display: none;
+  }
+}
+/* Extra small devices (phones, 480px and down) */
+@media only screen and (max-width: 480px) {
+  #sektors .sector-container .sector-row {
+    width: 100% !important;
+    padding-right: 2rem;
+  }
+  #sektors .sector-container .sector-row .title-sektor h3 {
+    width: 100%;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid;
+  }
+  #sektors .sector-container .sector-row .skCar {
+    display: none;
+  }
+  #sektors .sector-container .sector-row .skCar-mobil {
+    display: block;
+    text-align: center;
+    padding: 2rem;
+  }
+}
+/* Small devices (portrait tablets and large phones, 568px and up) */
+@media only screen and (max-width: 568px) {
+  #sektors .sector-container {
+    overflow-x: auto;
+    /*sektors.vue bitiş*/
+  }
+  #sektors .sector-container .sector-row {
+    width: 100% !important;
+    float: left;
+  }
+  #sektors .sector-container .sector-row .skCar {
+    margin-left: 3rem;
+  }
+  #sektors .sector-container .sector-row p {
+    font-size: 1rem;
+    margin: 4rem 0 0 3rem;
+    line-height: 1.3rem;
+  }
+}
+/* Medium devices (landscape tablets, 768px*432px and up) */
 /**********Home Responsive********/
 /* Extra small devices (phones, 320px and down) */
 @media only screen and (max-width: 320px) {

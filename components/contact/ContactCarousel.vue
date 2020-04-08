@@ -33,6 +33,8 @@
       </slide>
     </carousel-3d>
   </div>
+  </slide>
+  </carousel-3d>
 </template>
 
 <script>
