@@ -2,14 +2,16 @@
   <div class="product-responsive-carousel content-background">
     <carousel
       class="carousel-product"
-      :per-page="2.3"
+      :per-page="2.8"
       :navigation-enabled="true"
-      :min-swipe-distance="20"
+      :min-swipe-distance="2"
       :navigation-click-target-size="2"
       :pagination-enabled="false"
       :center-mode="true"
       :navigation-next-label="nexticon"
       :navigation-prev-label="previcon"
+      :space-padding="4"
+      :loop="true"
     >
       <slide v-for="(slide,index) in 10" :key="index" class="carousel-responsive">
         <div class="slide-content" @click="index=i">
