@@ -1,21 +1,22 @@
 <template>
   <div class="contact">
     <section class="content content-background bg-container">
-      <h1> Content bölümü</h1>
-      <ContactCarousel />
+      <div class="contact-container">
+        <h1> Content bölümü</h1>
+        <ContactCarousel />
+      </div>
     </section>
     <div class="colored-background">
-      <section class="content content-background bg-container">
-        <div class="form-map-container">
+      <div class="content content-background bg-container">
+        <div class="form-map-container ">
           <div class="box form-content">
-            <p>
-              Bir sorunuz mu var ?<br>
-              Bizimle iletişime geçmekten çekinmeyin.
-            </p>
+            <p>Bir sorunuz mu var ?</p>
+            <p>iletişime geçmekten çekinmeyin.</p>
             <ContactForm />
           </div>
           <div class="box map-content clearfix">
-            <p>Bizi ofisimizde <br> ziyaret edin.</p>
+            <p>Bizi ofisimizde</p>
+            <p>ziyaret edin.</p>
             <div class="map-container">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3007.3566675762777!2d28.78506281495511!3d41.08305312276978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa5f570baaaab%3A0xac43b09ef54311fd!2sGochem!5e0!3m2!1str!2str!4v1585750999091!5m2!1str!2str"
@@ -28,7 +29,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </div>
       <div class="contact-slogan-background clearfix">
         <section class="contact-slogan">
           <p> Dünya ve Ülke çapındaki sayısız müşteri ağımız arasında sizde yerinizi alın.</p>
@@ -69,10 +70,10 @@ export default {
   text-align: center;
   padding: 1rem;
    p{
-     margin: 1rem;
+     margin: 0.5rem;
      letter-spacing: 1px;
      word-spacing: 2px;
-     padding: 0.5rem;
+
    }
 }
 }
@@ -119,8 +120,7 @@ export default {
 .map-container{
   padding-top: 0.4rem;
   width: 100%;
-  height: 39vh;
-  overflow: hidden;
+  height: 24.5rem;
 .map{
   border:0;
   border-radius: .6rem;

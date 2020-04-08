@@ -108,7 +108,7 @@ export default {
 .social-network {
 
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
   letter-spacing: .05rem;
 }
 
@@ -134,7 +134,7 @@ export default {
     margin: 1rem;
 
     li {
-      margin: 1.7rem 0;
+      padding: 1rem 0;
     }
   }
 }
@@ -146,8 +146,8 @@ export default {
 [class^="flaticon-twitter"]:before,
 [class^="flaticon-linkedin-1"]:before,
 [class^="flaticon-youtube"]:before {
-  font-size: 2rem;
-  margin-right: 0.3rem;
+  font-size: 1.6rem;
+  margin-right: 0.2rem;
 }
 
 .contact-item {
