@@ -397,6 +397,9 @@
   #product .sidenav {
     display: none;
   }
+  .responsive-category {
+    display: block !important;
+  }
   .product-link i {
     display: none;
   }
