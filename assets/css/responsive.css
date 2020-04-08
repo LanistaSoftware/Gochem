@@ -245,14 +245,6 @@
   .box-container {
     height: 20vh;
   }
-  /*box bitiş*/
-  /* Product.vue */
-  #product .product-container {
-    overflow-x: auto;
-    height: 100%;
-  }
-  /*Product.vue bitiş*/
-  /*****************************************************************/
 }
 /* ###################################### Sectors Media Queries ############################################## */
 /* Extra small devices (phones, 320px and down) */
@@ -383,25 +375,34 @@
 /**********Product Responsive********/
 /* Extra small devices (phones, 320px and down) */
 @media only screen and (max-width: 320px) {
-  /* Product Carousel */
-  .carousel-product {
-    margin-left: 6rem !important;
+  .product-btn-info {
+    width: 3rem !important;
+  }
+  [class="flaticon-next"]:before {
+    font-size: 0.8em !important;
+  }
+  [class="flaticon-back"]:before {
+    font-size: 0.8em !important;
   }
 }
 /* Extra small devices (phones, 480px and down) */
-@media only screen and (max-width: 480px) {
-  /* Product Carousel */
-  .carousel-product {
-    margin-left: 7rem;
-  }
-}
 /* Small devices (portrait tablets and large phones, 568px and up) */
 @media only screen and (max-width: 568px) {
   #product .product-container {
-    height: 100% !important;
+    width: 100%;
+  }
+  #product .content {
+    height: auto;
   }
   #product .sidenav {
     display: none;
+  }
+  .product-link i {
+    display: none;
+  }
+  .product-btn-info {
+    width: 7rem !important;
+    font-size: 0.8rem !important;
   }
   .product-responsive-carousel {
     display: block;
@@ -411,6 +412,12 @@
   }
   .product-content h2 {
     display: none;
+  }
+  .product-content p {
+    text-indent: none !important;
+    text-align: left;
+    font-size: 1.8em !important;
+    font-family: Arial !important;
   }
 }
 /* Medium devices (landscape tablets, 768px*432px and up) */

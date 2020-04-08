@@ -1,7 +1,7 @@
 <template>
   <section id="product">
     <Sliderp />
-    <div class="content content-background mobile-content-background">
+    <div class="content clearfix content-background mobile-content-background">
       <section class="sidenav product-sidenav overflow-scroll">
         <div class="product-category">
           <h2> Slikon Pigment</h2>
