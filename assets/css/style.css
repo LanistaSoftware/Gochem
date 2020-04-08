@@ -80,6 +80,7 @@ h4 {
   background: lightgreen;
 }
 /* scrollbar bitiş */
+/***** OVERLAY BACKGROUND ******/
 @supports (backdrop-filter: none) {
   .content-background {
     background-color: rgba(0, 0, 0, 0.01);
@@ -200,21 +201,28 @@ h4 {
 .product-responsive-carousel {
   display: none;
 }
-[class="flaticon-next"]:before {
-  color: white ;
-  padding: 0.3rem;
-  font-size: 1rem !important;
+.VueCarousel-slide {
+  color: #166296;
 }
-[class="flaticon-back"]:before {
+.VueCarousel-wrapper {
+  width: 90% !important;
+}
+.product-responsive-carousel {
+  width: 100%;
+  height: 50%;
+  margin-top: 2rem;
+  border-radius: 10px ;
+}
+.carousel-product {
   color: white !important;
-  padding: 0.3rem;
-  font-size: 1rem !important;
+  text-align: center;
+  border: none;
+  margin-left: 10rem;
+  height: 12rem;
+  width: 80%;
+  border-radius: 10px ;
+  font-size: 10px;
 }
-.VueCarousel-navigation-next {
-  background-color: gray !important;
-  border-radius: 200%;
-}
-.VueCarousel-navigation-prev {
-  background-color: gray !important;
-  border-radius: 200%;
+.VueCarousel-navigation-button {
+  color: white !important;
 }
