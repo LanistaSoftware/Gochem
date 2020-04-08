@@ -1,4 +1,4 @@
-/*Media Sorgularımız.*/
+/******* Global Media Queries.*******/
 /* Extra small devices (phones, 320px and down) */
 @media only screen and (max-width: 320px) {
   html {
@@ -43,6 +43,9 @@
   }
   /*  /* Search bitiş */
   /*llanguage-container*/
+  .social {
+    display: none;
+  }
   /*navbar*/
   .navigation {
     display: none !important;
@@ -54,39 +57,6 @@
     font-size: 3rem !important;
     padding: 0 !important;
     padding: 0.6rem !important;
-  }
-  /*Carousel */
-  .carousel-content {
-    width: 95% !important;
-  }
-  .carousel-content h4 {
-    display: none;
-  }
-  .carousel-content h2 {
-    font-size: 3.4rem !important;
-  }
-  .carousel-content .carousel-items {
-    height: 20vh;
-  }
-  .sliderBtn {
-    margin-top: 10vh !important;
-    width: 5%;
-  }
-  .sliderBtn::before {
-    font-size: 1rem !important;
-  }
-  /* Box */
-  .boxes {
-    width: 100%;
-  }
-  .boxes .box-container {
-    width: 100% !important;
-  }
-  .boxes .box-carousel {
-    display: none !important;
-  }
-  .social {
-    display: none;
   }
   /* mobile icons */
   .call {
@@ -121,9 +91,6 @@
 .mobile-contact {
   display: block;
 }
-.contact-layout {
-  display: none;
-}
 /* Extra small devices (phones, 480px and down) */
 @media only screen and (max-width: 480px) {
   html {
@@ -155,45 +122,36 @@
   [class*=" flaticon-"]:after {
     font-size: 2rem;
   }
-  /*carousel*/
-  .carousel-content h2 {
-    font-size: 2.8rem !important;
-  }
-  .carousel-content span {
-    font-size: 1.8rem !important;
-  }
-  .carousel-content sup {
-    font-size: 1.2rem !important;
-  }
 }
 /* Small devices (portrait tablets and large phones, 568px and up) */
 @media only screen and (max-width: 568px) {
   html {
     font-size: 6px !important;
   }
-  /*bootstrapCarousel*/
-  .carousel-content h2 {
-    font-size: 2rem;
+  /*** Content Background ***/
+  @supports (backdrop-filter: none) {
+    .mobile-content-background {
+      background-color: rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(15px);
+    }
   }
-  .carousel-content span {
-    font-size: 1.8rem !important;
+  @supports not (backdrop-filter: none) {
+    .mobile-content-background {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
   }
-  .carousel-content sup {
-    font-size: 1.2rem !important;
+  @supports (backdrop-filter: none) {
+    .content-background {
+      background-color: none;
+      backdrop-filter: none;
+    }
   }
-  /* Product.vue */
-  #product .product-container {
-    overflow-x: auto !important;
-    height: 100% !important;
+  /* Tarayıcı desteği olmadığında seçilecek resim buraya gelecek.*/
+  @supports not (backdrop-filter: none) {
+    .content-background {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
   }
-  /*Product.vue bitiş*/
-  /************************************************/
-  /* sektors.vue */
-  #sektors .sector-container {
-    overflow-x: auto !important;
-    height: 100% !important;
-  }
-  /*sektors.vue bitiş*/
 }
 /* Medium devices (landscape tablets, 768px*432px and up) */
 @media only screen and (min-width: 768px) {
@@ -342,3 +300,151 @@
   }
   /*sektors.vue bitiş*/
 }
+/**********Home Responsive********/
+/* Extra small devices (phones, 320px and down) */
+@media only screen and (max-width: 320px) {
+  /*Carousel */
+  .carousel-content {
+    width: 95% !important;
+  }
+  .carousel-content h4 {
+    display: none;
+  }
+  .carousel-content h2 {
+    font-size: 3.4rem !important;
+  }
+  .carousel-content .carousel-items {
+    height: 20vh;
+  }
+  .sliderBtn {
+    margin-top: 10vh !important;
+    width: 5%;
+  }
+  .sliderBtn::before {
+    font-size: 1rem !important;
+  }
+  /* Box */
+  .boxes {
+    width: 100%;
+  }
+  .boxes .box-container {
+    width: 100% !important;
+  }
+  .boxes .box-carousel {
+    display: none !important;
+  }
+  .box-container {
+    height: 100% !important;
+  }
+}
+/* Extra small devices (phones, 480px and down) */
+@media only screen and (max-width: 480px) {
+  /*carousel*/
+  .carousel-content h2 {
+    font-size: 2.8rem !important;
+  }
+  .carousel-content span {
+    font-size: 1.8rem !important;
+  }
+  .carousel-content sup {
+    font-size: 1.2rem !important;
+  }
+}
+/* Small devices (portrait tablets and large phones, 568px and up) */
+@media only screen and (max-width: 568px) {
+  /*bootstrapCarousel*/
+  .carousel-content h2 {
+    font-size: 2rem;
+  }
+  .carousel-content span {
+    font-size: 1.8rem !important;
+  }
+  .carousel-content sup {
+    font-size: 1.2rem !important;
+  }
+}
+/* Medium devices (landscape tablets, 768px*432px and up) */
+/* Large devices (laptops/desktops, 992px*558px and up) */
+/* Extra large devices (large laptops and desktops, 1200px*675px and up) */
+/* Extra large devices (large laptops and desktops, 1400px and up) */
+/* Portrait */
+/* Landscape */
+/**********Product Responsive********/
+/* Extra small devices (phones, 320px and down) */
+@media only screen and (max-width: 320px) {
+  /* Product Carousel */
+  .carousel-product {
+    margin-left: 6rem !important;
+  }
+}
+/* Extra small devices (phones, 480px and down) */
+@media only screen and (max-width: 480px) {
+  /* Product Carousel */
+  .carousel-product {
+    margin-left: 7rem;
+  }
+}
+/* Small devices (portrait tablets and large phones, 568px and up) */
+@media only screen and (max-width: 568px) {
+  #product .product-container {
+    height: 100% !important;
+  }
+  #product .sidenav {
+    display: none;
+  }
+  .product-responsive-carousel {
+    display: block;
+  }
+  .product-content {
+    text-align: center;
+  }
+  .product-content h2 {
+    display: none;
+  }
+}
+/* Medium devices (landscape tablets, 768px*432px and up) */
+/* Large devices (laptops/desktops, 992px*558px and up) */
+/* Extra large devices (large laptops and desktops, 1200px*675px and up) */
+/* Extra large devices (large laptops and desktops, 1400px and up) */
+/* Portrait */
+/* Landscape */
+/**********About Us Responsive********/
+/* Extra small devices (phones, 320px and down) */
+/* Extra small devices (phones, 480px and down) */
+/* Small devices (portrait tablets and large phones, 568px and up) */
+/* Medium devices (landscape tablets, 768px*432px and up) */
+/* Large devices (laptops/desktops, 992px*558px and up) */
+/* Extra large devices (large laptops and desktops, 1200px*675px and up) */
+/* Extra large devices (large laptops and desktops, 1400px and up) */
+/* Portrait */
+/* Landscape */
+/**********Contact Responsive********/
+/* Extra small devices (phones, 320px and down) */
+/* Extra small devices (phones, 480px and down) */
+/* Small devices (portrait tablets and large phones, 568px and up) */
+/* Medium devices (landscape tablets, 768px*432px and up) */
+/* Large devices (laptops/desktops, 992px*558px and up) */
+/* Extra large devices (large laptops and desktops, 1200px*675px and up) */
+/* Extra large devices (large laptops and desktops, 1400px and up) */
+/* Portrait */
+/* Landscape */
+/**********Portfolio Responsive********/
+/* Extra small devices (phones, 320px and down) */
+/* Extra small devices (phones, 480px and down) */
+/* Small devices (portrait tablets and large phones, 568px and up) */
+/* Medium devices (landscape tablets, 768px*432px and up) */
+/* Large devices (laptops/desktops, 992px*558px and up) */
+/* Extra large devices (large laptops and desktops, 1200px*675px and up) */
+/* Extra large devices (large laptops and desktops, 1400px and up) */
+/* Portrait */
+/* Landscape */
+/**********Blogs Responsive********/
+/* Extra small devices (phones, 320px and down) */
+/* Extra small devices (phones, 480px and down) */
+/* Small devices (portrait tablets and large phones, 568px and up) */
+/* Medium devices (landscape tablets, 768px*432px and up) */
+/* Large devices (laptops/desktops, 992px*558px and up) */
+/* Extra large devices (large laptops and desktops, 1200px*675px and up) */
+/* Extra large devices (large laptops and desktops, 1400px and up) */
+/* Portrait */
+/* Landscape */
