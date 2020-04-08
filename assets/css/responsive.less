@@ -120,36 +120,6 @@
   }
 }
 /*Product */
-.sidenav{
-  display: none;
-}
-/* */
-/* Footer and Footer Mobile */
-.footer,.footer-contact{
-  position: relative;
-  .footer-desktop{
-    display: none;
-  }
-
-  /* Footer and Footer Mobile */
-  .footer {
-    position: relative;
-
-    .footer-desktop {
-      display: none;
-    }
-
-    .mobile-footer {
-      display: block !important;
-    }
-  }
-}
-.mobile-contact {
-  display: block;
-}
-.contact-layout{
-  display: none;
-}
 
 /* Extra small devices (phones, 480px and down) */
 @media only screen and (max-width: 480px) {
@@ -236,10 +206,25 @@
   /* Product.vue */
   #product {
     .product-container {
+     
       overflow-x: auto !important;
       height: 100% !important;
     }
   }
+  .product-responsive-carousel{
+    display: block;
+  }
+  .product-sidenav{
+    display: none;
+  }
+  .product-content{
+    text-align: center;
+    h2{
+      display: none ;
+    }
+    
+  }
+
 
   /*Product.vue bitiş*/
   /************************************************/
