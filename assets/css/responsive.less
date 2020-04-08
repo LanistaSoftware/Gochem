@@ -2,7 +2,7 @@
 /* Extra small devices (phones, 320px and down) */
 @media only screen and (max-width: 320px) {
   html {
-    font-size: 6px;
+    font-size: 5px;
   }
 
   .bg {
@@ -16,8 +16,8 @@
 
   /*logo*/
   .logobox {
-    display: block !important;
-    width: 10% !important;
+    display: block;
+    width: 10% ;
     float: left;
   }
 
@@ -32,13 +32,12 @@
 
   .icon-container .search-input {
     padding-top: 2.2rem !important;
-    padding-bottom: .5rem;
     background-color: #fff;
 
     input {
       font-size: 1.8rem;
-      vertical-align: super !important;
-      padding: 1rem !important;
+      vertical-align: super;
+      padding: 1rem;
     }
 
     [class^="flaticon-"]:before,
@@ -46,7 +45,7 @@
     [class^="flaticon-"]:after,
     [class*=" flaticon-"]:after {
       color: blue;
-      font-size: 2.4rem !important;
+      font-size: 2rem ;
     }
   }
 
@@ -62,21 +61,19 @@
   [class*=" flaticon-"]:before,
   [class^="flaticon-"]:after,
   [class*=" flaticon-"]:after {
-    font-size: 3rem !important;
-    padding: 0 !important;
-    padding: .6rem !important;
+    font-size: 2rem !important ;
+    padding: 0;
+    padding: .4rem ;
   }
 
   /*Carousel */
   .carousel-content {
-    width: 95% !important;
-
     h4 {
       display: none;
     }
 
     h2 {
-      font-size: 3.4rem !important;
+      font-size: 3rem !important;
     }
 
     .carousel-items {
@@ -139,13 +136,11 @@
 .contact-layout{
   display: none;
 }
-
 }
-
 /* Extra small devices (phones, 480px and down) */
 @media only screen and (max-width: 480px) {
   html {
-    font-size: 7px;
+    font-size: 6px;
   }
 
   .header {
@@ -154,9 +149,42 @@
 
   .logo-container {
     img {
-      width: 5rem !important;
-      height: auto;
+      width: 4rem !important;
     }
+  }
+
+  [class^="flaticon-"]:before,
+  [class*=" flaticon-"]:before,
+  [class^="flaticon-"]:after,
+  [class*=" flaticon-"]:after {
+    font-size: 1rem;
+  }
+
+  /*carousel*/
+  .carousel-content {
+    h2 {
+      font-size: 2.8rem;
+    }
+
+    span {
+      font-size: 1.8rem;
+    }
+
+    sup {
+      font-size: 1.2rem;
+    }
+  }
+  // .boxes {
+  //   .box-container{
+  //     width: 45% !important;
+  //   }
+  // }
+}
+
+/* Small devices (portrait tablets and large phones, 568px and up) */
+@media only screen and (max-width: 568px) {
+  html {
+    font-size: 7px;
   }
 
   .navigation {
@@ -170,45 +198,10 @@
     [class*=" flaticon-"]:before,
     [class^="flaticon-"]:after,
     [class*=" flaticon-"]:after {
-      padding-left: .6rem;
-      padding-right: .6rem;
+      padding-left: .4rem;
+      padding-right: .4rem;
     }
   }
-
-  [class^="flaticon-"]:before,
-  [class*=" flaticon-"]:before,
-  [class^="flaticon-"]:after,
-  [class*=" flaticon-"]:after {
-    font-size: 2rem;
-  }
-
-  /*carousel*/
-  .carousel-content {
-    h2 {
-      font-size: 2.8rem !important;
-    }
-
-    span {
-      font-size: 1.8rem !important;
-    }
-
-    sup {
-      font-size: 1.2rem !important;
-    }
-  }
-  // .boxes {
-  //   .box-container{
-  //     width: 45% !important;
-  //   }
-  // }
-}
-
-/* Small devices (portrait tablets and large phones, 568px and up) */
-@media only screen and (max-width: 568px) {
-  html {
-    font-size: 6px !important;
-  }
-
   /*bootstrapCarousel*/
   .carousel-content {
     h2 {
@@ -216,33 +209,23 @@
     }
 
     span {
-      font-size: 1.8rem !important;
+      font-size: 1.8rem;
     }
 
     sup {
-      font-size: 1.2rem !important;
+      font-size: 1.2rem;
     }
   }
-
   /* Product.vue */
   #product {
     .product-container {
-      overflow-x: auto !important;
-      height: 100% !important;
+      overflow-x: auto;
+      height: 100%;
     }
   }
 
   /*Product.vue bitiş*/
   /************************************************/
-  /* sektors.vue */
-  #sektors {
-    .sector-container {
-      overflow-x: auto !important;
-      height: 100% !important;
-    }
-  }
-
-  /*sektors.vue bitiş*/
 }
 
 /* Medium devices (landscape tablets, 768px*432px and up) */
@@ -252,16 +235,16 @@
   }
 
   .nav-text {
-    display: inline !important;
+    display: inline;
   }
 
   .bg-container {
     width: 93%;
   }
 
-  .navli {
-    padding: 0.5rem 1.3rem 0.5rem 1.3rem !important;
-  }
+  // .navli {
+  //   padding: 0.5rem 1.3rem 0.5rem 1.3rem !important;
+  // }
 }
 
 /* Large devices (laptops/desktops, 992px*558px and up) */
@@ -270,18 +253,18 @@
     font-size: 12px;
   }
 
-  .nav-text {
-    display: inline !important;
-  }
+  // .nav-text {
+  //   display: inline !important;
+  // }
 
   .bg-container {
     width: 90%;
 
   }
 
-  .navli {
-    padding: 0.5rem 1.3rem 0.5rem 1.3rem !important;
-  }
+  // .navli {
+  //   padding: 0.5rem 1.3rem 0.5rem 1.3rem ;
+  // }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px*675px and up) */
@@ -291,7 +274,7 @@
   }
 
   .nav-text {
-    display: inline !important;
+    display: inline;
   }
 
   .bg-container {
@@ -300,7 +283,7 @@
   }
 
   .navli {
-    padding: 0.5rem 1.3rem 0.5rem 1.3rem !important;
+    padding: 0.5rem 1.3rem 0.5rem 1.3rem;
   }
 }
 
@@ -311,7 +294,7 @@
   }
 
   .nav-text {
-    display: inline !important;
+    display: inline;
   }
 
   .bg-container {
@@ -320,7 +303,7 @@
   }
 
   .navli {
-    padding: 0.5rem 1.3rem 0.5rem 1.3rem !important;
+    padding: 0.5rem 1.3rem 0.5rem 1.3rem;
   }
 }
 
@@ -331,31 +314,45 @@
   }
 
   .bg-container {
-    width: 95% !important;
+    width: 95%;
   }
 
+  .navigation {
+    width: 70% !important;
+    span {
+      display: none;
+    }
+
+    [class^="flaticon-"]:before,
+    [class*=" flaticon-"]:before,
+    [class^="flaticon-"]:after,
+    [class*=" flaticon-"]:after {
+      padding-left: .4rem;
+      padding-right: .4rem;
+    }
+  }
   /*Carousel dikey*/
   .carousel-content {
-    width: 90% !important;
+    width: 90%;
 
     span {
-      font-size: 2.3rem !important;
+      font-size: 2.3rem;
     }
 
     sup {
-      font-size: 1.3rem !important;
+      font-size: 1.3rem;
     }
 
     strong {
-      font-size: 2.2rem !important;
+      font-size: 2.2rem;
     }
 
     h2 {
-      font-size: 2.6rem !important;
+      font-size: 2.6rem;
     }
 
     p {
-      font-size: 1.2rem !important;
+      font-size: 1.2rem ;
     }
   }
 
@@ -399,25 +396,40 @@
     font-size: 8px;
   }
 
+  .navigation {
+    width: 70% !important;
+    span {
+      display: none;
+    }
+
+    [class^="flaticon-"]:before,
+    [class*=" flaticon-"]:before,
+    [class^="flaticon-"]:after,
+    [class*=" flaticon-"]:after {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      font-size: 1.8rem;
+    }
+  }
   /*bg arkplan*/
   /*Carousel yatay*/
   .carousel-content {
-    width: 85% !important;
+    width: 90% !important;
 
     span {
-      font-size: 3rem !important;
+      font-size: 3rem;
     }
 
     sup {
-      font-size: 1.5rem !important;
+      font-size: 1.5rem;
     }
 
     strong {
-      font-size: 2.4rem !important;
+      font-size: 2.4rem;
     }
 
     h2 {
-      font-size: 4rem !important;
+      font-size: 4rem;
     }
 
     p {
@@ -429,7 +441,7 @@
 
   /*box boyutu*/
   .box-container {
-    height: 22vh !important;
+    height: 20vh;
   }
 
   /*box bitiş*/
@@ -437,20 +449,150 @@
   /* Product.vue */
   #product {
     .product-container {
-      overflow-x: auto !important;
-      height: 100% !important;
+      overflow-x: auto;
+      height: 100%;
     }
   }
 
   /*Product.vue bitiş*/
   /*****************************************************************/
-  /* sektors.vue */
-  #sektors {
+}
+
+
+/* ###################################### SEKTORS RESPONSİVE ############################################## */
+
+/*Media Sorgularımız.*/
+/* Extra small devices (phones, 320px and down) */
+@media only screen and (max-width: 320px) {
+ 
+  #sektors{
+    width: 100%;
+    .sidenav{
+      display: none;
+    }
     .sector-container {
-      overflow-x: auto !important;
-      height: 100% !important;
+      width: 100%;
+      margin-bottom: 3rem;
+      .sector-row {
+        .skCar {
+          display: none;
+        }
+      }
+    }
+    
+  }
+}
+/* Extra small devices (phones, 480px and down) */
+@media only screen and (max-width: 480px) {
+  #sektors{
+    .sector-container {
+  
+      .sector-row {
+        width: 100% !important;
+        padding-right: 2rem;
+        .title-sektor h3{
+          width: 100%;
+          padding-bottom: 1rem;
+          border-bottom: 1px solid;
+        }
+        .skCar {
+          display: none;
+        }
+        .skCar-mobil{
+          display: block;
+          text-align: center;
+          padding: 2rem;
+        }
+      }
     }
   }
+}
 
-  /*sektors.vue bitiş*/
+/* Small devices (portrait tablets and large phones, 568px and up) */
+@media only screen and (max-width: 568px) {
+  #sektors{
+.sector-container {
+    overflow-x: auto;
+
+/*sektors.vue bitiş*/
+  .sector-row {
+    width: 100% !important;
+    float: left;
+
+    .skCar {
+      margin-left: 3rem;
+    }
+
+    p {
+      font-size: 1rem;
+      margin: 4rem 0 0 3rem;
+      line-height: 1.3rem;
+    }
+  }
+}
+}
+}
+
+/* Medium devices (landscape tablets, 768px*432px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px*558px and up) */
+@media only screen and (min-width: 992px) {
+  
+}
+
+/* Extra large devices (large laptops and desktops, 1200px*675px and up) */
+@media only screen and (min-width: 1200px) {}
+
+/* Extra large devices (large laptops and desktops, 1400px and up) */
+@media only screen and (min-width: 1400px) {}
+
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: portrait) {
+  html {
+    font-size: 9px;
+  }
+  #sektors{
+  .sector-container {
+
+    .sector-row {
+      width: 100% !important;
+      padding-right: 2rem;
+      .title-sektor h3{
+        width: 100%;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid;
+      }
+      .skCar {
+        display: none;
+      }
+      .skCar-mobil{
+        display: block;
+        text-align: center;
+        padding: 2rem;
+      }
+    }
+  }
+}
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: landscape) {
+  #sektors{
+.sector-container {
+
+  .sector-row {
+    width: 100% !important;
+
+    .skCar {
+      display: none;
+    }
+    .skCar-mobil{
+      display: block;
+      text-align: center;
+    }
+  }
+}
+}
 }
