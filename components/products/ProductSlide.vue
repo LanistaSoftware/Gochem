@@ -1,16 +1,20 @@
 <template>
-  <div class="product-responsive-carousel">
+  <div class="product-responsive-carousel mobile-content-background">
     <carousel
       class="carousel-product"
-      :per-page-custom="[[200, 2.5], [1024, 3]]"
+      :per-page="2.3"
       :navigation-enabled="true"
-      :navigation-next-label="nexticon"
-      :navigation-prev-label="previcon"
+      :min-swipe-distance="20"
       :navigation-click-target-size="2"
       :pagination-enabled="false"
+      :center-mode="true"
     >
-      <slide v-for="(slide,index) in 5" :key="index" class="carousel-responsive">
-        Slide 1 Content
+      <slide v-for="(slide,index) in 10" :key="index" class="carousel-responsive">
+        <div class="slide-content">
+          <h2>
+            Serkan
+          </h2>
+        </div>
       </slide>
     </carousel>
   </div>
@@ -33,16 +37,12 @@ export default {
    height: 50%;
    margin-top:2rem;
    border-radius:10px ;
-   background-color:rgba(0, 0, 0, 0.2);
  }
 .carousel-product{
-   margin-left: 18rem;
-   margin-right: 30rem !important;
    color: white !important;
-   border: none;
    text-align: center;
-   height: 9rem;
-   width: 50%;
+   border: none;
+   width: 80%;
    border-radius:10px ;
    font-size: 10px;
 }
@@ -50,10 +50,12 @@ export default {
     display: none;
   }
   .carousel-responsive:not(:last-child){
-    border-right: 1px solid white;
+    div{
+      border-right: 1px solid white;
+    }
  }
  .carousel-responsive{
-   margin-top: 3rem;
+   margin-top: 4.8rem;
  }
 
 </style>
