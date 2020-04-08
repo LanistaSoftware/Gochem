@@ -6,26 +6,24 @@
         <Socials />
       </div>
       <nuxt />
-      <div class="footer">
+    </div>
+    <!-- <div class="footer-contact">
         <Footer class="footer-desktop" />
         <MobileFooter class="mobile-footer" />
-      </div>
-    </div>
+      </div> -->
   </div>
 </template>
 <script>
 import Header from '@/components/globalcomponents/Header/Header'
 import Socials from '@/components/globalcomponents/shared/Socials'
-import Footer from '@/components/globalcomponents/footer/ContactFooter'
-import MobileFooter from '@/components/globalcomponents/Footer/Mobile-footer'
+// import Footer from '@/components/globalcomponents/footer/ContactFooter'
+// import MobileFooter from '@/components/globalcomponents/Footer/Mobile-footer'
 export default {
   components: {
     Header,
-    Socials,
-    Footer,
-    MobileFooter
-    // Carousel,
-    // Box
+    Socials
+    // Footer,
+    // MobileFooter
   },
   data () {
     return {

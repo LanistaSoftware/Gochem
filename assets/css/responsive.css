@@ -1,4 +1,4 @@
-/*Media Sorgularımız.*/
+/******* Global Media Queries.*******/
 /* Extra small devices (phones, 320px and down) */
 @media only screen and (max-width: 320px) {
   html {
@@ -24,24 +24,11 @@
   .mobil-search {
     display: inline-block !important;
   }
-  .icon-container .search-input {
-    padding-top: 2.2rem !important;
-    background-color: #fff;
-  }
-  .icon-container .search-input input {
-    font-size: 1.8rem;
-    vertical-align: super;
-    padding: 1rem;
-  }
-  .icon-container .search-input [class^="flaticon-"]:before,
-  .icon-container .search-input [class*=" flaticon-"]:before,
-  .icon-container .search-input [class^="flaticon-"]:after,
-  .icon-container .search-input [class*=" flaticon-"]:after {
-    color: blue;
-    font-size: 2rem ;
-  }
   /*  /* Search bitiş */
   /*llanguage-container*/
+  .social {
+    display: none;
+  }
   /*navbar*/
   .navigation {
     display: none !important;
@@ -54,42 +41,9 @@
     padding: 0;
     padding: 0.4rem;
   }
-  /*Carousel */
-  .carousel-content h4 {
-    display: none;
-  }
-  .carousel-content h2 {
-    font-size: 3rem !important;
-  }
-  .carousel-content .carousel-items {
-    height: 20vh;
-  }
-  .sliderBtn {
-    margin-top: 10vh !important;
-    width: 5%;
-  }
-  .sliderBtn::before {
-    font-size: 1rem !important;
-  }
-  /* Box */
-  .boxes {
-    width: 100%;
-  }
-  .boxes .box-container {
-    width: 100% !important;
-  }
-  .boxes .box-carousel {
-    display: none !important;
-  }
-  .social {
-    display: none;
-  }
   /* mobile icons */
   .call {
     display: block !important;
-  }
-  .box-container {
-    height: 100% !important;
   }
   /* Footer and Footer Mobile */
   .footer {
@@ -106,9 +60,6 @@
   }
   .mobile-contact {
     display: block;
-  }
-  .contact-layout {
-    display: none;
   }
 }
 /* Extra small devices (phones, 480px and down) */
@@ -128,52 +79,19 @@
   [class*=" flaticon-"]:after {
     font-size: 1rem;
   }
-  /*carousel*/
-  .carousel-content h2 {
-    font-size: 2.8rem;
-  }
-  .carousel-content span {
-    font-size: 1.8rem;
-  }
-  .carousel-content sup {
-    font-size: 1.2rem;
-  }
 }
 /* Small devices (portrait tablets and large phones, 568px and up) */
 @media only screen and (max-width: 568px) {
   html {
     font-size: 7px;
   }
-  .navigation {
-    width: 70% !important;
+  /*** Content Background ***/
+  /***** OVERLAY BACKGROUND ******/
+  @supports (backdrop-filter: none) {
+    .content-background {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
   }
-  .navigation span {
-    display: none;
-  }
-  .navigation [class^="flaticon-"]:before,
-  .navigation [class*=" flaticon-"]:before,
-  .navigation [class^="flaticon-"]:after,
-  .navigation [class*=" flaticon-"]:after {
-    padding-left: 0.4rem;
-    padding-right: 0.4rem;
-  }
-  /*bootstrapCarousel*/
-  .carousel-content h2 {
-    font-size: 2rem;
-  }
-  .carousel-content span {
-    font-size: 1.8rem;
-  }
-  .carousel-content sup {
-    font-size: 1.2rem;
-  }
-  /* Product.vue */
-  #product .product-container {
-    overflow-x: auto;
-    height: 100%;
-  }
-  /*Product.vue bitiş*/
-  /************************************************/
 }
 /* Medium devices (landscape tablets, 768px*432px and up) */
 @media only screen and (min-width: 768px) {
@@ -186,6 +104,9 @@
   .bg-container {
     width: 93%;
   }
+  .navli {
+    padding: 0.5rem 1.3rem 0.5rem 1.3rem !important;
+  }
 }
 /* Large devices (laptops/desktops, 992px*558px and up) */
 @media only screen and (min-width: 992px) {
@@ -194,6 +115,9 @@
   }
   .bg-container {
     width: 90%;
+  }
+  .navli {
+    padding: 0.5rem 1.3rem 0.5rem 1.3rem;
   }
 }
 /* Extra large devices (large laptops and desktops, 1200px*675px and up) */
@@ -266,16 +190,12 @@
   .carousel-content p {
     font-size: 1.2rem;
   }
-  /*Carousel dikey bitiş*/
-  /** carousel içeriği pozisyon için*/
   .sliderBtn {
     margin-top: 10vh !important;
   }
   .carousel-items {
     height: 30vh !important;
   }
-  /** bitiş*/
-  /*Box */
   .box-container p {
     font-size: 1.3rem;
   }
@@ -334,8 +254,7 @@
   /*Product.vue bitiş*/
   /*****************************************************************/
 }
-/* ###################################### SEKTORS RESPONSİVE ############################################## */
-/*Media Sorgularımız.*/
+/* ###################################### Sectors Media Queries ############################################## */
 /* Extra small devices (phones, 320px and down) */
 @media only screen and (max-width: 320px) {
   #sektors {
@@ -392,42 +311,151 @@
   }
 }
 /* Medium devices (landscape tablets, 768px*432px and up) */
+/**********Home Responsive********/
+/* Extra small devices (phones, 320px and down) */
+@media only screen and (max-width: 320px) {
+  /*Carousel */
+  .carousel-content {
+    width: 95% !important;
+  }
+  .carousel-content h4 {
+    display: none;
+  }
+  .carousel-content h2 {
+    font-size: 3.4rem !important;
+  }
+  .carousel-content .carousel-items {
+    height: 20vh;
+  }
+  .sliderBtn {
+    margin-top: 10vh !important;
+    width: 5%;
+  }
+  .sliderBtn::before {
+    font-size: 1rem !important;
+  }
+  /* Box */
+  .boxes {
+    width: 100%;
+  }
+  .boxes .box-container {
+    width: 100% !important;
+  }
+  .boxes .box-carousel {
+    display: none !important;
+  }
+  .box-container {
+    height: 100% !important;
+  }
+}
+/* Extra small devices (phones, 480px and down) */
+@media only screen and (max-width: 480px) {
+  /*carousel*/
+  .carousel-content h2 {
+    font-size: 2.8rem !important;
+  }
+  .carousel-content span {
+    font-size: 1.8rem !important;
+  }
+  .carousel-content sup {
+    font-size: 1.2rem !important;
+  }
+}
+/* Small devices (portrait tablets and large phones, 568px and up) */
+@media only screen and (max-width: 568px) {
+  /*bootstrapCarousel*/
+  .carousel-content h2 {
+    font-size: 2rem;
+  }
+  .carousel-content span {
+    font-size: 1.8rem !important;
+  }
+  .carousel-content sup {
+    font-size: 1.2rem !important;
+  }
+}
+/* Medium devices (landscape tablets, 768px*432px and up) */
 /* Large devices (laptops/desktops, 992px*558px and up) */
 /* Extra large devices (large laptops and desktops, 1200px*675px and up) */
 /* Extra large devices (large laptops and desktops, 1400px and up) */
 /* Portrait */
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: portrait) {
-  html {
-    font-size: 9px;
-  }
-  #sektors .sector-container .sector-row {
-    width: 100% !important;
-    padding-right: 2rem;
-  }
-  #sektors .sector-container .sector-row .title-sektor h3 {
-    width: 100%;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid;
-  }
-  #sektors .sector-container .sector-row .skCar {
-    display: none;
-  }
-  #sektors .sector-container .sector-row .skCar-mobil {
-    display: block;
-    text-align: center;
-    padding: 2rem;
-  }
-}
 /* Landscape */
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: landscape) {
-  #sektors .sector-container .sector-row {
-    width: 100% !important;
-  }
-  #sektors .sector-container .sector-row .skCar {
-    display: none;
-  }
-  #sektors .sector-container .sector-row .skCar-mobil {
-    display: block;
-    text-align: center;
+/**********Product Responsive********/
+/* Extra small devices (phones, 320px and down) */
+@media only screen and (max-width: 320px) {
+  /* Product Carousel */
+  .carousel-product {
+    margin-left: 6rem !important;
   }
 }
+/* Extra small devices (phones, 480px and down) */
+@media only screen and (max-width: 480px) {
+  /* Product Carousel */
+  .carousel-product {
+    margin-left: 7rem;
+  }
+}
+/* Small devices (portrait tablets and large phones, 568px and up) */
+@media only screen and (max-width: 568px) {
+  #product .product-container {
+    height: 100% !important;
+  }
+  #product .sidenav {
+    display: none;
+  }
+  .product-responsive-carousel {
+    display: block;
+  }
+  .product-content {
+    text-align: center;
+  }
+  .product-content h2 {
+    display: none;
+  }
+}
+/* Medium devices (landscape tablets, 768px*432px and up) */
+/* Large devices (laptops/desktops, 992px*558px and up) */
+/* Extra large devices (large laptops and desktops, 1200px*675px and up) */
+/* Extra large devices (large laptops and desktops, 1400px and up) */
+/* Portrait */
+/* Landscape */
+/**********About Us Responsive********/
+/* Extra small devices (phones, 320px and down) */
+/* Extra small devices (phones, 480px and down) */
+/* Small devices (portrait tablets and large phones, 568px and up) */
+/* Medium devices (landscape tablets, 768px*432px and up) */
+/* Large devices (laptops/desktops, 992px*558px and up) */
+/* Extra large devices (large laptops and desktops, 1200px*675px and up) */
+/* Extra large devices (large laptops and desktops, 1400px and up) */
+/* Portrait */
+/* Landscape */
+/**********Contact Responsive********/
+/* Extra small devices (phones, 320px and down) */
+/* Extra small devices (phones, 480px and down) */
+/* Small devices (portrait tablets and large phones, 568px and up) */
+/* Medium devices (landscape tablets, 768px*432px and up) */
+/* Large devices (laptops/desktops, 992px*558px and up) */
+/* Extra large devices (large laptops and desktops, 1200px*675px and up) */
+/* Extra large devices (large laptops and desktops, 1400px and up) */
+/* Portrait */
+/* Landscape */
+/**********Portfolio Responsive********/
+/* Extra small devices (phones, 320px and down) */
+/* Extra small devices (phones, 480px and down) */
+/* Small devices (portrait tablets and large phones, 568px and up) */
+/* Medium devices (landscape tablets, 768px*432px and up) */
+/* Large devices (laptops/desktops, 992px*558px and up) */
+/* Extra large devices (large laptops and desktops, 1200px*675px and up) */
+/* Extra large devices (large laptops and desktops, 1400px and up) */
+/* Portrait */
+/* Landscape */
+/**********Blogs Responsive********/
+/* Extra small devices (phones, 320px and down) */
+/* Extra small devices (phones, 480px and down) */
+/* Small devices (portrait tablets and large phones, 568px and up) */
+/* Medium devices (landscape tablets, 768px*432px and up) */
+/* Large devices (laptops/desktops, 992px*558px and up) */
+/* Extra large devices (large laptops and desktops, 1200px*675px and up) */
+/* Extra large devices (large laptops and desktops, 1400px and up) */
+/* Portrait */
+/* Landscape */

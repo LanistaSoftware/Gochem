@@ -12,6 +12,7 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
+    "@chenfengyuan/vue-carousel": "^1.0.3",
     "@neneos/nuxt-animate.css": "0.0.1",
     "@nuxtjs/axios": "^5.9.5",
     "axios": "^0.19.2",
@@ -24,8 +25,11 @@
     "mdbvue": "^6.5.0",
     "nuxt": "^2.0.0",
     "view-design": "^4.1.3",
+    "vue": "^2.6.11",
+    "vue-awesome-swiper": "^4.1.0",
     "vue-carousel": "^0.18.0",
-    "vue-carousel-3d": "^0.2.0"
+    "vue-carousel-3d": "^0.2.0",
+    "vue-template-compiler": "^2.6.11"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.0",
