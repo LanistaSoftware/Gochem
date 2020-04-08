@@ -1,5 +1,6 @@
 <template>
   <section id="sektors">
+    <Sliderp />
     <div class="content content-background">
       <section class="sidenav overflow-scroll">
         <div class="sector-link">
@@ -58,9 +59,11 @@
 </template>
 <script>
 import SectorAlbum from '@/components/sectors/SectorAlbum'
+import Sliderp from '@/components/products/ProductSlide'
 export default {
   components: {
-    SectorAlbum
+    SectorAlbum,
+    Sliderp
   }
 }
 </script>
