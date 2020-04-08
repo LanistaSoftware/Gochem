@@ -89,9 +89,9 @@
 
 .mobile-contact {
   display: block;
-}
-}
 
+}
+}
 /* Extra small devices (phones, 480px and down) */
 @media only screen and (max-width: 480px) {
   html {
@@ -356,16 +356,32 @@
  
   #sektors{
     width: 100%;
+    .content{
+    margin-bottom: 3rem;
+    overflow: hidden;
+    height: 100%;
+    }
     .sidenav{
       display: none;
     }
     .sector-container {
+      overflow: initial;
       width: 100%;
-      margin-bottom: 3rem;
+      padding: 1.2rem;
       .sector-row {
+        h3{
+          display: none;
+        }
+        p{
+          line-height: 1.6 !important;
+          font-size: 1.5rem !important;
+        }
         .skCar {
           display: none;
         }
+      }
+      .skCar-mobil{
+        display: none !important;
       }
     }
     
@@ -401,8 +417,6 @@
 @media only screen and (max-width: 568px) {
   #sektors{
 .sector-container {
-    overflow-x: auto;
-
 /*sektors.vue bitiş*/
   .sector-row {
     width: 100% !important;

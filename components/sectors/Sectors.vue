@@ -94,7 +94,8 @@ export default {
     p {
       font-size: 1rem;
       margin: 4rem 0 0 3rem;
-      line-height: 1.3rem;
+      line-height: 1.4;
+      font-family: Arial;
     }
   }
 }
@@ -108,6 +109,7 @@ export default {
   width: 100%;
   text-align: center;
   margin-top: 2rem;
+   font-family: Georgia;
 
   .sector-btn {
     width: 50%;

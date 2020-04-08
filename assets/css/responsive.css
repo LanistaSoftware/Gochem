@@ -260,15 +260,31 @@
   #sektors {
     width: 100%;
   }
+  #sektors .content {
+    margin-bottom: 3rem;
+    overflow: hidden;
+    height: 100%;
+  }
   #sektors .sidenav {
     display: none;
   }
   #sektors .sector-container {
+    overflow: initial;
     width: 100%;
-    margin-bottom: 3rem;
+    padding: 1.2rem;
+  }
+  #sektors .sector-container .sector-row h3 {
+    display: none;
+  }
+  #sektors .sector-container .sector-row p {
+    line-height: 1.6 !important;
+    font-size: 1.5rem !important;
   }
   #sektors .sector-container .sector-row .skCar {
     display: none;
+  }
+  #sektors .sector-container .skCar-mobil {
+    display: none !important;
   }
 }
 /* Extra small devices (phones, 480px and down) */
@@ -294,7 +310,6 @@
 /* Small devices (portrait tablets and large phones, 568px and up) */
 @media only screen and (max-width: 568px) {
   #sektors .sector-container {
-    overflow-x: auto;
     /*sektors.vue bitiş*/
   }
   #sektors .sector-container .sector-row {
