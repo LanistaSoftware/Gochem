@@ -2,7 +2,7 @@
   <section id="product">
     <Sliderp />
     <div class="content clearfix content-background mobile-content-background">
-      <div class="responsive-category">
+      <div id="rescat" class="responsive-category">
         <h2>Responsive Category</h2>
       </div>
       <section class="sidenav product-sidenav overflow-scroll">
@@ -162,7 +162,7 @@ export default {
   .product-link {
     width: 100%;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 1rem;
 
     .product-btn {
       width: 33%;

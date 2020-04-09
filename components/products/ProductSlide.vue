@@ -14,8 +14,10 @@
       :loop="true"
     >
       <slide v-for="(slide,index) in 10" :key="index" class="carousel-responsive">
-        <div class="slide-content" @click="index=i">
-          <p>Serkan</p>
+        <div class="slide-content" @click="index=i,activeproduct='red'">
+          <p>
+            Serkan
+          </p>
         </div>
       </slide>
     </carousel>
@@ -65,6 +67,9 @@ export default {
 
   .carousel-responsive {
     margin-top: 2.8rem;
+  }
+  .activeproduct{
+    color: red;
   }
 
 </style>
