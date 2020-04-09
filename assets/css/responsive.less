@@ -11,86 +11,6 @@
     position: fixed;
     overflow: auto;
   }
-
-  .header {
-    padding-bottom: 5.4rem;
-  }
-
-  /*logo*/
-  .logobox {
-    display: block;
-    width: 10% ;
-    float: left;
-  }
-
-  /* Search */
-  .search-language {
-    float: right;
-  }
-
-  .mobil-search {
-    display: inline-block !important;
-  }
-
-  // .icon-container .search-input {
-  //   // padding-top: 2.2rem !important;
-
-  //   // input {
-  //   //   font-size: 1.8rem;
-  //   //   vertical-align: super;
-  //   //   padding: 1rem;
-  //   // }
-
-  //   // [class^="flaticon-"]:before,
-  //   // [class*=" flaticon-"]:before,
-  //   // [class^="flaticon-"]:after,
-  //   // [class*=" flaticon-"]:after {
-  //   //   color: blue;
-  //   //   font-size: 2rem ;
-  //   // }
-  // }
-
-  /*  /* Search bitiş */
-  /*llanguage-container*/
-  .social {
-    display: none;
-  }
-  /*navbar*/
-  .navigation {
-    display: none !important;
-  }
-
-  [class^="flaticon-"]:before,
-  [class*=" flaticon-"]:before,
-  [class^="flaticon-"]:after,
-  [class*=" flaticon-"]:after {
-    font-size: 2rem !important ;
-    padding: 0;
-    padding: .4rem ;
-  }
-  /* mobile icons */
-  .call {
-    display: block !important;
-  }
- /* Footer and Footer Mobile */
- .footer {
-  position: relative;
-
-  .footer-desktop {
-    display: none;
-  }
-  .mobile-footer {
-    display: block !important;
-  }
-}
-.footer-contact{
-  display: none;
-}
-
-.mobile-contact {
-  display: block;
-
-}
 }
 /* Extra small devices (phones, 480px and down) */
 @media only screen and (max-width: 480px) {
@@ -107,16 +27,18 @@
       width: 4rem !important;
     }
   }
-
-  [class^="flaticon-"]:before,
-  [class*=" flaticon-"]:before,
-  [class^="flaticon-"]:after,
-  [class*=" flaticon-"]:after {
-    font-size: 1rem;
+  .mobile-nav {
+    [class^="flaticon-"]:before,
+[class*=" flaticon-"]:before,
+[class^="flaticon-"]:after,
+[class*=" flaticon-"]:after {
+  color: white;
+  margin-left: .3rem;
+  margin-right: .3rem;
+  font-size: 1.5rem !important;
   }
-
+  }
 }
-
 /* Small devices (portrait tablets and large phones, 568px and up) */
 @media only screen and (max-width: 568px) {
   html {
@@ -127,13 +49,68 @@
 
 /***** OVERLAY BACKGROUND ******/ 
 @supports (backdrop-filter: none) {
-  .content-background {
-    background-color: rgba(0, 0, 0, .2);
+  .content-background, .mobile-content-background{
+    background-color: rgba(0, 0, 0, .4);
   }
 }
-
+.header {
+  padding-bottom: 5.4rem;
 }
 
+/*logo*/
+.logobox {
+  display: block;
+  width: 10% ;
+  float: left;
+}
+
+/* Search */
+.search-language {
+  float: right;
+}
+
+.mobil-search {
+  display: inline-block !important;
+}
+/*llanguage-container*/
+.social {
+  display: none;
+}
+/*navbar*/
+.navigation {
+  display: none !important;
+}
+
+[class^="flaticon-"]:before,
+[class*=" flaticon-"]:before,
+[class^="flaticon-"]:after,
+[class*=" flaticon-"]:after {
+  font-size: 1.5rem;
+}
+/* mobile icons */
+.call {
+  display: block !important;
+}
+/* Footer and Footer Mobile */
+.footer {
+position: relative;
+
+.footer-desktop {
+  display: none;
+}
+.mobile-footer {
+  display: block !important;
+}
+}
+.footer-contact{
+display: none;
+}
+
+.mobile-contact {
+display: block;
+
+}
+}
 /* Medium devices (landscape tablets, 768px*432px and up) */
 @media only screen and (min-width: 768px) {
   html {
@@ -152,7 +129,6 @@
     padding: 0.5rem 1.3rem 0.5rem 1.3rem !important;
   }
 }
-
 /* Large devices (laptops/desktops, 992px*558px and up) */
 @media only screen and (min-width: 992px) {
   html {
@@ -172,7 +148,6 @@
     padding: 0.5rem 1.3rem 0.5rem 1.3rem ;
   }
 }
-
 /* Extra large devices (large laptops and desktops, 1200px*675px and up) */
 @media only screen and (min-width: 1200px) {
   html {
@@ -227,38 +202,6 @@
     width: 70% !important;
     span {
       display: none;
-    }
-
-    [class^="flaticon-"]:before,
-    [class*=" flaticon-"]:before,
-    [class^="flaticon-"]:after,
-    [class*=" flaticon-"]:after {
-      padding-left: .4rem;
-      padding-right: .4rem;
-    }
-  }
-  /*Carousel dikey*/
-  .carousel-content {
-    width: 90%;
-
-    span {
-      font-size: 2.3rem;
-    }
-
-    sup {
-      font-size: 1.3rem;
-    }
-
-    strong {
-      font-size: 2.2rem;
-    }
-
-    h2 {
-      font-size: 2.6rem;
-    }
-
-    p {
-      font-size: 1.2rem ;
     }
   }
 
@@ -354,38 +297,38 @@
 /* Extra small devices (phones, 320px and down) */
 @media only screen and (max-width: 320px) {
  
-  #sektors{
-    width: 100%;
-    .content{
-    margin-bottom: 3rem;
-    overflow: hidden;
-    height: 100%;
-    }
-    .sidenav{
-      display: none;
-    }
-    .sector-container {
-      overflow: initial;
-      width: 100%;
-      padding: 1.2rem;
-      .sector-row {
-        h3{
-          display: none;
-        }
-        p{
-          line-height: 1.6 !important;
-          font-size: 1.5rem !important;
-        }
-        .skCar {
-          display: none;
-        }
-      }
-      .skCar-mobil{
-        display: none !important;
-      }
-    }
+  // #sektors{
+  //   width: 100%;
+  //   .content{
+  //   margin-bottom: 3rem;
+  //   overflow: hidden;
+  //   height: 100%;
+  //   }
+  //   .sidenav{
+  //     display: none;
+  //   }
+  //   .sector-container {
+  //     overflow: initial;
+  //     width: 100%;
+  //     padding: 1.2rem;
+  //     .sector-row {
+  //       h3{
+  //         display: none;
+  //       }
+  //       p{
+  //         line-height: 1.6 !important;
+  //         font-size: 1.5rem !important;
+  //       }
+  //       .skCar {
+  //         display: none;
+  //       }
+  //     }
+  //     .skCar-mobil{
+  //       display: none !important;
+  //     }
+  //   }
     
-  }
+  // }
 }
 /* Extra small devices (phones, 480px and down) */
 @media only screen and (max-width: 480px) {
@@ -394,7 +337,6 @@
   
       .sector-row {
         width: 100% !important;
-        padding-right: 2rem;
         .title-sektor h3{
           width: 100%;
           padding-bottom: 1rem;
@@ -415,29 +357,73 @@
 
 /* Small devices (portrait tablets and large phones, 568px and up) */
 @media only screen and (max-width: 568px) {
+  
   #sektors{
-.sector-container {
-/*sektors.vue bitiş*/
-  .sector-row {
-    width: 100% !important;
-    float: left;
-
-    .skCar {
-      margin-left: 3rem;
+    width: 100%;
+    .content{
+    margin-bottom: 3rem;
+    overflow: hidden;
+    height: 100%;
     }
-
-    p {
-      font-size: 1rem;
-      margin: 4rem 0 0 3rem;
-      line-height: 1.3rem;
+    .sidenav{
+      display: none;
     }
+    .sector-container {
+      overflow: initial;
+      width: 100%;
+      padding: 1.2rem;
+      .sector-row {
+        width: 100%;
+        h3{
+          display: none;
+        }
+        p{
+          line-height: 1.6 !important;
+          font-size: 1.5rem !important;
+        }
+        .skCar {
+          display: none;
+        }
+      }
+      .skCar-mobil{
+        display: none !important;
+      }
+    }
+    
   }
-}
-}
 }
 
 /* Medium devices (landscape tablets, 768px*432px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 569px) and (max-width: 768px) {
+  #sektors{
+    .sector-container {
+    /*sektors.vue bitiş*/
+      .sector-row {
+        width: 95% !important;
+        margin: 1.4rem 0 0 1.6rem;  
+        .skCar {
+          display: none;
+        }
+        .skCar-mobil{
+          display: inline;
+        }
+    
+        p {
+          font-size: 1rem;
+          margin: 0 0 1rem 0;
+          line-height: 1.3rem;
+        }
+      }
+    }
+    }
+}
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: landscape) {
+
 }
 
 

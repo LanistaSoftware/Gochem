@@ -8,6 +8,41 @@
     position: fixed;
     overflow: auto;
   }
+}
+/* Extra small devices (phones, 480px and down) */
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 6px;
+  }
+  .header {
+    padding-bottom: 5.4rem;
+  }
+  .logo-container img {
+    width: 4rem !important;
+  }
+  .mobile-nav [class^="flaticon-"]:before,
+  .mobile-nav [class*=" flaticon-"]:before,
+  .mobile-nav [class^="flaticon-"]:after,
+  .mobile-nav [class*=" flaticon-"]:after {
+    color: white;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+    font-size: 1.5rem !important;
+  }
+}
+/* Small devices (portrait tablets and large phones, 568px and up) */
+@media only screen and (max-width: 568px) {
+  html {
+    font-size: 7px;
+  }
+  /*** Content Background ***/
+  /***** OVERLAY BACKGROUND ******/
+  @supports (backdrop-filter: none) {
+    .content-background,
+    .mobile-content-background {
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+  }
   .header {
     padding-bottom: 5.4rem;
   }
@@ -24,7 +59,6 @@
   .mobil-search {
     display: inline-block !important;
   }
-  /*  /* Search bitiş */
   /*llanguage-container*/
   .social {
     display: none;
@@ -37,9 +71,7 @@
   [class*=" flaticon-"]:before,
   [class^="flaticon-"]:after,
   [class*=" flaticon-"]:after {
-    font-size: 2rem !important ;
-    padding: 0;
-    padding: 0.4rem;
+    font-size: 1.5rem;
   }
   /* mobile icons */
   .call {
@@ -60,37 +92,6 @@
   }
   .mobile-contact {
     display: block;
-  }
-}
-/* Extra small devices (phones, 480px and down) */
-@media only screen and (max-width: 480px) {
-  html {
-    font-size: 6px;
-  }
-  .header {
-    padding-bottom: 5.4rem;
-  }
-  .logo-container img {
-    width: 4rem !important;
-  }
-  [class^="flaticon-"]:before,
-  [class*=" flaticon-"]:before,
-  [class^="flaticon-"]:after,
-  [class*=" flaticon-"]:after {
-    font-size: 1rem;
-  }
-}
-/* Small devices (portrait tablets and large phones, 568px and up) */
-@media only screen and (max-width: 568px) {
-  html {
-    font-size: 7px;
-  }
-  /*** Content Background ***/
-  /***** OVERLAY BACKGROUND ******/
-  @supports (backdrop-filter: none) {
-    .content-background {
-      background-color: rgba(0, 0, 0, 0.2);
-    }
   }
 }
 /* Medium devices (landscape tablets, 768px*432px and up) */
@@ -164,32 +165,6 @@
   .navigation span {
     display: none;
   }
-  .navigation [class^="flaticon-"]:before,
-  .navigation [class*=" flaticon-"]:before,
-  .navigation [class^="flaticon-"]:after,
-  .navigation [class*=" flaticon-"]:after {
-    padding-left: 0.4rem;
-    padding-right: 0.4rem;
-  }
-  /*Carousel dikey*/
-  .carousel-content {
-    width: 90%;
-  }
-  .carousel-content span {
-    font-size: 2.3rem;
-  }
-  .carousel-content sup {
-    font-size: 1.3rem;
-  }
-  .carousel-content strong {
-    font-size: 2.2rem;
-  }
-  .carousel-content h2 {
-    font-size: 2.6rem;
-  }
-  .carousel-content p {
-    font-size: 1.2rem;
-  }
   .sliderBtn {
     margin-top: 10vh !important;
   }
@@ -257,41 +232,11 @@
 /* ###################################### Sectors Media Queries ############################################## */
 /* Extra small devices (phones, 320px and down) */
 @media only screen and (max-width: 320px) {
-  #sektors {
-    width: 100%;
-  }
-  #sektors .content {
-    margin-bottom: 3rem;
-    overflow: hidden;
-    height: 100%;
-  }
-  #sektors .sidenav {
-    display: none;
-  }
-  #sektors .sector-container {
-    overflow: initial;
-    width: 100%;
-    padding: 1.2rem;
-  }
-  #sektors .sector-container .sector-row h3 {
-    display: none;
-  }
-  #sektors .sector-container .sector-row p {
-    line-height: 1.6 !important;
-    font-size: 1.5rem !important;
-  }
-  #sektors .sector-container .sector-row .skCar {
-    display: none;
-  }
-  #sektors .sector-container .skCar-mobil {
-    display: none !important;
-  }
 }
 /* Extra small devices (phones, 480px and down) */
 @media only screen and (max-width: 480px) {
   #sektors .sector-container .sector-row {
     width: 100% !important;
-    padding-right: 2rem;
   }
   #sektors .sector-container .sector-row .title-sektor h3 {
     width: 100%;
@@ -309,23 +254,62 @@
 }
 /* Small devices (portrait tablets and large phones, 568px and up) */
 @media only screen and (max-width: 568px) {
+  #sektors {
+    width: 100%;
+  }
+  #sektors .content {
+    margin-bottom: 3rem;
+    overflow: hidden;
+    height: 100%;
+  }
+  #sektors .sidenav {
+    display: none;
+  }
+  #sektors .sector-container {
+    overflow: initial;
+    width: 100%;
+    padding: 1.2rem;
+  }
+  #sektors .sector-container .sector-row {
+    width: 100%;
+  }
+  #sektors .sector-container .sector-row h3 {
+    display: none;
+  }
+  #sektors .sector-container .sector-row p {
+    line-height: 1.6 !important;
+    font-size: 1.5rem !important;
+  }
+  #sektors .sector-container .sector-row .skCar {
+    display: none;
+  }
+  #sektors .sector-container .skCar-mobil {
+    display: none !important;
+  }
+}
+/* Medium devices (landscape tablets, 768px*432px and up) */
+@media only screen and (min-width: 569px) and (max-width: 768px) {
   #sektors .sector-container {
     /*sektors.vue bitiş*/
   }
   #sektors .sector-container .sector-row {
-    width: 100% !important;
-    float: left;
+    width: 95% !important;
+    margin: 1.4rem 0 0 1.6rem;
   }
   #sektors .sector-container .sector-row .skCar {
-    margin-left: 3rem;
+    display: none;
+  }
+  #sektors .sector-container .sector-row .skCar-mobil {
+    display: inline;
   }
   #sektors .sector-container .sector-row p {
     font-size: 1rem;
-    margin: 4rem 0 0 3rem;
+    margin: 0 0 1rem 0;
     line-height: 1.3rem;
   }
 }
-/* Medium devices (landscape tablets, 768px*432px and up) */
+/* Portrait */
+/* Landscape */
 /**********Home Responsive********/
 /* Extra small devices (phones, 320px and down) */
 @media only screen and (max-width: 320px) {

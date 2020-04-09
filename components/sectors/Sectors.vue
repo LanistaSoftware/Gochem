@@ -25,10 +25,10 @@
         </div>
       </section>
       <div class="sector-container">
+        <div class="title-sektor">
+          <h3>TEKSTİL</h3>
+        </div>
         <div class="sector-row">
-          <div class="title-sektor">
-            <h3>TEKSTİL</h3>
-          </div>
           <SectorAlbum class="skCar" />
         </div>
         <div class="sector-row">
@@ -77,6 +77,9 @@ export default {
     line-height: 2.5rem;
   }
 }
+.carousel {
+  margin-top:0 !important;
+}
 .sector-container {
   width: 80%;
   float: left;
@@ -87,16 +90,15 @@ export default {
   }
 
   .sector-row {
+    margin-top:3rem;
     width: 50%;
     float: left;
-
     .skCar {
-      margin-left: 3rem;
+      margin: 3rem 2rem 1rem 1rem;
     }
 
     p {
-      font-size: 1rem;
-      margin: 4rem 0 0 3rem;
+      font-size: 1.1rem;
       line-height: 1.4;
       font-family: Arial;
     }

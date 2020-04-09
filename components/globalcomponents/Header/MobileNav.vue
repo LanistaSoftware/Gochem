@@ -86,19 +86,6 @@ a {
   font-size: 1rem;
 }
 
-// ul {
-//   list-style-type: none;
-//   margin: 0;
-//   padding: 0;
-//   overflow: hidden;
-//   text-align: center;
-// }
-
-// li a {
-//   text-align: center;
-
-// }
-
 .navli {
   padding: 0 1.5rem 0 1.5rem;
 }
@@ -125,8 +112,8 @@ li:not(:last-child) {
 [class^="flaticon-"]:after,
 [class*=" flaticon-"]:after {
   color: white;
-  margin-left: 0px;
-  margin-right: 0.5rem;
-  font-size: 2rem !important;
+  margin-left: .3rem;
+  margin-right: .3rem;
+  font-size: 2rem;
 }
 </style>

@@ -20,14 +20,13 @@ export default {
 <style lang="less" scoped>
 
 .icon-container {
-  height: 2rem;
   padding: 0.5rem 0.5rem;
   display: inline-block;
   background-color: transparent;
   vertical-align: middle;
 
   .search-input{
-  padding: 0.7rem 0.3rem 0.5rem 0.3rem;
+  padding: 0.9rem 0.5rem 0.9rem 1rem;
   border-radius: 3em;
   transition: 1.3s;
   }
