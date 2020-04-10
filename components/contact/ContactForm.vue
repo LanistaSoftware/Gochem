@@ -1,48 +1,4 @@
 <template>
-  <!-- <div class="container-fluid">
-    <div class="container">
-      <div class="formBox">
-        <form>
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="inputBox ">
-                <input type="text" name="" class="input" placeholder="Konu">
-              </div>
-            </div>
-
-            <div class="col-sm-6">
-              <div class="inputBox">
-                <input type="text" name="" class="input" placeholder="İsim">
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="inputBox">
-                <input type="text" name="" class="input" placeholder="E-mail">
-              </div>
-            </div>
-
-            <div class="col-sm-6">
-              <div class="inputBox">
-                <input type="text" name="" class="input" placeholder="Telefon">
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="inputBox">
-                <textarea class="input" placeholder="Mesajınız" />
-                <input type="submit" name="" class="button" value="Gönder">
-              </div>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div> -->
   <section>
     <div class="form-container">
       <div class="twin-input left-inputs">
@@ -94,7 +50,7 @@ input,textarea{
   border-radius: 0.2em;
 }
 textarea{
-  height: 14rem;
+  height: 11rem;
 }
 .text-container{
  position: relative;

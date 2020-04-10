@@ -1,7 +1,10 @@
 <template>
   <section id="product">
     <Sliderp />
-    <div class="content content-background mobile-content-background">
+    <div class="content clearfix content-background mobile-content-background">
+      <div id="rescat" class="responsive-category">
+        <h2>Responsive Category</h2>
+      </div>
       <section class="sidenav product-sidenav overflow-scroll">
         <div class="product-category">
           <h2> Slikon Pigment</h2>
@@ -58,11 +61,6 @@
             necessitatibus a. Enim, nemo reprehenderit exercitationem odio harum blanditiis illum, sint fuga impedit
             eligendi asperiores, minus accusamus ullam cum. Eos, nostrum nihil? Sed ullam deserunt cum aut vero corporis
             dicta atque quos?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore inventore nobis possimus non quaerat sed.
-            Impedit dignissimos sint eligendi eaque?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti modi inventore nesciunt consequatur unde!
-            Sapiente, pariatur sunt ut architecto ipsum velit unde, iure beatae tempora, inventore suscipit ab
-            repellendus nobis!
           </p>
         </div>
         <div class="product-link">
@@ -131,6 +129,10 @@ export default {
   }
 
 }
+.responsive-category{
+  text-align: center;
+  display: none;
+}
 
 .product-container {
   width: 80%;
@@ -155,14 +157,14 @@ export default {
   .product-link {
     width: 100%;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 1rem;
 
     .product-btn {
       width: 33%;
       float: left;
 
       .btn {
-        margin-top: 1.3rem;
+        margin-top: 1.2rem;
         text-align: center;
 
         [class^="flaticon-"]:before,
