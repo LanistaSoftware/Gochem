@@ -9,7 +9,7 @@
         :navigation-click-target-size="2"
         :pagination-enabled="false"
         :center-mode="true"
-        :class="active"
+        :loop="true"
       >
         <slide v-for="(slide,index) in 10" :key="index" class="carousel-responsive">
           <div class="slide-content">

@@ -1,15 +1,17 @@
 <template>
-  <section>
+  <section id="about">
     <div class="content content-background overflow-scroll clearfix">
       <div class="about-container clearfix">
         <div class="about-profile">
           <div class="profile-img">
             <img :src="aboutUs.profileImg" alt="">
           </div>
-          <h2>{{ aboutUs.ownername }}</h2>
-          <span>{{ aboutUs.company }}</span>
-          <br>
-          <p>{{ aboutUs.title }}</p>
+          <div class="about-information">
+            <h2>{{ aboutUs.ownername }}</h2>
+            <span>{{ aboutUs.company }}</span>
+            <br>
+            <p>{{ aboutUs.title }}</p>
+          </div>
         </div>
         <div class="about-content">
           <p>
