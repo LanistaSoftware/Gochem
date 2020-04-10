@@ -1,28 +1,29 @@
 <template>
-  <div class="bg" :style="{ backgroundImage: 'url(' + bgImageUrl + ')' }">
-    <div class="overlay">
-      <div class="bg-container">
-        <Header />
-        <Socials />
+  <div class="contact-layout">
+    <div class="first-contact-background">
+      <div class="first-contact-background-overlay">
+        <div class="bg-container">
+          <Header />
+          <Socials />
+          <nuxt />
+        </div>
       </div>
-      <nuxt />
     </div>
-    <!-- <div class="footer-contact">
-        <Footer class="footer-desktop" />
-        <MobileFooter class="mobile-footer" />
-      </div> -->
+    <Footer />
   </div>
 </template>
 <script>
+// import ContactCarousel from '@/components/contact/ContactCarousel'
 import Header from '@/components/globalcomponents/Header/Header'
 import Socials from '@/components/globalcomponents/shared/Socials'
-// import Footer from '@/components/globalcomponents/footer/ContactFooter'
+import Footer from '@/components/globalcomponents/footer/ContactFooter'
 // import MobileFooter from '@/components/globalcomponents/Footer/Mobile-footer'
 export default {
   components: {
     Header,
-    Socials
-    // Footer,
+    Socials,
+    // ContactCarousel
+    Footer
     // MobileFooter
   },
   data () {
@@ -46,7 +47,13 @@ export default {
 }
 </script>
 <style lang="less">
-.mobile-footer{
-  display: none;
+/***** Background & Container ****/
+.first-contact-background {
+  background-image: url('../assets/img/bg2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  width: 100%;
 }
+
 </style>
