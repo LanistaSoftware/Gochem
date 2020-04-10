@@ -8,6 +8,47 @@
     position: fixed;
     overflow: auto;
   }
+  .bg-container {
+    width: 100%;
+  }
+}
+/* Extra small devices (phones, 480px and down) */
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 6px;
+  }
+  .header {
+    padding-bottom: 5.4rem;
+  }
+  .logo-container img {
+    width: 4rem !important;
+  }
+  .mobile-nav [class^="flaticon-"]:before,
+  .mobile-nav [class*=" flaticon-"]:before,
+  .mobile-nav [class^="flaticon-"]:after,
+  .mobile-nav [class*=" flaticon-"]:after {
+    color: white;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+    font-size: 1.5rem !important;
+  }
+}
+/* Small devices (portrait tablets and large phones, 568px and up) */
+@media only screen and (max-width: 568px) {
+  html {
+    font-size: 7px;
+  }
+  .bg-container {
+    width: 100%;
+  }
+  /*** Content Background ***/
+  /***** OVERLAY BACKGROUND ******/
+  @supports (backdrop-filter: none) {
+    .content-background,
+    .mobile-content-background {
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+  }
   .header {
     padding-bottom: 5.4rem;
   }
@@ -24,7 +65,6 @@
   .mobil-search {
     display: inline-block !important;
   }
-  /*  /* Search bitiş */
   /*llanguage-container*/
   .social {
     display: none;
@@ -37,9 +77,7 @@
   [class*=" flaticon-"]:before,
   [class^="flaticon-"]:after,
   [class*=" flaticon-"]:after {
-    font-size: 2rem !important ;
-    padding: 0;
-    padding: 0.4rem;
+    font-size: 1.5rem;
   }
   /* mobile icons */
   .call {
@@ -60,37 +98,6 @@
   }
   .mobile-contact {
     display: block;
-  }
-}
-/* Extra small devices (phones, 480px and down) */
-@media only screen and (max-width: 480px) {
-  html {
-    font-size: 6px;
-  }
-  .header {
-    padding-bottom: 5.4rem;
-  }
-  .logo-container img {
-    width: 4rem !important;
-  }
-  [class^="flaticon-"]:before,
-  [class*=" flaticon-"]:before,
-  [class^="flaticon-"]:after,
-  [class*=" flaticon-"]:after {
-    font-size: 1rem;
-  }
-}
-/* Small devices (portrait tablets and large phones, 568px and up) */
-@media only screen and (max-width: 568px) {
-  html {
-    font-size: 7px;
-  }
-  /*** Content Background ***/
-  /***** OVERLAY BACKGROUND ******/
-  @supports (backdrop-filter: none) {
-    .content-background {
-      background-color: rgba(0, 0, 0, 0.2);
-    }
   }
 }
 /* Medium devices (landscape tablets, 768px*432px and up) */
@@ -159,7 +166,7 @@
     width: 95%;
   }
   .navigation {
-    width: 70% !important;
+    width: 82% !important;
   }
   .navigation span {
     display: none;
@@ -168,26 +175,8 @@
   .navigation [class*=" flaticon-"]:before,
   .navigation [class^="flaticon-"]:after,
   .navigation [class*=" flaticon-"]:after {
-    padding-left: 0.4rem;
-    padding-right: 0.4rem;
-  }
-  /*Carousel dikey*/
-  .carousel-content {
-    width: 90%;
-  }
-  .carousel-content span {
-    font-size: 2.3rem;
-  }
-  .carousel-content sup {
-    font-size: 1.3rem;
-  }
-  .carousel-content strong {
-    font-size: 2.2rem;
-  }
-  .carousel-content h2 {
-    font-size: 2.6rem;
-  }
-  .carousel-content p {
+    padding-left: 1rem;
+    padding-right: 1rem;
     font-size: 1.2rem;
   }
   .sliderBtn {
@@ -207,7 +196,7 @@
     font-size: 8px;
   }
   .navigation {
-    width: 70% !important;
+    width: 82% !important;
   }
   .navigation span {
     display: none;
@@ -218,7 +207,7 @@
   .navigation [class*=" flaticon-"]:after {
     padding-left: 1rem;
     padding-right: 1rem;
-    font-size: 1.8rem;
+    font-size: 1.2rem;
   }
   /*bg arkplan*/
   /*Carousel yatay*/
@@ -249,25 +238,11 @@
 /* ###################################### Sectors Media Queries ############################################## */
 /* Extra small devices (phones, 320px and down) */
 @media only screen and (max-width: 320px) {
-  #sektors {
-    width: 100%;
-  }
-  #sektors .sidenav {
-    display: none;
-  }
-  #sektors .sector-container {
-    width: 100%;
-    margin-bottom: 3rem;
-  }
-  #sektors .sector-container .sector-row .skCar {
-    display: none;
-  }
 }
 /* Extra small devices (phones, 480px and down) */
 @media only screen and (max-width: 480px) {
   #sektors .sector-container .sector-row {
     width: 100% !important;
-    padding-right: 2rem;
   }
   #sektors .sector-container .sector-row .title-sektor h3 {
     width: 100%;
@@ -285,59 +260,70 @@
 }
 /* Small devices (portrait tablets and large phones, 568px and up) */
 @media only screen and (max-width: 568px) {
+  #sektors {
+    width: 100%;
+  }
+  #sektors .content {
+    margin-bottom: 3rem;
+    overflow: hidden;
+    height: 100%;
+  }
+  #sektors .sidenav {
+    display: none;
+  }
   #sektors .sector-container {
-    overflow-x: auto;
-    /*sektors.vue bitiş*/
+    overflow: initial;
+    width: 100%;
+    padding: 1.2rem;
   }
   #sektors .sector-container .sector-row {
-    width: 100% !important;
-    float: left;
+    width: 100%;
   }
-  #sektors .sector-container .sector-row .skCar {
-    margin-left: 3rem;
+  #sektors .sector-container .sector-row h3 {
+    display: none;
   }
   #sektors .sector-container .sector-row p {
-    font-size: 1rem;
-    margin: 4rem 0 0 3rem;
-    line-height: 1.3rem;
+    line-height: 1.6 !important;
+    font-size: 1.5rem !important;
+  }
+  #sektors .sector-container .sector-row .skCar {
+    display: none;
+  }
+  #sektors .sector-container .skCar-mobil {
+    display: none !important;
   }
 }
 /* Medium devices (landscape tablets, 768px*432px and up) */
+@media only screen and (min-width: 569px) and (max-width: 768px) {
+  #sektors .sector-container {
+    /*sektors.vue bitiş*/
+  }
+  #sektors .sector-container .sector-row {
+    width: 95% !important;
+    margin: 1.4rem 0 0 1.6rem;
+  }
+  #sektors .sector-container .sector-row .skCar {
+    display: none;
+  }
+  #sektors .sector-container .sector-row .skCar-mobil {
+    display: inline;
+  }
+  #sektors .sector-container .sector-row p {
+    font-size: 1rem;
+    margin: 0 0 1rem 0;
+    line-height: 1.3rem;
+  }
+}
+/* Portrait */
+/* Landscape */
 /**********Home Responsive********/
 /* Extra small devices (phones, 320px and down) */
 @media only screen and (max-width: 320px) {
-  /*Carousel */
-  .carousel-content {
-    width: 95% !important;
+  html {
+    font-size: 6px;
   }
-  .carousel-content h4 {
-    display: none;
-  }
-  .carousel-content h2 {
-    font-size: 3.4rem !important;
-  }
-  .carousel-content .carousel-items {
-    height: 20vh;
-  }
-  .sliderBtn {
-    margin-top: 10vh !important;
-    width: 5%;
-  }
-  .sliderBtn::before {
-    font-size: 1rem !important;
-  }
-  /* Box */
-  .boxes {
+  .carousel-container {
     width: 100%;
-  }
-  .boxes .box-container {
-    width: 100% !important;
-  }
-  .boxes .box-carousel {
-    display: none !important;
-  }
-  .box-container {
-    height: 100% !important;
   }
 }
 /* Extra small devices (phones, 480px and down) */
@@ -355,19 +341,69 @@
 }
 /* Small devices (portrait tablets and large phones, 568px and up) */
 @media only screen and (max-width: 568px) {
-  /*bootstrapCarousel*/
-  .carousel-content h2 {
-    font-size: 2rem;
+  html {
+    font-size: 10px;
   }
-  .carousel-content span {
-    font-size: 1.8rem !important;
+  /*Carousel */
+  .carousel-content {
+    width: 95% !important;
   }
-  .carousel-content sup {
-    font-size: 1.2rem !important;
+  .carousel-content h4 {
+    display: none;
+  }
+  .carousel-content p {
+    line-height: 1.5;
+  }
+  .carousel-content .carousel-items {
+    height: 20vh;
+  }
+  .sliderBtn {
+    margin-top: 10vh !important;
+    width: 5%;
+  }
+  .sliderBtn::before {
+    font-size: 1rem !important;
+  }
+  /* Box */
+  .boxes {
+    width: 100%;
+  }
+  .boxes .box-container {
+    width: 100% !important;
+    height: 30vh !important;
+  }
+  .boxes .box-carousel {
+    display: none !important;
   }
 }
 /* Medium devices (landscape tablets, 768px*432px and up) */
+@media only screen and (min-width: 569px) and (max-width: 768px) {
+  html {
+    font-size: 10px ;
+  }
+  .boxes .box-container {
+    width: 48% !important;
+  }
+}
 /* Large devices (laptops/desktops, 992px*558px and up) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  html {
+    font-size: 9px;
+  }
+  .carousel-content span {
+    font-size: 3.4rem !important;
+  }
+  .carousel-content sup {
+    font-size: 2rem !important;
+  }
+  .carousel-content strong {
+    font-size: 3.6rem !important;
+  }
+  .carousel-content p {
+    font-size: 1.5rem !important;
+    line-height: 1.2;
+  }
+}
 /* Extra large devices (large laptops and desktops, 1200px*675px and up) */
 /* Extra large devices (large laptops and desktops, 1400px and up) */
 /* Portrait */
