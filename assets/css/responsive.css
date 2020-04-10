@@ -8,6 +8,9 @@
     position: fixed;
     overflow: auto;
   }
+  .bg-container {
+    width: 100%;
+  }
 }
 /* Extra small devices (phones, 480px and down) */
 @media only screen and (max-width: 480px) {
@@ -34,6 +37,9 @@
 @media only screen and (max-width: 568px) {
   html {
     font-size: 7px;
+  }
+  .bg-container {
+    width: 100%;
   }
   /*** Content Background ***/
   /***** OVERLAY BACKGROUND ******/
@@ -313,38 +319,11 @@
 /**********Home Responsive********/
 /* Extra small devices (phones, 320px and down) */
 @media only screen and (max-width: 320px) {
-  /*Carousel */
-  .carousel-content {
-    width: 95% !important;
+  html {
+    font-size: 6px;
   }
-  .carousel-content h4 {
-    display: none;
-  }
-  .carousel-content h2 {
-    font-size: 3.4rem !important;
-  }
-  .carousel-content .carousel-items {
-    height: 20vh;
-  }
-  .sliderBtn {
-    margin-top: 10vh !important;
-    width: 5%;
-  }
-  .sliderBtn::before {
-    font-size: 1rem !important;
-  }
-  /* Box */
-  .boxes {
+  .carousel-container {
     width: 100%;
-  }
-  .boxes .box-container {
-    width: 100% !important;
-  }
-  .boxes .box-carousel {
-    display: none !important;
-  }
-  .box-container {
-    height: 100% !important;
   }
 }
 /* Extra small devices (phones, 480px and down) */
@@ -362,18 +341,47 @@
 }
 /* Small devices (portrait tablets and large phones, 568px and up) */
 @media only screen and (max-width: 568px) {
-  /*bootstrapCarousel*/
-  .carousel-content h2 {
-    font-size: 2rem;
+  html {
+    font-size: 10px;
   }
-  .carousel-content span {
-    font-size: 1.8rem !important;
+  /*Carousel */
+  .carousel-content {
+    width: 95% !important;
   }
-  .carousel-content sup {
-    font-size: 1.2rem !important;
+  .carousel-content h4 {
+    display: none;
+  }
+  .carousel-content p {
+    line-height: 1.5;
+  }
+  .carousel-content .carousel-items {
+    height: 20vh;
+  }
+  .sliderBtn {
+    margin-top: 10vh !important;
+    width: 5%;
+  }
+  .sliderBtn::before {
+    font-size: 1rem !important;
+  }
+  /* Box */
+  .boxes {
+    width: 100%;
+  }
+  .boxes .box-container {
+    width: 100% !important;
+    height: 30vh !important;
+  }
+  .boxes .box-carousel {
+    display: none !important;
   }
 }
 /* Medium devices (landscape tablets, 768px*432px and up) */
+@media only screen and (min-width: 569px) and (max-width: 768px) {
+  .boxes .box-container {
+    width: 48% !important;
+  }
+}
 /* Large devices (laptops/desktops, 992px*558px and up) */
 /* Extra large devices (large laptops and desktops, 1200px*675px and up) */
 /* Extra large devices (large laptops and desktops, 1400px and up) */

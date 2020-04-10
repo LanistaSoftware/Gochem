@@ -88,7 +88,6 @@ export default {
   h3 {
     text-align: center;
   }
-
   .sector-row {
     margin-top:3rem;
     width: 50%;
