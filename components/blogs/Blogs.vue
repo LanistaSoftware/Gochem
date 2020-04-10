@@ -1,8 +1,8 @@
 <template>
-  <section>
+  <section id="blogs">
     <div class="content content-background overflow-scroll">
       <div class="blogs">
-        <div v-for="item in 6" :key="item" class="blogs-content">
+        <div v-for="item in 9" :key="item" class="blogs-content">
           <img src="../../assets/img/bg1.jpg" alt="Buraya belgeler gelecek." style="width:100%">
           <a href="#"><h3>Slikon Nedir ? </h3></a>
           <h2>{{ tarih }} </h2>

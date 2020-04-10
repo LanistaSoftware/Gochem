@@ -61,11 +61,6 @@
             necessitatibus a. Enim, nemo reprehenderit exercitationem odio harum blanditiis illum, sint fuga impedit
             eligendi asperiores, minus accusamus ullam cum. Eos, nostrum nihil? Sed ullam deserunt cum aut vero corporis
             dicta atque quos?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore inventore nobis possimus non quaerat sed.
-            Impedit dignissimos sint eligendi eaque?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti modi inventore nesciunt consequatur unde!
-            Sapiente, pariatur sunt ut architecto ipsum velit unde, iure beatae tempora, inventore suscipit ab
-            repellendus nobis!
           </p>
         </div>
         <div class="product-link">
@@ -169,7 +164,7 @@ export default {
       float: left;
 
       .btn {
-        margin-top: 1.3rem;
+        margin-top: 1.2rem;
         text-align: center;
 
         [class^="flaticon-"]:before,

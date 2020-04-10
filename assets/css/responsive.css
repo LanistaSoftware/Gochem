@@ -430,7 +430,7 @@
 /* Medium devices (landscape tablets, 768px*432px and up) */
 @media only screen and (max-width: 768px) and (min-width: 569px) {
   #product .product-content p {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
   #product .sidenav {
     padding: 3rem;
@@ -483,18 +483,57 @@
 /* Extra small devices (phones, 320px and down) */
 /* Extra small devices (phones, 480px and down) */
 /* Small devices (portrait tablets and large phones, 568px and up) */
+@media only screen and (max-width: 568px) {
+  #portfolio .portfolio-content {
+    width: 100%;
+  }
+  #portfolio img {
+    height: 40vh;
+    object-fit: cover;
+  }
+}
 /* Medium devices (landscape tablets, 768px*432px and up) */
+@media only screen and (max-width: 768px) and (min-width: 569px) {
+  #portfolio .portfolio-content {
+    width: 50%;
+  }
+}
 /* Large devices (laptops/desktops, 992px*558px and up) */
+@media only screen and (max-width: 1024px) {
+  #portfolio .portfolio-content img {
+    height: 30vh;
+  }
+}
 /* Extra large devices (large laptops and desktops, 1200px*675px and up) */
 /* Extra large devices (large laptops and desktops, 1400px and up) */
 /* Portrait */
 /* Landscape */
 /**********Blogs Responsive********/
 /* Extra small devices (phones, 320px and down) */
+@media only screen and (max-width: 320px) {
+  #blogs .blogs-content {
+    padding: 1rem 1rem 0 1rem;
+  }
+}
 /* Extra small devices (phones, 480px and down) */
 /* Small devices (portrait tablets and large phones, 568px and up) */
+@media only screen and (max-width: 568px) {
+  #blogs .blogs-content {
+    width: 100%;
+  }
+}
 /* Medium devices (landscape tablets, 768px*432px and up) */
+@media only screen and (max-width: 768px) and (min-width: 568px) {
+  #blogs .blogs-content {
+    width: 50%;
+  }
+}
 /* Large devices (laptops/desktops, 992px*558px and up) */
+@media only screen and (max-width: 1024px) {
+  #blogs .blogs-content img {
+    height: 25vh;
+  }
+}
 /* Extra large devices (large laptops and desktops, 1200px*675px and up) */
 /* Extra large devices (large laptops and desktops, 1400px and up) */
 /* Portrait */
