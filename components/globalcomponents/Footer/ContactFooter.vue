@@ -1,77 +1,110 @@
 <template>
-  <div class="footer-contact">
-    <div class="bg-container clearfix">
-      <div class="footer-container clearfix">
-        <div class="footer-row">
-          <h4>Bizi takip edin</h4>
-          <hr>
-          <ul class="social-network social-circle">
-            <li v-for="sosyal in social" :key="sosyal.id" class="icon-container">
-              <a
-                :href="sosyal.href"
-                :title="sosyal.title"
-              >
-                <i
-                  :class="sosyal.icon"
-                >  {{ sosyal.adress }}</i></a>
-            </li>
-          </ul>
+  <div id="contact-footer">
+    <div class="colored-background">
+      <div class="form-map-container bg-container clearfix">
+        <div class="box form-content">
+          <p>
+            Bir sorunuz mu var ?<br>
+            Bizimle iletişime geçmekten çekinmeyin.
+          </p>
+          <ContactForm />
         </div>
-        <div class="footer-row">
-          <h4> Şirket </h4>
-          <hr>
-          <ul class="contact-item">
-            <li>
-              <a href="#">Hakkımızda</a>
-            </li>
-            <li>
-              <a href="#">Ekibimiz</a>
-            </li>
-            <li>
-              <a href="#">Makaleler</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-row">
-          <h4> Müşteri </h4>
-          <hr>
-          <ul class="contact-item">
-            <li>
-              <a href="#">Bilgi servisi</a>
-            </li>
-            <li>
-              <a href="#">Lojistik</a>
-            </li>
-            <li>
-              <a href="#">Sipariş</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-row">
-          <h4>Destek</h4>
-          <hr>
-          <ul class="contact-item">
-            <li>
-              <a href="#">İletişim</a>
-            </li>
-            <li>
-              <a href="#">Belgeler</a>
-            </li>
-          </ul>
+        <div class="box map-content clearfix">
+          <p>Bizi ofisimizde <br> ziyaret edin.</p>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3007.3566675762777!2d28.78506281495511!3d41.08305312276978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa5f570baaaab%3A0xac43b09ef54311fd!2sGochem!5e0!3m2!1str!2str!4v1585750999091!5m2!1str!2str"
+              frameborder="0"
+              class="map"
+              allowfullscreen=""
+              aria-hidden="false"
+              tabindex="0"
+            />
+          </div>
         </div>
       </div>
-      <hr class="hr-copy">
-      <div class="contact-footer">
-        <p class="copyright">
-          <i>Copyright © 2020</i>
-        </p>
-        <img class="lanista" src="../../../assets/img/beyaz.png" alt="Created by Lanista Software">
+      <div class="contact-slogan-background">
+        <section class="contact-slogan  bg-container">
+          <p> Dünya ve Ülke çapındaki sayısız müşteri ağımız arasında sizde yerinizi alın.</p>
+          <small>Envanterimizde bulunan ürünlerle ilgili bilgi almak için</small>
+          <br>
+          <button class="contact-btn">
+            Arayın
+          </button>
+        </section>
+      </div>
+      <div class="footer-container bg-container">
+        <div class=" clearfix">
+          <div class="footer-row">
+            <h4>Bizi takip edin</h4>
+            <hr>
+            <ul class="social-network social-circle">
+              <li v-for="sosyal in social" :key="sosyal.id" class="icon-container">
+                <a :href="sosyal.href" :title="sosyal.title">
+                  <i :class="sosyal.icon"> {{ sosyal.adress }}</i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-row">
+            <h4> Şirket </h4>
+            <hr>
+            <ul class="contact-item">
+              <li>
+                <a href="#">Hakkımızda</a>
+              </li>
+              <li>
+                <a href="#">Ekibimiz</a>
+              </li>
+              <li>
+                <a href="#">Makaleler</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-row">
+            <h4> Müşteri </h4>
+            <hr>
+            <ul class="contact-item">
+              <li>
+                <a href="#">Bilgi servisi</a>
+              </li>
+              <li>
+                <a href="#">Lojistik</a>
+              </li>
+              <li>
+                <a href="#">Sipariş</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-row">
+            <h4>Destek</h4>
+            <hr>
+            <ul class="contact-item">
+              <li>
+                <a href="#">İletişim</a>
+              </li>
+              <li>
+                <a href="#">Belgeler</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr class="hr-copy">
+        <div class="contact-footer">
+          <p class="copyright">
+            <i>Copyright © 2020</i>
+          </p>
+          <img class="lanista" src="../../../assets/img/beyaz.png" alt="Created by Lanista Software">
+        </div>
       </div>
     </div>
   </div>
 </template>
 <script>
+import ContactForm from '@/components/contact/ContactForm'
 export default {
+  components: {
+    ContactForm
+  },
   data () {
     return {
       show: false,
@@ -100,6 +133,12 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+/*Footer */
+
+.footer-container {
+  padding: 5rem 0 1rem 0;
+}
+
 .footer-contact {
   background-color: transparent;
   padding: 5rem 0 2rem 0;
@@ -108,15 +147,15 @@ export default {
 .social-network {
 
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1.2rem;
-  letter-spacing: .05rem;
+  font-size: 1.1rem;
+  letter-spacing: .04rem;
 }
 
 .footer-row {
   width: 25%;
   float: left;
   color: #fff;
-  padding: 0 3rem;
+  padding: 0 2rem;
   margin-bottom: 2rem;
   text-align: center;
 
@@ -131,10 +170,8 @@ export default {
   }
 
   ul {
-    margin: 1rem;
-
     li {
-      margin: 1.7rem 0;
+      margin: 2rem 0;
     }
   }
 }
@@ -146,8 +183,8 @@ export default {
 [class^="flaticon-twitter"]:before,
 [class^="flaticon-linkedin-1"]:before,
 [class^="flaticon-youtube"]:before {
-  font-size: 2rem;
-  margin-right: 0.3rem;
+  font-size: 1.7rem;
+  margin-right: 0.2rem;
 }
 
 .contact-item {
@@ -173,4 +210,78 @@ export default {
     margin-right: 0.5rem;
   }
 }
+
+/** form-map***/
+.box {
+  margin: 3rem 0;
+  width: 50%;
+  float: left;
+  font-family: Georgia !important;
+  color: white;
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 1rem;
+
+  p {
+    margin: 1rem;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    padding: 0.5rem;
+  }
+}
+
+.map-container {
+  padding-top: 0.4rem;
+  width: 100%;
+  overflow: hidden;
+
+  .map {
+    border: 0;
+    border-radius: .6rem;
+    width: 100%;
+    height: 20rem;
+  }
+}
+
+/*Slogan*/
+.contact-slogan-background {
+  background-color: white;
+  padding: 1rem;
+  text-align: center;
+  font-family: Helvetica !important;
+  letter-spacing: .1rem;
+
+  p {
+    font-size: 2.2rem;
+  }
+
+  small {
+    font-size: 1.4rem;
+  }
+
+  p,
+  small {
+    color: #166296;
+    padding: 2rem;
+  }
+
+  .contact-btn {
+    margin: 3rem;
+    padding: 1rem 3rem;
+    background: none;
+    border: 1px solid rgba(24, 130, 138, .5);
+    border-radius: .6rem;
+    color: #FD7C7C;
+    font-weight: 600;
+    font-size: 1.3rem;
+    transition: 0.5s;
+
+    &:hover {
+      color: lightgreen;
+      text-decoration: none;
+      border-color: lightgreen;
+    }
+  }
+}
+
 </style>
