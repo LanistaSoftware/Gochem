@@ -245,14 +245,6 @@
   .box-container {
     height: 20vh;
   }
-  /*box bitiş*/
-  /* Product.vue */
-  #product .product-container {
-    overflow-x: auto;
-    height: 100%;
-  }
-  /*Product.vue bitiş*/
-  /*****************************************************************/
 }
 /* ###################################### Sectors Media Queries ############################################## */
 /* Extra small devices (phones, 320px and down) */
@@ -383,24 +375,40 @@
 /**********Product Responsive********/
 /* Extra small devices (phones, 320px and down) */
 @media only screen and (max-width: 320px) {
-  /* Product Carousel */
-  .carousel-product {
-    margin-left: 6rem !important;
+  #product .product-btn-info {
+    font-size: 0.7rem;
+    width: 5rem ;
+  }
+  [class="flaticon-next"]:before {
+    font-size: 0.8em !important;
+  }
+  [class="flaticon-back"]:before {
+    font-size: 0.8em !important;
   }
 }
 /* Extra small devices (phones, 480px and down) */
 @media only screen and (max-width: 480px) {
-  /* Product Carousel */
-  .carousel-product {
-    margin-left: 7rem;
+  #product .product-btn-info {
+    font-size: 0.8rem;
+    width: 7rem ;
   }
 }
 /* Small devices (portrait tablets and large phones, 568px and up) */
 @media only screen and (max-width: 568px) {
   #product .product-container {
-    height: 100% !important;
+    width: 100%;
+    padding: 1rem 3rem;
+  }
+  #product .content {
+    height: auto;
   }
   #product .sidenav {
+    display: none;
+  }
+  #rescat {
+    display: block ;
+  }
+  .product-link i {
     display: none;
   }
   .product-responsive-carousel {
@@ -412,8 +420,40 @@
   .product-content h2 {
     display: none;
   }
+  .product-content p {
+    text-indent: none !important;
+    text-align: left;
+    font-size: 1.8em !important;
+    font-family: Arial !important;
+  }
 }
 /* Medium devices (landscape tablets, 768px*432px and up) */
+@media only screen and (max-width: 768px) and (min-width: 569px) {
+  #product .product-content p {
+    font-size: 1.1rem;
+  }
+  #product .sidenav {
+    padding: 3rem;
+    width: 25%;
+    height: 80%;
+  }
+  #product .sidenav a {
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+  }
+  #product .product-container {
+    position: relative;
+    width: 75%;
+    height: 90%;
+  }
+  #product .content {
+    height: 80vh;
+  }
+  #product .product-btn-info {
+    font-size: 0.8rem;
+    width: 8rem;
+    padding: 0.3rem;
+  }
+}
 /* Large devices (laptops/desktops, 992px*558px and up) */
 /* Extra large devices (large laptops and desktops, 1200px*675px and up) */
 /* Extra large devices (large laptops and desktops, 1400px and up) */
@@ -443,18 +483,57 @@
 /* Extra small devices (phones, 320px and down) */
 /* Extra small devices (phones, 480px and down) */
 /* Small devices (portrait tablets and large phones, 568px and up) */
+@media only screen and (max-width: 568px) {
+  #portfolio .portfolio-content {
+    width: 100%;
+  }
+  #portfolio img {
+    height: 40vh;
+    object-fit: cover;
+  }
+}
 /* Medium devices (landscape tablets, 768px*432px and up) */
+@media only screen and (max-width: 768px) and (min-width: 569px) {
+  #portfolio .portfolio-content {
+    width: 50%;
+  }
+}
 /* Large devices (laptops/desktops, 992px*558px and up) */
+@media only screen and (max-width: 1024px) {
+  #portfolio .portfolio-content img {
+    height: 30vh;
+  }
+}
 /* Extra large devices (large laptops and desktops, 1200px*675px and up) */
 /* Extra large devices (large laptops and desktops, 1400px and up) */
 /* Portrait */
 /* Landscape */
 /**********Blogs Responsive********/
 /* Extra small devices (phones, 320px and down) */
+@media only screen and (max-width: 320px) {
+  #blogs .blogs-content {
+    padding: 1rem 1rem 0 1rem;
+  }
+}
 /* Extra small devices (phones, 480px and down) */
 /* Small devices (portrait tablets and large phones, 568px and up) */
+@media only screen and (max-width: 568px) {
+  #blogs .blogs-content {
+    width: 100%;
+  }
+}
 /* Medium devices (landscape tablets, 768px*432px and up) */
+@media only screen and (max-width: 768px) and (min-width: 568px) {
+  #blogs .blogs-content {
+    width: 50%;
+  }
+}
 /* Large devices (laptops/desktops, 992px*558px and up) */
+@media only screen and (max-width: 1024px) {
+  #blogs .blogs-content img {
+    height: 25vh;
+  }
+}
 /* Extra large devices (large laptops and desktops, 1200px*675px and up) */
 /* Extra large devices (large laptops and desktops, 1400px and up) */
 /* Portrait */
