@@ -205,9 +205,17 @@ display: block;
   }
 
   .navigation {
-    width: 70% !important;
+    width: 82% !important;
     span {
       display: none;
+    }
+    [class^="flaticon-"]:before,
+    [class*=" flaticon-"]:before,
+    [class^="flaticon-"]:after,
+    [class*=" flaticon-"]:after {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      font-size: 1.2rem;
     }
   }
 
@@ -237,7 +245,7 @@ display: block;
   }
 
   .navigation {
-    width: 70% !important;
+    width: 82% !important;
     span {
       display: none;
     }
@@ -248,7 +256,7 @@ display: block;
     [class*=" flaticon-"]:after {
       padding-left: 1rem;
       padding-right: 1rem;
-      font-size: 1.8rem;
+      font-size: 1.2rem;
     }
   }
   /*bg arkplan*/
@@ -512,6 +520,9 @@ display: block;
 
 /* Medium devices (landscape tablets, 768px*432px and up) */
 @media only screen and (min-width: 569px) and (max-width: 768px) {
+  html {
+    font-size: 10px ;
+  }
  .boxes {
    .box-container {
      width: 48% !important;
@@ -520,8 +531,28 @@ display: block;
 }
 
 /* Large devices (laptops/desktops, 992px*558px and up) */
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+ html {
+   font-size: 9px;
+ }
+ .carousel-content {
 
+  span {
+    font-size: 3.4rem !important;
+  }
+
+  sup {
+    font-size: 2rem !important;
+  }
+
+  strong {
+    font-size: 3.6rem !important;
+  }
+p {
+    font-size: 1.5rem !important;
+    line-height: 1.2;
+  }
+}
 }
 
 /* Extra large devices (large laptops and desktops, 1200px*675px and up) */
@@ -534,12 +565,12 @@ display: block;
 
 /* Portrait */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: portrait) {
- 
 }
 
 /* Landscape */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: landscape) {
-
+ 
+  
 }
 
 /**********Product Responsive********/

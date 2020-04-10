@@ -166,10 +166,18 @@
     width: 95%;
   }
   .navigation {
-    width: 70% !important;
+    width: 82% !important;
   }
   .navigation span {
     display: none;
+  }
+  .navigation [class^="flaticon-"]:before,
+  .navigation [class*=" flaticon-"]:before,
+  .navigation [class^="flaticon-"]:after,
+  .navigation [class*=" flaticon-"]:after {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1.2rem;
   }
   .sliderBtn {
     margin-top: 10vh !important;
@@ -188,7 +196,7 @@
     font-size: 8px;
   }
   .navigation {
-    width: 70% !important;
+    width: 82% !important;
   }
   .navigation span {
     display: none;
@@ -199,7 +207,7 @@
   .navigation [class*=" flaticon-"]:after {
     padding-left: 1rem;
     padding-right: 1rem;
-    font-size: 1.8rem;
+    font-size: 1.2rem;
   }
   /*bg arkplan*/
   /*Carousel yatay*/
@@ -378,11 +386,32 @@
 }
 /* Medium devices (landscape tablets, 768px*432px and up) */
 @media only screen and (min-width: 569px) and (max-width: 768px) {
+  html {
+    font-size: 10px ;
+  }
   .boxes .box-container {
     width: 48% !important;
   }
 }
 /* Large devices (laptops/desktops, 992px*558px and up) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  html {
+    font-size: 9px;
+  }
+  .carousel-content span {
+    font-size: 3.4rem !important;
+  }
+  .carousel-content sup {
+    font-size: 2rem !important;
+  }
+  .carousel-content strong {
+    font-size: 3.6rem !important;
+  }
+  .carousel-content p {
+    font-size: 1.5rem !important;
+    line-height: 1.2;
+  }
+}
 /* Extra large devices (large laptops and desktops, 1200px*675px and up) */
 /* Extra large devices (large laptops and desktops, 1400px and up) */
 /* Portrait */
