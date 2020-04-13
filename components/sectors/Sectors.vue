@@ -144,6 +144,9 @@ export default {
   }
 
 }
+.skCar{
+  border-radius: 1em;
+}
 .skCar-mobil{
   display: none;
 }
