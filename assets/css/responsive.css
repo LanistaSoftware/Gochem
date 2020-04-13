@@ -425,12 +425,15 @@
 /* Extra small devices (phones, 480px and down) */
 @media only screen and (max-width: 480px) {
   #product .product-btn-info {
-    font-size: 0.8rem;
-    width: 7rem ;
+    font-size: 0.7rem;
+    width: 6rem ;
   }
 }
 /* Small devices (portrait tablets and large phones, 568px and up) */
 @media only screen and (max-width: 568px) {
+  #product {
+    padding: 1rem;
+  }
   #product .product-container {
     width: 100%;
     padding: 1rem 3rem;
@@ -443,6 +446,7 @@
   }
   #rescat {
     display: block ;
+    padding: 1rem;
   }
   .product-link i {
     display: none;
@@ -497,9 +501,126 @@
 /* Landscape */
 /**********About Us Responsive********/
 /* Extra small devices (phones, 320px and down) */
+@media only screen and (max-width: 320px) {
+  #about .overlay h2 {
+    font-size: 1.3rem;
+  }
+  #about .overlay .teams-title {
+    height: 7rem;
+  }
+}
 /* Extra small devices (phones, 480px and down) */
 /* Small devices (portrait tablets and large phones, 568px and up) */
+@media only screen and (max-width: 568px) {
+  #about {
+    padding-bottom: 2rem;
+    height: auto;
+  }
+  #about .twin-card {
+    width: 100%;
+  }
+  #about .f-right {
+    display: none;
+  }
+  #about .f-left {
+    display: none;
+  }
+  #about .about-profile {
+    float: none;
+    width: 100%;
+  }
+  #about .about-content {
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  }
+  #about .about-content p {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+  #about .about-container {
+    overflow-x: visible;
+  }
+  #about .about-information {
+    display: none;
+  }
+  #about img {
+    width: 25%;
+  }
+  #about .overlay {
+    position: relative;
+  }
+  #about .overlay img {
+    width: 100%;
+  }
+  #about .overlay .profile-image-container {
+    width: 11rem;
+  }
+  #about .overlay h2 {
+    font-size: 1.5rem;
+  }
+  #about .overflow-scroll {
+    overflow-x: none;
+  }
+  #about .content {
+    height: auto;
+  }
+  #about .quad-card {
+    width: 100%;
+  }
+}
 /* Medium devices (landscape tablets, 768px*432px and up) */
+@media only screen and (max-width: 1024px) and (min-width: 569px) {
+  .footer {
+    position: inherit;
+  }
+  #about {
+    padding-bottom: 4rem;
+    height: auto  ;
+  }
+  #about .about-content {
+    overflow: inherit;
+  }
+  #about .about-content p {
+    font-size: 1.8rem;
+  }
+  #about .about-content .about-profile {
+    padding: 2rem;
+  }
+  #about .about-content .teams-title {
+    height: 8rem;
+  }
+  #about .overlay {
+    position: relative;
+  }
+  #about .overlay .quad-card {
+    float: left;
+    width: 50%;
+  }
+  #about .overlay .f-right {
+    float: none;
+  }
+  #about .overlay .f-left {
+    float: none ;
+  }
+  #about .overlay .twin-card {
+    float: left;
+    width: 50%;
+  }
+  #about .teams-title {
+    height: 8rem;
+  }
+  #about .content {
+    height: auto;
+  }
+  #about .profile-image-container {
+    width: 18rem;
+  }
+  #about .profile-image-container img {
+    width: 100%;
+  }
+  #about .overflow-scroll {
+    overflow-x: none;
+  }
+}
 /* Large devices (laptops/desktops, 992px*558px and up) */
 /* Extra large devices (large laptops and desktops, 1200px*675px and up) */
 /* Extra large devices (large laptops and desktops, 1400px and up) */
@@ -520,8 +641,14 @@
 /* Extra small devices (phones, 480px and down) */
 /* Small devices (portrait tablets and large phones, 568px and up) */
 @media only screen and (max-width: 568px) {
+  #portfolio {
+    padding: 1rem;
+  }
   #portfolio .portfolio-content {
     width: 100%;
+  }
+  #portfolio .content {
+    height: auto;
   }
   #portfolio img {
     height: 40vh;
@@ -554,8 +681,14 @@
 /* Extra small devices (phones, 480px and down) */
 /* Small devices (portrait tablets and large phones, 568px and up) */
 @media only screen and (max-width: 568px) {
+  #blogs {
+    padding: 1rem;
+  }
   #blogs .blogs-content {
     width: 100%;
+  }
+  #blogs .content {
+    height: auto;
   }
 }
 /* Medium devices (landscape tablets, 768px*432px and up) */
