@@ -59,7 +59,7 @@
 </template>
 <script>
 import SectorAlbum from '@/components/sectors/SectorAlbum'
-import Sliderp from '@/components/products/ProductSlide'
+import Sliderp from '@/components/products/globalSlide.vue'
 export default {
   components: {
     SectorAlbum,

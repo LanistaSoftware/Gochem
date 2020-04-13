@@ -29,7 +29,7 @@
           <small>Envanterimizde bulunan ürünlerle ilgili bilgi almak için</small>
           <br>
           <button class="contact-btn">
-            Arayın
+            <a href="tel:123-456-7890">Arayın</a>
           </button>
         </section>
       </div>
@@ -134,6 +134,11 @@ export default {
 </script>
 <style lang="less" scoped>
 /*Footer */
+.contact-btn{
+  a{
+  color: #FD7C7C;
+}
+}
 
 .footer-container {
   padding: 5rem 0 1rem 0;

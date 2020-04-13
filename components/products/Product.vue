@@ -1,6 +1,6 @@
 <template>
   <section id="product">
-    <Sliderp />
+    <ProductSlide></ProductSlide>
     <div class="content clearfix content-background mobile-content-background">
       <div id="rescat" class="responsive-category">
         <h2>Responsive Category</h2>
@@ -94,10 +94,10 @@
   </section>
 </template>
 <script>
-import Sliderp from '@/components/products/ProductSlide'
+import ProductSlide from '@/components/products/globalSlide.vue'
 export default {
   components: {
-    Sliderp
+    ProductSlide
   },
   computed: {
     getProduct () {

@@ -11,7 +11,7 @@
         :center-mode="true"
         :loop="true"
       >
-        <slide v-for="(slide,index) in 10" :key="index" class="carousel-responsive">
+        <slide v-for="(slide) in 10" :key="slide.id" class="carousel-responsive">
           <div class="slide-content">
             <h2>
               <a href="#">
