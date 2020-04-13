@@ -6,16 +6,19 @@
         <div v-for="item in footerList" :key="item.id" class="footer-container clearfix">
           <div class="company-group">
             <div class="companydesc">
-              <p>
-                <i class="flaticon-pin" /> {{ item.company }}
-              </p>
+              <a :href="item.gochemLink" target="_blank">
+                <p>
+                  <i class="flaticon-pin" /> {{ item.company }}
+                </p>
+              </a>
             </div>
             <hr>
             <Social />
             <hr>
             <div class="mobil-box">
               <div class="icon-gochem">
-                <img class="slikonLogo" src="../../../assets/img/welove.png" alt="We Love Slicone">
+                <a :href="item.logoLink" target="_blank">
+                  <img class="slikonLogo" :src="item.logo" alt="We Love Slicone"></a>
               </div>
             </div>
             <div class="mobil-box">
@@ -23,7 +26,7 @@
                 <p class="copyright">
                   <i>Copyright © 2020</i>
                 </p>
-                <img src="../../../assets/img/beyaz.png" alt="Created by Lanista Software">
+                <a :href="item.lanistaLink" target="_blank"><img :src="item.lanistaLogo" alt="Created by Lanista Software"></a>
               </div>
             </div>
           </div>
@@ -45,8 +48,11 @@ export default {
       footerList: [
         {
           company: 'Gochem Slikon Kimya San. Tic. Ltd. Şti',
-          logo: '../../assets/img/welove.png',
-          lanistaLogo: '../../assets/img/beyaz.png'
+          gochemLink: '/contact',
+          logo: require('../../../assets/img/welove.png'),
+          logoLink: '/about',
+          lanistaLogo: require('../../../assets/img/beyaz.png'),
+          lanistaLink: 'https://www.lanista.com.tr/'
         }
       ]
     }
@@ -72,7 +78,7 @@ export default {
     }
     .companydesc{
        p{
-      font-size: 1.3rem;
+      font-size: 1rem;
       padding-top: 2.2rem;
       padding-right: 2rem;
     }

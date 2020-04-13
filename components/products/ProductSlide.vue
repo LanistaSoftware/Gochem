@@ -1,27 +1,25 @@
 <template>
   <div class="product-responsive-carousel mobile-content-background">
-    <no-ssr>
-      <carousel
-        class="carousel-product"
-        :per-page="2.5"
-        :navigation-enabled="true"
-        :min-swipe-distance="20"
-        :navigation-click-target-size="2"
-        :pagination-enabled="false"
-        :center-mode="true"
-        :class="active"
-      >
-        <slide v-for="(slide,index) in 10" :key="index" class="carousel-responsive">
-          <div class="slide-content">
-            <h2>
-              <a href="#">
-                Serkan
-              </a>
-            </h2>
-          </div>
-        </slide>
-      </carousel>
-    </no-ssr>
+    <carousel
+      class="carousel-product"
+      :per-page="2.5"
+      :navigation-enabled="true"
+      :min-swipe-distance="20"
+      :navigation-click-target-size="2"
+      :pagination-enabled="false"
+      :center-mode="true"
+      name="Slidep"
+    >
+      <slide v-for="(slide,index) in 10" :key="index.id" class="carousel-responsive">
+        <div class="slide-content">
+          <h2>
+            <a href="#">
+              Serkan
+            </a>
+          </h2>
+        </div>
+      </slide>
+    </carousel>
   </div>
 </template>
 <script>

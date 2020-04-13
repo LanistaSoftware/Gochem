@@ -1,23 +1,48 @@
 <template>
   <li class="icon-container first-li" @mouseover="show=true" @mouseleave="show=false">
     <span class="search-input">
-      <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
-        <input v-if="show" type="text" size="20" height="48">
+      <transition>
+        <input v-if="show" v-model="searchQuery" type="text" size="20" height="48">
       </transition>
       <i class="flaticon-search" i />
     </span>
+    <nuxt-link
+      v-for="nav in resultQuery"
+      :key="nav.id"
+      to="/"
+      tag="li"
+      class="navli"
+    >
+      <a :href="nav.content" target="_blank">{{ nav.header }}</a>
+    </nuxt-link>
   </li>
 </template>
 <script>
 export default {
   data () {
     return {
-      show: false
+      show: false,
+      searchQuery: null
+    }
+  },
+  computed: {
+    resultQuery () {
+      if (this.searchQuery) {
+        return this.$store.getters.getSlideSets.filter((item) => {
+          return this.searchQuery.toLowerCase().split(' ').every(v => item.header.toLowerCase().includes(v))
+        })
+      } else {
+        return this.resources
+      }
     }
   }
 }
 </script>
 <style lang="less" scoped>
+.navli {
+  position: relative;
+  float:left;
+}
 
 .icon-container {
   padding: 0.5rem 0.5rem;

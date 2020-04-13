@@ -50,13 +50,13 @@
             <hr>
             <ul class="contact-item">
               <li>
-                <a href="#">Hakkımızda</a>
+                <a href="/about" target="_blank">Hakkımızda</a>
               </li>
               <li>
-                <a href="#">Ekibimiz</a>
+                <a href="/about" target="_blank">Ekibimiz</a>
               </li>
               <li>
-                <a href="#">Makaleler</a>
+                <a href="/blogs" target="_blank">Makaleler</a>
               </li>
             </ul>
           </div>
@@ -65,13 +65,13 @@
             <hr>
             <ul class="contact-item">
               <li>
-                <a href="#">Bilgi servisi</a>
+                <a href="/" target="_blank">Bilgi servisi</a>
               </li>
               <li>
                 <a href="#">Lojistik</a>
               </li>
               <li>
-                <a href="#">Sipariş</a>
+                <a href="/products" target="_blank">Sipariş</a>
               </li>
             </ul>
           </div>
@@ -80,10 +80,10 @@
             <hr>
             <ul class="contact-item">
               <li>
-                <a href="#">İletişim</a>
+                <a href="/contact" target="_blank">İletişim</a>
               </li>
               <li>
-                <a href="#">Belgeler</a>
+                <a href="/portfolio" target="_blank">Belgeler</a>
               </li>
             </ul>
           </div>
@@ -93,7 +93,9 @@
           <p class="copyright">
             <i>Copyright © 2020</i>
           </p>
-          <img class="lanista" src="../../../assets/img/beyaz.png" alt="Created by Lanista Software">
+          <a href="https://www.lanista.com.tr/">
+            <img class="lanista" src="../../../assets/img/beyaz.png" alt="Created by Lanista Software">
+          </a>
         </div>
       </div>
     </div>

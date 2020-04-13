@@ -2,13 +2,16 @@
   <div>
     <div v-for="item in footerList" :key="item.id" class="footer-bg">
       <div class="box">
-        <p class="companydesc">
-          <i class="flaticon-pin" /> {{ item.company }}
-        </p>
+        <a :href="item.gochemLink" target="_blank">
+          <p class="companydesc">
+            <i class="flaticon-pin" /> {{ item.company }}
+          </p>
+        </a>
       </div>
       <div class="box">
         <div class="imgcontainer">
-          <img class="slikonLogo" src="../../../assets/img/welove.png" alt="We Love Slicone">
+          <a :href="item.logoLink" target="_blank">
+            <img class="slikonLogo" :src="item.logo" alt="We Love Slicone"></a>
         </div>
       </div>
       <div class="box">
@@ -16,12 +19,8 @@
           <p class="copyright">
             <i>Copyright © 2020</i>
           </p>
-          <img class="lanista" src="../../../assets/img/beyaz.png" alt="Created by Lanista Software">
+          <a :href="item.lanistaLink" target="_blank"><img :src="item.lanistaLogo" alt="Created by Lanista Software"></a>
         </div>
-        <!-- <div class="footer-copyright text-center py-3">
-          © Copyright 2020
-          <img class="lanista" src="../../assets/img/beyaz.png">
-        </div> -->
       </div>
     </div>
   </div>
@@ -33,8 +32,11 @@ export default {
       footerList: [
         {
           company: 'Gochem Slikon Kimya San. Tic. Ltd. Şti',
-          logo: '../../assets/img/welove.png',
-          lanistaLogo: '../../assets/img/beyaz.png'
+          gochemLink: '/contact',
+          logo: require('../../../assets/img/welove.png'),
+          logoLink: '/about',
+          lanistaLogo: require('../../../assets/img/beyaz.png'),
+          lanistaLink: 'https://www.lanista.com.tr/'
         }
       ]
     }
@@ -42,6 +44,10 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+a{
+  color: #939393;
+  font-size: .8rem;
+}
 .box {
 
   width: 33.3%;
@@ -52,7 +58,7 @@ export default {
   .companydesc {
     position: relative;
     top: 25%;
-
+    margin-top: .4rem;
   }
 
   .imgcontainer {

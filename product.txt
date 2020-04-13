@@ -1,149 +1,78 @@
 <template>
   <section>
-    <Social class="social" />
-    <div class="content content-background">
-      <div class="sidenav">
-        <h1> Slikon Pigment</h1>
-        <div class="head rtv-1">
-          <h2> RTV 1</h2>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#clients">Clients</a>
-          <a href="#contact">Contact</a>
-          <a href="#contact">Search</a>
-        </div>
-        <div class="head rtv-2">
-          <h2> RTV 2</h2>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#clients">Clients</a>
-          <a href="#contact">Contact</a>
-          <a href="#contact">Search</a>
-        </div>
-        <div class="head lsr">
-          <h2> LSR </h2>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#clients">Clients</a>
-          <a href="#contact">Contact</a>
-          <a href="#contact">Search</a>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#clients">Clients</a>
-          <a href="#contact">Contact</a>
-          <a href="#contact">Search</a>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#clients">Clients</a>
-          <a href="#contact">Contact</a>
-          <a href="#contact">Search</a>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#clients">Clients</a>
-          <a href="#contact">Contact</a>
-          <a href="#contact">Search</a>
-        </div>
-      </div>
-      <div class="product-container">
-        <div class="product-content">
-          <h2>SS 9852</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quia ab possimus, consequatur repudiandae eveniet vitae velit dolorum sint fugiat necessitatibus est obcaecati cumque, eos iste neque, sapiente eum consequuntur exercitationem ullam culpa soluta. Minima optio eaque soluta ipsam, quia quidem dicta et fugiat quisquam sapiente, explicabo dignissimos iusto adipisci? Ratione aut laboriosam error repudiandae debitis saepe eligendi quos natus, nemo non architecto consequatur cum autem culpa maxime necessitatibus a. Enim, nemo reprehenderit exercitationem odio harum blanditiis illum, sint fuga impedit eligendi asperiores, minus accusamus ullam cum. Eos, nostrum nihil? Sed ullam deserunt cum aut vero corporis dicta atque quos?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore inventore nobis possimus non quaerat sed. Impedit dignissimos sint eligendi eaque?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti modi inventore nesciunt consequatur unde! Sapiente, pariatur sunt ut architecto ipsum velit unde, iure beatae tempora, inventore suscipit ab repellendus nobis!
-          </p>
-        </div>
-        <div class="product-link">
-          <div class="btn-product">
-            <button class="btn">
-              <i class="flaticon-product" /> Online sipariş çok yakında
-            </button>
-          </div>
-          <div class="btn-product">
-            <i class="flaticon-deal" />
-            <br>
-            <button class="btn">
-              Hemen teklif alın
-            </button>
-          </div>
-          <div class="btn-product">
-            <i class="flaticon-info" />
-            <br>
-            <button class="btn">
-              Daha fazla bilgi alın
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <li class="icon-container first-li" @mouseover="show=true" @mouseleave="show=false">
+      <span class="search-input">
+        <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
+          <input v-if="show" v-model="searchQuery" type="text" size="20" height="48">
+        </transition>
+        <i class="flaticon-search" i />
+      </span>
+      <nuxt-link
+        v-for="nav in resultQuery"
+        :key="nav.id"
+        to="/"
+        tag="li"
+        class="navli"
+      >
+        <a :href="nav.content" target="_blank">{{ nav.header }}</a>
+      </nuxt-link>
+    </li>
   </section>
 </template>
 <script>
-import Social from '@/components/globalcomponents/Social'
 export default {
-  components: {
-    Social
+  data () {
+    return {
+      show: false,
+      searchQuery: null
+    }
+  },
+  computed: {
+    resultQuery () {
+      if (this.searchQuery) {
+        return this.$store.getters.getSlideSets.filter((item) => {
+          return this.searchQuery.toLowerCase().split(' ').every(v => item.header.toLowerCase().includes(v))
+        })
+      } else {
+        return this.resources
+      }
+    }
   }
 }
 </script>
 <style lang="less" scoped>
-.sidenav {
-  height: 100%;
-  width: 20%;
-  overflow-x: hidden;
-  float: left;
-  padding: 3rem;
-  h1 {
-    padding-bottom: 1.1rem;
-    font-size: 1.8rem;
-  }
-  .head{
-    h2{
-      padding: 1rem;
-      font-size: 1.5rem;
-    }
 
+.icon-container {
+  padding: 0.5rem 0.5rem;
+  display: inline-block;
+  background-color: transparent;
+  vertical-align: middle;
+
+  .search-input{
+  padding: 0.9rem 0.5rem 0.9rem 1rem;
+  border-radius: 3em;
+  transition: 1.3s;
+  }
+
+  [class^="flaticon-search"]:hover:before {
+    color: lightgreen;
+  }
+
+  input {
+    color: white;
+    border: none;
+    background: transparent;
+    vertical-align: middle;
+    z-index: 1000;
   }
 }
-.sidenav a {
-  padding: .3rem .3rem .3rem 1rem;
-  display: block;
+
+.search-input:hover {
+  background-color: rgba(144, 238, 144, 0.3);
 }
-.product-container{
-  width: 80%;
-  float: left;
-  padding: 2rem 5rem;
-}
-.product-content{
-  h2{
-    font-size: 2rem;
-    padding-bottom: 2rem;
-    line-height:initial;
-  }
-  p{
-    text-indent: 2rem;
-    font-size: 1rem;
-  }
-  h4{
-    background-color: lightgrey;
-  }
-}
-.product-link{
-  width: 100%;
-  text-align: center;
-  .btn-product{
-    width: 33%;
-    float: left;
-    .btn{
-      margin-top: 1.3rem;
-      text-align: center;
-    }
-  [class^="flaticon-"]:before,
-[class*=" flaticon-"]:before,
-[class^="flaticon-"]:after,
-[class*=" flaticon-"]:after {
-  font-size: 3rem;
-  cursor: pointer;
-}
+
+.first-li{
+  position: relative;
+  left: 0.6rem;
 }
 </style>

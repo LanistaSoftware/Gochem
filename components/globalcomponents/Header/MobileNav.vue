@@ -73,7 +73,7 @@ export default {
   background-color: rgba(29, 56, 65,.8);
   padding-top: 1.3rem;
   padding-bottom: 1.3rem;
-  position: fixed;
+  //position: fixed;
   bottom: 0;
   z-index: 100;
 }
