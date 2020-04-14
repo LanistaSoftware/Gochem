@@ -2,7 +2,7 @@ import axios from 'axios'
 
 export default () => {
   return axios.create({
-    baseURL: 'https://test.lanista.com.tr/api',
+    baseURL: 'http://localhost:4000/api',
     withCredentials: false
   })
 }

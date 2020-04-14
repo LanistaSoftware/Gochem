@@ -16,8 +16,8 @@ export const getAboutUs = ({
     commit('setAbout', about)
   }).catch((err) => { alert(err) })
 }
-export const search = () => {
-  return api().get('/pigment/search').then((res) => {
-    console.log(res)
-  }).catch((err) => { console.log(err) })
+export const search = ({ commit }, searchitem) => {
+  return api().post('/search', searchitem).then((res) => {
+    commit('setSearchItem', res.data)
+  }).catch((err) => { alert(err) })
 }

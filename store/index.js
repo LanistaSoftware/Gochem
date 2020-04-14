@@ -6,6 +6,7 @@ const createStore = () => {
   return new Vuex.Store({
     state: () => ({
       About: '',
+      search: '',
       slideSets: [
         {
           index: 1,

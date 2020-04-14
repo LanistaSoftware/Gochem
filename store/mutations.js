@@ -19,3 +19,6 @@ export const setProducts = (state, product) => {
 export const setAbout = (state, about) => {
   state.About = about
 }
+export const setSearchItem = (state, value) => {
+  state.search = value
+}

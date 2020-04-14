@@ -105,12 +105,10 @@ export default {
   },
   created () {
     this.getAboutUsAction()
-    this.search()
   },
   methods: {
     ...mapActions({
-      getAboutUsAction: 'getAboutUs',
-      search: 'search'
+      getAboutUsAction: 'getAboutUs'
     })
   }
 }

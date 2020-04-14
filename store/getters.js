@@ -19,3 +19,6 @@ export const getProducts = (state) => {
 export const getAbout = (state) => {
   return state.About
 }
+export const getSearchItem = (state) => {
+  return state.search
+}

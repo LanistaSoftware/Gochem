@@ -1,18 +1,76 @@
 <template>
   <li class="icon-container first-li" @mouseover="show=true" @mouseleave="show=false">
-    <span class="search-input">
+    <div class="search-input">
       <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
-        <input v-if="show" type="text" size="20" height="48">
+        <input
+          v-if="show"
+          v-model="Search.searchitem"
+          type="text"
+          size="20"
+          height="48"
+          @keyup="searchdata"
+        >
       </transition>
       <i class="flaticon-search" i />
-    </span>
+      <div>
+        <span v-for="item in products" :key="item._id">
+          <a href="/products">
+            {{ item.prdoudctName }}
+          </a>
+        </span>
+        <span v-for="item in sectors" :key="item._id">
+          <a href="/sectors">
+            {{ item.sectorname }}
+          </a>
+        </span>
+        <span v-for="item in pigments" :key="item._id">
+          <a href="/products">
+            {{ item.prdoudctName }}
+          </a>
+        </span>
+      </div>
+    </div>
   </li>
 </template>
 <script>
+import { mapActions, mapGetters } from 'vuex'
 export default {
   data () {
     return {
+      products: {},
+      sectors: {},
+      pigments: {},
+      Search: { searchitem: '' },
       show: false
+    }
+  },
+  computed: {
+    ...mapGetters({
+      getSearchItem: 'getSearchItem'
+    })
+  },
+  methods: {
+    ...mapActions({
+      search: 'search'
+    }),
+    searchdata () {
+      if (this.Search.searchitem.length >= 2) {
+        this.search(this.Search).then(() => {
+          if (this.getSearchItem.sectordetail) {
+            this.sectors = this.getSearchItem.sectordetail
+          }
+          if (this.getSearchItem.proddetail) {
+            this.products = this.getSearchItem.proddetail
+          }
+          if (this.getSearchItem.pigmentdetail) {
+            this.pigments = this.getSearchItem.pigmentdetail
+          }
+        })
+      } else {
+        this.sectors = null
+        this.products = null
+        this.pigments = null
+      }
     }
   }
 }
@@ -29,6 +87,9 @@ export default {
   padding: 0.9rem 0.5rem 0.9rem 1rem;
   border-radius: 3em;
   transition: 1.3s;
+  a{
+    color: red;
+  }
   }
 
   [class^="flaticon-search"]:hover:before {
@@ -51,5 +112,9 @@ export default {
 .first-li{
   position: relative;
   left: 0.6rem;
+}
+.search-result{
+  position: relative;
+  top: 5px;
 }
 </style>
