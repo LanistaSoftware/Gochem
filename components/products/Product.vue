@@ -1,6 +1,6 @@
 <template>
   <section id="product">
-    <Sliderp />
+    <productSlide />
     <div class="content clearfix content-background mobile-content-background">
       <div id="rescat" class="responsive-category">
         <h2>Responsive Category</h2>
@@ -17,7 +17,7 @@
           <a href="#contact">Contact</a>
           <a href="#contact">Search</a>
         </div>
-        <div class="product-category">
+        <!-- <div class="product-category">
           <h2> RTV 2</h2>
           <a href="#about">About</a>
           <a href="#services">Services</a>
@@ -47,7 +47,7 @@
           <a href="#clients">Clients</a>
           <a href="#contact">Contact</a>
           <a href="#contact">Search</a>
-        </div>
+        </div> -->
       </section>
       <div class="product-container">
         <div class="product-content">
@@ -94,15 +94,18 @@
   </section>
 </template>
 <script>
-import Sliderp from '@/components/products/ProductSlide'
+import productSlide from '@/components/products/globalSlide.vue'
 export default {
   components: {
-    Sliderp
+    productSlide
   },
   computed: {
     getProduct () {
       return this.$store.getters.getProducts
     }
+  },
+  created () {
+    this.$store.commit('setActiveSlide', 'product')
   }
 }
 </script>

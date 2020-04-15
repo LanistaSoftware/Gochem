@@ -4,39 +4,24 @@
     <div class="content content-background">
       <section class="sidenav overflow-scroll">
         <div class="sector-link">
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#clients">Clients</a>
-          <a href="#contact">Contact</a>
-          <a href="#contact">Search</a>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#clients">Clients</a>
-          <a href="#contact">Contact</a>
-          <a href="#contact">Search</a>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#clients">Clients</a>
-          <a href="#contact">Contact</a>
-          <a href="#contact">Search</a>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#contact">Search</a>
+          <a v-for="item in getsector" :key="item._id" :href="'#'+item.sectorname" @click="getSectorItem(item._id)">
+            {{ item.sectorname }}
+          </a>
         </div>
       </section>
       <div class="sector-container">
         <div class="title-sektor">
-          <h3>TEKSTİL</h3>
+          <h3>{{ sectoritems.sectorname }}</h3>
         </div>
         <div class="sector-row">
           <SectorAlbum class="skCar" />
         </div>
         <div class="sector-row">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo provident maxime optio ea. Repellat incidunt perspiciatis eveniet in repellendus, pariatur ratione possimus deserunt vero architecto, velit minus, inventore aliquid. Labore odio alias modi eum unde, totam molestias tempore dolorum maxime, commodi inventore asperiores, atque explicabo sunt. Sint itaque neque ullam sapiente libero ducimus distinctio, ad, velit, numquam repellendus possimus a nemo quisquam? Non reprehenderit nihil quos, suscipit fuga, labore velit cumque mollitia minima eaque doloribus tenetur adipisci, accusamus ab sunt animi voluptates. Iusto recusandae, a fugit consequatur nostrum sed quibusdam ipsa facere culpa id ab eos ipsam numquam unde deserunt exercitationem enim consectetur illum consequuntur blanditiis sequi. Quidem vel porro dolorem! Ea voluptatem eveniet et quidem eos ab nisi ex.
+            {{ sectoritems.sectordescription }}
           </p>
           <SectorAlbum class="skCar-mobil" />
-          <div class="btn-link-sector">
+          <div v-if="sectoropen" class="btn-link-sector">
             <div class="sector-btn">
               <button class="btn">
                 <span class="sector-btn-info">
@@ -58,12 +43,55 @@
   </section>
 </template>
 <script>
+import { mapActions, mapGetters } from 'vuex'
 import SectorAlbum from '@/components/sectors/SectorAlbum'
-import Sliderp from '@/components/products/ProductSlide'
+import Sliderp from '@/components/products/globalSlide.vue'
 export default {
   components: {
     SectorAlbum,
     Sliderp
+  },
+  data () {
+    return {
+      sector: {
+        title: '',
+        desc: ''
+      },
+      sectoropen: false
+    }
+  },
+  computed: {
+    ...mapGetters({
+      getsector: 'getsector',
+      getASector: 'getASector',
+      sectoritems: 'sectoritems',
+      sectorid: 'sectorid'
+    })
+  },
+  mounted () {
+    const id = localStorage.getItem('sectorid')
+    if (id !== null || id !== '') {
+      this.getSectorItem(id)
+      localStorage.removeItem('sectorid')
+    }
+  },
+  created () {
+    this.sectorData()
+    this.sectoropen = false
+    this.$store.commit('setActiveSlide', 'sector')
+  },
+  methods: {
+    ...mapActions({
+      sectorData: 'sectorData',
+      oneSector: 'oneSector'
+    }),
+    getSectorItem (id) {
+      this.oneSector(id).then(() => {
+        this.sectoropen = true
+        this.sector.title = this.getASector.sectorname
+        this.sector.desc = this.getASector.sectordescription
+      })
+    }
   }
 }
 </script>
