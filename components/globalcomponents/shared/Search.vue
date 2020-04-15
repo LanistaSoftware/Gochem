@@ -48,8 +48,4 @@ export default {
   background-color: rgba(144, 238, 144, 0.3);
 }
 
-.first-li{
-  position: relative;
-  left: 0.6rem;
-}
 </style>

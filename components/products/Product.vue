@@ -68,7 +68,7 @@
             <button class="btn">
               <i class="flaticon-product" />
               <span class="product-btn-info">
-                Online sipariş çok yakında !
+                Online sipariş çok yakında.
               </span>
             </button>
           </div>
@@ -76,7 +76,7 @@
             <button class="btn">
               <i class="flaticon-customer-service" />
               <span class="product-btn-info">
-                Hemen teklif alın !
+                Hemen teklif alın.
               </span>
             </button>
           </div>
@@ -177,14 +177,13 @@ export default {
 
         .product-btn-info {
           font-size: 1rem;
-          padding: 0.5rem 0.5rem;
+          padding: 0.8rem 3.7rem;
           text-align: center;
           color: white;
           border: 1px solid white;
           border-radius: 1em;
           display: block;
-          width: 10rem;
-          height: 4rem;
+          width: 14rem;
           transition: 0.5s;
         }
       }

@@ -1,17 +1,15 @@
 <template>
-  <div class="social-container social">
-    <ul class="social-network social-circle">
-      <li v-for="sosyal in social" :key="sosyal.id" class="icon-container">
-        <a
-          :href="sosyal.href"
-          :title="sosyal.title"
-        >
-          <i
-            :class="sosyal.icon"
-          /></a>
-      </li>
-    </ul>
-  </div>
+  <ul class="social-network social-circle">
+    <li v-for="sosyal in social" :key="sosyal.id" class="icon-container">
+      <a
+        :href="sosyal.href"
+        :title="sosyal.title"
+      >
+        <i
+          :class="sosyal.icon"
+        /></a>
+    </li>
+  </ul>
 </template>
 <script>
 export default {
@@ -27,7 +25,7 @@ export default {
         {
           href: '#',
           title: 'linkedin',
-          icon: 'flaticon-linkedin-1'
+          icon: 'flaticon-linkedin'
         },
         {
           href: '#',
@@ -40,9 +38,6 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-/*=========================
-  Icons
- ================= */
 
 ul.social-network li {
   display: inline-block;
@@ -53,19 +48,10 @@ ul li {
   cursor: pointer !important;
   padding-left: .6rem;
 }
-[class^="flaticon-twitter"]:before,[class^="flaticon-linkedin-1"]:before,[class^="flaticon-youtube"]:before {
+[class^="flaticon-twitter"]:before,[class^="flaticon-linkedin"]:before,[class^="flaticon-youtube"]:before {
   font-size: 1.5rem;
 }
 [class^="flaticon-search"]:before{
   font-size: 1.5rem;
 }
-// [class^="flaticon-youtube"]:hover:before {
-//   color: #ff0000;
-// }
-// [class^="flaticon-twitter"]:hover:before {
-//   color: #33ccff;
-// }
-// [class^="flaticon-linkedin-1"]:hover:before {
-//   color: #007bb7;
-// }
 </style>
