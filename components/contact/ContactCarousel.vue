@@ -9,27 +9,6 @@
       :space="450"
     >
       <slide v-for="(slide, i) in contactSlides" :key="i" :index="i">
-        <!-- <div class="contact-slide">
-          <div class="contact-head clearfix">
-            <span class="icon-container">
-              <i :class="slide.icons" />
-
-            </span>
-            <span class="heading-text-container">
-              <h2>
-                {{ slide.title }}
-              </h2>
-            </span>
-          </div>
-          <hr>
-          <div class="contact-item">
-            <h3> {{ slide.info }} </h3>
-            <p> {{ slide.content }} </p>
-          </div>
-          <div class="contact-btn">
-            <button> {{ slide.contactBtn }} </button>
-          </div>
-        </div> -->
         <div class="slide-card-container">
           <div class="slide-card">
             <div class="slide-card-header clearfix">
@@ -62,56 +41,35 @@ export default {
     return {
       contactSlides: [
         {
-          icons: 'flaticon-sydney-opera-house',
+          icons: 'flaticon-warehouse',
           title: 'Ofis Adresi',
           info: 'bilgiler',
           content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, maxime.',
           contactBtn: 'Sizi Arayalım.'
         },
         {
-          icons: 'flaticon-customer-service',
+          icons: 'flaticon-email',
           title: 'Hızlı bilgi alma servisi',
           info: 'Lorem ipsum dolor sit amet ',
           content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, maxime.',
           contactBtn: 'Destek'
         },
         {
-          icons: 'flaticon-mail',
+          icons: 'flaticon-placeholder',
           title: 'Hızlı bilgi alma servisi',
           info: 'Lorem ipsum dolor sit amet ',
           content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, maxime.',
           contactBtn: 'Destek'
         },
         {
-          icons: 'flaticon-mail',
+          icons: 'flaticon-phone',
           title: 'Hızlı bilgi alma servisi',
           info: 'Lorem ipsum dolor sit amet ',
           content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, maxime.',
           contactBtn: 'Destek'
         },
         {
-          icons: 'flaticon-mail',
-          title: 'Hızlı bilgi alma servisi',
-          info: 'Lorem ipsum dolor sit amet ',
-          content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, maxime.',
-          contactBtn: 'Destek'
-        },
-        {
-          icons: 'flaticon-mail',
-          title: 'Hızlı bilgi alma servisi',
-          info: 'Lorem ipsum dolor sit amet ',
-          content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, maxime.',
-          contactBtn: 'Destek'
-        },
-        {
-          icons: 'flaticon-mail',
-          title: 'Hızlı bilgi alma servisi',
-          info: 'Lorem ipsum dolor sit amet ',
-          content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, maxime.',
-          contactBtn: 'Destek'
-        },
-        {
-          icons: 'flaticon-mail',
+          icons: 'flaticon-delivery-truck',
           title: 'Hızlı bilgi alma servisi',
           info: 'Lorem ipsum dolor sit amet ',
           content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, maxime.',
@@ -125,7 +83,7 @@ export default {
 </script>
 <style lang="less" scoped>
 .carousel-container {
-  width: 82.5vw;
+  width: 100%;
   padding: 50px 0;
   margin-bottom: 40px;
 }

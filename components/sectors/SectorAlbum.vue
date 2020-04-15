@@ -1,35 +1,18 @@
 <template>
-  <b-carousel
-    id="carousel-1"
-    v-model="slide"
-    fade
-    :interval="4000"
-  >
+  <b-carousel id="carousel-1" v-model="slide" fade :interval="4000">
     <b-carousel-slide>
       <template v-slot:img>
-        <img
-          class="img-fluid"
-          src="../../assets/img/bg1.jpg"
-          alt="image slot"
-        >
+        <img class="img-fluid" src="../../assets/img/bg1.jpg" alt="image slot">
       </template>
     </b-carousel-slide>
     <b-carousel-slide>
       <template v-slot:img>
-        <img
-          class="img-fluid"
-          src="../../assets/img/bg2.jpg"
-          alt="image slot"
-        >
+        <img class="img-fluid" src="../../assets/img/bg2.jpg" alt="image slot">
       </template>
     </b-carousel-slide>
     <b-carousel-slide>
       <template v-slot:img>
-        <img
-          class="img-fluid"
-          src="../../assets/img/bg3.jpg"
-          alt="image slot"
-        >
+        <img class="img-fluid" src="../../assets/img/bg3.jpg" alt="image slot">
       </template>
     </b-carousel-slide>
   </b-carousel>
