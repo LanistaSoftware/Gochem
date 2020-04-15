@@ -22,3 +22,15 @@ export const setAbout = (state, about) => {
 export const setSearchItem = (state, value) => {
   state.search = value
 }
+export const setSector = (state, value) => {
+  state.sectors = value
+}
+export const setAsector = (state, value) => {
+  state.sector = value
+}
+export const setActiveSlide = (state, value) => {
+  state.slideactive = value
+}
+export const sectoritemsset = (state, value) => {
+  state.sectoritems = value
+}

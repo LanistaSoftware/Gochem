@@ -7,28 +7,30 @@
           v-model="Search.searchitem"
           type="text"
           size="20"
-          height="48"
           @keyup="searchdata"
         >
       </transition>
       <i class="flaticon-search" i />
-      <div>
-        <span v-for="item in products" :key="item._id">
+      <ul v-if="show" class="search-sn">
+        <li v-for="item in products" :key="item._id">
           <a href="/products">
-            {{ item.prdoudctName }}
+            Ürün- {{ item.prdoudctName }}
           </a>
-        </span>
-        <span v-for="item in sectors" :key="item._id">
-          <a href="/sectors">
-            {{ item.sectorname }}
+        </li>
+        <li v-for="item in sectors" :key="item._id">
+          <a href="/sectors" @click="oneSectoritem(item._id)">
+            Sektör- {{ item.sectorname }}
           </a>
-        </span>
-        <span v-for="item in pigments" :key="item._id">
+        </li>
+        <li v-for="item in pigments" :key="item._id">
           <a href="/products">
-            {{ item.prdoudctName }}
+            Pigment- {{ item.prdoudctName }}
           </a>
+        </li>
+        <span v-for="item in blogs" :key="item._id">
+          <a href="/products" v-html="getHeader(item.content)" />
         </span>
-      </div>
+      </ul>
     </div>
   </li>
 </template>
@@ -40,6 +42,7 @@ export default {
       products: {},
       sectors: {},
       pigments: {},
+      blogs: {},
       Search: { searchitem: '' },
       show: false
     }
@@ -51,8 +54,32 @@ export default {
   },
   methods: {
     ...mapActions({
-      search: 'search'
+      search: 'search',
+      oneSector: 'oneSector'
     }),
+    oneSectoritem (id) {
+      localStorage.setItem('sectorid', id)
+    },
+    getHeader (item, index) {
+      let headerTag = ''
+      let firstIndex = null
+      let lastIndex = null
+      firstIndex = item.search('<h')
+      item = item.slice(firstIndex)
+      firstIndex = 0
+      lastIndex = item.search('</' + item.slice(firstIndex + 1, 3) + '>') + 5
+      headerTag = item.slice(firstIndex, lastIndex)
+      if (headerTag.search('<img') !== -1) {
+        headerTag = '<p>Bu makalede başlık bulunamadı.</p>'
+        return headerTag
+      } else if (lastIndex === -1 || firstIndex === -1) {
+        alert('Başlık bulunamadı.')
+        headerTag = '<p>Bu makalede başlık bulunamadı.</p>'
+        return headerTag
+      } else {
+        return 'Bu makalede aradığınız kelime mevcut' + headerTag
+      }
+    },
     searchdata () {
       if (this.Search.searchitem.length >= 2) {
         this.search(this.Search).then(() => {
@@ -65,11 +92,15 @@ export default {
           if (this.getSearchItem.pigmentdetail) {
             this.pigments = this.getSearchItem.pigmentdetail
           }
+          if (this.getSearchItem.blogdetail) {
+            this.blogs = this.getSearchItem.blogdetail
+          }
         })
       } else {
         this.sectors = null
         this.products = null
         this.pigments = null
+        this.blogs = null
       }
     }
   }

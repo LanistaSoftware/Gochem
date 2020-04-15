@@ -21,3 +21,14 @@ export const search = ({ commit }, searchitem) => {
     commit('setSearchItem', res.data)
   }).catch((err) => { alert(err) })
 }
+export const sectorData = ({ commit }) => {
+  return api().get('/sector').then((res) => {
+    commit('setSector', res.data.sectors)
+  }).catch((err) => { alert(err) })
+}
+export const oneSector = ({ commit }, id) => {
+  return api().get('/sector/' + id).then((res) => {
+    commit('setAsector', res.data.sectorone)
+    commit('sectoritemsset', res.data.sectorone)
+  }).catch((err) => { alert(err) })
+}

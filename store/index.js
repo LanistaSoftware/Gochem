@@ -7,6 +7,13 @@ const createStore = () => {
     state: () => ({
       About: '',
       search: '',
+      sectors: '',
+      sector: '',
+      slideactive: '',
+      sectoritems: {
+        title: '',
+        desc: ''
+      },
       slideSets: [
         {
           index: 1,

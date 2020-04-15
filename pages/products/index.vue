@@ -1,8 +1,5 @@
 <template>
   <div class="cadfsard">
-    <div>
-      <Slide />
-    </div>
     <Product />
   </div>
 </template>

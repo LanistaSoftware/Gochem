@@ -22,3 +22,15 @@ export const getAbout = (state) => {
 export const getSearchItem = (state) => {
   return state.search
 }
+export const getsector = (state) => {
+  return state.sectors
+}
+export const getASector = (state) => {
+  return state.sector
+}
+export const activeslide = (state) => {
+  return state.slideactive
+}
+export const sectoritems = (state) => {
+  return state.sectoritems
+}
