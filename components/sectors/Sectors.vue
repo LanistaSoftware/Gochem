@@ -40,14 +40,14 @@
             <div class="sector-btn">
               <button class="btn">
                 <span class="sector-btn-info">
-                  Daha fazla bilgi al !
+                  Daha fazla bilgi al
                 </span>
               </button>
             </div>
             <div class="sector-btn">
               <button class="btn">
                 <span class="sector-btn-info">
-                  Uygun ürün bul !
+                  Uygun ürün bul
                 </span>
               </button>
             </div>
@@ -124,15 +124,16 @@ export default {
       text-align: center;
 
       .sector-btn-info {
-        font-size: 1rem;
-        padding: 1rem 0.5rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.1rem;
+        word-wrap: break-word;
+        padding: 0.6rem 3.6rem;
         text-align: center;
         color: white;
         border: 1px solid white;
         border-radius: 1em;
         display: block;
-        width: 10rem;
-        height: 4rem;
+        width: 13rem;
         transition: 0.5s;
       }
     }

@@ -32,7 +32,7 @@ export default {
         {
           href: '#',
           title: 'linkedin',
-          icon: 'flaticon-linkedin-1'
+          icon: 'flaticon-linkedin'
         },
         {
           href: '#',
@@ -58,7 +58,7 @@ ul li {
   cursor: pointer !important;
   padding-left: .6rem;
 }
-[class^="flaticon-twitter"]:before,[class^="flaticon-linkedin-1"]:before,[class^="flaticon-youtube"]:before {
+[class^="flaticon-twitter"]:before,[class^="flaticon-linkedin"]:before,[class^="flaticon-youtube"]:before {
   font-size: 1.5rem;
 }
 [class^="flaticon-search"]:before{
