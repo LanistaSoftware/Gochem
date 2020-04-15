@@ -1,5 +1,5 @@
 <template>
-  <div class="contact-content">
+  <div id="contact" class="contact-content">
     <div class="content-background">
       <contactCarousel />
     </div>

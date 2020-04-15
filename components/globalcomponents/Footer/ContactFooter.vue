@@ -1,7 +1,7 @@
 <template>
   <div id="contact-footer">
     <div class="colored-background">
-      <div class="form-map-container bg-container clearfix">
+      <div id="fm-container" class="form-map-container bg-container clearfix">
         <div class="box form-content">
           <p>
             Bir sorunuz mu var ?<br>
@@ -33,7 +33,7 @@
           </button>
         </section>
       </div>
-      <div class="footer-container bg-container">
+      <div id="contact-desktop-footer" class="footer-container bg-container">
         <div class=" clearfix">
           <div class="footer-row">
             <h4>Bizi takip edin</h4>
@@ -96,14 +96,20 @@
           <img class="lanista" src="../../../assets/img/beyaz.png" alt="Created by Lanista Software">
         </div>
       </div>
+      <div id="contact-mobile-footer" class="mobile-footer-container">
+        <MobileFooter />
+      </div>
     </div>
   </div>
 </template>
 <script>
 import ContactForm from '@/components/contact/ContactForm'
+import MobileFooter from '@/components/globalcomponents/Footer/Mobile-footer'
 export default {
   components: {
-    ContactForm
+    ContactForm,
+    MobileFooter
+
   },
   data () {
     return {
@@ -118,7 +124,7 @@ export default {
         {
           href: '#',
           title: 'linkedin',
-          icon: 'flaticon-linkedin-1',
+          icon: 'flaticon-linkedin',
           adress: 'linkedin/gochem'
         },
         {
@@ -142,6 +148,9 @@ export default {
 .footer-contact {
   background-color: transparent;
   padding: 5rem 0 2rem 0;
+}
+#contact-mobile-footer{
+  display: none;
 }
 
 .social-network {
@@ -181,7 +190,7 @@ export default {
 }
 
 [class^="flaticon-twitter"]:before,
-[class^="flaticon-linkedin-1"]:before,
+[class^="flaticon-linkedin"]:before,
 [class^="flaticon-youtube"]:before {
   font-size: 1.7rem;
   margin-right: 0.2rem;

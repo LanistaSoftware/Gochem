@@ -55,7 +55,7 @@
   /*logo*/
   .logobox {
     display: block;
-    width: 12% ;
+    width: 12%;
     float: left;
   }
   .logo-container img {
@@ -382,7 +382,7 @@
 /* Medium devices (landscape tablets, 768px*432px and up) */
 @media only screen and (min-width: 569px) and (max-width: 768px) {
   html {
-    font-size: 10px ;
+    font-size: 10px;
   }
   .boxes .box-container {
     width: 48% !important;
@@ -416,7 +416,7 @@
 @media only screen and (max-width: 320px) {
   #product .product-btn-info {
     font-size: 0.7rem;
-    width: 5rem ;
+    width: 5rem;
   }
   [class="flaticon-next"]:before {
     font-size: 0.8em !important;
@@ -428,7 +428,7 @@
 /* Extra small devices (phones, 480px and down) */
 @media only screen and (max-width: 480px) {
   #product .product-btn-info {
-    font-size: 1rem ;
+    font-size: 1rem;
     width: 5rem !important;
     padding: 0.3rem 0.9rem;
   }
@@ -449,12 +449,12 @@
     display: none;
   }
   #product .product-btn-info {
-    font-size: 1rem ;
+    font-size: 1rem;
     width: 9rem;
     padding: 0.3rem 0.9rem;
   }
   #rescat {
-    display: block ;
+    display: block;
     padding: 1rem;
   }
   .product-link i {
@@ -583,7 +583,7 @@
   }
   #about {
     padding-bottom: 4rem;
-    height: auto  ;
+    height: auto;
   }
   #about .about-content {
     overflow: inherit;
@@ -608,7 +608,7 @@
     float: none;
   }
   #about .overlay .f-left {
-    float: none ;
+    float: none;
   }
   #about .overlay .twin-card {
     float: left;
@@ -639,6 +639,46 @@
 /* Extra small devices (phones, 320px and down) */
 /* Extra small devices (phones, 480px and down) */
 /* Small devices (portrait tablets and large phones, 568px and up) */
+@media only screen and (max-width: 568px) {
+  #contact {
+    /***** OVERLAY BACKGROUND ******/
+  }
+  @supports (backdrop-filter: none) {
+    #contact .content-background,
+    #contact .mobile-content-background {
+      background-color: transparent;
+    }
+  }
+  #fm-container .box {
+    float: none;
+    width: 100%;
+  }
+  #form-container .twin-input {
+    width: 100%;
+    float: none;
+    margin-bottom: 0;
+  }
+  #form-container .left-inputs {
+    padding-right: 0;
+  }
+  #form-container .right-inputs {
+    padding-left: 0;
+  }
+  #form-container input,
+  #form-container textarea,
+  #form-container select {
+    width: 100%;
+  }
+  #form-container .mobile-footer-container {
+    display: block;
+  }
+  #contact-desktop-footer {
+    display: none;
+  }
+  #contact-mobile-footer {
+    display: block !important;
+  }
+}
 /* Medium devices (landscape tablets, 768px*432px and up) */
 /* Large devices (laptops/desktops, 992px*558px and up) */
 /* Extra large devices (large laptops and desktops, 1200px*675px and up) */
