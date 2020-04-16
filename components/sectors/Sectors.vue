@@ -110,6 +110,7 @@ export default {
     border-bottom: 1px solid rgba(255, 255, 255, 0.7);
     padding-top: 1rem;
     line-height: 2.5rem;
+    transition: 1s;
   }
 }
 .carousel {

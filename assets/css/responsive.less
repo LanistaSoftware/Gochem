@@ -51,7 +51,7 @@
 }
 /* Small devices (portrait tablets and large phones, 568px and up) */
 @media only screen and (max-width: 568px) {
-  html {
+   html {
     font-size: 7px;
   }
   .bg-container{
@@ -236,48 +236,39 @@ display: block;
   }
 }
 
-// /* Portrait */
-// @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: portrait) {
-//   html {
-//     font-size: 10px;
-//   }
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: portrait) {
+  html {
+    font-size: 10px;
+  }
 
-//   .bg-container {
-//     width: 95%;
-//   }
+  .bg-container {
+    width: 95%;
+  }
 
-//   .navigation {
-//     width: 82% !important;
-//     span {
-//       display: none;
-//     }
-//     [class^="flaticon-"]:before,
-//     [class*=" flaticon-"]:before,
-//     [class^="flaticon-"]:after,
-//     [class*=" flaticon-"]:after {
-//       padding-left: 1rem;
-//       padding-right: 1rem;
-//       font-size: 1.2rem;
-//     }
-//   }
+  .navigation {
+    width: 82% !important;
+    span {
+      display: none;
+    }
+    [class^="flaticon-"]:before,
+    [class*=" flaticon-"]:before,
+    [class^="flaticon-"]:after,
+    [class*=" flaticon-"]:after {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      font-size: 1.2rem;
+    }
+  }
 
+  .bg-container {
+    height: inherit;
+  }
+ .footer{
+   position: relative;
+ }
 
-//   .sliderBtn {
-//     margin-top: 10vh !important;
-//   }
-//   .box-container {
-//     p {
-//       font-size: 1.3rem;
-//     }
-//   }
-//   .bg-container {
-//     height: inherit;
-//   }
-//  .footer{
-//    position: relative;
-//  }
-
-// }
+}
 
 /* Landscape */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: landscape) {

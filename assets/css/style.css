@@ -180,8 +180,12 @@ h4 {
   color: #939393;
   height: 2rem;
   width: 100%;
+  overflow: auto;
   text-align: center;
   overflow: hidden;
+}
+.mobile-footer {
+  display: none;
 }
 .mobile-footer {
   display: none;

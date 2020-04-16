@@ -175,6 +175,35 @@
     position: absolute;
   }
 }
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: portrait) {
+  html {
+    font-size: 10px;
+  }
+  .bg-container {
+    width: 95%;
+  }
+  .navigation {
+    width: 82% !important;
+  }
+  .navigation span {
+    display: none;
+  }
+  .navigation [class^="flaticon-"]:before,
+  .navigation [class*=" flaticon-"]:before,
+  .navigation [class^="flaticon-"]:after,
+  .navigation [class*=" flaticon-"]:after {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1.2rem;
+  }
+  .bg-container {
+    height: inherit;
+  }
+  .footer {
+    position: relative;
+  }
+}
 /* Landscape */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: landscape) {
   html {
