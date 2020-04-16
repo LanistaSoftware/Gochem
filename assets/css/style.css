@@ -140,7 +140,7 @@ h4 {
 }
 /***** SOCIAL ******/
 .social {
-  height: 2rem;
+  height: 1rem;
   padding-top: 1rem;
   text-align: right;
 }
@@ -180,7 +180,15 @@ h4 {
   color: #939393;
   height: 2rem;
   width: 100%;
+  overflow: auto;
   text-align: center;
+  overflow: hidden;
+}
+.mobile-footer {
+  display: none;
+}
+.mobile-footer {
+  display: none;
 }
 /***** Navigation ******/
 .nuxt-link-exact-active a {

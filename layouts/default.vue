@@ -1,10 +1,14 @@
+/* eslint-disable nuxt/no-env-in-hooks */
+
 <template>
   <div class="bg" :style="{ backgroundImage: 'url(' + bgImageUrl + ')' }">
     <div class="overlay">
       <div class="bg-container clearfix">
         <Header />
         <Socials />
-        <nuxt />
+        <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut" appear>
+          <nuxt />
+        </transition>
       </div>
       <div class="footer">
         <Footer class="footer-desktop" />
@@ -46,9 +50,11 @@ export default {
     }
   }
 }
+
 </script>
 <style lang="less" scoped>
-.mobile-footer{
-  display: none;
+.fadeIn {
+  animation-duration: 1s;
+  animation-delay: .1s;
 }
 </style>

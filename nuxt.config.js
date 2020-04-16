@@ -32,7 +32,8 @@ module.exports = {
   script: [
     { src: 'https://kit.fontawesome.com/475a188618.js', crossorigin: 'anonymous' }
   ],
-  plugins: [{ src: '~plugins/vue-carousel.js', ssr: false, mode: 'client' }
+  plugins: [{ src: '~plugins/vue-carousel.js', ssr: false, mode: 'client' },
+    { src: '~plugins/deneme.js', ssr: false, mode: 'client' }
   ],
   /*
   ** Nuxt.js dev-modules

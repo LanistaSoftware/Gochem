@@ -5,7 +5,9 @@
         <div class="bg-container">
           <Header />
           <Socials />
-          <nuxt />
+          <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut" appear>
+            <nuxt />
+          </transition>
         </div>
       </div>
     </div>
@@ -55,5 +57,8 @@ export default {
   background-position: bottom;
   width: 100%;
 }
-
+.fadeIn {
+  animation-duration: 1s;
+  animation-delay: .1s;
+}
 </style>

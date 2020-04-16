@@ -21,7 +21,7 @@
           </div>
         </div>
       </div>
-      <div class="teams-container clearfix">
+      <div id="c" class="teams-container clearfix">
         <div class="overlay">
           <div class="teams-header">
             <div class="teams-title">

@@ -107,6 +107,16 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+.search-results{
+  text-align: left;
+  li{
+    margin-top: 0.7rem;
+  }
+}
+.navli {
+  position: relative;
+  float:left;
+}
 
 .icon-container {
   padding: 0.5rem 0.5rem;
