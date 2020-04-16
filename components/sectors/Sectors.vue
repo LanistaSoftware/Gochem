@@ -70,7 +70,7 @@ export default {
   },
   mounted () {
     const id = localStorage.getItem('sectorid')
-    if (id !== null || id !== '') {
+    if (id !== null) {
       this.getSectorItem(id)
       localStorage.removeItem('sectorid')
     }

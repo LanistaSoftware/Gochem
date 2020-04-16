@@ -44,3 +44,8 @@ export const getReferencesAction = ({ commit }) => {
     commit('setReferences', res.data.references)
   }).catch((err) => { alert(err) })
 }
+export const getProducts = ({ commit }) => {
+  return api().get('product').then((res) => {
+    console.log(res.data.products)
+  })
+}
