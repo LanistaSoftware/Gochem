@@ -94,6 +94,7 @@
   </section>
 </template>
 <script>
+import { mapActions } from 'vuex'
 import productSlide from '@/components/products/globalSlide.vue'
 export default {
   components: {
@@ -106,6 +107,12 @@ export default {
   },
   created () {
     this.$store.commit('setActiveSlide', 'product')
+    this.getProducts()
+  },
+  methods: {
+    ...mapActions({
+      getProducts: 'getProducts'
+    })
   }
 }
 </script>

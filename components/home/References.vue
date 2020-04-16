@@ -9,13 +9,13 @@
       <div v-for="(ref, index) in references" :key="index.id" class="referance">
         <b-carousel-slide>
           <template v-slot:img>
-            <a :href="ref.webLink" target="_blank">
-              <h2> {{ ref.name }} </h2>
+            <a :href="ref.referenceUrl" target="_blank">
+              <h2> {{ ref.referenceName }} </h2>
               <hr>
               <img
                 :title="ref.title"
                 class="ref-img"
-                :src="ref.photo"
+                :src="imgUrl+ref.imageUrl"
                 width="500"
                 height="300"
                 alt="image slot"
@@ -29,6 +29,7 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex'
 export default {
   data () {
     return {
@@ -37,9 +38,18 @@ export default {
     }
   },
   computed: {
-    references () {
-      return this.$store.getters.getReferences
-    }
+    ...mapGetters({
+      references: 'getReferences',
+      imgUrl: 'imgUrl'
+    })
+  },
+  created () {
+    this.getReferencesAction()
+  },
+  methods: {
+    ...mapActions({
+      getReferencesAction: 'getReferencesAction'
+    })
   }
 }
 </script>

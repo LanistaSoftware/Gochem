@@ -34,3 +34,9 @@ export const activeslide = (state) => {
 export const sectoritems = (state) => {
   return state.sectoritems
 }
+export const gettersVideoId = (state) => {
+  return state.videoid
+}
+export const imgUrl = (state) => {
+  return state.imgurl
+}

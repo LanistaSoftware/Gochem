@@ -30,7 +30,7 @@
       <Box>
         <div class="embed-responsive embed-responsive-16by9">
           <iframe
-            src="https://www.youtube.com/embed/Acnr15Nli7Q"
+            :src="videoid"
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
@@ -47,6 +47,7 @@
 </template>
 <script>
 // import Social from '@/components/globalcomponents/Social'
+import { mapActions, mapGetters } from 'vuex'
 import BootstrapCarousel from '@/components/home/BootsrapCarousel'
 import References from '@/components/home/References'
 import Box from '@/components/home/Box'
@@ -69,16 +70,16 @@ export default {
     return {
       bgImageUrl: 'bgUrl1',
       filteredSlideSets: [],
-      boxAnimated: false
+      boxAnimated: false,
+      videoid: ''
     }
   },
   computed: {
-    slideSets () {
-      return this.$store.getters.getSlideSets
-    },
-    slideIndex () {
-      return this.$store.getters.getSlideIndex
-    }
+    ...mapGetters({
+      slideSets: 'getSlideSets',
+      slideIndex: 'getSlideIndex',
+      gettersVideoId: 'gettersVideoId'
+    })
   },
   watch: {
     slideIndex () {
@@ -96,6 +97,9 @@ export default {
   },
   created () {
     this.animateInterval(500)
+    this.getVideoId().then(() => {
+      this.videoid = 'https://www.youtube.com/embed/' + this.gettersVideoId
+    }).catch()
     this.filteredSlideSets = [this.slideSets[1], this.slideSets[2]]
   },
   methods: {
@@ -107,7 +111,10 @@ export default {
     },
     changeIndex (index) {
       this.$store.commit('changeSlideIndex', index)
-    }
+    },
+    ...mapActions({
+      getVideoId: 'getVideoId'
+    })
   }
 }
 

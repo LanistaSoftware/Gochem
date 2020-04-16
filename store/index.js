@@ -8,8 +8,10 @@ const createStore = () => {
       About: '',
       search: '',
       sectors: '',
+      imgurl: 'https://api.lanista.com.tr/assest/images/',
       sector: '',
       slideactive: '',
+      videoid: '',
       sectoritems: {
         title: '',
         desc: ''
@@ -35,36 +37,7 @@ const createStore = () => {
         }
       ],
       slideIndex: 0,
-      references: [
-        {
-          id: 1,
-          name: 'lanista',
-          photo: require('../assets/img/beyaz.png'),
-          webLink: 'https://www.lanista.com.tr/',
-          title: 'lanista'
-        },
-        {
-          id: 2,
-          name: 'referansımız',
-          photo: require('../assets/img/whitelogo.png'),
-          webLink: 'https://www.lanista.com.tr/',
-          title: 'linke git'
-        },
-        {
-          id: 3,
-          name: 'son durum',
-          photo: require('../assets/img/coloredlogo.png'),
-          webLink: 'https://www.lanista.com.tr/',
-          title: 'lanista sitesine git'
-        },
-        {
-          id: 4,
-          name: 'slogann',
-          photo: require('../assets/img/play-button.png'),
-          webLink: 'https://www.lanista.com.tr/',
-          title: 'lanista.com.tr'
-        }
-      ],
+      references: [],
       customSlideIndex: null,
       aboutUs:
         {
