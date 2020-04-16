@@ -99,7 +99,7 @@ export default {
     this.animateInterval(500)
     this.getVideoId().then(() => {
       this.videoid = 'https://www.youtube.com/embed/' + this.gettersVideoId
-    })
+    }).catch()
     this.filteredSlideSets = [this.slideSets[1], this.slideSets[2]]
   },
   methods: {
