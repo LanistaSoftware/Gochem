@@ -27,7 +27,7 @@ export const oneSector = ({ commit }, id) => {
   return api().get('/sector/' + id).then((res) => {
     commit('setAsector', res.data.sectorone)
     commit('sectoritemsset', res.data.sectorone)
-  }).catch((err) => { alert(err) })
+  }).catch()
 }
 export const getActiveSlide = ({ commit }) => {
   return api().get('slide/active/slide').then((res) => {
