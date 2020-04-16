@@ -1,3 +1,5 @@
+/* eslint-disable nuxt/no-env-in-hooks */
+
 <template>
   <div class="bg" :style="{ backgroundImage: 'url(' + bgImageUrl + ')' }">
     <div class="overlay">
@@ -48,11 +50,9 @@ export default {
     }
   }
 }
+
 </script>
 <style lang="less" scoped>
-.mobile-footer{
-  display: none;
-}
 .fadeIn {
   animation-duration: 1s;
   animation-delay: .1s;

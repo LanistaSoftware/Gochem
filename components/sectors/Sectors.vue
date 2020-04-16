@@ -68,6 +68,13 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+.sidenav{
+  margin-top: 5rem;
+  height: 80%;
+::-webkit-scrollbar-track {
+  margin-top:5rem
+}
+}
 .sector-link{
   a {
     display: block;
@@ -75,6 +82,7 @@ export default {
     border-bottom: 1px solid rgba(255, 255, 255, 0.7);
     padding-top: 1rem;
     line-height: 2.5rem;
+    transition: 1s;
   }
 }
 .carousel {
@@ -84,6 +92,7 @@ export default {
   width: 80%;
   float: left;
   overflow-x: auto;
+  padding-right: 1.5rem;
   height: 100%;
   h3 {
     text-align: center;

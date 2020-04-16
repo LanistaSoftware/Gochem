@@ -49,7 +49,6 @@ a{
   font-size: .8rem;
 }
 .box {
-
   width: 33.3%;
   height: 100%;
   float: left;

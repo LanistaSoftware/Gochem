@@ -2,7 +2,7 @@
   <section>
     <MobileNav />
     <div class="footer-mobile">
-      <div class="clearfix">
+      <div class="">
         <div v-for="item in footerList" :key="item.id" class="footer-container clearfix">
           <div class="company-group">
             <div class="companydesc">

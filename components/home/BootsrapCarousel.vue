@@ -142,6 +142,7 @@ export default {
     font-family: Helvetica , sans-serif;
     font-weight:200;
     margin-top: 1.5rem;
+    line-height: 1.4;
     // letter-spacing: 0.1rem;
   }
   .carousel-items {
