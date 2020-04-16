@@ -8,7 +8,7 @@ const createStore = () => {
       About: '',
       search: '',
       sectors: '',
-      imgurl: 'https://test.lanista.com.tr/img/',
+      imgurl: 'https://api.lanista.com.tr/assest/images/',
       sector: '',
       slideactive: '',
       videoid: '',
