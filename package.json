@@ -29,6 +29,7 @@
     "vue-awesome-swiper": "^4.1.0",
     "vue-carousel": "^0.18.0",
     "vue-carousel-3d": "^0.2.0",
+    "vue-sticky-directive": "0.0.10",
     "vue-template-compiler": "^2.6.11"
   },
   "devDependencies": {

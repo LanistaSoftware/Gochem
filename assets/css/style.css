@@ -182,6 +182,9 @@ h4 {
   width: 100%;
   text-align: center;
 }
+.mobile-footer {
+  display: none;
+}
 /***** Navigation ******/
 .nuxt-link-exact-active a {
   color: lightgreen;

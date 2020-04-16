@@ -5,16 +5,19 @@
         <input v-if="show" v-model="searchQuery" type="text" size="20" height="48">
       </transition>
       <i class="flaticon-search" i />
+      <div class="search-results">
+        <ul v-if="show">
+          <nuxt-link
+            v-for="nav in resultQuery"
+            :key="nav.id"
+            to="/"
+            tag="li"
+          >
+            <a :href="nav.content" target="_blank">{{ nav.header }}</a>
+          </nuxt-link>
+        </ul>
+      </div>
     </span>
-    <nuxt-link
-      v-for="nav in resultQuery"
-      :key="nav.id"
-      to="/"
-      tag="li"
-      class="navli"
-    >
-      <a :href="nav.content" target="_blank">{{ nav.header }}</a>
-    </nuxt-link>
   </li>
 </template>
 <script>
@@ -39,6 +42,12 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+.search-results{
+  text-align: left;
+  li{
+    margin-top: 0.7rem;
+  }
+}
 .navli {
   position: relative;
   float:left;

@@ -53,7 +53,7 @@
                 <a href="/about" target="_blank">Hakkımızda</a>
               </li>
               <li>
-                <a href="/about" target="_blank">Ekibimiz</a>
+                <a href="/about#c">Ekibimiz</a>
               </li>
               <li>
                 <a href="/blogs" target="_blank">Makaleler</a>
@@ -80,7 +80,7 @@
             <hr>
             <ul class="contact-item">
               <li>
-                <a href="/contact" target="_blank">İletişim</a>
+                <a href="#contact-footer">İletişim</a>
               </li>
               <li>
                 <a href="/portfolio" target="_blank">Belgeler</a>
@@ -93,7 +93,7 @@
           <p class="copyright">
             <i>Copyright © 2020</i>
           </p>
-          <a href="https://www.lanista.com.tr/">
+          <a href="https://www.lanista.com.tr/" target="_blank">
             <img class="lanista" src="../../../assets/img/beyaz.png" alt="Created by Lanista Software">
           </a>
         </div>
