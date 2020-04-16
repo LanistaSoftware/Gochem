@@ -1,6 +1,6 @@
 <template>
   <section id="product">
-    <Sliderp />
+    <productSlide />
     <div class="content clearfix content-background mobile-content-background">
       <div id="rescat" class="responsive-category">
         <h2>Responsive Category</h2>
@@ -17,7 +17,7 @@
           <a href="#contact">Contact</a>
           <a href="#contact">Search</a>
         </div>
-        <div class="product-category">
+        <!-- <div class="product-category">
           <h2> RTV 2</h2>
           <a href="#about">About</a>
           <a href="#services">Services</a>
@@ -47,7 +47,7 @@
           <a href="#clients">Clients</a>
           <a href="#contact">Contact</a>
           <a href="#contact">Search</a>
-        </div>
+        </div> -->
       </section>
       <div class="product-container">
         <div class="product-content">
@@ -68,7 +68,7 @@
             <button class="btn">
               <i class="flaticon-product" />
               <span class="product-btn-info">
-                Online sipariş çok yakında !
+                Online sipariş çok yakında.
               </span>
             </button>
           </div>
@@ -76,7 +76,7 @@
             <button class="btn">
               <i class="flaticon-customer-service" />
               <span class="product-btn-info">
-                Hemen teklif alın !
+                Hemen teklif alın.
               </span>
             </button>
           </div>
@@ -94,15 +94,18 @@
   </section>
 </template>
 <script>
-import Sliderp from '@/components/products/ProductSlide'
+import productSlide from '@/components/products/globalSlide.vue'
 export default {
   components: {
-    Sliderp
+    productSlide
   },
   computed: {
     getProduct () {
       return this.$store.getters.getProducts
     }
+  },
+  created () {
+    this.$store.commit('setActiveSlide', 'product')
   }
 }
 </script>
@@ -177,14 +180,13 @@ export default {
 
         .product-btn-info {
           font-size: 1rem;
-          padding: 0.5rem 0.5rem;
+          padding: 0.8rem 3.7rem;
           text-align: center;
           color: white;
           border: 1px solid white;
           border-radius: 1em;
           display: block;
-          width: 10rem;
-          height: 4rem;
+          width: 14rem;
           transition: 0.5s;
         }
       }

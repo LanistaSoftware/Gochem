@@ -1,8 +1,19 @@
 import Vuex from 'vuex'
-
+import * as mutations from './mutations'
+import * as actions from './actions'
+import * as getters from './getters'
 const createStore = () => {
   return new Vuex.Store({
     state: () => ({
+      About: '',
+      search: '',
+      sectors: '',
+      sector: '',
+      slideactive: '',
+      sectoritems: {
+        title: '',
+        desc: ''
+      },
       slideSets: [
         {
           index: 1,
@@ -123,57 +134,9 @@ const createStore = () => {
         }
       ]
     }),
-    mutations: {
-      setSlideSets (state, slide) {
-        state.slideSets = slide
-      },
-      setSlideIndex (state, index) {
-        state.slideIndex = index
-      },
-      setReferences (state, reference) {
-        state.referance = reference
-      },
-      changeSlideIndex (state, customSlideIndex) {
-        state.customSlideIndex = customSlideIndex
-      },
-      setAboutUs (state, about) {
-        state.aboutUs = about
-      },
-      setProducts (state, product) {
-        state.products = product
-      }
-    },
-    actions: {
-      addReferences (vuexContext, reference) {
-        vuexContext.commit('setReferance', reference)
-      },
-      addAbout (vuexContext, about) {
-        vuexContext.commit('setAboutUs', about)
-      },
-      addProduct (vuexContext, product) {
-        vuexContext.commit('setProducts', product)
-      }
-    },
-    getters: {
-      getSlideSets (state) {
-        return state.slideSets
-      },
-      getSlideIndex (state) {
-        return state.slideIndex
-      },
-      getReferences (state) {
-        return state.references
-      },
-      getCustomIndex (state) {
-        return state.customSlideIndex
-      },
-      getAboutUs (state) {
-        return state.aboutUs
-      },
-      getProducts (state) {
-        return state.products
-      }
-    }
+    mutations,
+    actions,
+    getters
   })
 }
 export default createStore

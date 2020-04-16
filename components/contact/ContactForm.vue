@@ -1,15 +1,28 @@
 <template>
   <section>
-    <div class="form-container">
+    <div id="form-container" class="form-container">
       <div class="twin-input left-inputs">
         <div class="inputBox ">
-          <input type="text" name="" class="input" placeholder="Konu">
+          <select id="konu" name="Konu" placeholder="Konu">
+            <option value="">
+              Bilgi almak istiyorum.
+            </option>
+            <option value="">
+              Ürün işlemleri.
+            </option>
+            <option value="">
+              Stok işlemleri.
+            </option>
+            <option value="">
+              Sipariş işlemleri.
+            </option>
+          </select>
         </div>
         <div class="inputBox">
           <input type="text" name="" class="input" placeholder="İsim">
         </div>
       </div>
-      <div class="twin-input right-inputs">
+      <div class="twin-input right-inputs clearfix">
         <div class="inputBox">
           <input type="email" name="" class="input" placeholder="E-mail">
         </div>
@@ -42,18 +55,20 @@
   padding-left: 1rem;
 }
 
-input,textarea{
-  padding: 0.7rem;
+input,textarea,select{
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0.8rem 0.8rem 0.8rem 1.2rem;
   width: 100%;
   margin: 0.5rem;
   border: none;
-  border-radius: 0.2em;
+  border-radius: 0.8em;
+  z-index: 500;
 }
 textarea{
   height: 11rem;
 }
 .text-container{
- position: relative;
+
  .form-btn {
   position: absolute;
   border: 1px solid;
@@ -61,8 +76,8 @@ textarea{
   border-radius: .5rem;
   color: #9A9A9A;
   background: none;
-  bottom: 2rem;
-  right: 1rem;
+  bottom: -60rem;
+  right: 2rem;
   transition: 0.2s;
 }
 .form-btn:hover{

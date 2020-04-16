@@ -43,7 +43,7 @@ export default {
     return {
       contactSlides: [
         {
-          icons: 'flaticon-sydney-opera-house',
+          icons: 'flaticon-warehouse',
           title: 'Ofis Adresi',
           info: '',
           content: '<address><strong>Merkez Ofis</strong> : Atatür Mahallesi Marmara Sanayi Sitesi M Blok No: 7/a ikitelli K.Çekmece/İstanbul <br><strong>Telefon</strong> : 0 212 485 3754<br><strong>Fax </strong> : 0 212 485 3754<br><strong>GSM</strong> : 0 532 626 6355<br><strong>E-Mail</strong> : go@gochem.com.tr</address>',
@@ -85,7 +85,7 @@ export default {
 </script>
 <style lang="less" scoped>
 .carousel-container {
-  width: 82.5vw;
+  width: 100%;
   padding: 50px 0;
   margin-bottom: 40px;
 }

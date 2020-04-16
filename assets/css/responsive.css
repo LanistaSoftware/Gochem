@@ -190,9 +190,9 @@
   .navigation [class*=" flaticon-"]:before,
   .navigation [class^="flaticon-"]:after,
   .navigation [class*=" flaticon-"]:after {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    font-size: 1.6rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    font-size: 1.4rem;
   }
   /*bg arkplan*/
   /*Carousel yatay*/
@@ -519,7 +519,7 @@
     height: 90%;
   }
   #product .content {
-    height: 80vh;
+    height: 100%;
   }
   #product .product-btn-info {
     font-size: 0.8rem;

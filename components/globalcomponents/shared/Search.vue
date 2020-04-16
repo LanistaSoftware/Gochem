@@ -1,41 +1,106 @@
 <template>
   <li class="icon-container first-li" @mouseover="show=true" @mouseleave="show=false">
-    <span class="search-input">
-      <transition>
-        <input v-if="show" v-model="searchQuery" type="text" size="20" height="48">
+    <div class="search-input">
+      <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
+        <input
+          v-if="show"
+          v-model="Search.searchitem"
+          type="text"
+          size="20"
+          @keyup="searchdata"
+        >
       </transition>
       <i class="flaticon-search" i />
-      <div class="search-results">
-        <ul v-if="show">
-          <nuxt-link
-            v-for="nav in resultQuery"
-            :key="nav.id"
-            to="/"
-            tag="li"
-          >
-            <a :href="nav.content" target="_blank">{{ nav.header }}</a>
-          </nuxt-link>
-        </ul>
-      </div>
-    </span>
+      <ul v-if="show" class="search-sn">
+        <li v-for="item in products" :key="item._id">
+          <a href="/products">
+            Ürün- {{ item.prdoudctName }}
+          </a>
+        </li>
+        <li v-for="item in sectors" :key="item._id">
+          <a href="/sectors" @click="oneSectoritem(item._id)">
+            Sektör- {{ item.sectorname }}
+          </a>
+        </li>
+        <li v-for="item in pigments" :key="item._id">
+          <a href="/products">
+            Pigment- {{ item.prdoudctName }}
+          </a>
+        </li>
+        <span v-for="item in blogs" :key="item._id">
+          <a href="/products" v-html="getHeader(item.content)" />
+        </span>
+      </ul>
+    </div>
   </li>
 </template>
 <script>
+import { mapActions, mapGetters } from 'vuex'
 export default {
   data () {
     return {
-      show: false,
-      searchQuery: null
+      products: {},
+      sectors: {},
+      pigments: {},
+      blogs: {},
+      Search: { searchitem: '' },
+      show: false
     }
   },
   computed: {
-    resultQuery () {
-      if (this.searchQuery) {
-        return this.$store.getters.getSlideSets.filter((item) => {
-          return this.searchQuery.toLowerCase().split(' ').every(v => item.header.toLowerCase().includes(v))
+    ...mapGetters({
+      getSearchItem: 'getSearchItem'
+    })
+  },
+  methods: {
+    ...mapActions({
+      search: 'search',
+      oneSector: 'oneSector'
+    }),
+    oneSectoritem (id) {
+      localStorage.setItem('sectorid', id)
+    },
+    getHeader (item, index) {
+      let headerTag = ''
+      let firstIndex = null
+      let lastIndex = null
+      firstIndex = item.search('<h')
+      item = item.slice(firstIndex)
+      firstIndex = 0
+      lastIndex = item.search('</' + item.slice(firstIndex + 1, 3) + '>') + 5
+      headerTag = item.slice(firstIndex, lastIndex)
+      if (headerTag.search('<img') !== -1) {
+        headerTag = '<p>Bu makalede başlık bulunamadı.</p>'
+        return headerTag
+      } else if (lastIndex === -1 || firstIndex === -1) {
+        alert('Başlık bulunamadı.')
+        headerTag = '<p>Bu makalede başlık bulunamadı.</p>'
+        return headerTag
+      } else {
+        return 'Bu makalede aradığınız kelime mevcut' + headerTag
+      }
+    },
+    searchdata () {
+      if (this.Search.searchitem.length >= 2) {
+        this.search(this.Search).then(() => {
+          if (this.getSearchItem.sectordetail) {
+            this.sectors = this.getSearchItem.sectordetail
+          }
+          if (this.getSearchItem.proddetail) {
+            this.products = this.getSearchItem.proddetail
+          }
+          if (this.getSearchItem.pigmentdetail) {
+            this.pigments = this.getSearchItem.pigmentdetail
+          }
+          if (this.getSearchItem.blogdetail) {
+            this.blogs = this.getSearchItem.blogdetail
+          }
         })
       } else {
-        return this.resources
+        this.sectors = null
+        this.products = null
+        this.pigments = null
+        this.blogs = null
       }
     }
   }
@@ -63,6 +128,9 @@ export default {
   padding: 0.9rem 0.5rem 0.9rem 1rem;
   border-radius: 3em;
   transition: 1.3s;
+  a{
+    color: red;
+  }
   }
 
   [class^="flaticon-search"]:hover:before {
@@ -85,5 +153,9 @@ export default {
 .first-li{
   position: relative;
   left: 0.6rem;
+}
+.search-result{
+  position: relative;
+  top: 5px;
 }
 </style>

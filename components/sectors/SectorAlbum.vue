@@ -1,10 +1,5 @@
 <template>
-  <b-carousel
-    id="carousel-1"
-    v-model="slide"
-    fade
-    :interval="4000"
-  >
+  <b-carousel id="carousel-1" v-model="slide" fade :interval="4000">
     <b-carousel-slide>
       <template v-slot:img>
         <div class="img-sector-container">

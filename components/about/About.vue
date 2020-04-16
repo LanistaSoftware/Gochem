@@ -1,24 +1,23 @@
 <template>
-  <section>
+  <section id="about">
     <div class="content content-background overflow-scroll clearfix">
       <div class="about-container clearfix">
         <div class="about-profile">
           <div class="profile-img">
-            <img :src="aboutUs.profileImg" alt="">
+            <img :src="'https://test.lanista.com.tr/img/'+getAbout.imgUrl" alt="">
           </div>
-          <h2>{{ aboutUs.ownername }}</h2>
-          <span>{{ aboutUs.company }}</span>
-          <br>
-          <p>{{ aboutUs.title }}</p>
+          <div class="about-information">
+            <h2>{{ getAboutUs.ownername }}</h2>
+            <span>{{ getAboutUs.company }}</span>
+            <br>
+            <p>{{ getAboutUs.title }}</p>
+          </div>
         </div>
         <div class="about-content">
-          <p>
-            {{ aboutUs.content }}
-            {{ aboutUs.content }}
-          </p>
+          <div v-html="getAbout.content" />
           <div class="imza">
-            <h2> {{ aboutUs.ownername }} </h2>
-            <img :src="aboutUs.autograph" alt="Signature">
+            <h2> {{ getAboutUs.ownername }} </h2>
+            <img :src="getAboutUs.autograph" alt="Signature">
           </div>
         </div>
       </div>
@@ -93,14 +92,24 @@
   </section>
 </template>
 <script>
+import { mapActions, mapGetters } from 'vuex'
 export default {
   data () {
     return {}
   },
   computed: {
-    aboutUs () {
-      return this.$store.getters.getAboutUs
-    }
+    ...mapGetters({
+      getAbout: 'getAbout',
+      getAboutUs: 'getAboutUs'
+    })
+  },
+  created () {
+    this.getAboutUsAction()
+  },
+  methods: {
+    ...mapActions({
+      getAboutUsAction: 'getAboutUs'
+    })
   }
 }
 </script>

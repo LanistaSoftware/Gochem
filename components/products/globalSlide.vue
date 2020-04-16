@@ -1,43 +1,78 @@
 <template>
   <div class="product-responsive-carousel mobile-content-background">
-    <carousel
-      class="carousel-product"
-      :per-page="2.5"
-      :navigation-enabled="true"
-      :min-swipe-distance="20"
-      :navigation-click-target-size="2"
-      :pagination-enabled="false"
-      :center-mode="true"
-      name="Slidep"
-    >
-      <slide v-for="(slide,index) in 10" :key="index.id" class="carousel-responsive">
-        <div class="slide-content">
-          <h2>
-            <a href="#">
-              Serkan
-            </a>
-          </h2>
-        </div>
-      </slide>
-    </carousel>
+    <no-ssr>
+      <carousel
+        class="carousel-product"
+        :per-page="2.5"
+        :navigation-enabled="true"
+        :min-swipe-distance="20"
+        name="global-slide"
+        :navigation-click-target-size="2"
+        :pagination-enabled="false"
+        :center-mode="true"
+        :loop="true"
+      >
+        <slider v-for=" item in getsector" v-show="sectorshow" :key="item.id" class="carousel-responsive">
+          <div class="slide-content">
+            <h2>
+              <a href="#" @click="oneSector(item._id)">
+                {{ item.sectorname }}
+              </a>
+            </h2>
+          </div>
+        </slider>
+        <slider v-for=" item in 10" v-show="!sectorshow" :key="item.id" class="carousel-responsive">
+          <div class="slide-content">
+            <h2>
+              <a href="#">
+                Serkan
+              </a>
+            </h2>
+          </div>
+        </slider>
+      </carousel>
+    </no-ssr>
   </div>
 </template>
 <script>
 import Carousel from 'vue-carousel/src/Carousel.vue'
-import Slide from 'vue-carousel/src/Slide.vue'
+import slider from 'vue-carousel/src/Slide.vue'
+import { mapGetters, mapActions } from 'vuex'
 export default {
   components: {
     Carousel,
-    Slide
+    slider
   },
   data () {
     return {
       i: '',
+      sectorshow: false,
       activeproduct: '',
       nexticon: '<i class="flaticon-next"></i>',
       previcon: '<i class="flaticon-back"></i>'
     }
+  },
+  computed: {
+    ...mapGetters({
+      activeslide: 'activeslide',
+      getsector: 'getsector'
+    })
+  },
+  mounted () {
+    if (this.activeslide === 'sector') {
+      this.sectorData()
+      this.sectorshow = true
+    } else {
+      this.sectorshow = false
+    }
+  },
+  methods: {
+    ...mapActions({
+      oneSector: 'oneSector',
+      sectorData: 'sectorData'
+    })
   }
+
 }
 
 </script>
