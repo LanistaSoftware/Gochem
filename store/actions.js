@@ -1,7 +1,4 @@
 import api from './api'
-export const addReferences = (vuexContext, reference) => {
-  vuexContext.commit('setReferance', reference)
-}
 export const addAbout = (vuexContext, about) => {
   vuexContext.commit('setAboutUs', about)
 }
@@ -30,5 +27,20 @@ export const oneSector = ({ commit }, id) => {
   return api().get('/sector/' + id).then((res) => {
     commit('setAsector', res.data.sectorone)
     commit('sectoritemsset', res.data.sectorone)
-  }).catch((err) => { alert(err) })
+  })
+}
+export const getActiveSlide = ({ commit }) => {
+  return api().get('slide/active/slide').then((res) => {
+    commit('setActionActiveSlide', res.data.slide[0])
+  })
+}
+export const getVideoId = ({ commit }) => {
+  return api().get('video').then((res) => {
+    commit('setVideoId', res.data.sliders[0].videopath)
+  })
+}
+export const getReferencesAction = ({ commit }) => {
+  return api().get('reference').then((res) => {
+    commit('setReferences', res.data.references)
+  })
 }

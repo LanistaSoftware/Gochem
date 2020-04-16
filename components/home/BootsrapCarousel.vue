@@ -28,6 +28,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 export default {
   filters: {
     firstWord (header) {
@@ -66,6 +67,9 @@ export default {
       this.setSlides(this.customSlideIndex)
     }
   },
+  created () {
+    this.getActiveSlide()
+  },
   methods: {
     prev () {
       this.$refs.myCarousel.prev()
@@ -75,7 +79,10 @@ export default {
     },
     setSlides (index) {
       this.$refs.myCarousel.setSlide(index)
-    }
+    },
+    ...mapActions({
+      getActiveSlide: 'getActiveSlide'
+    })
   }
 }
 </script>
