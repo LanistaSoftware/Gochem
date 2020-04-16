@@ -4,7 +4,7 @@
       <div class="about-container clearfix">
         <div class="about-profile">
           <div class="profile-img">
-            <img :src="'https://test.lanista.com.tr/img/'+getAbout.imgUrl" alt="">
+            <img :src="'https://api.lanista.com.tr/assest/images/'+getAbout.imgUrl" alt="">
           </div>
           <div class="about-information">
             <h2>{{ getAboutUs.ownername }}</h2>
