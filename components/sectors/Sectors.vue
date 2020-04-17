@@ -43,7 +43,10 @@
   </section>
 </template>
 <script>
-import { mapActions, mapGetters } from 'vuex'
+import {
+  mapActions,
+  mapGetters
+} from 'vuex'
 import SectorAlbum from '@/components/sectors/SectorAlbum'
 import Sliderp from '@/components/products/globalSlide.vue'
 export default {
@@ -96,14 +99,16 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-.sidenav{
+.sidenav {
   margin-top: 5rem;
   height: 80%;
-::-webkit-scrollbar-track {
-  margin-top:5rem
+
+  ::-webkit-scrollbar-track {
+    margin-top: 5rem
+  }
 }
-}
-.sector-link{
+
+.sector-link {
   a {
     display: block;
     font-size: 1.2rem;
@@ -113,22 +118,27 @@ export default {
     transition: 1s;
   }
 }
+
 .carousel {
-  margin-top:0 !important;
+  margin-top: 0 !important;
 }
+
 .sector-container {
   width: 80%;
   float: left;
   overflow-x: auto;
   padding-right: 1.5rem;
   height: 100%;
+
   h3 {
     text-align: center;
   }
+
   .sector-row {
-    margin-top:3rem;
+    margin-top: 3rem;
     width: 50%;
     float: left;
+
     .skCar {
       margin: 3rem 2rem 1rem 1rem;
     }
@@ -150,7 +160,7 @@ export default {
   width: 100%;
   text-align: center;
   margin-top: 2rem;
-   font-family: Georgia;
+  font-family: Georgia;
 
   .sector-btn {
     width: 50%;
@@ -182,13 +192,16 @@ export default {
   }
 
 }
-.skCar{
+
+.skCar {
   border-radius: 1em;
 }
-.skCar-mobil{
+
+.skCar-mobil {
   display: none;
 }
-.title-sektor{
+
+.title-sektor {
   width: 30%;
   margin: auto;
 }
