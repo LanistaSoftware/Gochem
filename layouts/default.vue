@@ -1,5 +1,4 @@
 /* eslint-disable nuxt/no-env-in-hooks */
-
 <template>
   <div class="bg" :style="{ backgroundImage: 'url(' + bgImageUrl + ')' }">
     <div class="overlay">
