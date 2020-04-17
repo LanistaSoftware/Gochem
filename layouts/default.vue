@@ -6,6 +6,7 @@
       <div class="bg-container clearfix">
         <Header />
         <Socials />
+        <Mobile class="mobile-call" />
         <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut" appear>
           <nuxt />
         </transition>
@@ -22,12 +23,14 @@ import Header from '@/components/globalcomponents/Header/Header'
 import Footer from '@/components/globalcomponents/Footer/Footer'
 import MobileFooter from '@/components/globalcomponents/Footer/Mobile-footer'
 import Socials from '@/components/globalcomponents/shared/Socials'
+import Mobile from '@/components/globalcomponents/shared/Mobile'
 export default {
   components: {
     Header,
     Socials,
     Footer,
-    MobileFooter
+    MobileFooter,
+    Mobile
     // Carousel,
     // Box
   },

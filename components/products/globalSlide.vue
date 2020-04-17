@@ -11,6 +11,8 @@
         :pagination-enabled="false"
         :center-mode="true"
         :loop="true"
+        :navigation-prev-label="previcon"
+        :navigation-next-label="nexticon"
       >
         <slider v-for=" item in getsector" v-show="sectorshow" :key="item.id" class="carousel-responsive">
           <div class="slide-content">
@@ -123,7 +125,7 @@ export default {
 //   }
   .product-responsive-carousel {
     width: 100%;
-    margin-top: 2rem;
+    margin-top: 5rem;
   }
   .carousel-product {
     color: white !important;

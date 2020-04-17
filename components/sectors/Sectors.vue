@@ -25,14 +25,14 @@
             <div class="sector-btn">
               <button class="btn">
                 <span class="sector-btn-info">
-                  Daha fazla bilgi al
+                  <a href="/contact#form-container"> Daha fazla bilgi al</a>
                 </span>
               </button>
             </div>
             <div class="sector-btn">
               <button class="btn">
                 <span class="sector-btn-info">
-                  Uygun ürün bul
+                  <a href="/contact#form-container">  Uygun ürün bul</a>
                 </span>
               </button>
             </div>

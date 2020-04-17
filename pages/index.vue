@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Mobile />
     <div class="carousel">
       <BootstrapCarousel />
     </div>
@@ -51,15 +50,13 @@ import { mapActions, mapGetters } from 'vuex'
 import BootstrapCarousel from '@/components/home/BootsrapCarousel'
 import References from '@/components/home/References'
 import Box from '@/components/home/Box'
-import Mobile from '@/components/globalcomponents/shared/Mobile'
 export default {
   name: 'Slider',
   components: {
     // Social,
     BootstrapCarousel,
     Box,
-    References,
-    Mobile
+    References
   },
   filters: {
     filterBoxContent (value) {

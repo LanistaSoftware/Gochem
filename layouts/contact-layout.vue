@@ -5,6 +5,7 @@
         <div class="bg-container">
           <Header />
           <Socials />
+          <Mobile class="mobile-call" />
           <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut" appear>
             <nuxt />
           </transition>
@@ -20,11 +21,15 @@ import Footer from '../components/globalcomponents/Footer/ContactFooter'
 import Header from '@/components/globalcomponents/Header/Header'
 import Socials from '@/components/globalcomponents/shared/Socials'
 // import MobileFooter from '@/components/globalcomponents/Footer/Mobile-footer'
+
+import Mobile from '@/components/globalcomponents/shared/Mobile'
 export default {
   components: {
     Header,
     Socials,
-    Footer
+    // ContactCarousel
+    Footer,
+    Mobile
 
   },
   data () {
