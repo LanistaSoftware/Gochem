@@ -575,7 +575,43 @@
 /* Extra small devices (phones, 320px and down) */
 /* Extra small devices (phones, 480px and down) */
 /* Small devices (portrait tablets and large phones, 568px and up) */
+@media only screen and (max-width: 568px) {
+  #form-container .twin-input {
+    float: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  #contact-desktop-footer {
+    display: none;
+  }
+  #contact-mobile-footer {
+    display: block !important;
+  }
+}
 /* Medium devices (landscape tablets, 768px*432px and up) */
+@media only screen and (max-width: 768px) {
+  #fm-container .box {
+    float: none;
+    width: 100%;
+    margin-top: 0;
+  }
+}
+#footer-rows .footer-row {
+  width: 33%;
+}
+#footer-rows .first-row {
+  float: none;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+#footer-rows .first-row ul li {
+  display: inline-block;
+  margin: 0.7rem;
+}
+#footer-rows .first-row ul {
+  text-align: center;
+}
 /* Large devices (laptops/desktops, 992px*558px and up) */
 /* Extra large devices (large laptops and desktops, 1200px*675px and up) */
 /* Extra large devices (large laptops and desktops, 1400px and up) */

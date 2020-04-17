@@ -46,6 +46,6 @@ export const getReferencesAction = ({ commit }) => {
 }
 export const getProducts = ({ commit }) => {
   return api().get('product').then((res) => {
-    console.log(res.data.products)
+    alert(res.data.products)
   })
 }
