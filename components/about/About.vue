@@ -4,7 +4,7 @@
       <div class="about-container clearfix">
         <div class="about-profile">
           <div class="profile-img">
-            <img :src="'https://test.lanista.com.tr/img/'+getAbout.imgUrl" alt="">
+            <img :src="'https://api.lanista.com.tr/assest/images/'+getAbout.imgUrl" alt="">
           </div>
           <div class="about-information">
             <h2>{{ getAboutUs.ownername }}</h2>
@@ -29,59 +29,23 @@
             </div>
           </div>
           <div class="teams-head-card clearfix">
-            <div class="twin-card f-left">
+            <div v-for="item in employezero" :key="item._id" class="twin-card f-left">
               <div class="image-card">
-                <div class="profile-image-container f-right">
-                  <img src="https://randomuser.me/api/portraits/men/63.jpg" alt="Profile Image">
-                  <p>Gökhan Özenoğlu</p>
-                  <p>Yönetim Kurulu Başkanı</p>
-                </div>
-              </div>
-            </div>
-            <div class="twin-card f-left clearfix">
-              <div class="image-card">
-                <div class="profile-image-container f-left">
-                  <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Profile Image">
-                  <p>Gökhan Özenoğlu</p>
-                  <p>Yönetim Kurulu Başkanı</p>
+                <div class="profile-image-container">
+                  <img :src="imgUrl+item.imgUrl" alt="Profile Image">
+                  <p>{{item.name}}</p>
+                  <p>{{item.task}}</p>
                 </div>
               </div>
             </div>
           </div>
           <div class="teams-other-card clearfix">
-            <div class="quad-card">
+            <div v-for="item in employeone " :key="item._id" class="quad-card">
               <div class="image-card">
                 <div class="profile-image-container">
-                  <img src="https://randomuser.me/api/portraits/women/7.jpg" alt="Profile Image">
-                  <p>Gökhan Özenoğlu</p>
-                  <p>Yönetim Kurulu Başkanı</p>
-                </div>
-              </div>
-            </div>
-            <div class="quad-card">
-              <div class="image-card">
-                <div class="profile-image-container">
-                  <img src="https://randomuser.me/api/portraits/women/52.jpg" alt="Profile Image">
-                  <p>Gökhan Özenoğlu</p>
-                  <p>Yönetim Kurulu Başkanı</p>
-                </div>
-              </div>
-            </div>
-            <div class="quad-card">
-              <div class="image-card">
-                <div class="profile-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/99.jpg" alt="Profile Image">
-                  <p>Gökhan Özenoğlu</p>
-                  <p>Yönetim Kurulu Başkanı</p>
-                </div>
-              </div>
-            </div>
-            <div class="quad-card">
-              <div class="image-card">
-                <div class="profile-image-container">
-                  <img src="https://randomuser.me/api/portraits/men/21.jpg" alt="Profile Image">
-                  <p>Gökhan Özenoğlu</p>
-                  <p>Yönetim Kurulu Başkanı</p>
+                  <img :src="imgUrl+item.imgUrl" alt="Profile Image">
+                  <p>{{item.name}}</p>
+                  <p>{{item.task}}</p>
                 </div>
               </div>
             </div>
@@ -100,15 +64,23 @@ export default {
   computed: {
     ...mapGetters({
       getAbout: 'getAbout',
-      getAboutUs: 'getAboutUs'
+      getAboutUs: 'getAboutUs',
+      employezero: 'employezero',
+      employeone: 'employeone',
+      imgUrl: 'imgUrl'
     })
   },
   created () {
     this.getAboutUsAction()
+    this.getEmploye()
+  },
+  mounted () {
+    this.$store.commit('setNullemploye')
   },
   methods: {
     ...mapActions({
-      getAboutUsAction: 'getAboutUs'
+      getAboutUsAction: 'getAboutUs',
+      getEmploye: 'getEmploye'
     })
   }
 }
@@ -136,7 +108,14 @@ export default {
     font-size: 1rem;
     padding-top: .5rem;
   }
-
+.twin-card {
+  .profile-image-container:not(:first-child){
+    float: left;
+  }
+  .profile-image-container:not(:last-child){
+    float: right;
+  }
+}
   .profile-img img {
     width: 100%;
     border-radius: 10%;

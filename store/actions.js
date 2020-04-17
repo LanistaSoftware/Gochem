@@ -1,7 +1,4 @@
 import api from './api'
-export const addReferences = (vuexContext, reference) => {
-  vuexContext.commit('setReferance', reference)
-}
 export const addAbout = (vuexContext, about) => {
   vuexContext.commit('setAboutUs', about)
 }
@@ -30,5 +27,42 @@ export const oneSector = ({ commit }, id) => {
   return api().get('/sector/' + id).then((res) => {
     commit('setAsector', res.data.sectorone)
     commit('sectoritemsset', res.data.sectorone)
+  }).catch()
+}
+export const getActiveSlide = ({ commit }) => {
+  return api().get('slide/active/slide').then((res) => {
+    commit('setActionActiveSlide', res.data.slide[0])
   }).catch((err) => { alert(err) })
+}
+export const getVideoId = ({ commit }) => {
+  return api().get('video').then((res) => {
+    commit('setVideoId', res.data.sliders[0].videopath)
+  }).catch((err) => { alert(err) })
+}
+export const getReferencesAction = ({ commit }) => {
+  return api().get('reference').then((res) => {
+    commit('setReferences', res.data.references)
+  }).catch((err) => { alert(err) })
+}
+export const getProducts = ({ commit }) => {
+  return api().get('product').then((res) => {
+    commit('setProduct', res.data.products)
+  })
+}
+export const getEmploye = ({ commit }) => {
+  return api().get('employe').then((res) => {
+    res.data.employes.map((item) => {
+      if (item.order === '0') {
+        commit('setEmployezero', item)
+      }
+      if (item.order === '1') {
+        commit('setEmployeone', item)
+      }
+    })
+  })
+}
+export const getOneProduct = ({ commit }, id) => {
+  return api().get('product/' + id).then((res) => {
+    commit('setProductOne', res.data.productone)
+  })
 }

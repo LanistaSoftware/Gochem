@@ -21,11 +21,11 @@
             </h2>
           </div>
         </slider>
-        <slider v-for=" item in 10" v-show="!sectorshow" :key="item.id" class="carousel-responsive">
+        <slider v-for=" item in getProductDb" v-show="!sectorshow" :key="item.id" class="carousel-responsive">
           <div class="slide-content">
             <h2>
-              <a href="#">
-                Serkan
+              <a :href="'#'+item.prdoudctGroup" @click="getOneProduct(item._id)">
+                {{ item.prdoudctName }}
               </a>
             </h2>
           </div>
@@ -55,7 +55,8 @@ export default {
   computed: {
     ...mapGetters({
       activeslide: 'activeslide',
-      getsector: 'getsector'
+      getsector: 'getsector',
+      getProductDb: 'getProductDb'
     })
   },
   mounted () {
@@ -69,7 +70,8 @@ export default {
   methods: {
     ...mapActions({
       oneSector: 'oneSector',
-      sectorData: 'sectorData'
+      sectorData: 'sectorData',
+      getOneProduct: 'getOneProduct'
     })
   }
 
