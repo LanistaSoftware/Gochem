@@ -33,10 +33,10 @@
       <div class="text-container">
         <div class="inputBox">
           <textarea class="input" placeholder="Mesajınız" />
-          <button class="form-btn">
-            Gönder
-          </button>
         </div>
+        <button class="form-btn">
+          Gönder
+        </button>
       </div>
     </div>
   </section>
@@ -57,7 +57,7 @@
 
 input,textarea,select{
   font-family: Arial, Helvetica, sans-serif;
-  padding: 0.8rem 0.8rem 0.8rem 1.2rem;
+  padding: 1rem 0.8rem 1rem 1.2rem;
   width: 100%;
   margin: 0.5rem;
   border: none;
@@ -68,7 +68,7 @@ textarea{
   height: 11rem;
 }
 .text-container{
-
+  position: relative;
  .form-btn {
   position: absolute;
   border: 1px solid;
@@ -76,9 +76,9 @@ textarea{
   border-radius: .5rem;
   color: #9A9A9A;
   background: none;
-  bottom: -60rem;
-  right: 2rem;
   transition: 0.2s;
+  bottom: 1.5rem;
+  right: 0.5rem;
 }
 .form-btn:hover{
     color: lightgreen;

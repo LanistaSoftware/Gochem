@@ -3,14 +3,14 @@
     <div class="colored-background">
       <div id="fm-container" class="form-map-container bg-container clearfix">
         <div class="box form-content">
-          <p>
+          <h3>
             Bir sorunuz mu var ?<br>
             Bizimle iletişime geçmekten çekinmeyin.
-          </p>
+          </h3>
           <ContactForm />
         </div>
         <div class="box map-content clearfix">
-          <p>Bizi ofisimizde <br> ziyaret edin.</p>
+          <h2>Bizi ofisimizde <br> ziyaret edin.</h2>
           <div class="map-container">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3007.3566675762777!2d28.78506281495511!3d41.08305312276978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa5f570baaaab%3A0xac43b09ef54311fd!2sGochem!5e0!3m2!1str!2str!4v1585750999091!5m2!1str!2str"
@@ -34,8 +34,8 @@
         </section>
       </div>
       <div id="contact-desktop-footer" class="footer-container bg-container">
-        <div class=" clearfix">
-          <div class="footer-row">
+        <div id="footer-rows" class=" clearfix">
+          <div class="footer-row first-row">
             <h4>Bizi takip edin</h4>
             <hr>
             <ul class="social-network social-circle">
@@ -238,12 +238,18 @@ export default {
   text-align: center;
   padding: 1rem;
 
-  p {
+  h2,h3 {
     margin: 1rem;
     letter-spacing: 1px;
     word-spacing: 2px;
     padding: 0.5rem;
   }
+  h3{
+    font-size:1.6rem;
+    margin-top: 3.3rem;
+    padding: 0.2rem;
+  }
+
 }
 
 .map-container {

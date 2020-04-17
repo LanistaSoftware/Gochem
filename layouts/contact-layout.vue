@@ -24,9 +24,8 @@ export default {
   components: {
     Header,
     Socials,
-    // ContactCarousel
     Footer
-    // MobileFooter
+
   },
   data () {
     return {
