@@ -68,7 +68,7 @@
             <button class="btn">
               <i class="flaticon-product" />
               <span class="product-btn-info">
-                Online sipariş çok yakında.
+                <a href="/contact#form-container"> Online sipariş çok yakında.</a>
               </span>
             </button>
           </div>
@@ -76,7 +76,7 @@
             <button class="btn">
               <i class="flaticon-customer-service" />
               <span class="product-btn-info">
-                Hemen teklif alın.
+                <a href="/contact#form-container">Hemen teklif alın.</a>
               </span>
             </button>
           </div>
@@ -84,7 +84,7 @@
             <button class="btn">
               <i class="flaticon-question" />
               <span class="product-btn-info">
-                Daha fazla bilgi alın.
+                <a href="/contact#form-container"> Daha fazla bilgi alın.</a>
               </span>
             </button>
           </div>
@@ -94,6 +94,7 @@
   </section>
 </template>
 <script>
+import { mapActions } from 'vuex'
 import productSlide from '@/components/products/globalSlide.vue'
 export default {
   components: {
@@ -106,6 +107,12 @@ export default {
   },
   created () {
     this.$store.commit('setActiveSlide', 'product')
+    this.getProducts()
+  },
+  methods: {
+    ...mapActions({
+      getProducts: 'getProducts'
+    })
   }
 }
 </script>

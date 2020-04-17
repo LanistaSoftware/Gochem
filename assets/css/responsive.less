@@ -56,6 +56,7 @@
   }
   .bg-container{
     width: 100%;
+    height: auto;
   }
 
   /*** Content Background ***/
@@ -261,9 +262,9 @@ display: block;
     }
   }
 
-  .bg-container {
-    height: inherit;
-  }
+  // .bg-container {
+  //   height: inherit;
+  // }
  .footer{
    position: relative;
  }
@@ -316,9 +317,9 @@ display: block;
       font-size: 1rem !important;
     }
   }
-  .bg-container {
-    height: inherit;
-  }
+  // .bg-container {
+  //   height: inherit;
+  // }
   /*Carousel yatay bitiş*/
 
   /*box boyutu*/
@@ -668,6 +669,7 @@ p {
     .product-btn-info {
       font-size: 0.8rem ;
       width: 7rem ;
+      padding: .4rem;
     }
   }
  
@@ -686,6 +688,11 @@ p {
     }
     .sidenav {
       display: none;
+    }
+    .product-btn-info {
+      font-size: 0.6rem ;
+      width: 8rem ;
+      padding: 1rem;
     }
   }
   #rescat{
@@ -742,10 +749,15 @@ p {
   .content{
     height: 100%;
   }
+  // .product-btn-info {
+  //   font-size: 0.8rem ;
+  //   width: 8rem;
+  //   padding: 0.3rem;
+  // }
   .product-btn-info {
     font-size: 0.8rem ;
-    width: 8rem;
-    padding: 0.3rem;
+    width: 7rem;
+    padding: 0.9rem;
   }
    }
 }
@@ -779,7 +791,17 @@ p {
 
 /* Extra small devices (phones, 320px and down) */
 @media only screen and (max-width: 320px) {
+  #about {
+    .overlay {
+      h2 {
+        font-size: 1.3rem;
+      }
 
+      .teams-title {
+        height: 7rem;
+      }
+    }
+  }
 }
 
 /* Extra small devices (phones, 480px and down) */
@@ -789,7 +811,79 @@ p {
 
 /* Small devices (portrait tablets and large phones, 568px and up) */
 @media only screen and (max-width: 568px) {
+  #about {	
+    .twin-card {	
+      width: 100%;	
 
+
+    }	
+
+    .f-right {	
+      display: none;	
+    }	
+
+    .f-left {	
+      display: none;	
+    }	
+
+    padding-bottom: 2rem;	
+    height: auto;	
+
+    .about-profile {	
+      float: none;	
+      width: 100%;	
+    }	
+
+    .about-content {	
+      padding: 0.5rem 0.5rem 0.5rem 0.5rem;	
+
+      p {	
+        padding-left: 0rem;	
+        padding-right: 0rem;	
+      }	
+    }	
+
+    .about-container {	
+      overflow-x: visible;	
+    }	
+
+    .about-information {	
+      display: none;	
+    }	
+
+    img {	
+      width: 25%;	
+    }	
+
+    .overlay {	
+      position: relative;	
+
+      img {	
+        width: 100%;	
+      }	
+
+      .profile-image-container {	
+        width: 11rem;	
+      }	
+
+      h2 {	
+        font-size: 1.5rem;	
+      }	
+    }	
+
+    .overflow-scroll {	
+      overflow-x: none;	
+    }	
+
+    .content {	
+      height: auto;	
+    }	
+
+    .quad-card {	
+      width: 100%;	
+
+    }	
+  }
 }
 
 /* Medium devices (landscape tablets, 768px*432px and up) */
@@ -808,6 +902,79 @@ p {
 
 /* Extra large devices (large laptops and desktops, 1400px and up) */
 @media only screen and (min-width: 1400px) {
+}
+
+/* Medium devices (landscape tablets, 768px*432px and up) */
+@media only screen and (max-width: 1024px) and (min-width:569px) {
+  // .footer {
+  //   position: inherit;
+  // }
+
+  #about {
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+    height: initial;
+    .about-content {
+      //overflow: inherit;
+
+      p {
+        font-size: 1.4rem;
+      }
+
+      .about-profile {
+        padding: 2rem;
+      }
+
+      .teams-title {
+        height: 8rem;
+      }
+
+    }
+
+    .overlay {
+      position: relative;
+
+      .quad-card {
+        float: left;
+        width: 50%;
+      }
+
+      .f-right {
+        float: none;
+      }
+
+      .f-left {
+        float: none;
+      }
+
+      .twin-card {
+        float: left;
+        width: 50%;
+      }
+
+    }
+
+    .teams-title {
+      height: 8rem;
+    }
+
+    .content {
+     // height: auto;
+
+    }
+
+    .profile-image-container {
+      img {
+        width: 100%;
+      }
+
+      width: 18rem;
+    }
+
+    .overflow-scroll {
+      overflow-x: none;
+    }
+  }
 }
 
 /* Portrait */
@@ -831,12 +998,112 @@ p {
 
 /* Extra small devices (phones, 480px and down) */
 @media only screen and (max-width: 480px) {
+  .slide-card-header .header-container h2{
+    font-size: 2rem !important;
+}
 
+.slide-card-body {
+  h3 {
+    font-size: 1.8rem !important;
+  }
+  p {
+    font-size: 1.3rem !important;
+  }
+}
+button{
+  width:30% !important;
+  padding: 1rem !important;
+a{
+  font-size:1rem !important;
+}
+}
+.icon-container {
+  text-align: center;
+
+  [class^="flaticon-"]:before,
+  [class*=" flaticon-"]:before,
+  [class^="flaticon-"]:after,
+  [class*=" flaticon-"]:after {
+    font-size: 4rem !important;
+  }
+}
 }
 
 /* Small devices (portrait tablets and large phones, 568px and up) */
 @media only screen and (max-width: 568px) {
+  #contact {
 
+    /***** OVERLAY BACKGROUND ******/
+    @supports (backdrop-filter: none) {
+
+      .content-background,
+      .mobile-content-background {
+        background-color: transparent;
+      }
+    }
+
+
+  }
+
+  #fm-container {
+    .box {
+      float: none;
+      width: 100%;
+    }
+  }
+
+  #form-container {
+    .twin-input {
+      width: 100%;
+      float: none;
+      margin-bottom: 0;
+    }
+
+    .left-inputs {
+      padding-right: 0;
+    }
+
+    .right-inputs {
+      padding-left: 0;
+    }
+
+    input,
+    textarea,
+    select {
+
+      width: 100%;
+
+    }
+
+    .mobile-footer-container {
+      display: block
+    }
+
+  }
+  #contact-desktop-footer {
+    display: none;
+  }
+  #contact-mobile-footer{
+    display: block !important;
+  }
+  .slide-card-header .header-container h2{
+    font-size: 2rem !important;
+}
+.slide-card-container {
+  height: 100% !important;
+}
+
+
+.icon-container {
+  text-align: center;
+
+  [class^="flaticon-"]:before,
+  [class*=" flaticon-"]:before,
+  [class^="flaticon-"]:after,
+  [class*=" flaticon-"]:after {
+    font-size: 2rem !important;
+  }
+}
 }
 
 /* Medium devices (landscape tablets, 768px*432px and up) */
@@ -859,7 +1126,11 @@ p {
 
 /* Portrait */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: portrait) {
- 
+  .slide-card-body{
+    p{
+      font-size: 1.5rem;
+    }
+  }
 }
 
 /* Landscape */

@@ -46,6 +46,7 @@
   }
   .bg-container {
     width: 100%;
+    height: auto;
   }
   /*** Content Background ***/
   /***** OVERLAY BACKGROUND ******/
@@ -197,9 +198,6 @@
     padding-right: 1rem;
     font-size: 1.2rem;
   }
-  .bg-container {
-    height: inherit;
-  }
   .footer {
     position: relative;
   }
@@ -242,9 +240,6 @@
   }
   .carousel-content p {
     font-size: 1rem !important;
-  }
-  .bg-container {
-    height: inherit;
   }
   /*Carousel yatay bitiş*/
   /*box boyutu*/
@@ -493,6 +488,7 @@
   #product .product-btn-info {
     font-size: 0.8rem;
     width: 7rem ;
+    padding: 0.4rem;
   }
 }
 /* Small devices (portrait tablets and large phones, 568px and up) */
@@ -506,6 +502,11 @@
   }
   #product .sidenav {
     display: none;
+  }
+  #product .product-btn-info {
+    font-size: 0.6rem;
+    width: 8rem ;
+    padding: 1rem;
   }
   #rescat {
     display: block ;
@@ -552,8 +553,8 @@
   }
   #product .product-btn-info {
     font-size: 0.8rem;
-    width: 8rem;
-    padding: 0.3rem;
+    width: 7rem;
+    padding: 0.9rem;
   }
 }
 /* Large devices (laptops/desktops, 992px*558px and up) */
@@ -563,23 +564,220 @@
 /* Landscape */
 /**********About Us Responsive********/
 /* Extra small devices (phones, 320px and down) */
+@media only screen and (max-width: 320px) {
+  #about .overlay h2 {
+    font-size: 1.3rem;
+  }
+  #about .overlay .teams-title {
+    height: 7rem;
+  }
+}
 /* Extra small devices (phones, 480px and down) */
 /* Small devices (portrait tablets and large phones, 568px and up) */
+@media only screen and (max-width: 568px) {
+  #about {
+    padding-bottom: 2rem;
+    height: auto;
+  }
+  #about .twin-card {
+    width: 100%;
+  }
+  #about .f-right {
+    display: none;
+  }
+  #about .f-left {
+    display: none;
+  }
+  #about .about-profile {
+    float: none;
+    width: 100%;
+  }
+  #about .about-content {
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  }
+  #about .about-content p {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+  #about .about-container {
+    overflow-x: visible;
+  }
+  #about .about-information {
+    display: none;
+  }
+  #about img {
+    width: 25%;
+  }
+  #about .overlay {
+    position: relative;
+  }
+  #about .overlay img {
+    width: 100%;
+  }
+  #about .overlay .profile-image-container {
+    width: 11rem;
+  }
+  #about .overlay h2 {
+    font-size: 1.5rem;
+  }
+  #about .overflow-scroll {
+    overflow-x: none;
+  }
+  #about .content {
+    height: auto;
+  }
+  #about .quad-card {
+    width: 100%;
+  }
+}
 /* Medium devices (landscape tablets, 768px*432px and up) */
 /* Large devices (laptops/desktops, 992px*558px and up) */
 /* Extra large devices (large laptops and desktops, 1200px*675px and up) */
 /* Extra large devices (large laptops and desktops, 1400px and up) */
+/* Medium devices (landscape tablets, 768px*432px and up) */
+@media only screen and (max-width: 1024px) and (min-width: 569px) {
+  #about {
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+    height: initial;
+  }
+  #about .about-content p {
+    font-size: 1.4rem;
+  }
+  #about .about-content .about-profile {
+    padding: 2rem;
+  }
+  #about .about-content .teams-title {
+    height: 8rem;
+  }
+  #about .overlay {
+    position: relative;
+  }
+  #about .overlay .quad-card {
+    float: left;
+    width: 50%;
+  }
+  #about .overlay .f-right {
+    float: none;
+  }
+  #about .overlay .f-left {
+    float: none;
+  }
+  #about .overlay .twin-card {
+    float: left;
+    width: 50%;
+  }
+  #about .teams-title {
+    height: 8rem;
+  }
+  #about .profile-image-container {
+    width: 18rem;
+  }
+  #about .profile-image-container img {
+    width: 100%;
+  }
+  #about .overflow-scroll {
+    overflow-x: none;
+  }
+}
 /* Portrait */
 /* Landscape */
 /**********Contact Responsive********/
 /* Extra small devices (phones, 320px and down) */
 /* Extra small devices (phones, 480px and down) */
+@media only screen and (max-width: 480px) {
+  .slide-card-header .header-container h2 {
+    font-size: 2rem !important;
+  }
+  .slide-card-body h3 {
+    font-size: 1.8rem !important;
+  }
+  .slide-card-body p {
+    font-size: 1.3rem !important;
+  }
+  button {
+    width: 30% !important;
+    padding: 1rem !important;
+  }
+  button a {
+    font-size: 1rem !important;
+  }
+  .icon-container {
+    text-align: center;
+  }
+  .icon-container [class^="flaticon-"]:before,
+  .icon-container [class*=" flaticon-"]:before,
+  .icon-container [class^="flaticon-"]:after,
+  .icon-container [class*=" flaticon-"]:after {
+    font-size: 4rem !important;
+  }
+}
 /* Small devices (portrait tablets and large phones, 568px and up) */
+@media only screen and (max-width: 568px) {
+  #contact {
+    /***** OVERLAY BACKGROUND ******/
+  }
+  @supports (backdrop-filter: none) {
+    #contact .content-background,
+    #contact .mobile-content-background {
+      background-color: transparent;
+    }
+  }
+  #fm-container .box {
+    float: none;
+    width: 100%;
+  }
+  #form-container .twin-input {
+    width: 100%;
+    float: none;
+    margin-bottom: 0;
+  }
+  #form-container .left-inputs {
+    padding-right: 0;
+  }
+  #form-container .right-inputs {
+    padding-left: 0;
+  }
+  #form-container input,
+  #form-container textarea,
+  #form-container select {
+    width: 100%;
+  }
+  #form-container .mobile-footer-container {
+    display: block;
+  }
+  #contact-desktop-footer {
+    display: none;
+  }
+  #contact-mobile-footer {
+    display: block !important;
+  }
+  .slide-card-header .header-container h2 {
+    font-size: 2rem !important;
+  }
+  .slide-card-container {
+    height: 100% !important;
+  }
+  .icon-container {
+    text-align: center;
+  }
+  .icon-container [class^="flaticon-"]:before,
+  .icon-container [class*=" flaticon-"]:before,
+  .icon-container [class^="flaticon-"]:after,
+  .icon-container [class*=" flaticon-"]:after {
+    font-size: 2rem !important;
+  }
+}
 /* Medium devices (landscape tablets, 768px*432px and up) */
 /* Large devices (laptops/desktops, 992px*558px and up) */
 /* Extra large devices (large laptops and desktops, 1200px*675px and up) */
 /* Extra large devices (large laptops and desktops, 1400px and up) */
 /* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: portrait) {
+  .slide-card-body p {
+    font-size: 1.5rem;
+  }
+}
 /* Landscape */
 /**********Portfolio Responsive********/
 /* Extra small devices (phones, 320px and down) */
