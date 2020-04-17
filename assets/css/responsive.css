@@ -30,7 +30,7 @@
     color: white;
     margin-left: 0.3rem;
     margin-right: 0.3rem;
-    font-size: 1rem !important;
+    font-size: 1.5rem !important;
   }
 }
 /* Small devices (portrait tablets and large phones, 568px and up) */
@@ -40,7 +40,6 @@
   }
   .bg-container {
     width: 100%;
-    height: auto;
   }
   /*** Content Background ***/
   /***** OVERLAY BACKGROUND ******/
@@ -182,9 +181,6 @@
     padding-left: 1rem;
     padding-right: 1rem;
     font-size: 1.2rem;
-  }
-  .footer {
-    position: relative;
   }
   .sliderBtn {
     margin-top: 10vh !important;
@@ -574,9 +570,6 @@
     width: 100%;
   }
 }
-/* Large devices (laptops/desktops, 992px*558px and up) */
-/* Extra large devices (large laptops and desktops, 1200px*675px and up) */
-/* Extra large devices (large laptops and desktops, 1400px and up) */
 /* Medium devices (landscape tablets, 768px*432px and up) */
 @media only screen and (max-width: 1024px) and (min-width: 569px) {
   .footer {
@@ -584,11 +577,13 @@
   }
   #about {
     padding-bottom: 4rem;
-    padding-top: 4rem;
-    height: initial;
+    height: auto;
+  }
+  #about .about-content {
+    overflow: inherit;
   }
   #about .about-content p {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
   }
   #about .about-content .about-profile {
     padding: 2rem;
@@ -616,6 +611,9 @@
   #about .teams-title {
     height: 8rem;
   }
+  #about .content {
+    height: auto;
+  }
   #about .profile-image-container {
     width: 18rem;
   }
@@ -626,65 +624,14 @@
     overflow-x: none;
   }
 }
+/* Large devices (laptops/desktops, 992px*558px and up) */
+/* Extra large devices (large laptops and desktops, 1200px*675px and up) */
+/* Extra large devices (large laptops and desktops, 1400px and up) */
 /* Portrait */
 /* Landscape */
 /**********Contact Responsive********/
 /* Extra small devices (phones, 320px and down) */
-@media only screen and (max-width: 320px) {
-  .slide-card-header .header-container h2 {
-    font-size: 2rem !important;
-  }
-  .slide-card-body h3 {
-    font-size: 1.8rem !important;
-  }
-  .slide-card-body p {
-    font-size: 1.3rem !important;
-  }
-  button {
-    width: 30% !important;
-    padding: 1rem !important;
-  }
-  button a {
-    font-size: 1rem !important;
-  }
-  .icon-container {
-    text-align: center;
-  }
-  .icon-container [class^="flaticon-"]:before,
-  .icon-container [class*=" flaticon-"]:before,
-  .icon-container [class^="flaticon-"]:after,
-  .icon-container [class*=" flaticon-"]:after {
-    font-size: 4rem !important;
-  }
-}
 /* Extra small devices (phones, 480px and down) */
-@media only screen and (max-width: 480px) {
-  .slide-card-header .header-container h2 {
-    font-size: 2rem !important;
-  }
-  .slide-card-body h3 {
-    font-size: 1.8rem !important;
-  }
-  .slide-card-body p {
-    font-size: 1.3rem !important;
-  }
-  button {
-    width: 30% !important;
-    padding: 1rem !important;
-  }
-  button a {
-    font-size: 1rem !important;
-  }
-  .icon-container {
-    text-align: center;
-  }
-  .icon-container [class^="flaticon-"]:before,
-  .icon-container [class*=" flaticon-"]:before,
-  .icon-container [class^="flaticon-"]:after,
-  .icon-container [class*=" flaticon-"]:after {
-    font-size: 4rem !important;
-  }
-}
 /* Small devices (portrait tablets and large phones, 568px and up) */
 @media only screen and (max-width: 568px) {
   #form-container .twin-input {
@@ -727,11 +674,6 @@
 /* Extra large devices (large laptops and desktops, 1200px*675px and up) */
 /* Extra large devices (large laptops and desktops, 1400px and up) */
 /* Portrait */
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: portrait) {
-  .slide-card-body p {
-    font-size: 1.5rem;
-  }
-}
 /* Landscape */
 /**********Portfolio Responsive********/
 /* Extra small devices (phones, 320px and down) */
