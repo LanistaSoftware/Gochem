@@ -3,64 +3,24 @@
     <productSlide />
     <div class="content clearfix content-background mobile-content-background">
       <div id="rescat" class="responsive-category">
-        <h2>Responsive Category</h2>
+        <h2>{{ getProductone.prdoudctGroup }}</h2>
       </div>
       <section class="sidenav product-sidenav overflow-scroll">
         <div class="product-category">
           <h2> Slikon Pigment</h2>
         </div>
-        <div class="product-category">
-          <h2> RTV 1</h2>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#clients">Clients</a>
-          <a href="#contact">Contact</a>
-          <a href="#contact">Search</a>
+        <div v-for="item in getsector" :key="item.id" class="product-category">
+          <h2>{{ item.sectorname }}</h2>
+          <span v-for="product in getProductdb" :key="product._id">
+            <a v-if="item.sectorname==product.prdoudctGroup" :href="'#'+product.prdoudctName " @click="getAproduct(product._id)">{{ product.prdoudctName }}</a>
+          </span>
         </div>
-        <!-- <div class="product-category">
-          <h2> RTV 2</h2>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#clients">Clients</a>
-          <a href="#contact">Contact</a>
-          <a href="#contact">Search</a>
-        </div>
-        <div class="product-category">
-          <h2> LSR </h2>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#clients">Clients</a>
-          <a href="#contact">Contact</a>
-          <a href="#contact">Search</a>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#clients">Clients</a>
-          <a href="#contact">Contact</a>
-          <a href="#contact">Search</a>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#clients">Clients</a>
-          <a href="#contact">Contact</a>
-          <a href="#contact">Search</a>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#clients">Clients</a>
-          <a href="#contact">Contact</a>
-          <a href="#contact">Search</a>
-        </div> -->
       </section>
       <div class="product-container">
         <div class="product-content">
-          <h2>SS 9852</h2>
+          <h2>{{ getProductone.prdoudctName }}</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quia ab possimus, consequatur
-            repudiandae eveniet vitae velit dolorum sint fugiat necessitatibus est obcaecati cumque, eos iste neque,
-            sapiente eum consequuntur exercitationem ullam culpa soluta. Minima optio eaque soluta ipsam, quia quidem
-            dicta et fugiat quisquam sapiente, explicabo dignissimos iusto adipisci? Ratione aut laboriosam error
-            repudiandae debitis saepe eligendi quos natus, nemo non architecto consequatur cum autem culpa maxime
-            necessitatibus a. Enim, nemo reprehenderit exercitationem odio harum blanditiis illum, sint fuga impedit
-            eligendi asperiores, minus accusamus ullam cum. Eos, nostrum nihil? Sed ullam deserunt cum aut vero corporis
-            dicta atque quos?
+            {{ getProductone.productMoreDesc }}
           </p>
         </div>
         <div class="product-link">
@@ -94,25 +54,53 @@
   </section>
 </template>
 <script>
-import { mapActions } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 import productSlide from '@/components/products/globalSlide.vue'
 export default {
   components: {
     productSlide
   },
-  computed: {
-    getProduct () {
-      return this.$store.getters.getProducts
+  data () {
+    return {
+      productone: {
+        name: 'name',
+        desc: 'desc',
+        category: 'category'
+      }
     }
+  },
+  computed: {
+    ...mapGetters({
+      getsector: 'getsector',
+      getProductdb: 'getProductDb',
+      getProductone: 'getProductone'
+    })
   },
   created () {
     this.$store.commit('setActiveSlide', 'product')
     this.getProducts()
+    this.sectorData()
+  },
+  mounted () {
+    const id = localStorage.getItem('productid')
+    if (id !== null) {
+      this.getOneProduct(id)
+      localStorage.removeItem('productid')
+    }
   },
   methods: {
     ...mapActions({
-      getProducts: 'getProducts'
-    })
+      getProducts: 'getProducts',
+      sectorData: 'sectorData',
+      getOneProduct: 'getOneProduct'
+    }),
+    getAproduct (id) {
+      this.getOneProduct(id).then(() => {
+        this.productone.name = this.getProductone.prdoudctName
+        this.productone.desc = this.getProductone.productMoreDesc
+        this.productone.category = this.getProductone.prdoudctGroup
+      })
+    }
   }
 }
 </script>

@@ -46,6 +46,23 @@ export const getReferencesAction = ({ commit }) => {
 }
 export const getProducts = ({ commit }) => {
   return api().get('product').then((res) => {
-    alert(res.data.products)
+    commit('setProduct', res.data.products)
+  })
+}
+export const getEmploye = ({ commit }) => {
+  return api().get('employe').then((res) => {
+    res.data.employes.map((item) => {
+      if (item.order === '0') {
+        commit('setEmployezero', item)
+      }
+      if (item.order === '1') {
+        commit('setEmployeone', item)
+      }
+    })
+  })
+}
+export const getOneProduct = ({ commit }, id) => {
+  return api().get('product/' + id).then((res) => {
+    commit('setProductOne', res.data.productone)
   })
 }

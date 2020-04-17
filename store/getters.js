@@ -40,3 +40,18 @@ export const gettersVideoId = (state) => {
 export const imgUrl = (state) => {
   return state.imgurl
 }
+export const employeone = (state) => {
+  return state.employeone
+}
+export const employezero = (state) => {
+  return state.employezero
+}
+export const getProductDb = (state) => {
+  return state.product
+}
+export const getProductone = (state) => {
+  return state.productone
+}
+export const getterProductSet = (state) => {
+  return state.productoneset
+}
