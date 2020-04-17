@@ -16,9 +16,9 @@
 </template>
 <script>
 // import ContactCarousel from '@/components/contact/ContactCarousel'
+import Footer from '../components/globalcomponents/Footer/ContactFooter'
 import Header from '@/components/globalcomponents/Header/Header'
 import Socials from '@/components/globalcomponents/shared/Socials'
-import Footer from '@/components/globalcomponents/footer/ContactFooter'
 // import MobileFooter from '@/components/globalcomponents/Footer/Mobile-footer'
 export default {
   components: {

@@ -7,7 +7,8 @@
 </template>
 
 <script>
-import contactCarousel from '@/components/contact/contactCarousel'
+
+import contactCarousel from '../contact/ContactCarousel'
 export default {
   components: {
     contactCarousel

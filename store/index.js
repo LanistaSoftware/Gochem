@@ -11,7 +11,16 @@ const createStore = () => {
       imgurl: 'https://api.lanista.com.tr/assest/images/',
       sector: '',
       slideactive: '',
+      product: '',
+      productone: '',
+      productoneset: {
+        name: 'name',
+        desc: 'desc',
+        category: 'category'
+      },
       videoid: '',
+      employezero: [],
+      employeone: [],
       sectoritems: {
         title: '',
         desc: ''

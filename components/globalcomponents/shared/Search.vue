@@ -13,7 +13,7 @@
       <i class="flaticon-search" i />
       <ul v-if="show" class="search-sn">
         <li v-for="item in products" :key="item._id">
-          <a href="/products">
+          <a href="/products" @click="oneProductItem(item._id)">
             Ürün- {{ item.prdoudctName }}
           </a>
         </li>
@@ -54,11 +54,13 @@ export default {
   },
   methods: {
     ...mapActions({
-      search: 'search',
-      oneSector: 'oneSector'
+      search: 'search'
     }),
     oneSectoritem (id) {
       localStorage.setItem('sectorid', id)
+    },
+    oneProductItem (id) {
+      localStorage.setItem('productid', id)
     },
     getHeader (item, index) {
       let headerTag = ''

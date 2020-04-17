@@ -36,7 +36,7 @@
   </section>
 </template>
 <script>
-import MobileNav from '@/components/globalcomponents/header/MobileNav'
+import MobileNav from '../Header/MobileNav'
 import Social from '@/components/globalcomponents/shared/Social'
 export default {
   components: {

@@ -48,3 +48,20 @@ export const setVideoId = (state, value) => {
 export const setReferences = (state, value) => {
   state.references = value
 }
+
+export const setEmployezero = (state, zero) => {
+  state.employezero.push(zero)
+}
+export const setEmployeone = (state, one) => {
+  state.employeone.push(one)
+}
+export const setNullemploye = (state) => {
+  state.employeone = []
+  state.employezero = []
+}
+export const setProduct = (state, value) => {
+  state.product = value
+}
+export const setProductOne = (state, value) => {
+  state.productone = value
+}
