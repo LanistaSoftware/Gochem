@@ -1,6 +1,6 @@
 <template>
   <div id="contact" class="contact-content">
-    <div class="content-background">
+    <div id="content-bg" class="content-background">
       <contactCarousel />
     </div>
   </div>
