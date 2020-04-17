@@ -4,7 +4,6 @@
       <carousel
         class="carousel-product"
         :per-page="2.5"
-        :navigation-enabled="true"
         :min-swipe-distance="20"
         name="global-slide"
         :navigation-click-target-size="2"
