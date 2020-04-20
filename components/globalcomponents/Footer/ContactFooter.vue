@@ -10,12 +10,12 @@
           <ContactForm />
         </div>
         <div class="box map-content clearfix">
-          <h2>Bizi ofisimizde <br> ziyaret edin.</h2>
+          <h3>Bizi ofisimizde <br> ziyaret edin.</h3>
           <div class="map-container">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3007.3566675762777!2d28.78506281495511!3d41.08305312276978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa5f570baaaab%3A0xac43b09ef54311fd!2sGochem!5e0!3m2!1str!2str!4v1585750999091!5m2!1str!2str"
               frameborder="0"
-              class="map"
+              class="map radius-1em"
               allowfullscreen=""
               aria-hidden="false"
               tabindex="0"
@@ -28,7 +28,7 @@
           <p> Dünya ve Ülke çapındaki sayısız müşteri ağımız arasında sizde yerinizi alın.</p>
           <small>Envanterimizde bulunan ürünlerle ilgili bilgi almak için</small>
           <br>
-          <button class="contact-btn">
+          <button class="contact-btn radius-05em">
             <a href="tel:123-456-7890">Arayın</a>
           </button>
         </section>
@@ -259,9 +259,8 @@ export default {
 
   .map {
     border: 0;
-    border-radius: .6rem;
     width: 100%;
-    height: 20rem;
+    height: 23rem;
   }
 }
 
@@ -292,7 +291,6 @@ export default {
     padding: 1rem 3rem;
     background: none;
     border: 1px solid rgba(24, 130, 138, .5);
-    border-radius: .6rem;
     color: #FD7C7C;
     font-weight: 600;
     font-size: 1.3rem;

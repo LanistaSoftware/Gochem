@@ -3,25 +3,27 @@
     <div class="content content-background overflow-scroll">
       <div v-if="false" class="blogs">
         <div v-for="item in 9" :key="item" class="blogs-content">
-          <img src="../../assets/img/bg1.jpg" alt="Buraya belgeler gelecek." style="width:100%">
-          <a href="#"><h3>Slikon Nedir ? </h3></a>
-          <h2>{{ tarih }} </h2>
+          <img class="radius-1em" src="../../assets/img/bg1.jpg" alt="Buraya belgeler gelecek." style="width:100%">
+          <a href="#"><h3 class="radius-05em">Slikon Nedir ? </h3></a>
+          <h2 class="radius-05em">
+            {{ tarih }}
+          </h2>
         </div>
       </div>
       <div v-else class="blogs-detail overflow-scroll">
         <div class="button-container clearfix">
           <div class="box-left ">
-            <button class="btn">
+            <button class="btn radius-05em">
               Önceki <i class="flaticon-left-arrow" />
             </button>
           </div>
           <div class="box-center">
-            <button class="btn">
+            <button class="btn radius-05em">
               Makaleler <i class="flaticon-up-arrow" />
             </button>
           </div>
           <div class="box-right">
-            <button class="btn">
+            <button class="btn radius-05em">
               Sonraki <i class="flaticon-next" />
             </button>
           </div>
@@ -56,7 +58,6 @@ export default {
   img {
       height: 50vh;
       object-fit: cover;
-      border-radius: 0.5em;
   }
   h3{
     cursor: pointer;
@@ -66,7 +67,6 @@ export default {
     margin-top: 1rem;
     padding: .5rem 0;
     text-align: center;
-    border-radius: 0.3em;
     text-transform: uppercase;
     font-size: 1.5rem;
   }
@@ -102,7 +102,6 @@ export default {
     text-align: center;
     color: white;
     border: 1px solid white;
-    border-radius: 1em;
     transition: 0.5s;
   }
 }

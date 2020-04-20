@@ -10,7 +10,7 @@
         :space="450"
       >
         <slide v-for="(slide, i) in contactSlides" :key="i" :index="i">
-          <div class="slide-card-container">
+          <div class="slide-card-container radius-2em">
             <div class="slide-card">
               <div class="slide-card-header clearfix">
                 <span class="icon-container">
@@ -27,7 +27,9 @@
                 <p v-html="slide.content" />
               </div>
               <div class="slide-card-button">
-                <button><a href="#contact-footer">{{ slide.contactBtn }}</a> </button>
+                <button class="radius-05em">
+                  <a href="#contact-footer">{{ slide.contactBtn }}</a>
+                </button>
               </div>
             </div>
           </div>
@@ -100,7 +102,6 @@ export default {
 
 .slide-card-container {
   box-shadow: 0px 3px 15px 6px rgba(216, 238, 255, 0.7);
-  border-radius: 2em;
   height: 405px;
 }
 
@@ -168,7 +169,6 @@ export default {
     padding:5px 20px;
     background: none;
     border: 1px solid #166296;
-    border-radius: 0.7em;
     transition: 0.5s;
 a{
  color: #166296;

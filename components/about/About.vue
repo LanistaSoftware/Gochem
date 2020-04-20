@@ -4,7 +4,7 @@
       <div class="about-container clearfix">
         <div class="about-profile">
           <div class="profile-img">
-            <img :src="'https://api.lanista.com.tr/assest/images/'+getAbout.imgUrl" alt="">
+            <img class="radius-1em" :src="'https://api.lanista.com.tr/assest/images/'+getAbout.imgUrl" alt="">
           </div>
           <div class="about-information">
             <h2>{{ getAboutUs.ownername }}</h2>
@@ -21,8 +21,8 @@
           </div>
         </div>
       </div>
-      <div id="c" class="teams-container clearfix">
-        <div class="overlay">
+      <div id="c" class="teams-container radius-1em clearfix">
+        <div class="overlay radius-1em">
           <div class="teams-header">
             <div class="teams-title">
               <h2>Gochem Silikon Ekibi</h2>
@@ -32,9 +32,9 @@
             <div v-for="item in employezero" :key="item._id" class="twin-card f-left">
               <div class="image-card">
                 <div class="profile-image-container">
-                  <img :src="imgUrl+item.imgUrl" alt="Profile Image">
-                  <p>{{item.name}}</p>
-                  <p>{{item.task}}</p>
+                  <img class="radius-circle" :src="imgUrl+item.imgUrl" alt="Profile Image">
+                  <p>{{ item.name }}</p>
+                  <p>{{ item.task }}</p>
                 </div>
               </div>
             </div>
@@ -43,9 +43,9 @@
             <div v-for="item in employeone " :key="item._id" class="quad-card">
               <div class="image-card">
                 <div class="profile-image-container">
-                  <img :src="imgUrl+item.imgUrl" alt="Profile Image">
-                  <p>{{item.name}}</p>
-                  <p>{{item.task}}</p>
+                  <img class="radius-circle" :src="imgUrl+item.imgUrl" alt="Profile Image">
+                  <p>{{ item.name }}</p>
+                  <p>{{ item.task }}</p>
                 </div>
               </div>
             </div>
@@ -118,13 +118,12 @@ export default {
 }
   .profile-img img {
     width: 100%;
-    border-radius: 10%;
   }
 }
-
 .about-content {
   padding: 1rem;
   overflow: hidden;
+  padding-top:0;
 
   p {
     text-indent: 2rem;
@@ -155,7 +154,6 @@ export default {
 
 .teams-container {
   margin-top: 2rem;
-  border-radius: 2em;
   background-image: url("../../assets/img/team.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -165,7 +163,6 @@ export default {
   .overlay {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.70);
-    border-radius: 2em;
 
   }
 }
@@ -214,7 +211,6 @@ export default {
   img {
     width: 9rem;
     height: auto;
-    border-radius: 50%;
   }
 
   p {

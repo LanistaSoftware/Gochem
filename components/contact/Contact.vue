@@ -1,6 +1,6 @@
 <template>
   <div id="contact" class="contact-content">
-    <div id="content-bg" class="content-background">
+    <div id="content-bg" class="content-background radius-1em">
       <contactCarousel />
     </div>
   </div>
@@ -25,7 +25,6 @@ export default {
   width: 100%;
   margin-top: 3rem;
   padding-bottom: 3rem;
-  border-radius: 1em;
   font-family: Arial, sans-serif;
 }
 </style>
