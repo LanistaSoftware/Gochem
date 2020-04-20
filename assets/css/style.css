@@ -57,6 +57,10 @@ h4 {
 [class^="flaticon-linkedin-1"]:hover:before {
   color: #007bb7;
 }
+.mobile-call {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 /* Content */
 .content {
   color: white;
@@ -128,6 +132,7 @@ h4 {
   padding-left: 1rem;
   margin-right: auto;
   margin-left: auto;
+  height: 100%;
 }
 /***** Global Icon's ****/
 [class^="flaticon-"]:before {
@@ -236,10 +241,10 @@ h4 {
   color: white !important;
 }
 .VueCarousel-navigation-prev {
-  transform: translateY(-50%) translateX(40%) !important;
+  transform: translateY(-50%) translateX(-40%) !important;
 }
 .VueCarousel-navigation-next {
-  transform: translateY(-50%) translateX(-40%) !important;
+  transform: translateY(-50%) translateX(40%) !important;
 }
 .slide-content {
   font-size: 2.2rem;

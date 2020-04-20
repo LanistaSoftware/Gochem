@@ -45,35 +45,34 @@ export default {
     return {
       contactSlides: [
         {
-          icons: 'flaticon-warehouse',
+          icons: 'flaticon-placeholder',
           title: 'Ofis Adresi',
-          info: '',
-          content: '<address><strong>Merkez Ofis</strong> : Atatür Mahallesi Marmara Sanayi Sitesi M Blok No: 7/a ikitelli K.Çekmece/İstanbul <br><strong>Telefon</strong> : 0 212 485 3754<br><strong>Fax </strong> : 0 212 485 3754<br><strong>GSM</strong> : 0 532 626 6355<br><strong>E-Mail</strong> : go@gochem.com.tr</address>',
-          contactBtn: 'Sizi Arayalım.'
+          content: ' <table style="width:100%"><tr>   <td style="width:40%; padding-bottom:1rem; font-weight:bold">Merkez Ofis : </td> <td  style="padding-bottom:1rem"> Atatür Mahallesi Marmara Sanayi Sitesi M Blok No: 7/a ikitelli K.Çekmece/İstanbul</td></tr><tr><td style="padding-bottom:2rem;font-weight:bold">Telefon : </td> <td>0 212 485 3754</td></tr> <tr><td style="padding-bottom:2rem;font-weight:bold">Fax : </td><td>0 212 485 3754</td></tr><tr><td style="font-weight:bold">GSM : </td><td> 0 532 626 6355</td></tr></table>',
+          contactBtn: 'Bizi haritada bulun.'
         },
         {
-          icons: 'flaticon-support-1',
+          icons: 'flaticon-phone',
           title: 'Hızlı Bilgi Alma Servisi',
           info: 'Almak istediğiniz bilgi için sizi hemen arayalım',
           content: 'Bize bilgilerinizi bırakın, almak istediğiniz bilgi için biz sizi arayalım. Hem istediğiniz bilgilere çabuk ulaşın hemde bütün servislerimiz hakkında sizi bilgilendirelim',
           contactBtn: 'Sizi arayalım'
         },
         {
-          icons: 'flaticon-customer-service',
-          title: 'Stoklu Ürünlerle Hızlı Hizmet',
-          info: 'Stoklu ürünlerimizle kesintisiz hizmet ',
-          content: 'Size uygun olan stoklu ürünlerimizi keşfetmek için bizden ayrıntılı bilgi alabilirsiniz. Müşteri destek personelimizden gerekli bilgileri alabilirsiniz.',
-          contactBtn: 'Stok durumunu öğrenin'
-        },
-        {
-          icons: 'flaticon-loupe',
+          icons: 'flaticon-delivery-truck',
           title: 'Zamanında Teslimat',
           info: 'Hızlı ve zamanında teslimat ',
           content: 'Stoktaki ürünlerimizden vereceğiniz siparişlerde İstanbul içine 1 iş gününde teslimat',
           contactBtn: 'Hemen sipariş verin'
         },
         {
-          icons: 'flaticon-customer-service',
+          icons: 'flaticon-warehouse',
+          title: 'Stoklu Ürünlerle Hızlı Hizmet',
+          info: 'Stoklu ürünlerimizle kesintisiz hizmet ',
+          content: 'Size uygun olan stoklu ürünlerimizi keşfetmek için bizden ayrıntılı bilgi alabilirsiniz. Müşteri destek personelimizden gerekli bilgileri alabilirsiniz.',
+          contactBtn: 'Stok durumunu öğrenin'
+        },
+        {
+          icons: 'flaticon-email',
           title: 'Müşteri Destek',
           info: 'Sorularınızı sorun destek personelimiz size dönüş yapsın ',
           content: 'Sorularınızı mail yoluyla bize iletin, uzman müşteri destek personelimiz kısa sürede size dönüş yapsın.',
@@ -83,13 +82,13 @@ export default {
     }
   }
 }
-
 </script>
 <style lang="less" scoped>
 .carousel-container {
   width: 100%;
   padding: 50px 0;
   margin-bottom: 40px;
+  margin-top: 5rem;
 }
 
 .carousel-3d-slide {
@@ -164,12 +163,15 @@ export default {
 .slide-card-button {
   text-align: center;
   button{
-    margin-top: 90px;
+    //margin-top: 90px;
     width:120px;
     padding:5px 20px;
     background: none;
     border: 1px solid #166296;
     transition: 0.5s;
+     position: absolute;
+    left: 35%;
+    bottom: 10%;
 a{
  color: #166296;
     font-size:14px;
