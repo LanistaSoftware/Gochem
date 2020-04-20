@@ -8,6 +8,7 @@ const createStore = () => {
       About: '',
       search: '',
       sectors: '',
+      blog: '',
       imgurl: 'https://api.lanista.com.tr/assest/images/',
       sector: '',
       slideactive: '',
@@ -25,6 +26,7 @@ const createStore = () => {
         title: '',
         desc: ''
       },
+      blogs: '',
       slideSets: [
         {
           index: 1,

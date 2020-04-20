@@ -55,3 +55,9 @@ export const getProductone = (state) => {
 export const getterProductSet = (state) => {
   return state.productoneset
 }
+export const gettersBlogs = (state) => {
+  return state.blogs
+}
+export const gettersBlog = (state) => {
+  return state.blog
+}
