@@ -1,7 +1,7 @@
 <template>
   <section id="portfolio">
     <div class="content content-background overflow-scroll">
-      <div v-if="false" class="portfolio">
+      <div v-if="true" class="portfolio">
         <div v-for="item in 9" :key="item" class="portfolio-content">
           <img class="radius-1em" src="../../assets/img/bg1.jpg" alt="Buraya belgeler gelecek." style="width:100%">
           <a href="#">
