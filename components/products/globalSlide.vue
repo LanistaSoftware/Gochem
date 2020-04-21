@@ -2,9 +2,8 @@
   <div class="product-responsive-carousel mobile-content-background">
     <no-ssr>
       <carousel
-        class="carousel-product"
+        class="carousel-product radius-2em"
         :per-page="2.5"
-        :navigation-enabled="true"
         :min-swipe-distance="20"
         name="global-slide"
         :navigation-click-target-size="2"
@@ -81,48 +80,6 @@ export default {
 
 </script>
 <style lang="less" scoped>
-//  .product-responsive-carousel{
-//    width: 100%;
-//    height: 50%;
-//    margin-top:2rem;
-//    padding-right:2rem;
-//    border-radius:10px ;
-//  }
-// .carousel-product{
-//    color: white !important;
-//    text-align: center;
-//    border: none;
-//    width: 80%;
-//    padding: .2rem 0 0 0;
-//    border-radius:10px ;
-//    margin: 2rem 0 0 6rem;
-//     font-size: 2rem;
-// }
-//   .product-sidenav{
-//     display: none;
-//   }
-
-//   .carousel-product {
-//     color: white !important;
-//     text-align: center;
-//     border: none;
-//     width:100%;
-//     border-radius: 2em;
-//     font-size: 1rem;
-//   }
-
-//   .carousel-responsive:not(:last-child) {
-//     div {
-//       border-right: 1px solid white;
-//     }
-//   }
-
-//   .carousel-responsive {
-//     margin-top: 2.8rem;
-//   }
-//   .activeproduct{
-//     color: red;
-//   }
   .product-responsive-carousel {
     width: 100%;
     margin-top: 5.8rem;
@@ -132,7 +89,6 @@ export default {
     text-align: center;
     border: none;
     width:100%;
-    border-radius: 2em;
     font-size: 1rem;
   }
   .carousel-responsive:not(:last-child) {
