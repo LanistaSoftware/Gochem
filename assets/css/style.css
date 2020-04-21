@@ -46,8 +46,8 @@ h4 {
   color: #007bb7;
 }
 .mobile-call {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 1.8rem;
+  padding-bottom: 1.8rem;
 }
 /* Content */
 .content {
@@ -89,6 +89,7 @@ h4 {
   .content-background {
     background-color: rgba(0, 0, 0, 0.01);
     backdrop-filter: blur(15px);
+    border-radius: 2rem;
   }
 }
 /* Tarayıcı desteği olmadığında seçilecek resim buraya gelecek.*/

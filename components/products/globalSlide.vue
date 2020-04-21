@@ -125,7 +125,7 @@ export default {
 //   }
   .product-responsive-carousel {
     width: 100%;
-    margin-top: 5rem;
+    margin-top: 5.8rem;
   }
   .carousel-product {
     color: white !important;

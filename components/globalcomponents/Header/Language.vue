@@ -60,7 +60,7 @@ export default {
   float: right;
 }
 table, tr, td{
-  padding-top: .1rem;
+  padding-top: .5rem;
   padding-bottom: .1rem;
   padding-left: .4rem;
   text-align: center;

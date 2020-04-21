@@ -33,8 +33,8 @@
               <div class="image-card">
                 <div class="profile-image-container">
                   <img :src="imgUrl+item.imgUrl" alt="Profile Image">
-                  <p>{{item.name}}</p>
-                  <p>{{item.task}}</p>
+                  <p>{{ item.name }}</p>
+                  <p>{{ item.task }}</p>
                 </div>
               </div>
             </div>
@@ -44,8 +44,8 @@
               <div class="image-card">
                 <div class="profile-image-container">
                   <img :src="imgUrl+item.imgUrl" alt="Profile Image">
-                  <p>{{item.name}}</p>
-                  <p>{{item.task}}</p>
+                  <p>{{ item.name }}</p>
+                  <p>{{ item.task }}</p>
                 </div>
               </div>
             </div>
@@ -87,6 +87,9 @@ export default {
 </script>
 <style lang="less" scoped>
 /* Create three equal columns that floats next to each other */
+.about-container{
+  padding: 2rem 1rem 2rem 1rem;
+}
 .about-profile {
   float: left;
   text-align: center;
@@ -123,7 +126,7 @@ export default {
 }
 
 .about-content {
-  padding: 1rem;
+  padding: 0 0 0 3rem;
   overflow: hidden;
 
   p {
