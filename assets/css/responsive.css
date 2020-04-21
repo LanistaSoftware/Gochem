@@ -452,17 +452,26 @@
   #product .sidenav {
     display: none;
   }
+  #product .product-btn {
+    display: inline-block;
+    width: 100%;
+  }
+  #product .product-btn button {
+    margin-top: 0;
+  }
   #product .product-btn-info {
     font-size: 1rem;
-    width: 9rem;
-    padding: 0.3rem 0.9rem;
+    padding: 0.4rem 0.9rem;
   }
   #rescat {
     display: block;
     padding: 1rem;
   }
-  .product-link i {
-    display: none;
+  [class^="flaticon-"]:before,
+  [class*=" flaticon-"]:before,
+  [class^="flaticon-"]:after,
+  [class*=" flaticon-"]:after {
+    font-size: 2.5rem !important;
   }
   .product-responsive-carousel {
     display: block;
@@ -529,6 +538,9 @@
     padding-bottom: 2rem;
     height: auto;
   }
+  #about .content {
+    padding: 0;
+  }
   #about .twin-card {
     width: 100%;
   }
@@ -536,12 +548,21 @@
     float: none;
     width: 100%;
   }
+  #about .about-profile .profile-img img {
+    object-fit: cover;
+    width: 14rem;
+    height: 10rem;
+    object-position: 0 28%;
+  }
   #about .about-content {
     padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   }
   #about .about-content p {
     padding-left: 0rem;
     padding-right: 0rem;
+  }
+  #about .imza .d-none {
+    display: block !important;
   }
   #about .about-container {
     overflow-x: visible;
@@ -557,9 +578,6 @@
   }
   #about .overlay img {
     width: 100%;
-  }
-  #about .overlay .profile-image-container {
-    width: 11rem;
   }
   #about .overlay h2 {
     font-size: 1.5rem;
@@ -687,8 +705,8 @@
 @media only screen and (max-width: 568px) {
   #content-bg {
     background-color: transparent;
-    -webkit-backdrop-filter: none ;
-    backdrop-filter: none ;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
   }
   #form-container .twin-input {
     float: none;
