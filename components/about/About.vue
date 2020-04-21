@@ -16,7 +16,9 @@
         <div class="about-content">
           <div v-html="getAbout.content" />
           <div class="imza">
-            <h2> {{ getAboutUs.ownername }} </h2>
+            <h2 class="d-none">
+              {{ getAboutUs.ownername }}
+            </h2>
             <img :src="getAboutUs.autograph" alt="Signature">
           </div>
         </div>
@@ -94,7 +96,6 @@ export default {
   float: left;
   text-align: center;
   width: 22%;
-  height: 100%;
 
   h2 {
     font-size: 1.6rem;
@@ -207,12 +208,12 @@ export default {
 }
 .profile-image-container {
   display: inline-block;
-  width: 10rem;
+  width: 13rem;
   margin: 3rem 3rem;
   text-align: center;
 
   img {
-    width: 9rem;
+    width: 10rem;
     height: auto;
   }
 

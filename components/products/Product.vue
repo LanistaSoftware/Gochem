@@ -35,8 +35,8 @@
           <div class="product-btn">
             <button class="btn">
               <i class="flaticon-customer-service" />
-              <span class="product-btn-info">
-                <a href="/contact#form-container radius-1em">Hemen teklif alın.</a>
+              <span class="product-btn-info radius-1em">
+                <a href="/contact#form-container">Hemen teklif alın.</a>
               </span>
             </button>
           </div>

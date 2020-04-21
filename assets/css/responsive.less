@@ -52,7 +52,7 @@
   }
 
   .navli {
-    padding: 0 .9rem 0 .9rem !important;
+    padding: 0 .7rem 0 .7rem !important;
   }
   .company-group p {
     font-size: .6rem;
@@ -707,10 +707,18 @@
       display: none;
     }
 
+    .product-btn {
+      display: inline-block;
+      width: 100%;
+
+      button {
+        margin-top: 0;
+      }
+    }
+
     .product-btn-info {
       font-size: 1rem;
-      width: 9rem;
-      padding: 0.3rem 0.9rem;
+      padding: 0.4rem 0.9rem;
     }
   }
 
@@ -719,11 +727,11 @@
     padding: 1rem;
   }
 
-  .product-link {
-    i {
-      display: none;
-    }
-
+  [class^="flaticon-"]:before,
+  [class*=" flaticon-"]:before,
+  [class^="flaticon-"]:after,
+  [class*=" flaticon-"]:after {
+    font-size: 2.5rem !important;
   }
 
   .product-responsive-carousel {
@@ -828,17 +836,28 @@
 /* Small devices (portrait tablets and large phones, 568px and up) */
 @media only screen and (max-width: 568px) {
   #about {
-    .twin-card {
-      width: 100%;
-
-    }
-
     padding-bottom: 2rem;
     height: auto;
+
+    .content {
+      padding: 0;
+    }
+
+    .twin-card {
+      width: 100%;
+    }
 
     .about-profile {
       float: none;
       width: 100%;
+
+      .profile-img img {
+        object-fit: cover;
+        width: 14rem;
+        height: 10rem;
+        object-position: 0 28%;
+
+      }
     }
 
     .about-content {
@@ -848,6 +867,10 @@
         padding-left: 0rem;
         padding-right: 0rem;
       }
+    }
+
+    .imza .d-none {
+      display: block !important;
     }
 
     .about-container {
@@ -867,10 +890,6 @@
 
       img {
         width: 100%;
-      }
-
-      .profile-image-container {
-        width: 11rem;
       }
 
       h2 {

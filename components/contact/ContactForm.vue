@@ -3,6 +3,17 @@
     <div id="form-container" class="form-container">
       <div class="twin-input left-inputs">
         <div class="inputBox">
+          <input type="text" name="name" class="input radius-1em" placeholder="İsim">
+        </div>
+        <div class="inputBox">
+          <input type="email" name="email" class="input radius-1em" placeholder="E-mail">
+        </div>
+      </div>
+      <div class="twin-input right-inputs clearfix">
+        <div class="inputBox">
+          <input type="text" name="phone" class="input radius-1em" placeholder="Telefon">
+        </div>
+        <div class="inputBox">
           <select id="konu" class="radius-1em" name="Konu" placeholder="Konu">
             <option value="">
               Bilgi almak istiyorum.
@@ -17,17 +28,6 @@
               Sipariş işlemleri.
             </option>
           </select>
-        </div>
-        <div class="inputBox">
-          <input type="text" name="name" class="input radius-1em" placeholder="İsim">
-        </div>
-      </div>
-      <div class="twin-input right-inputs clearfix">
-        <div class="inputBox">
-          <input type="email" name="email" class="input radius-1em" placeholder="E-mail">
-        </div>
-        <div class="inputBox">
-          <input type="text" name="phone" class="input radius-1em" placeholder="Telefon">
         </div>
       </div>
       <div class="text-container">
