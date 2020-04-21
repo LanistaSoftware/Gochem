@@ -27,20 +27,50 @@
             </button>
           </div>
         </div>
-        <div class="portfolio-document" />
+        <client-only>
+          <div class="portfolio-document">
+            <iframe id="getdocument" name="getdocument" src="https://api.lanista.com.tr/assest/file/Python-Tricks_-The-Book-Dan-Bader.pdf?#toolbar=0" style="width:100%;height:100%" @contextmenu="disableClick()" />
+          </div>
+        </client-only>
       </div>
     </div>
   </section>
 </template>
 <script>
 export default {
+  plugins: [
+    { src: '~/plugins/both-sides.js' },
+    { src: '~/plugins/client-only.js', mode: 'client' },
+    { src: '~/plugins/server-only.js', mode: 'server' }
+  ],
   data () {
     return {
+      menu: false
+    }
+  },
+  created () {
+    if (process.client) {
+      console.log(window)
+      // eslint-disable-next-line nuxt/no-globals-in-created
+      window.document.body.addEventListener('contextmenu', function (e) {
+        e.preventDefault()
+      }, false)
+      // eslint-disable-next-line
+    }
+  },
+  methods: {
+    disableClick () {
+      // eslint-disable-next-line
+      window.frames['getdocument'].addEventListener('contextmenu', function (e) {
+        e.preventDefault()
+      }, false)
     }
   }
 }
 </script>
 <style lang="less" scoped>
+#porfolio{
+}
 .portfolio,
 .portfolio>.portfolio-content {
   padding: 1rem 3rem 0 3rem;
@@ -48,7 +78,8 @@ export default {
 
 .portfolio-document {
   margin-top: 2rem;
-}
+  height: 95vh;
+  }
 
 .portfolio-content {
   float: left;

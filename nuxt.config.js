@@ -47,14 +47,20 @@ module.exports = {
   /*
   ** Nuxt.js modules
   */
+
   modules: [
+    '@nuxtjs/proxy',
     // Doc: https://bootstrap-vue.js.org
     'bootstrap-vue/nuxt',
     '@neneos/nuxt-animate.css',
     '@nuxtjs/axios'
   ],
   axios: { // burda da ax,os ,ile ilgili öz
-    baseURL: 'http://localhost:3000/api'
+    baseURL: 'http://localhost:3000/api',
+    proxy: true
+  },
+  proxy: {
+    '/api/': { target: 'http://localhost:3000/api/', pathRewrite: { '^/api/': '' }, changeOrigin: true }
   },
   /*
   ** Build configuration

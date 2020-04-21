@@ -28,7 +28,7 @@ export default {
     return {
       disablebtn: false,
       activeBlogId: null,
-      newIndex: null
+      newIndex: 0
     }
   },
   computed: {
@@ -53,26 +53,26 @@ export default {
       this.$router.push('/blogs')
     },
     nextBlog () {
+      this.$store.commit('setBlog', '')
       this.gettersBlogs.forEach((element, index) => {
         if (element._id === this.activeBlogId) {
-          // eslint-disable-next-line eqeqeq
-          if (index == this.gettersBlogs.length) {
-            console.log(index)
+          this.newIndex = index + 1
+          if (this.newIndex === this.gettersBlogs.length) {
             this.newIndex = 0
           }
-          this.newIndex = index + 1
           this.$route.params.blogid = this.gettersBlogs[this.newIndex]._id
           this.$router.push(this.$route.params.blogid)
         }
       })
     },
     prevBlog () {
+      this.$store.commit('setBlog', '')
       this.gettersBlogs.forEach((element, index) => {
         if (element._id === this.activeBlogId) {
-          if (index === this.gettersBlogs.length) {
-            this.newIndex = this.gettersBlogs.length
-          }
           this.newIndex = index - 1
+          if (this.newIndex === -1) {
+            this.newIndex = this.gettersBlogs.length - 1
+          }
           this.$route.params.blogid = this.gettersBlogs[this.newIndex]._id
           this.$router.push(this.$route.params.blogid)
         }
