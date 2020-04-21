@@ -6,8 +6,7 @@ import VueCarousel from 'vue-carousel'
 import Sticky from 'vue-sticky-directive'
 Vue.use(Sticky)
 Vue.use(VueCarousel)
-
-// Install BootstrapVue
+    // Install BootstrapVue
 Vue.use(BootstrapVue)
 Vue.use(Carousel3d)
     // Optionally install the BootstrapVue icon components plugin

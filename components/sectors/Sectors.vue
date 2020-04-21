@@ -14,25 +14,25 @@
           <h3>{{ sectoritems.sectorname }}</h3>
         </div>
         <div class="sector-row">
-          <SectorAlbum class="skCar" />
+          <SectorAlbum class="skCar radius-1em" />
         </div>
         <div class="sector-row">
           <p>
             {{ sectoritems.sectordescription }}
           </p>
           <SectorAlbum class="skCar-mobil" />
-          <div v-if="sectoropen" class="btn-link-sector">
+          <div class="btn-link-sector">
             <div class="sector-btn">
               <button class="btn">
                 <span class="sector-btn-info">
-                  Daha fazla bilgi al
+                  <a href="/contact#form-container radius-1em"> Daha fazla bilgi al</a>
                 </span>
               </button>
             </div>
             <div class="sector-btn">
               <button class="btn">
                 <span class="sector-btn-info">
-                  Uygun ürün bul
+                  <a href="/contact#form-container radius-1em">  Uygun ürün bul</a>
                 </span>
               </button>
             </div>
@@ -178,7 +178,6 @@ export default {
         text-align: center;
         color: white;
         border: 1px solid white;
-        border-radius: 1em;
         display: block;
         width: 13rem;
         transition: 0.5s;
@@ -191,10 +190,6 @@ export default {
     }
   }
 
-}
-
-.skCar {
-  border-radius: 1em;
 }
 
 .skCar-mobil {

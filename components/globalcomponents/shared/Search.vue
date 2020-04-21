@@ -1,6 +1,6 @@
 <template>
   <li class="icon-container first-li" @mouseover="show=true" @mouseleave="show=false">
-    <div class="search-input">
+    <div class="search-input radius-2em">
       <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
         <input
           v-if="show"
@@ -125,10 +125,10 @@ export default {
   display: inline-block;
   background-color: transparent;
   vertical-align: middle;
+  z-index: 1;
 
   .search-input{
-  padding: 0.9rem 0.5rem 0.9rem 1rem;
-  border-radius: 3em;
+  padding: 1.2rem 0.5rem 0.9rem 1rem;
   transition: 1.3s;
   a{
     color: red;

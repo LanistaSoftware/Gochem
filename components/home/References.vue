@@ -4,14 +4,13 @@
       id="carousel-1"
       v-model="slide"
       :interval="4000"
-      controls
     >
+      <h2>Referanslarımız</h2>
+      <hr>
       <div v-for="(ref, index) in references" :key="index.id" class="referance">
         <b-carousel-slide>
           <template v-slot:img>
             <a :href="ref.referenceUrl" target="_blank">
-              <h2> {{ ref.referenceName }} </h2>
-              <hr>
               <img
                 :title="ref.title"
                 class="ref-img"
@@ -57,8 +56,16 @@ export default {
 a{
   text-decoration: none;
 }
+.carousel{
+  margin-top: 0;
+}
  .referance h2:hover{
   color: lightgreen;
+}
+div.ref-container img{
+  width: 100%;
+  height: 13vh;
+  object-fit: contain;
 }
  .ref-container{
    display: table-cell;
@@ -68,12 +75,7 @@ a{
    margin-right: auto;
    text-align: center;
  }
- .ref-img{
-   width: 70%;
-   height: 10vh;
-   object-fit:contain;
- }
- .referance h2 {
+ h2 {
    font-size: 1.2rem;
    font-weight: 600;
    color: #fff;

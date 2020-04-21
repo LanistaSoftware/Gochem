@@ -9,6 +9,18 @@
 .f-left {
   float: left;
 }
+.radius-2em {
+  border-radius: 2em;
+}
+.radius-1em {
+  border-radius: 1em;
+}
+.radius-circle {
+  border-radius: 50%;
+}
+.radius-05em {
+  border-radius: 0.5em;
+}
 html {
   font-size: 10px;
   font-family: Arial, Helvetica, sans-serif;
@@ -44,6 +56,24 @@ h4 {
 }
 [class^="flaticon-linkedin-1"]:hover:before {
   color: #007bb7;
+}
+.social-search {
+  width: 100%;
+  float: right;
+}
+.social-search .search {
+  float: right;
+}
+.social-search .socials {
+  float: right;
+  padding-top: 1.4rem;
+}
+[class^="flaticon-search"]:before {
+  font-size: 1.5rem;
+}
+.mobile-call {
+  padding-top: 1.8rem;
+  padding-bottom: 1.8rem;
 }
 /* Content */
 .content {
@@ -85,6 +115,7 @@ h4 {
   .content-background {
     background-color: rgba(0, 0, 0, 0.01);
     backdrop-filter: blur(15px);
+    border-radius: 2rem;
   }
 }
 /* Tarayıcı desteği olmadığında seçilecek resim buraya gelecek.*/
@@ -116,6 +147,7 @@ h4 {
   padding-left: 1rem;
   margin-right: auto;
   margin-left: auto;
+  height: 100%;
 }
 /***** Global Icon's ****/
 [class^="flaticon-"]:before {
@@ -214,7 +246,6 @@ h4 {
 }
 .product-responsive-carousel {
   margin-top: 2rem;
-  border-radius: 10px ;
 }
 .carousel-product {
   color: white !important;
@@ -224,10 +255,10 @@ h4 {
   color: white !important;
 }
 .VueCarousel-navigation-prev {
-  transform: translateY(-50%) translateX(40%) !important;
+  transform: translateY(-50%) translateX(-40%) !important;
 }
 .VueCarousel-navigation-next {
-  transform: translateY(-50%) translateX(-40%) !important;
+  transform: translateY(-50%) translateX(40%) !important;
 }
 .slide-content {
   font-size: 2.2rem;
@@ -244,4 +275,80 @@ h4 {
 }
 tr:hover {
   color: lightgreen !important;
+}
+tr:hover .blogs img,
+tr:hover .blogs > .blogs-content img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  border-radius: 0.5em;
+}
+tr:hover .blogs h3,
+tr:hover .blogs > .blogs-content h3 {
+  cursor: pointer;
+}
+tr:hover .blogs h3,
+tr:hover .blogs > .blogs-content h3,
+tr:hover .blogs h2,
+tr:hover .blogs > .blogs-content h2,
+tr:hover .blogs h1,
+tr:hover .blogs > .blogs-content h1,
+tr:hover .blogs h4,
+tr:hover .blogs > .blogs-content h4,
+tr:hover .blogs h5,
+tr:hover .blogs > .blogs-content h5,
+tr:hover .blogs h6,
+tr:hover .blogs > .blogs-content h6 {
+  border: 1px solid white;
+  margin-top: 1rem;
+  padding: 0.5rem 0;
+  text-align: center;
+  border-radius: 0.3em;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+tr:hover .blogs h3:hover,
+tr:hover .blogs > .blogs-content h3:hover {
+  color: lightgreen;
+  border-color: lightgreen;
+}
+tr:hover #blogs-detail .blogs-detail {
+  width: 100%;
+  height: 100%;
+}
+tr:hover #blogs-detail .button-container {
+  width: 100%;
+  margin: 1rem;
+  display: flex;
+}
+tr:hover #blogs-detail .button-container .box-left,
+tr:hover #blogs-detail .button-container .box-right,
+tr:hover #blogs-detail .button-container .box-center {
+  width: 33%;
+  display: inline-block;
+}
+tr:hover #blogs-detail .button-container .box-center {
+  text-align: center;
+}
+tr:hover #blogs-detail .button-container .box-right {
+  text-align: right;
+}
+tr:hover #blogs-detail .button-container .btn {
+  display: inline-block;
+  font-size: 0.8rem;
+  text-align: center;
+  color: white;
+  border: 1px solid white;
+  border-radius: 1em;
+  transition: 0.5s;
+}
+tr:hover #blogs-detail .btn:hover {
+  color: lightgreen;
+  border-color: lightgreen;
+}
+tr:hover #blogs-detail .btn:hover [class^="flaticon-"]:before,
+tr:hover #blogs-detail .btn:hover [class*=" flaticon-"]:before,
+tr:hover #blogs-detail .btn:hover [class^="flaticon-"]:after,
+tr:hover #blogs-detail .btn:hover [class*=" flaticon-"]:after {
+  color: lightgreen;
 }

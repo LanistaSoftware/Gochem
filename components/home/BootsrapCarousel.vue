@@ -97,8 +97,6 @@ export default {
   padding: .6vh;
   z-index: 2000;
   color: #fff;
-  // border: 1px solid #fff;
-  // border-radius: 20%;
 
 }
 .sliderBtn::before {

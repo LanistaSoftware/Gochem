@@ -13,7 +13,7 @@
               </a>
             </div>
             <hr>
-            <Social />
+            <Social class="mobile-social-footer" />
             <hr>
             <div class="mobil-box">
               <div class="icon-gochem">
@@ -62,14 +62,14 @@ export default {
 <style lang="less" scoped>
 .footer-mobile{
     background-color: rgba(0,0,0,0.6);
-    padding-bottom: 8rem !important;
+    padding-bottom: 6rem;
+    height: 100%;
   }
   hr {
     background-color: #fff;
     width: 40%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 4rem;
   }
   .company-group{
     text-align: center;
@@ -101,13 +101,20 @@ export default {
   .icon-gochem img{
     width: 50%;
   }
-  .icon-copy img{
+  .icon-copy{
+    display: inline;
+    img{
     font-size: 1rem;
     width: 30%;
+  }
   }
   .copyright {
       display: inline-block;
       margin-right: 0.5rem;
     }
+}
+.mobile-social-footer{
+ padding-top: 1rem;
+ padding-bottom: 1rem;
 }
 </style>

@@ -66,3 +66,13 @@ export const getOneProduct = ({ commit }, id) => {
     commit('setProductOne', res.data.productone)
   })
 }
+export const getBlogs = ({ commit }) => {
+  return api().get('/blog').then((res) => {
+    commit('setBlogs', res.data.blogs)
+  })
+}
+export const getBlog = ({ commit }, id) => {
+  return api().get('/blog/' + id).then((res) => {
+    commit('setBlog', res.data.blogs[0].content)
+  })
+}

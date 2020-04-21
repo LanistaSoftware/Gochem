@@ -5,7 +5,11 @@
     <div class="overlay">
       <div class="bg-container clearfix">
         <Header />
-        <Socials />
+        <div class="social-search">
+          <Social class="socials" />
+          <Search class="search" />
+        </div>
+        <Mobile class="mobile-call" />
         <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut" appear>
           <nuxt />
         </transition>
@@ -21,13 +25,17 @@
 import Header from '@/components/globalcomponents/Header/Header'
 import Footer from '@/components/globalcomponents/Footer/Footer'
 import MobileFooter from '@/components/globalcomponents/Footer/Mobile-footer'
-import Socials from '@/components/globalcomponents/shared/Socials'
+import Social from '@/components/globalcomponents/shared/Social'
+import Mobile from '@/components/globalcomponents/shared/Mobile'
+import Search from '@/components/globalcomponents/shared/Search'
 export default {
   components: {
     Header,
-    Socials,
+    Social,
     Footer,
-    MobileFooter
+    MobileFooter,
+    Mobile,
+    Search
     // Carousel,
     // Box
   },
