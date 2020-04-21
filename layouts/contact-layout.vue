@@ -4,7 +4,10 @@
       <div class="first-contact-background-overlay">
         <div class="bg-container">
           <Header />
-          <Socials />
+          <div class="social-search">
+            <Social class="socials" />
+            <Search class="search" />
+          </div>
           <Mobile class="mobile-call" />
           <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut" appear>
             <nuxt />
@@ -19,14 +22,16 @@
 // import ContactCarousel from '@/components/contact/ContactCarousel'
 import Footer from '../components/globalcomponents/Footer/ContactFooter'
 import Header from '@/components/globalcomponents/Header/Header'
-import Socials from '@/components/globalcomponents/shared/Socials'
+import Social from '@/components/globalcomponents/shared/Social'
+import Search from '@/components/globalcomponents/shared/Search'
 // import MobileFooter from '@/components/globalcomponents/Footer/Mobile-footer'
 
 import Mobile from '@/components/globalcomponents/shared/Mobile'
 export default {
   components: {
     Header,
-    Socials,
+    Social,
+    Search,
     // ContactCarousel
     Footer,
     Mobile

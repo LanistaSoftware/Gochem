@@ -20,7 +20,7 @@
   .mobile-nav [class*=" flaticon-"]:after {
     margin-left: 0 !important;
     margin-right: 0 !important;
-    font-size: 1.9rem !important;
+    font-size: 2rem !important;
   }
   .mobile-nav li:not(:last-child) {
     border-right: none !important;
@@ -31,18 +31,14 @@
   html {
     font-size: 6px;
   }
-  /* tüm iconlar */
-  [class^="flaticon-"]:before,
-  [class*=" flaticon-"]:before,
-  [class^="flaticon-"]:after,
-  [class*=" flaticon-"]:after {
-    font-size: 1.5rem !important;
-  }
   .logo-container img {
     width: 4rem !important;
   }
   .navli {
     padding: 0 0.9rem 0 0.9rem !important;
+  }
+  .company-group p {
+    font-size: 0.6rem;
   }
 }
 /* Small devices (portrait tablets and large phones, 568px and up) */
@@ -53,6 +49,9 @@
   .icon-container .search-input {
     padding: 0 !important;
   }
+  .icon-container .search-input input {
+    padding: 0.9rem 1rem 0.7rem 0.8rem;
+  }
   .bg-container {
     width: 100%;
     height: auto;
@@ -62,7 +61,7 @@
   [class*=" flaticon-"]:before,
   [class^="flaticon-"]:after,
   [class*=" flaticon-"]:after {
-    font-size: 2rem !important;
+    font-size: 1.8rem !important;
   }
   /*** Content Background ***/
   /***** OVERLAY BACKGROUND ******/
@@ -89,7 +88,7 @@
     display: inline-block !important;
   }
   /*llanguage-container*/
-  .social {
+  .social-search {
     display: none;
   }
   /*navbar*/
@@ -277,6 +276,15 @@
     text-align: center;
     padding: 2rem;
   }
+  #sektors .sector-container .sector-btn {
+    width: 100%;
+  }
+  #sektors .sector-container .sector-btn .btn {
+    width: 100%;
+  }
+  #sektors .sector-container .sector-btn .btn .sector-btn-info {
+    width: 100%;
+  }
 }
 /* Small devices (portrait tablets and large phones, 568px and up) */
 @media only screen and (max-width: 568px) {
@@ -453,11 +461,15 @@
   #product .product-container {
     padding: 1rem 0 !important;
   }
-  #product .product-btn-info {
-    font-size: 0.6rem !important;
-    width: 6rem !important;
-    height: 2.4rem;
-    padding: 0.3rem 0.9rem;
+  #product .product-btn {
+    width: 100%;
+  }
+  #product .product-btn .btn {
+    width: 100%;
+    margin-top: 0;
+  }
+  #product .product-btn .btn span {
+    width: 100%;
   }
 }
 /* Small devices (portrait tablets and large phones, 568px and up) */

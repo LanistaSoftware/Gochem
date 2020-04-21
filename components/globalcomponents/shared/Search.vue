@@ -125,9 +125,10 @@ export default {
   display: inline-block;
   background-color: transparent;
   vertical-align: middle;
+  z-index: 1;
 
   .search-input{
-  padding: 0.9rem 0.5rem 0.9rem 1rem;
+  padding: 1.2rem 0.5rem 0.9rem 1rem;
   transition: 1.3s;
   a{
     color: red;

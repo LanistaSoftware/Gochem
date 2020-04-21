@@ -57,6 +57,20 @@ h4 {
 [class^="flaticon-linkedin-1"]:hover:before {
   color: #007bb7;
 }
+.social-search {
+  width: 100%;
+  float: right;
+}
+.social-search .search {
+  float: right;
+}
+.social-search .socials {
+  float: right;
+  padding-top: 1.4rem;
+}
+[class^="flaticon-search"]:before {
+  font-size: 1.5rem;
+}
 .mobile-call {
   padding-top: 1.8rem;
   padding-bottom: 1.8rem;
