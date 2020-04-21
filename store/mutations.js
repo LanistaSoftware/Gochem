@@ -65,3 +65,9 @@ export const setProduct = (state, value) => {
 export const setProductOne = (state, value) => {
   state.productone = value
 }
+export const setBlogs = (state, value) => {
+  state.blogs = value
+}
+export const setBlog = (state, value) => {
+  state.blog = value
+}

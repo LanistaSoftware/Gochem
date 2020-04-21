@@ -254,3 +254,79 @@ h4 {
 [class="flaticon-back"]:before {
   padding-right: 0.3rem;
 }
+.blogs img,
+.blogs > .blogs-content img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  border-radius: 0.5em;
+}
+.blogs h3,
+.blogs > .blogs-content h3 {
+  cursor: pointer;
+}
+.blogs h3,
+.blogs > .blogs-content h3,
+.blogs h2,
+.blogs > .blogs-content h2,
+.blogs h1,
+.blogs > .blogs-content h1,
+.blogs h4,
+.blogs > .blogs-content h4,
+.blogs h5,
+.blogs > .blogs-content h5,
+.blogs h6,
+.blogs > .blogs-content h6 {
+  border: 1px solid white;
+  margin-top: 1rem;
+  padding: 0.5rem 0;
+  text-align: center;
+  border-radius: 0.3em;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+.blogs h3:hover,
+.blogs > .blogs-content h3:hover {
+  color: lightgreen;
+  border-color: lightgreen;
+}
+#blogs-detail .blogs-detail {
+  width: 100%;
+  height: 100%;
+}
+#blogs-detail .button-container {
+  width: 100%;
+  margin: 1rem;
+  display: flex;
+}
+#blogs-detail .button-container .box-left,
+#blogs-detail .button-container .box-right,
+#blogs-detail .button-container .box-center {
+  width: 33%;
+  display: inline-block;
+}
+#blogs-detail .button-container .box-center {
+  text-align: center;
+}
+#blogs-detail .button-container .box-right {
+  text-align: right;
+}
+#blogs-detail .button-container .btn {
+  display: inline-block;
+  font-size: 0.8rem;
+  text-align: center;
+  color: white;
+  border: 1px solid white;
+  border-radius: 1em;
+  transition: 0.5s;
+}
+#blogs-detail .btn:hover {
+  color: lightgreen;
+  border-color: lightgreen;
+}
+#blogs-detail .btn:hover [class^="flaticon-"]:before,
+#blogs-detail .btn:hover [class*=" flaticon-"]:before,
+#blogs-detail .btn:hover [class^="flaticon-"]:after,
+#blogs-detail .btn:hover [class*=" flaticon-"]:after {
+  color: lightgreen;
+}
