@@ -89,6 +89,9 @@ export default {
 </script>
 <style lang="less" scoped>
 /* Create three equal columns that floats next to each other */
+.about-container{
+  padding: 2rem 1rem 2rem 1rem;
+}
 .about-profile {
   float: left;
   text-align: center;
@@ -122,7 +125,7 @@ export default {
   }
 }
 .about-content {
-  padding: 1rem;
+  padding: 0 0 0 3rem;
   overflow: hidden;
   padding-top:0;
 

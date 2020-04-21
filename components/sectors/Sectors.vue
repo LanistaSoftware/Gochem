@@ -21,7 +21,7 @@
             {{ sectoritems.sectordescription }}
           </p>
           <SectorAlbum class="skCar-mobil" />
-          <div v-if="sectoropen" class="btn-link-sector">
+          <div class="btn-link-sector">
             <div class="sector-btn">
               <button class="btn">
                 <span class="sector-btn-info">

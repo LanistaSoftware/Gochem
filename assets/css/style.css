@@ -57,9 +57,23 @@ h4 {
 [class^="flaticon-linkedin-1"]:hover:before {
   color: #007bb7;
 }
+.social-search {
+  width: 100%;
+  float: right;
+}
+.social-search .search {
+  float: right;
+}
+.social-search .socials {
+  float: right;
+  padding-top: 1.4rem;
+}
+[class^="flaticon-search"]:before {
+  font-size: 1.5rem;
+}
 .mobile-call {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 1.8rem;
+  padding-bottom: 1.8rem;
 }
 /* Content */
 .content {
@@ -101,6 +115,7 @@ h4 {
   .content-background {
     background-color: rgba(0, 0, 0, 0.01);
     backdrop-filter: blur(15px);
+    border-radius: 2rem;
   }
 }
 /* Tarayıcı desteği olmadığında seçilecek resim buraya gelecek.*/
