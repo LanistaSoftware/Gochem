@@ -1,7 +1,7 @@
 <template>
   <section id="blogs">
     <div class="content content-background overflow-scroll">
-      <div v-if="true" class="blogs">
+      <div class="blogs">
         <div v-for="item in gettersBlogs" :key="item._id" class="blogs-content">
           <div class="img-tag" alt="Buraya belgeler gelecek." v-html="getImage(item.content)" />
           <a href="#" @click.prevent="doneBlog(item._id)"><div v-html="getHeader(item.content)" /></a>
@@ -94,7 +94,6 @@ export default {
   img {
       height: 50vh;
       object-fit: cover;
-      border-radius: 0.5em;
   }
   h3{
     cursor: pointer;
@@ -104,7 +103,6 @@ export default {
     margin-top: 1rem;
     padding: .5rem 0;
     text-align: center;
-    border-radius: 0.3em;
     text-transform: uppercase;
     font-size: 1.5rem;
   }
@@ -140,7 +138,6 @@ export default {
     text-align: center;
     color: white;
     border: 1px solid white;
-    border-radius: 1em;
     transition: 0.5s;
   }
 }

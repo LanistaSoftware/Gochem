@@ -685,6 +685,11 @@
 }
 /* Small devices (portrait tablets and large phones, 568px and up) */
 @media only screen and (max-width: 568px) {
+  #content-bg {
+    background-color: transparent;
+    -webkit-backdrop-filter: none ;
+    backdrop-filter: none ;
+  }
   #form-container .twin-input {
     float: none;
     width: 100%;
