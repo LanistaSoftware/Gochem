@@ -18,10 +18,24 @@
       </section>
       <div class="product-container">
         <div class="product-content">
-          <h2>{{ getProductone.prdoudctName }}</h2>
-          <p>
-            {{ getProductone.productMoreDesc }}
-          </p>
+          <div v-if="false" class="products-section">
+            <h2>{{ getProductone.prdoudctName }}</h2>
+            <p>
+              {{ getProductone.productMoreDesc }}
+            </p>
+          </div>
+          <div class="pigments-section">
+            <b-table
+              hover
+              striped
+              :items="items"
+              :fields="fields"
+              :sort-by.sync="sortBy"
+              :sort-desc.sync="sortDesc"
+              responsive="sm"
+              class="pigment-table"
+            />
+          </div>
         </div>
         <div class="product-link">
           <div class="product-btn">
@@ -66,7 +80,29 @@ export default {
         name: 'name',
         desc: 'desc',
         category: 'category'
-      }
+      },
+      sortBy: 'age',
+      sortDesc: false,
+      fields: [
+        { key: 'index', sortable: true },
+        { key: 'product_name', sortable: true },
+        { key: 'color', sortable: false, class: 'colored' },
+        { key: 'migration', sortable: false },
+        { key: 'heat', sortable: false },
+        { key: 'light', sortable: false }
+      ],
+      items: [
+        { index: 0, product_name: 'G Line Yellow L 1000 CP', color: '#CC0000', migration: '5', heat: '250', light: '7' },
+        { index: 2, product_name: 'A Line Yellow L 1000 CP', color: '#CC0000', migration: '5', heat: '250', light: '7' },
+        { index: 5, product_name: 'C Line Yellow L 1000 CP', color: '#CC0000', migration: '5', heat: '250', light: '7' },
+        { index: 5, product_name: 'G Line Yellow L 1000 CP', color: '#CC0000', migration: '5', heat: '250', light: '7' },
+        { index: 8, product_name: 'G Line Yellow L 1000 CP', color: '#CC0000', migration: '5', heat: '250', light: '7' },
+        { index: 8, product_name: 'G Line Yellow L 1000 CP', color: '#CC0000', migration: '5', heat: '250', light: '7' },
+        { index: 0, product_name: 'G Line Yellow L 1000 CP', color: '#CC0000', migration: '5', heat: '250', light: '7' },
+        { index: 0, product_name: 'G Line Yellow L 1000 CP', color: '#CC0000', migration: '5', heat: '250', light: '7' },
+        { index: 6, product_name: 'G Line Yellow L 1000 CP', color: '#CC0000', migration: '5', heat: '250', light: '7' },
+        { index: 0, product_name: 'G Line Yellow L 1000 CP', color: '#CC0000', migration: '5', heat: '250', light: '7' }
+      ]
     }
   },
   computed: {
@@ -127,7 +163,8 @@ export default {
   }
 
 }
-.responsive-category{
+
+.responsive-category {
   text-align: center;
   display: none;
 }
@@ -204,5 +241,7 @@ export default {
 
   }
 }
-
+.colored{
+  color:red;
+}
 </style>
