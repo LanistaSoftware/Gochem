@@ -34,14 +34,14 @@ export default {
       setTimeout(() => {
         this.showColor = true
         this.logom = require('../../../assets/img/coloredlogo.png')
-      }, 700)
+      }, 300)
     },
     mouseleave () {
       this.showColor = false
       setTimeout(() => {
         this.showColor = true
         this.logom = require('../../../assets/img/whitelogo.png')
-      }, 700)
+      }, 300)
     }
   }
 }

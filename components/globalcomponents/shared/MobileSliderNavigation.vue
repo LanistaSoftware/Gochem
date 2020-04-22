@@ -1,7 +1,6 @@
 <template>
   <div
-    class="product-responsive-carousel radius-2
-  em mobile-content-background"
+    class="product-responsive-carousel radius-2em mobile-content-background"
   >
     <no-ssr>
       <carousel

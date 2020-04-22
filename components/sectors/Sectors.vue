@@ -48,7 +48,7 @@ import {
   mapGetters
 } from 'vuex'
 import SectorAlbum from '@/components/sectors/SectorAlbum'
-import Sliderp from '@/components/products/globalSlide.vue'
+import Sliderp from '@/components/globalcomponents/shared/MobileSliderNavigation.vue'
 export default {
   components: {
     SectorAlbum,
