@@ -6,7 +6,7 @@
     <div class="navigation">
       <Navigation />
     </div>
-    <Search class="mobil-search" />
+    <Search id="mobil-search" class="mobil-search" />
     <div class="search-language">
       <Language />
     </div>
@@ -46,7 +46,5 @@ export default {
    vertical-align: middle;
    text-align: right;
  }
- .mobil-search{
-   display: none;
- }
+
 </style>
