@@ -2,12 +2,12 @@
   <section id="product">
     <productSlide />
     <div class="content clearfix content-background mobile-content-background">
-      <div id="rescat" class="responsive-category">
+      <div v-if="!getpigmentShow" id="rescat" class="responsive-category">
         <h2>{{ getProductone.prdoudctGroup }}</h2>
       </div>
       <section class="sidenav product-sidenav overflow-scroll">
         <div class="product-category">
-          <h2 @click="pigmentShow=!pigmentShow">
+          <h2 @click="setpigmentShow(true)">
             Slikon Pigment
           </h2>
         </div>
@@ -20,13 +20,13 @@
       </section>
       <div class="product-container">
         <div class="product-content">
-          <div v-if="!pigmentShow" class="products-section">
+          <div v-if="!getpigmentShow" class="products-section">
             <h2>{{ getProductone.prdoudctName }}</h2>
             <p>
               {{ getProductone.productMoreDesc }}
             </p>
           </div>
-          <div v-if="pigmentShow" class="pigments-section">
+          <div v-if="getpigmentShow" class="pigments-section">
             <pigment-table />
           </div>
         </div>
@@ -61,7 +61,7 @@
   </section>
 </template>
 <script>
-import { mapActions, mapGetters } from 'vuex'
+import { mapActions, mapGetters, mapMutations } from 'vuex'
 import pigmentTable from './productPigmentTable.vue'
 import productSlide from '@/components/globalcomponents/shared/MobileSliderNavigation.vue'
 export default {
@@ -84,7 +84,8 @@ export default {
     ...mapGetters({
       getsector: 'getsector',
       getProductdb: 'getProductDb',
-      getProductone: 'getProductone'
+      getProductone: 'getProductone',
+      getpigmentShow: 'getpigmentShow'
     })
   },
   created () {
@@ -108,8 +109,12 @@ export default {
       sectorData: 'sectorData',
       getOneProduct: 'getOneProduct'
     }),
+    ...mapMutations({
+      setpigmentShow: 'setpigmentShow'
+    }),
     getAproduct (id) {
       this.pigmentShow = false
+      this.setpigmentShow(false)
       this.getOneProduct(id).then(() => {
         this.productone.name = this.getProductone.prdoudctName
         this.productone.desc = this.getProductone.productMoreDesc

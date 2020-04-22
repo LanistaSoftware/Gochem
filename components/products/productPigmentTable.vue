@@ -14,7 +14,7 @@
       class="pigment-table"
     >
       <template v-slot:cell(color)="data">
-        <p :style="{color:data.item.color}">
+        <p class="colored" :style="{color:data.item.color}">
           {{ data.item.color }}
         </p>
       </template>

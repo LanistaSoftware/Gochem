@@ -15,13 +15,13 @@
         :navigation-prev-label="previcon"
         :navigation-next-label="nexticon"
       >
-        <slider v-for=" item in activeMenu" :key="item.id" class="carousel-responsive">
+        <slider v-for=" item in activeMenu" :key="item._id" class="carousel-responsive">
           <div class="slide-content">
             <h2>
               <a v-if="sectorshow" href="#" @click="oneSector(item._id)">
                 {{ item.sectorname }}
               </a>
-              <a v-else href="#" @click="getOneProduct(item._id)">
+              <a v-else href="#" @click="getAproduct(item._id)">
                 {{ item.prdoudctName }}
               </a>
             </h2>
@@ -69,19 +69,32 @@ export default {
   mounted () {
     if (this.activeslide === 'sector') {
       this.sectorshow = true
-      this.sectorData()
-      this.activeMenu = this.getsector
+      this.sectorData().then(() => {
+        this.activeMenu = this.getsector
+      })
     } else {
       this.sectorshow = false
-      this.activeMenu = this.getProductDb
+      this.getProducts().then(() => {
+        this.activeMenu = this.getProductDb
+        this.activeMenu.push({ prdoudctName: 'pigmentler', _id: 4 })
+      })
     }
   },
   methods: {
     ...mapActions({
       oneSector: 'oneSector',
       sectorData: 'sectorData',
+      getProducts: 'getProducts',
       getOneProduct: 'getOneProduct'
-    })
+    }),
+    getAproduct (id) {
+      if (id === 4) {
+        this.$store.commit('setpigmentShow', true)
+      } else {
+        this.$store.commit('setpigmentShow', false)
+        this.getOneProduct(id)
+      }
+    }
   }
 
 }

@@ -73,3 +73,6 @@ export const gettersDocument = (state) => {
 export const gettersFileurl = (state) => {
   return state.fileUrl
 }
+export const getpigmentShow = (state) => {
+  return state.pigmentShow
+}

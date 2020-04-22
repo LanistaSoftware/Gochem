@@ -80,3 +80,6 @@ export const setDocuments = (state, value) => {
 export const setDocument = (state, value) => {
   state.document = value
 }
+export const setpigmentShow = (state, value) => {
+  state.pigmentShow = value
+}

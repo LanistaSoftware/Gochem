@@ -398,6 +398,9 @@ tr:hover .blogs > .blogs-content h3:hover {
   width: 100%;
   text-align: center;
 }
+#pigment .colored {
+  font-size: 1rem !important;
+}
 #portfolioDetail {
   margin-bottom: 1rem;
   width: 100%;
