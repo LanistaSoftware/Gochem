@@ -18,7 +18,7 @@
       </section>
       <div class="product-container">
         <div class="product-content">
-          <div v-if="false" class="products-section">
+          <div v-if="true" class="products-section">
             <h2>{{ getProductone.prdoudctName }}</h2>
             <p>
               {{ getProductone.productMoreDesc }}
