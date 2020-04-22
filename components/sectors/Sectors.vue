@@ -24,15 +24,15 @@
           <div class="btn-link-sector">
             <div class="sector-btn">
               <button class="btn">
-                <span class="sector-btn-info">
-                  <a href="/contact#form-container radius-1em"> Daha fazla bilgi al</a>
+                <span class="sector-btn-info radius-1em">
+                  <a href="/contact#form-container"> Daha fazla bilgi al</a>
                 </span>
               </button>
             </div>
             <div class="sector-btn">
               <button class="btn">
-                <span class="sector-btn-info">
-                  <a href="/contact#form-container radius-1em">  Uygun ürün bul</a>
+                <span class="sector-btn-info radius-1em">
+                  <a href="/contact#form-container">  Uygun ürün bul</a>
                 </span>
               </button>
             </div>

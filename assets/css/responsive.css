@@ -256,8 +256,6 @@
 }
 /* ###################################### Sectors Media Queries ############################################## */
 /* Extra small devices (phones, 320px and down) */
-@media only screen and (max-width: 320px) {
-}
 /* Extra small devices (phones, 480px and down) */
 @media only screen and (max-width: 480px) {
   #sektors .sector-container .sector-row {
@@ -275,15 +273,6 @@
     display: block;
     text-align: center;
     padding: 2rem;
-  }
-  #sektors .sector-container .sector-btn {
-    width: 100%;
-  }
-  #sektors .sector-container .sector-btn .btn {
-    width: 100%;
-  }
-  #sektors .sector-container .sector-btn .btn .sector-btn-info {
-    width: 100%;
   }
 }
 /* Small devices (portrait tablets and large phones, 568px and up) */
@@ -319,6 +308,16 @@
   }
   #sektors .sector-container .skCar-mobil {
     display: none !important;
+  }
+  #sektors .sector-btn {
+    width: 100%;
+  }
+  #sektors .sector-btn .btn {
+    width: 100%;
+  }
+  #sektors .sector-btn .btn .sector-btn-info {
+    width: 100%;
+    padding: 1rem 0.9rem;
   }
 }
 /* Medium devices (landscape tablets, 768px*432px and up) */
@@ -444,32 +443,10 @@
 /* Landscape */
 /**********Product Responsive********/
 /* Extra small devices (phones, 320px and down) */
-@media only screen and (max-width: 320px) {
-  #product .product-btn-info {
-    font-size: 0.7rem;
-    width: 5rem;
-  }
-  [class="flaticon-next"]:before {
-    font-size: 0.8em !important;
-  }
-  [class="flaticon-back"]:before {
-    font-size: 0.8em !important;
-  }
-}
 /* Extra small devices (phones, 480px and down) */
 @media only screen and (max-width: 480px) {
   #product .product-container {
     padding: 1rem 0 !important;
-  }
-  #product .product-btn {
-    width: 100%;
-  }
-  #product .product-btn .btn {
-    width: 100%;
-    margin-top: 0;
-  }
-  #product .product-btn .btn span {
-    width: 100%;
   }
 }
 /* Small devices (portrait tablets and large phones, 568px and up) */
@@ -488,25 +465,22 @@
     display: none;
   }
   #product .product-btn {
-    display: inline-block;
     width: 100%;
   }
-  #product .product-btn button {
+  #product .product-btn .btn {
     margin-top: 0;
+    width: 100%;
   }
-  #product .product-btn-info {
-    font-size: 1rem;
-    padding: 0.4rem 0.9rem;
+  #product .product-btn .btn .product-btn-info {
+    width: 100%;
+    padding: 1rem 0.9rem;
+  }
+  #product .product-btn .btn i {
+    display: none;
   }
   #rescat {
     display: block;
     padding: 1rem;
-  }
-  [class^="flaticon-"]:before,
-  [class*=" flaticon-"]:before,
-  [class^="flaticon-"]:after,
-  [class*=" flaticon-"]:after {
-    font-size: 2.5rem !important;
   }
   .product-responsive-carousel {
     display: block;

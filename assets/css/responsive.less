@@ -19,6 +19,7 @@
   .navli {
     padding: 0 .8rem 0 .8rem !important;
   }
+
   .mobile-nav {
 
     [class^="flaticon-"]:before,
@@ -41,6 +42,7 @@
   html {
     font-size: 6px;
   }
+
   // .header {
   //   padding-bottom: 5.4rem;
   // }
@@ -54,9 +56,10 @@
   .navli {
     padding: 0 .7rem 0 .7rem !important;
   }
+
   .company-group p {
     font-size: .6rem;
-}
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 568px and up) */
@@ -64,9 +67,10 @@
   html {
     font-size: 7px;
   }
+
   .icon-container .search-input {
     padding: 0 !important;
-    
+
     input {
       padding: 0.9rem 1rem 0.7rem .8rem;
     }
@@ -338,10 +342,6 @@
     }
   }
 
-  // .bg-container {
-  //   height: inherit;
-  // }
-
   /*Carousel yatay bitiş*/
 
   /*box boyutu*/
@@ -352,41 +352,7 @@
 
 /* ###################################### Sectors Media Queries ############################################## */
 /* Extra small devices (phones, 320px and down) */
-@media only screen and (max-width: 320px) {
-
-  // #sektors{
-  //   width: 100%;
-  //   .content{
-  //   margin-bottom: 3rem;
-  //   overflow: hidden;
-  //   height: 100%;
-  //   }
-  //   .sidenav{
-  //     display: none;
-  //   }
-  //   .sector-container {
-  //     overflow: initial;
-  //     width: 100%;
-  //     padding: 1.2rem;
-  //     .sector-row {
-  //       h3{
-  //         display: none;
-  //       }
-  //       p{
-  //         line-height: 1.6 !important;
-  //         font-size: 1.5rem !important;
-  //       }
-  //       .skCar {
-  //         display: none;
-  //       }
-  //     }
-  //     .skCar-mobil{
-  //       display: none !important;
-  //     }
-  //   }
-
-  // }
-}
+@media only screen and (max-width: 320px) {}
 
 /* Extra small devices (phones, 480px and down) */
 @media only screen and (max-width: 480px) {
@@ -412,15 +378,8 @@
           padding: 2rem;
         }
       }
-      .sector-btn{
-        width: 100%;
-        .btn {
-            width: 100%;
-          .sector-btn-info {
-            width: 100%;
-          }
-        }
-      }
+
+
     }
   }
 }
@@ -468,6 +427,18 @@
       }
     }
 
+    .sector-btn {
+      width: 100%;
+
+      .btn {
+        width: 100%;
+
+        .sector-btn-info {
+          width: 100%;
+          padding: 1rem 0.9rem;
+        }
+      }
+    }
   }
 }
 
@@ -649,39 +620,13 @@
 /**********Product Responsive********/
 
 /* Extra small devices (phones, 320px and down) */
-@media only screen and (max-width: 320px) {
-  #product {
-    .product-btn-info {
-      font-size: 0.7rem;
-      width: 5rem;
-    }
-
-  }
-
-  [class="flaticon-next"]:before {
-    font-size: 0.8em !important;
-  }
-
-  [class="flaticon-back"]:before {
-    font-size: 0.8em !important;
-  }
-}
+@media only screen and (max-width: 320px) {}
 
 /* Extra small devices (phones, 480px and down) */
 @media only screen and (max-width: 480px) {
   #product {
     .product-container {
       padding: 1rem 0 !important;
-    }
-    .product-btn {
-      width: 100%;
-      .btn{
-        width: 100%;
-        margin-top: 0;
-        span{
-          width: 100%;
-        }
-      }
     }
   }
 }
@@ -706,18 +651,24 @@
     }
 
     .product-btn {
-      display: inline-block;
       width: 100%;
 
-      button {
+      .btn {
         margin-top: 0;
+        width: 100%;
+
+        .product-btn-info {
+          width: 100%;
+          padding: 1rem 0.9rem;
+        }
+
+        i {
+          display: none;
+        }
       }
     }
 
-    .product-btn-info {
-      font-size: 1rem;
-      padding: 0.4rem 0.9rem;
-    }
+
   }
 
   #rescat {
@@ -725,12 +676,7 @@
     padding: 1rem;
   }
 
-  [class^="flaticon-"]:before,
-  [class*=" flaticon-"]:before,
-  [class^="flaticon-"]:after,
-  [class*=" flaticon-"]:after {
-    font-size: 2.5rem !important;
-  }
+
 
   .product-responsive-carousel {
     display: block;

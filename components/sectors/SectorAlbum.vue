@@ -4,7 +4,7 @@
       <template v-slot:img>
         <div class="img-sector-container">
           <img
-            class="img-fluid"
+            class="img-fluid radius-1em"
             src="../../assets/img/bg1.jpg"
             alt="image slot"
           >
@@ -15,7 +15,7 @@
       <template v-slot:img>
         <div class="img-sector-container">
           <img
-            class="img-fluid"
+            class="img-fluid radius-1em"
             src="../../assets/img/bg2.jpg"
             alt="image slot"
           >
@@ -26,7 +26,7 @@
       <template v-slot:img>
         <div class="img-sector-container">
           <img
-            class="img-fluid"
+            class="img-fluid radius-1em"
             src="../../assets/img/bg3.jpg"
             alt="image slot"
           >
