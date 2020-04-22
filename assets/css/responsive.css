@@ -49,6 +49,9 @@
     width: 100%;
     height: auto;
   }
+  .carousel-3d-controls {
+    display: block;
+  }
   /*** Content Background ***/
   /***** OVERLAY BACKGROUND ******/
   @supports (backdrop-filter: none) {

@@ -4,6 +4,9 @@
   <div class="bg" :style="{ backgroundImage: 'url(' + bgImageUrl + ')' }">
     <div class="overlay">
       <div class="bg-container clearfix">
+        <transition enter-active-class="animated fadeInTop" leave-active-class="animated fadeOutTop" appear>
+          <SearchInput />
+        </transition>
         <Header />
         <div class="social-search">
           <Social class="socials" />
@@ -25,6 +28,7 @@
 import Header from '@/components/globalcomponents/Header/Header'
 import Footer from '@/components/globalcomponents/Footer/Footer'
 import MobileFooter from '@/components/globalcomponents/Footer/Mobile-footer'
+import SearchInput from '@/components/globalcomponents/shared/SearchInput'
 import Social from '@/components/globalcomponents/shared/Social'
 import Mobile from '@/components/globalcomponents/shared/Mobile'
 import Search from '@/components/globalcomponents/shared/Search'
@@ -35,9 +39,8 @@ export default {
     Footer,
     MobileFooter,
     Mobile,
-    Search
-    // Carousel,
-    // Box
+    Search,
+    SearchInput
   },
   data () {
     return {
