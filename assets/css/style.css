@@ -60,13 +60,13 @@ h4 {
 .social-search {
   width: 100%;
   float: right;
+  padding-top: 1.5rem;
 }
 .social-search .search {
   float: right;
 }
 .social-search .socials {
   float: right;
-  padding-top: 1.4rem;
 }
 [class^="flaticon-search"]:before {
   font-size: 1.5rem;
@@ -81,7 +81,7 @@ h4 {
   width: 100%;
   height: 73vh;
   padding: 1rem;
-  margin-top: 3rem;
+  margin-top: 4.2rem;
   border-radius: 1em;
   font-family: Arial, sans-serif;
 }
