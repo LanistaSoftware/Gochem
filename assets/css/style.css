@@ -324,8 +324,10 @@ tr:hover .blogs > .blogs-content h3:hover {
 }
 #blogs-detail .button-container {
   width: 100%;
-  margin: 1rem;
   display: flex;
+  margin-top: 1rem;
+  border: 1.5px solid white;
+  padding: 0.8rem;
 }
 #blogs-detail .button-container .box-left,
 #blogs-detail .button-container .box-right,
@@ -339,23 +341,30 @@ tr:hover .blogs > .blogs-content h3:hover {
 #blogs-detail .button-container .box-right {
   text-align: right;
 }
+#blogs-detail .button-container i {
+  margin: 0.6rem;
+}
 #blogs-detail .button-container .btn {
   display: inline-block;
-  font-size: 0.8rem;
+  font-size: 1rem;
   text-align: center;
   color: white;
-  border: 1px solid white;
-  border-radius: 1em;
   transition: 0.5s;
 }
-#blogs-detail .btn:hover {
-  color: lightgreen;
-  border-color: lightgreen;
+#blogs-detail .button-container .box {
+  text-align: center !important;
 }
-#blogs-detail .btn:hover [class^="flaticon-"]:before,
-#blogs-detail .btn:hover [class*=" flaticon-"]:before,
-#blogs-detail .btn:hover [class^="flaticon-"]:after,
-#blogs-detail .btn:hover [class*=" flaticon-"]:after {
+#blogs-detail .button-container .box:not(:last-child) {
+  line-height: 0.02px !important;
+  border-right: 0.1rem solid white;
+}
+#blogs-detail .button-container .btn:hover {
+  color: lightgreen;
+}
+#blogs-detail .button-container .btn:hover [class^="flaticon-"]:before,
+#blogs-detail .button-container .btn:hover [class*=" flaticon-"]:before,
+#blogs-detail .button-container .btn:hover [class^="flaticon-"]:after,
+#blogs-detail .button-container .btn:hover [class*=" flaticon-"]:after {
   color: lightgreen;
 }
 #blogs img {
@@ -401,6 +410,8 @@ tr:hover .blogs > .blogs-content h3:hover {
   width: 100%;
   display: flex;
   margin-top: 1rem;
+  border: 1.5px solid white;
+  padding: 0.8rem;
 }
 #portfolioDetail .button-container .box-left,
 #portfolioDetail .button-container .box-right,
@@ -414,17 +425,25 @@ tr:hover .blogs > .blogs-content h3:hover {
 #portfolioDetail .button-container .box-right {
   text-align: right;
 }
+#portfolioDetail .button-container i {
+  margin: 0.6rem;
+}
 #portfolioDetail .button-container .btn {
   display: inline-block;
-  font-size: 0.8rem;
+  font-size: 1rem;
   text-align: center;
   color: white;
-  border: 1px solid white;
   transition: 0.5s;
+}
+#portfolioDetail .button-container .box {
+  text-align: center !important;
+}
+#portfolioDetail .button-container .box:not(:last-child) {
+  line-height: 0.02px !important;
+  border-right: 0.1rem solid white;
 }
 #portfolioDetail .btn:hover {
   color: lightgreen;
-  border-color: lightgreen;
 }
 #portfolioDetail .btn:hover [class^="flaticon-"]:before,
 #portfolioDetail .btn:hover [class*=" flaticon-"]:before,

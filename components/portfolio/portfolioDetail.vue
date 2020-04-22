@@ -8,18 +8,18 @@
         style="width:100%;height:100%"
       />
     </div>
-    <div class="button-container radius-05em clearfix">
-      <div class="box-left ">
+    <div class="button-container radius-2em clearfix">
+      <div class="box box-left ">
         <button class="btn radius-05em" @click="prevDocument">
           Önceki <i class="flaticon-left-arrow" />
         </button>
       </div>
-      <div class="box-center">
+      <div class="box box-center">
         <button class="btn radius-05em" @click="doneDocument">
           Belgeler <i class="flaticon-up-arrow" />
         </button>
       </div>
-      <div class="box-right">
+      <div class="box box-right">
         <button class="btn radius-05em" @click="nextDocument">
           Sonraki <i class="flaticon-next" />
         </button>

@@ -1152,11 +1152,20 @@
     }
     .button-container .btn{
       border: none;
-      margin-left: 1rem;
-      line-clamp: 1;
+      font-size: 10px;
+      font-weight: 500;
+    }
+    .box{
+      text-align: center !important;
+    }
+    .box:not(:last-child){
+      line-height: 0.02px !important;
+      border-right: 0.1rem solid white;
+      
     }
     .button-container{
       border: 1.5px solid white;
+      padding: 0.8rem;
     }
   }
 }
@@ -1205,7 +1214,6 @@
       padding: 1rem 1rem 0 1rem;
     }
   }
-
 }
 
 /* Extra small devices (phones, 480px and down) */
@@ -1215,7 +1223,6 @@
 @media only screen and (max-width: 568px) {
   #blogs {
     padding: 1rem;
-
     .blogs-content {
       width: 100%;
     }
@@ -1230,6 +1237,26 @@
     }
     .blogs-html{
       width: 100%;
+    }
+    i{
+      display: none;
+    }
+    .button-container .btn{
+      border: none;
+      font-size: 10px;
+      
+    }
+    .box{
+      text-align: center !important;
+    }
+    .box:not(:last-child){
+      line-height: 0.02px !important;
+      border-right: 0.1rem solid white;
+      
+    }
+    .button-container{
+      border: 1.5px solid white;
+      padding: 0.8rem;
     }
   }
 

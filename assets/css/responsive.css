@@ -792,11 +792,19 @@
   }
   #portfolioDetail .button-container .btn {
     border: none;
-    margin-left: 1rem;
-    line-clamp: 1;
+    font-size: 10px;
+    font-weight: 500;
+  }
+  #portfolioDetail .box {
+    text-align: center !important;
+  }
+  #portfolioDetail .box:not(:last-child) {
+    line-height: 0.02px !important;
+    border-right: 0.1rem solid white;
   }
   #portfolioDetail .button-container {
     border: 1.5px solid white;
+    padding: 0.8rem;
   }
 }
 /* Medium devices (landscape tablets, 768px*432px and up) */
@@ -839,6 +847,24 @@
   }
   #blogs-detail .blogs-html {
     width: 100%;
+  }
+  #blogs-detail i {
+    display: none;
+  }
+  #blogs-detail .button-container .btn {
+    border: none;
+    font-size: 10px;
+  }
+  #blogs-detail .box {
+    text-align: center !important;
+  }
+  #blogs-detail .box:not(:last-child) {
+    line-height: 0.02px !important;
+    border-right: 0.1rem solid white;
+  }
+  #blogs-detail .button-container {
+    border: 1.5px solid white;
+    padding: 0.8rem;
   }
 }
 /* Medium devices (landscape tablets, 768px*432px and up) */
