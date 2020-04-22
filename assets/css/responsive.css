@@ -48,6 +48,7 @@
   }
   .icon-container .search-input {
     padding: 0 !important;
+    margin-top: 1rem;
   }
   .icon-container .search-input input {
     padding: 0.9rem 1rem 0.7rem 0.8rem;
@@ -61,7 +62,7 @@
   [class*=" flaticon-"]:before,
   [class^="flaticon-"]:after,
   [class*=" flaticon-"]:after {
-    font-size: 1.8rem !important;
+    font-size: 1.7rem !important;
   }
   /*** Content Background ***/
   /***** OVERLAY BACKGROUND ******/
@@ -697,12 +698,6 @@
   .slide-card-container button a {
     font-size: 0.8rem !important;
   }
-  .slide-card-container .icon-container [class^="flaticon-"]:before,
-  .slide-card-container .icon-container [class*=" flaticon-"]:before,
-  .slide-card-container .icon-container [class^="flaticon-"]:after,
-  .slide-card-container .icon-container [class*=" flaticon-"]:after {
-    font-size: 3rem !important;
-  }
 }
 /* Extra small devices (phones, 480px and down) */
 @media only screen and (max-width: 480px) {
@@ -729,7 +724,7 @@
   .slide-card-container .icon-container [class*=" flaticon-"]:before,
   .slide-card-container .icon-container [class^="flaticon-"]:after,
   .slide-card-container .icon-container [class*=" flaticon-"]:after {
-    font-size: 3rem !important;
+    font-size: 3.2rem !important;
   }
 }
 /* Small devices (portrait tablets and large phones, 568px and up) */
