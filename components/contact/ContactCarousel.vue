@@ -13,14 +13,18 @@
           <div class="slide-card-container radius-2em">
             <div class="slide-card">
               <div class="slide-card-header clearfix">
-                <span class="icon-container">
-                  <i :class="slide.icons" />
-                </span>
-                <span class="header-container">
-                  <h2>
-                    {{ slide.title }}
-                  </h2>
-                </span>
+                <div class="header-container">
+                  <span class="icon-container">
+                    <i :class="slide.icons" />
+                  </span>
+                  <span class="header-text-container">
+                    <h2>
+                      {{ slide.title }}
+                    </h2>
+                  </span>
+                </div>
+
+                <span class="slide-card-border" />
               </div>
               <div class="slide-card-body">
                 <h3> {{ slide.info }} </h3>
@@ -106,9 +110,19 @@ export default {
 
 .slide-card-header {
   width: 100%;
-  padding: 20px 45px 10px 20px;
   word-wrap: break-word;
-  border-bottom: 2px solid #166296;
+
+  .header-container {
+    padding: 20px 30px;
+  }
+
+  .slide-card-border {
+    display: inline-block;
+    width: 85%;
+    border-bottom: 2px solid #166296;
+    margin-left: 7.5%;
+    margin-top: 15px;
+  }
 
   span {
     display: block;
@@ -128,7 +142,7 @@ export default {
     }
   }
 
-  .header-container {
+  .header-text-container {
     width: 70%;
     text-align: center;
     vertical-align: bottom;
@@ -145,38 +159,44 @@ export default {
 }
 
 .slide-card-body {
-  margin-top: 30px;
+  margin-top: 10px;
   padding: 0 10px;
+
   h3 {
     font-weight: bold;
     font-size: 18px;
   }
+
   p {
     font-size: 14px;
   }
+
   p,
   h3 {
     color: #166296;
     padding: 10px;
   }
 }
+
 .slide-card-button {
   text-align: center;
-  button{
-    //margin-top: 90px;
-    width:120px;
-    padding:5px 20px;
+
+  button {
+    width: 120px;
+    padding: 5px 20px;
     background: none;
     border: 1px solid #166296;
     transition: 0.5s;
-     position: absolute;
+    position: absolute;
     left: 35%;
     bottom: 10%;
-a{
- color: #166296;
-    font-size:14px;
-    word-wrap: break;
-}
+
+    a {
+      color: #166296;
+      font-size: 14px;
+      word-wrap: break;
+    }
+
     &:hover {
       color: lightgreen;
       text-decoration: none;

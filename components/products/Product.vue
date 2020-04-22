@@ -69,7 +69,7 @@
 </template>
 <script>
 import { mapActions, mapGetters } from 'vuex'
-import productSlide from '@/components/products/globalSlide.vue'
+import productSlide from '@/components/globalcomponents/shared/MobileSliderNavigation.vue'
 export default {
   components: {
     productSlide
