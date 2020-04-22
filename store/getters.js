@@ -61,3 +61,15 @@ export const gettersBlogs = (state) => {
 export const gettersBlog = (state) => {
   return state.blog
 }
+export const gettersPigments = (state) => {
+  return state.pigments
+}
+export const gettersDocuments = (state) => {
+  return state.documents
+}
+export const gettersDocument = (state) => {
+  return state.document
+}
+export const gettersFileurl = (state) => {
+  return state.fileUrl
+}

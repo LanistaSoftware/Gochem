@@ -56,6 +56,9 @@
     width: 100%;
     height: auto;
   }
+  #mobil-search {
+    display: inline-block !important;
+  }
   /* tüm iconlar */
   [class^="flaticon-"]:before,
   [class*=" flaticon-"]:before,
@@ -784,6 +787,17 @@
     height: 40vh;
     object-fit: cover;
   }
+  #portfolioDetail i {
+    display: none;
+  }
+  #portfolioDetail .button-container .btn {
+    border: none;
+    margin-left: 1rem;
+    line-clamp: 1;
+  }
+  #portfolioDetail .button-container {
+    border: 1.5px solid white;
+  }
 }
 /* Medium devices (landscape tablets, 768px*432px and up) */
 @media only screen and (max-width: 768px) and (min-width: 569px) {
@@ -819,6 +833,12 @@
   }
   #blogs .content {
     height: auto;
+  }
+  #blogs-detail img {
+    width: 100%;
+  }
+  #blogs-detail .blogs-html {
+    width: 100%;
   }
 }
 /* Medium devices (landscape tablets, 768px*432px and up) */

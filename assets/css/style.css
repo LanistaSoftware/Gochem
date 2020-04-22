@@ -68,6 +68,9 @@ h4 {
   float: right;
   padding-top: 1.4rem;
 }
+#mobil-search {
+  display: none !important;
+}
 [class^="flaticon-search"]:before {
   font-size: 1.5rem;
 }
@@ -312,6 +315,9 @@ tr:hover .blogs > .blogs-content h3:hover {
   color: lightgreen;
   border-color: lightgreen;
 }
+#blogs-detail {
+  margin-bottom: 1rem;
+}
 #blogs-detail .blogs-detail {
   width: 100%;
   height: 100%;
@@ -378,4 +384,51 @@ tr:hover .blogs > .blogs-content h3:hover {
 #blogs h3:hover {
   color: lightgreen;
   border-color: lightgreen;
+}
+#pigment .button-container {
+  width: 100%;
+  text-align: center;
+}
+#portfolioDetail {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+#portfolioDetail .portfolio-document {
+  margin-top: 2rem;
+  height: 60vh;
+}
+#portfolioDetail .button-container {
+  width: 100%;
+  display: flex;
+  margin-top: 1rem;
+}
+#portfolioDetail .button-container .box-left,
+#portfolioDetail .button-container .box-right,
+#portfolioDetail .button-container .box-center {
+  width: 33%;
+  display: inline-block;
+}
+#portfolioDetail .button-container .box-center {
+  text-align: center;
+}
+#portfolioDetail .button-container .box-right {
+  text-align: right;
+}
+#portfolioDetail .button-container .btn {
+  display: inline-block;
+  font-size: 0.8rem;
+  text-align: center;
+  color: white;
+  border: 1px solid white;
+  transition: 0.5s;
+}
+#portfolioDetail .btn:hover {
+  color: lightgreen;
+  border-color: lightgreen;
+}
+#portfolioDetail .btn:hover [class^="flaticon-"]:before,
+#portfolioDetail .btn:hover [class*=" flaticon-"]:before,
+#portfolioDetail .btn:hover [class^="flaticon-"]:after,
+#portfolioDetail .btn:hover [class*=" flaticon-"]:after {
+  color: lightgreen;
 }

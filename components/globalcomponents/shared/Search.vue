@@ -28,7 +28,7 @@
           </a>
         </li>
         <span v-for="item in blogs" :key="item._id">
-          <a href="/products" v-html="getHeader(item.content)" />
+          <a :href="'/blogs/'+item._id" v-html="getHeader(item.content)" />
         </span>
       </ul>
     </div>

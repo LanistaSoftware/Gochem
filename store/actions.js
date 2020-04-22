@@ -76,3 +76,18 @@ export const getBlog = ({ commit }, id) => {
     commit('setBlog', res.data.blogs[0].content)
   })
 }
+export const getPigments = ({ commit }) => {
+  return api().get('/pigment/').then((res) => {
+    commit('setPigments', res.data.pigments)
+  })
+}
+export const getDocuments = ({ commit }) => {
+  return api().get('/document/').then((res) => {
+    commit('setDocuments', res.data.documents)
+  })
+}
+export const getDocument = ({ commit }, id) => {
+  return api().get('/document/' + id).then((res) => {
+    commit('setDocument', res.data.documentone)
+  })
+}

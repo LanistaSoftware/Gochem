@@ -7,7 +7,9 @@
       </div>
       <section class="sidenav product-sidenav overflow-scroll">
         <div class="product-category">
-          <h2> Slikon Pigment</h2>
+          <h2 @click="pigmentShow=!pigmentShow">
+            Slikon Pigment
+          </h2>
         </div>
         <div v-for="item in getsector" :key="item.id" class="product-category">
           <h2>{{ item.sectorname }}</h2>
@@ -18,23 +20,14 @@
       </section>
       <div class="product-container">
         <div class="product-content">
-          <div v-if="true" class="products-section">
+          <div v-if="!pigmentShow" class="products-section">
             <h2>{{ getProductone.prdoudctName }}</h2>
             <p>
               {{ getProductone.productMoreDesc }}
             </p>
           </div>
-          <div class="pigments-section">
-            <b-table
-              hover
-              striped
-              :items="items"
-              :fields="fields"
-              :sort-by.sync="sortBy"
-              :sort-desc.sync="sortDesc"
-              responsive="sm"
-              class="pigment-table"
-            />
+          <div v-if="pigmentShow" class="pigments-section">
+            <pigment-table />
           </div>
         </div>
         <div class="product-link">
@@ -69,40 +62,22 @@
 </template>
 <script>
 import { mapActions, mapGetters } from 'vuex'
+import pigmentTable from './productPigmentTable.vue'
 import productSlide from '@/components/products/globalSlide.vue'
 export default {
   components: {
-    productSlide
+    productSlide,
+    pigmentTable
   },
   data () {
     return {
+      defaultProduct: '',
       productone: {
         name: 'name',
         desc: 'desc',
         category: 'category'
       },
-      sortBy: 'age',
-      sortDesc: false,
-      fields: [
-        { key: 'index', sortable: true },
-        { key: 'product_name', sortable: true },
-        { key: 'color', sortable: false, class: 'colored' },
-        { key: 'migration', sortable: false },
-        { key: 'heat', sortable: false },
-        { key: 'light', sortable: false }
-      ],
-      items: [
-        { index: 0, product_name: 'G Line Yellow L 1000 CP', color: '#CC0000', migration: '5', heat: '250', light: '7' },
-        { index: 2, product_name: 'A Line Yellow L 1000 CP', color: '#CC0000', migration: '5', heat: '250', light: '7' },
-        { index: 5, product_name: 'C Line Yellow L 1000 CP', color: '#CC0000', migration: '5', heat: '250', light: '7' },
-        { index: 5, product_name: 'G Line Yellow L 1000 CP', color: '#CC0000', migration: '5', heat: '250', light: '7' },
-        { index: 8, product_name: 'G Line Yellow L 1000 CP', color: '#CC0000', migration: '5', heat: '250', light: '7' },
-        { index: 8, product_name: 'G Line Yellow L 1000 CP', color: '#CC0000', migration: '5', heat: '250', light: '7' },
-        { index: 0, product_name: 'G Line Yellow L 1000 CP', color: '#CC0000', migration: '5', heat: '250', light: '7' },
-        { index: 0, product_name: 'G Line Yellow L 1000 CP', color: '#CC0000', migration: '5', heat: '250', light: '7' },
-        { index: 6, product_name: 'G Line Yellow L 1000 CP', color: '#CC0000', migration: '5', heat: '250', light: '7' },
-        { index: 0, product_name: 'G Line Yellow L 1000 CP', color: '#CC0000', migration: '5', heat: '250', light: '7' }
-      ]
+      pigmentShow: false
     }
   },
   computed: {
@@ -114,7 +89,10 @@ export default {
   },
   created () {
     this.$store.commit('setActiveSlide', 'product')
-    this.getProducts()
+    this.getProducts().then(() => {
+      this.defaultProduct = this.getProductdb[0]._id
+      localStorage.setItem('productid', this.defaultProduct)
+    })
     this.sectorData()
   },
   mounted () {
@@ -131,6 +109,7 @@ export default {
       getOneProduct: 'getOneProduct'
     }),
     getAproduct (id) {
+      this.pigmentShow = false
       this.getOneProduct(id).then(() => {
         this.productone.name = this.getProductone.prdoudctName
         this.productone.desc = this.getProductone.productMoreDesc
@@ -241,7 +220,5 @@ export default {
 
   }
 }
-.colored{
-  color:red;
-}
+
 </style>

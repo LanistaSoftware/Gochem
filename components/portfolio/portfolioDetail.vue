@@ -1,0 +1,98 @@
+<template>
+  <div id="portfolioDetail" class="portfolio-detail content-background  overflow-scroll content">
+    <div class="portfolio-document">
+      <iframe
+        id="getdocument"
+        name="getdocument"
+        :src="gettersFileurl + gettersDocument.path+'#toolbar=0'"
+        style="width:100%;height:100%"
+      />
+    </div>
+    <div class="button-container radius-05em clearfix">
+      <div class="box-left ">
+        <button class="btn radius-05em" @click="prevDocument">
+          Önceki <i class="flaticon-left-arrow" />
+        </button>
+      </div>
+      <div class="box-center">
+        <button class="btn radius-05em" @click="doneDocument">
+          Belgeler <i class="flaticon-up-arrow" />
+        </button>
+      </div>
+      <div class="box-right">
+        <button class="btn radius-05em" @click="nextDocument">
+          Sonraki <i class="flaticon-next" />
+        </button>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+import { mapActions, mapGetters } from 'vuex'
+export default {
+  data () {
+    return {
+      newIndex: 0,
+      activeDocumentId: ''
+    }
+  },
+  plugins: [
+    { src: '~/plugins/both-sides.js' },
+    { src: '~/plugins/client-only.js', mode: 'client' },
+    { src: '~/plugins/server-only.js', mode: 'server' }
+  ],
+  computed: {
+    ...mapGetters({
+      gettersDocument: 'gettersDocument',
+      gettersDocuments: 'gettersDocuments',
+      gettersFileurl: 'gettersFileurl'
+    })
+  },
+  created () {
+    if (this.gettersDocument === '') {
+      this.getDocuments()
+    }
+    this.activeDocumentId = this.$route.params.portfolioid
+    this.getDocument(this.$route.params.portfolioid)
+    if (process.client) {
+      // eslint-disable-next-line nuxt/no-globals-in-created
+      window.document.body.addEventListener('contextmenu', function (e) {
+        e.preventDefault()
+      }, false)
+    }
+  },
+  methods: {
+    ...mapActions({
+      getDocument: 'getDocument',
+      getDocuments: 'getDocuments'
+    }),
+    doneDocument () {
+      this.$router.push('/portfolio')
+    },
+    nextDocument () {
+      this.gettersDocuments.forEach((element, index) => {
+        if (element._id === this.activeDocumentId) {
+          this.newIndex = index + 1
+          if (this.newIndex === this.gettersDocuments.length) {
+            this.newIndex = 0
+          }
+          this.$route.params.portfolioid = this.gettersDocuments[this.newIndex]._id
+          this.$router.push(this.$route.params.portfolioid)
+        }
+      })
+    },
+    prevDocument () {
+      this.gettersDocuments.forEach((element, index) => {
+        if (element._id === this.activeDocumentId) {
+          this.newIndex = index - 1
+          if (this.newIndex === -1) {
+            this.newIndex = this.gettersDocuments.length - 1
+          }
+          this.$route.params.portfolioid = this.gettersDocuments[this.newIndex]._id
+          this.$router.push(this.$route.params.portfolioid)
+        }
+      })
+    }
+  }
+}
+</script>
