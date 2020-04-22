@@ -6,7 +6,6 @@
       :interval="4000"
     >
       <h2>Referanslarımız</h2>
-      <hr>
       <div v-for="(ref, index) in references" :key="index.id" class="referance">
         <b-carousel-slide>
           <template v-slot:img>

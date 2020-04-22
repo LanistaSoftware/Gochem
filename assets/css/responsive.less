@@ -753,7 +753,33 @@
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: portrait) {}
 
 /* Landscape */
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: landscape) {}
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: landscape) {
+  #product{
+    .content{
+      height: 75vh;
+    }
+  }
+   .product-link {
+
+    .product-btn {
+      width: 33%;
+      .btn {
+        margin-top: 0 !important;
+        [class^="flaticon-"]:before,
+        [class*=" flaticon-"]:before,
+        [class^="flaticon-"]:after,
+        [class*=" flaticon-"]:after {
+          font-size: 2.5rem !important;
+        }
+
+        .product-btn-info {
+          font-size: .8rem !important;
+        }
+      }
+    }
+
+  }
+ }
 
 
 
