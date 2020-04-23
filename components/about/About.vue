@@ -19,7 +19,6 @@
             <h2 class="d-none">
               {{ getAboutUs.ownername }}
             </h2>
-            <img :src="getAboutUs.autograph" alt="Signature">
           </div>
         </div>
       </div>

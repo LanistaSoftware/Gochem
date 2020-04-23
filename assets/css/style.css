@@ -416,10 +416,13 @@ tr:hover .blogs > .blogs-content h3:hover {
 #portfolioDetail {
   margin-bottom: 1rem;
   width: 100%;
+  text-align: center;
 }
 #portfolioDetail .portfolio-document {
   margin-top: 2rem;
-  height: 60vh;
+}
+#portfolioDetail img {
+  width: 80%;
 }
 #portfolioDetail .button-container {
   width: 100%;
