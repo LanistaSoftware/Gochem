@@ -15,7 +15,7 @@ export default {
 </script>
 <style lang="less" scoped>
 .icon-container {
-  padding: 0.5rem 0.5rem;
+  //padding: 0.5rem 0.5rem;
   display: inline-block;
   background-color: transparent;
   vertical-align: middle;

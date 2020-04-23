@@ -60,13 +60,16 @@ h4 {
 .social-search {
   width: 100%;
   float: right;
+  padding-top: 1.5rem;
 }
 .social-search .search {
   float: right;
 }
 .social-search .socials {
   float: right;
-  padding-top: 1.4rem;
+}
+#mobil-search {
+  display: none !important;
 }
 [class^="flaticon-search"]:before {
   font-size: 1.5rem;
@@ -81,7 +84,7 @@ h4 {
   width: 100%;
   height: 73vh;
   padding: 1rem;
-  margin-top: 3rem;
+  margin-top: 4.2rem;
   border-radius: 1em;
   font-family: Arial, sans-serif;
 }
@@ -232,6 +235,10 @@ h4 {
 .nuxt-link-exact-active a [class*=" flaticon-"]:after {
   color: lightgreen;
 }
+/**** Home ****/
+#home {
+  margin-top: 5.5rem;
+}
 /*** Contact CSS*****/
 .colored-background {
   background-color: white;
@@ -317,14 +324,19 @@ tr:hover .blogs > .blogs-content h3:hover {
   display: none;
 }
 /**** Blog Detail****/
+#blogs-detail {
+  margin-bottom: 1rem;
+}
 #blogs-detail .blogs-detail {
   width: 100%;
   height: 100%;
 }
 #blogs-detail .button-container {
   width: 100%;
-  margin: 1rem;
   display: flex;
+  margin-top: 1rem;
+  border: 1.5px solid white;
+  padding: 0.8rem;
 }
 #blogs-detail .button-container .box-left,
 #blogs-detail .button-container .box-right,
@@ -338,23 +350,30 @@ tr:hover .blogs > .blogs-content h3:hover {
 #blogs-detail .button-container .box-right {
   text-align: right;
 }
+#blogs-detail .button-container i {
+  margin: 0.6rem;
+}
 #blogs-detail .button-container .btn {
   display: inline-block;
-  font-size: 0.8rem;
+  font-size: 1rem;
   text-align: center;
   color: white;
-  border: 1px solid white;
-  border-radius: 1em;
   transition: 0.5s;
 }
-#blogs-detail .btn:hover {
-  color: lightgreen;
-  border-color: lightgreen;
+#blogs-detail .button-container .box {
+  text-align: center !important;
 }
-#blogs-detail .btn:hover [class^="flaticon-"]:before,
-#blogs-detail .btn:hover [class*=" flaticon-"]:before,
-#blogs-detail .btn:hover [class^="flaticon-"]:after,
-#blogs-detail .btn:hover [class*=" flaticon-"]:after {
+#blogs-detail .button-container .box:not(:last-child) {
+  line-height: 0.02px !important;
+  border-right: 0.1rem solid white;
+}
+#blogs-detail .button-container .btn:hover {
+  color: lightgreen;
+}
+#blogs-detail .button-container .btn:hover [class^="flaticon-"]:before,
+#blogs-detail .button-container .btn:hover [class*=" flaticon-"]:before,
+#blogs-detail .button-container .btn:hover [class^="flaticon-"]:after,
+#blogs-detail .button-container .btn:hover [class*=" flaticon-"]:after {
   color: lightgreen;
 }
 #blogs img {
@@ -384,7 +403,67 @@ tr:hover .blogs > .blogs-content h3:hover {
   color: lightgreen;
   border-color: lightgreen;
 }
-/**** Search Popup *****/
+#pigment .button-container {
+  width: 100%;
+  text-align: center;
+}
+#pigment .colored {
+  font-size: 1rem !important;
+}
+#portfolioDetail {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+#portfolioDetail .portfolio-document {
+  margin-top: 2rem;
+  height: 60vh;
+}
+#portfolioDetail .button-container {
+  width: 100%;
+  display: flex;
+  margin-top: 1rem;
+  border: 1.5px solid white;
+  padding: 0.8rem;
+}
+#portfolioDetail .button-container .box-left,
+#portfolioDetail .button-container .box-right,
+#portfolioDetail .button-container .box-center {
+  width: 33%;
+  display: inline-block;
+}
+#portfolioDetail .button-container .box-center {
+  text-align: center;
+}
+#portfolioDetail .button-container .box-right {
+  text-align: right;
+}
+#portfolioDetail .button-container i {
+  margin: 0.6rem;
+}
+#portfolioDetail .button-container .btn {
+  display: inline-block;
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+  transition: 0.5s;
+}
+#portfolioDetail .button-container .box {
+  text-align: center !important;
+}
+#portfolioDetail .button-container .box:not(:last-child) {
+  line-height: 0.02px !important;
+  border-right: 0.1rem solid white;
+}
+#portfolioDetail .btn:hover {
+  color: lightgreen;
+}
+#portfolioDetail .btn:hover [class^="flaticon-"]:before,
+#portfolioDetail .btn:hover [class*=" flaticon-"]:before,
+#portfolioDetail .btn:hover [class^="flaticon-"]:after,
+#portfolioDetail .btn:hover [class*=" flaticon-"]:after {
+  color: lightgreen;
+}
+/****  Search pop-up*/
 .blog-results {
   font-size: 1.2rem;
 }

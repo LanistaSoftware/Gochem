@@ -94,7 +94,6 @@ export default {
   width: 100%;
   padding: 50px 0;
   margin-bottom: 40px;
-  margin-top: 5rem;
 }
 
 .carousel-3d-slide {

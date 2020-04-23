@@ -74,6 +74,11 @@
           </li>
         </ul>
       </div>
+      <div class="btn-icon-container">
+        <button @click="changeSearchStatus">
+          <i class="flaticon-up-arrow" />
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -146,6 +151,10 @@ export default {
         this.pigments = []
         this.blogs = []
       }
+    },
+    changeSearchStatus () {
+      this.$store.commit('setSearchStatus', false)
+      this.Search.searchitem = ''
     }
   }
 }

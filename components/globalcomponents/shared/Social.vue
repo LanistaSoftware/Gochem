@@ -1,5 +1,14 @@
 <template>
   <ul class="social-network social-circle">
+    <li class="icon-container">
+      <a
+        title="search"
+        @click="changeSearchStatus"
+      >
+        <i
+          class="flaticon-search"
+        /></a>
+    </li>
     <li v-for="sosyal in social" :key="sosyal.id" class="icon-container">
       <a
         :href="sosyal.href"
@@ -33,6 +42,11 @@ export default {
           icon: 'flaticon-youtube-rounded-square-logo'
         }
       ]
+    }
+  },
+  methods: {
+    changeSearchStatus () {
+      this.$store.commit('setSearchStatus', true)
     }
   }
 }

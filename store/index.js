@@ -8,12 +8,17 @@ const createStore = () => {
       About: '',
       search: '',
       sectors: '',
+      documents: '',
+      pigmentShow: false,
       blog: '',
       imgurl: 'https://api.lanista.com.tr/assest/images/',
       sector: '',
       slideactive: '',
       product: '',
       productone: '',
+      pigments: '',
+      document: '',
+      fileUrl: 'https://api.lanista.com.tr/assest/file/',
       productoneset: {
         name: 'name',
         desc: 'desc',
@@ -116,7 +121,8 @@ const createStore = () => {
             }
           ]
         }
-      ]
+      ],
+      searchStatus: false
     }),
     mutations,
     actions,

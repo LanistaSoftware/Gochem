@@ -71,3 +71,18 @@ export const setBlogs = (state, value) => {
 export const setBlog = (state, value) => {
   state.blog = value
 }
+export const setPigments = (state, value) => {
+  state.pigments = value
+}
+export const setDocuments = (state, value) => {
+  state.documents = value
+}
+export const setDocument = (state, value) => {
+  state.document = value
+}
+export const setpigmentShow = (state, value) => {
+  state.pigmentShow = value
+}
+export const setSearchStatus = (state, value) => {
+  state.searchStatus = value
+}

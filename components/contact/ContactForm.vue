@@ -3,28 +3,28 @@
     <div id="form-container" class="form-container">
       <div class="twin-input left-inputs">
         <div class="inputBox">
-          <input type="text" name="name" class="input radius-1em" placeholder="İsim">
+          <input v-model="communication.name" type="text" name="name" class="input radius-1em" placeholder="İsim">
         </div>
         <div class="inputBox">
-          <input type="email" name="email" class="input radius-1em" placeholder="E-mail">
+          <input v-model="communication.email" type="email" name="email" class="input radius-1em" placeholder="E-mail">
         </div>
       </div>
       <div class="twin-input right-inputs clearfix">
         <div class="inputBox">
-          <input type="text" name="phone" class="input radius-1em" placeholder="Telefon">
+          <input v-model="communication.telephone" type="text" name="phone" class="input radius-1em" placeholder="Telefon">
         </div>
         <div class="inputBox">
-          <select id="konu" class="radius-1em" name="Konu" placeholder="Konu">
-            <option value="">
+          <select id="konu" v-model="communication.subject" class="radius-1em" name="Konu" placeholder="Konu">
+            <option value="Bilgi almak istiyorum.">
               Bilgi almak istiyorum.
             </option>
-            <option value="">
+            <option value=" Ürün işlemleri.">
               Ürün işlemleri.
             </option>
-            <option value="">
+            <option value="  Stok işlemleri.">
               Stok işlemleri.
             </option>
-            <option value="">
+            <option value=" Sipariş işlemleri.">
               Sipariş işlemleri.
             </option>
           </select>
@@ -32,10 +32,10 @@
       </div>
       <div class="text-container">
         <div class="inputBox">
-          <textarea class="input radius-1em" placeholder="Mesajınız" />
+          <textarea v-model="communication.message" class="input radius-1em" placeholder="Mesajınız" />
         </div>
         <div class="btn-container">
-          <button class="form-btn radius-05em">
+          <button class="form-btn radius-05em" @click="send">
             Gönder
           </button>
         </div>
@@ -43,6 +43,40 @@
     </div>
   </section>
 </template>
+<script>
+import { mapActions } from 'vuex'
+export default {
+  data () {
+    return {
+      communication: {
+        name: '',
+        telephone: '',
+        email: '',
+        subject: '',
+        message: '',
+        toemail: 'korkacserkan@gmail.com'
+      }
+    }
+  },
+  methods: {
+    ...mapActions({
+      sendMail: 'sendMail',
+      sendCommunication: 'sendCommunication'
+    }),
+    send () {
+      this.sendCommunication(this.communication).then(() => {
+        this.sendMail(this.communication).then(() => {
+          this.communication.name = ''
+          this.communication.telephone = ''
+          this.communication.subject = ''
+          this.communication.message = ''
+          this.communication.email = ''
+        })
+      })
+    }
+  }
+}
+</script>
 <style lang="less" scoped>
 .twin-input {
   width: 50%;
