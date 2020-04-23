@@ -109,13 +109,4 @@ li:not(:last-child) {
   border-right: 0.01rem solid white;
 
 }
-
-[class^="flaticon-"]:before,
-[class*=" flaticon-"]:before,
-[class^="flaticon-"]:after,
-[class*=" flaticon-"]:after {
-  color: white;
-  margin-left: 0px;
-  margin-right: 0.5rem;
-}
 </style>

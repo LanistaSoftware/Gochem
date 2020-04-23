@@ -195,14 +195,6 @@ export default {
 .footer-row:first-child {
   text-align: left;
 }
-
-[class^="flaticon-twitter"]:before,
-[class^="flaticon-linkedin"]:before,
-[class^="flaticon-youtube"]:before {
-  font-size: 1.7rem;
-  margin-right: 0.2rem;
-}
-
 .contact-item {
   font-family: Georgia;
   font-size: 1.1rem;

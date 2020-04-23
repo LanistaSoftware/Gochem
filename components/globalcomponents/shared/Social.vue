@@ -48,10 +48,7 @@ ul li {
   cursor: pointer !important;
   padding-left: .6rem;
 }
-[class^="flaticon-twitter"]:before,[class^="flaticon-linkedin"]:before,[class^="flaticon-youtube"]:before {
-  font-size: 1.5rem;
-}
-[class^="flaticon-search"]:before{
-  font-size: 1.5rem;
-}
+// [class^="flaticon-search"]:before{
+//   font-size: 1.5rem;
+// }
 </style>

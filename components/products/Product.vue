@@ -1,5 +1,5 @@
 <template>
-  <section id="product">
+  <section id="product" class="clearfix">
     <productSlide />
     <div class="content clearfix content-background mobile-content-background">
       <div v-if="!getpigmentShow" id="rescat" class="responsive-category">
@@ -127,7 +127,6 @@ export default {
 <style lang="less" scoped>
 .sidenav {
   padding: 3rem;
-
   h1 {
     padding-bottom: 1.1rem;
     font-size: 1.8rem;
@@ -189,14 +188,6 @@ export default {
         margin-top: .6rem;
         text-align: center;
 
-        [class^="flaticon-"]:before,
-        [class*=" flaticon-"]:before,
-        [class^="flaticon-"]:after,
-        [class*=" flaticon-"]:after {
-          font-size: 3rem;
-          transition: 0.5s;
-        }
-
         .product-btn-info {
           font-size: .6rem;
           padding: .5rem 2rem;
@@ -208,22 +199,6 @@ export default {
           height: 2.7rem;
           transition: 0.5s;
         }
-      }
-
-      .btn:hover {
-
-        [class^="flaticon-"]:before,
-        [class*=" flaticon-"]:before,
-        [class^="flaticon-"]:after,
-        [class*=" flaticon-"]:after {
-          color: lightgreen;
-        }
-
-        .product-btn-info {
-          color: lightgreen;
-          border-color: lightgreen;
-        }
-
       }
     }
 

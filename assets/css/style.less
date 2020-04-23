@@ -74,11 +74,16 @@ h4 {
 [class^="flaticon-linkedin-1"]:hover:before {
   color: #007bb7;
 }
-
+.social-circle{
+  [class^="flaticon-twitter"]:before,[class^="flaticon-linkedin"]:before,[class^="flaticon-youtube"]:before {
+    font-size: 1.5rem;
+  }
+}
 .social-search {
   width: 100%;
-  float: right;
-  padding-top: 1.5rem;
+ // float: right;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 
   .search {
     float: right;
@@ -98,8 +103,8 @@ h4 {
 }
 
 .mobile-call {
-  padding-top: 1.8rem;
-  padding-bottom: 1.8rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 /* Content */
@@ -109,7 +114,7 @@ h4 {
   width: 100%;
   height: 73vh;
   padding: 1rem;
-  margin-top: 4.2rem;
+  //margin-top: 4.2rem;
   border-radius: 1em;
   font-family: Arial, sans-serif;
 }
@@ -218,9 +223,8 @@ h4 {
   display: inline-block;
   width: 100%;
   border-bottom: 0.003rem solid white;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   text-align: center;
-  height: 5.5rem;
 }
 
 /***** SOCIAL ******/
@@ -266,6 +270,14 @@ h4 {
   position: absolute;
   width: 100%;
   bottom: 0;
+  
+[class^="flaticon-twitter"]:before,
+[class^="flaticon-linkedin"]:before,
+[class^="flaticon-youtube"]:before {
+  font-size: 1.7rem;
+  margin-right: 0.2rem;
+}
+
 }
 
 .footer-bg {
@@ -280,6 +292,12 @@ h4 {
 
 .mobile-footer {
   display: none;
+  [class^="flaticon-"]:before,
+  [class*=" flaticon-"]:before,
+  [class^="flaticon-"]:after,
+  [class*=" flaticon-"]:after {
+    font-size: 1.3rem !important;
+  }
 }
 
 .mobile-footer {
@@ -299,6 +317,29 @@ h4 {
     }
   }
 }
+nav{
+  [class^="flaticon-"]:before,
+[class*=" flaticon-"]:before,
+[class^="flaticon-"]:after,
+[class*=" flaticon-"]:after {
+  color: white;
+  margin-left: 0px;
+  margin-right: 0.5rem;
+}
+}
+/*Mobile nav*/
+.mobile-nav{
+  [class^="flaticon-"]:before,
+[class*=" flaticon-"]:before,
+[class^="flaticon-"]:after,
+[class*=" flaticon-"]:after {
+  color: white;
+  margin-left: .3rem;
+  margin-right: .3rem;
+  font-size: 2.4rem !important;
+}
+}
+
 
 /*** Contact CSS*****/
 
@@ -307,18 +348,57 @@ h4 {
   background-image: linear-gradient(rgba(0, 34, 57, 0.8), rgba(5, 69, 74, 0.8));
 }
 
+#contact{
+  .carousel-container{
+    .icon-container {
+      [class^="flaticon-"]:before,
+      [class*=" flaticon-"]:before,
+      [class^="flaticon-"]:after,
+      [class*=" flaticon-"]:after {
+        font-size: 4rem;
+        color: #FB5757;
+      }
+    }
+  }
+}
+
 /* Product-carosuel*/
 .product-responsive-carousel {
   display: none;
+}
+/** prodcur btn **/
+  .product-btn {
+    .btn {
+      [class^="flaticon-"]:before,
+      [class*=" flaticon-"]:before,
+      [class^="flaticon-"]:after,
+      [class*=" flaticon-"]:after {
+        font-size: 3rem;
+        transition: 0.5s;
+      }
+    }
+    .btn:hover {
+
+      [class^="flaticon-"]:before,
+      [class*=" flaticon-"]:before,
+      [class^="flaticon-"]:after,
+      [class*=" flaticon-"]:after {
+        color: lightgreen;
+      }
+      .product-btn-info {
+        color: lightgreen;
+        border-color: lightgreen;
+      }
+    }
 }
 
 .VueCarousel-wrapper {
   width: 95% !important;
 }
 
-.product-responsive-carousel {
-  margin-top: 2rem;
-}
+// .product-responsive-carousel {
+//   margin-top: 2rem;
+// }
 
 .carousel-product {
   color: white !important;

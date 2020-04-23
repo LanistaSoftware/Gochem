@@ -4,7 +4,7 @@
       <div class="first-contact-background-overlay">
         <div class="bg-container">
           <Header />
-          <div class="social-search">
+          <div class="social-search clearfix">
             <Social class="socials" />
             <Search class="search" />
           </div>

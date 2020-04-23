@@ -5,7 +5,7 @@
     <div class="overlay">
       <div class="bg-container clearfix">
         <Header />
-        <div class="social-search">
+        <div class="social-search clearfix">
           <Social class="socials" />
           <Search class="search" />
         </div>

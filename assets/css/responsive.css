@@ -46,6 +46,9 @@
   html {
     font-size: 7px;
   }
+  .sliderBtn {
+    top: 24%;
+  }
   .icon-container .search-input {
     padding: 0 !important;
     margin-top: 1rem;
@@ -201,9 +204,6 @@
   }
   .footer {
     position: relative;
-  }
-  .sliderBtn {
-    margin-top: 10vh !important;
   }
   .carousel-items {
     height: 30vh !important;
@@ -455,15 +455,13 @@
 }
 /* Small devices (portrait tablets and large phones, 568px and up) */
 @media only screen and (max-width: 568px) {
-  #product {
-    padding: 1rem;
-  }
   #product .product-container {
     width: 100%;
     padding: 1rem 3rem;
   }
   #product .content {
     height: auto;
+    margin-bottom: 3rem;
   }
   #product .sidenav {
     display: none;
@@ -713,7 +711,6 @@
     padding-bottom: 0.3rem !important;
   }
   .slide-card-container .slide-card-body p {
-    font-size: 1rem !important;
     padding: 0 !important;
   }
   .slide-card-container button {
@@ -795,7 +792,7 @@
     width: 100%;
   }
   #portfolio .content {
-    height: auto;
+    margin-bottom: 3rem;
   }
   #portfolio img {
     height: 40vh;
@@ -847,14 +844,12 @@
 /* Extra small devices (phones, 480px and down) */
 /* Small devices (portrait tablets and large phones, 568px and up) */
 @media only screen and (max-width: 568px) {
-  #blogs {
-    padding: 1rem;
-  }
   #blogs .blogs-content {
     width: 100%;
   }
   #blogs .content {
     height: auto;
+    margin-bottom: 3rem;
   }
   #blogs-detail img {
     width: 100%;
