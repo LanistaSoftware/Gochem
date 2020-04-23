@@ -121,15 +121,16 @@ export default {
 }
 
 .icon-container {
-  padding: 0.5rem 0.5rem;
+  //padding: 0.5rem 0.5rem;
   display: inline-block;
   background-color: transparent;
   vertical-align: middle;
   z-index: 1;
 
   .search-input{
-  padding: 1.2rem 0.5rem 0.9rem 1rem;
+  padding: .1rem 0.5rem 0.9rem 1rem;
   transition: 1.3s;
+  margin-right: 0.6rem;
   a{
     color: red;
   }

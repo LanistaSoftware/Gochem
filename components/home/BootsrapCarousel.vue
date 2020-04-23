@@ -94,9 +94,10 @@ export default {
   position: absolute;
   margin-top: 20vh;
   background-color: transparent;
-  padding: .6vh;
+ // padding: .6vh;
   z-index: 2000;
   color: #fff;
+  top: 20%;
 
 }
 .sliderBtn::before {

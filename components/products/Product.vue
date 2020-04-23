@@ -156,13 +156,16 @@ export default {
 .product-container {
   width: 80%;
   float: left;
+  height: 100%;
   text-align: left;
-  padding: 2rem 5rem;
+  padding: 1.5rem 3rem;
 
   .product-content {
+    overflow-x: auto;
+    height: 72%;
     h2 {
       font-size: 2rem;
-      padding-bottom: 2rem;
+      padding-bottom: 1rem;
 
     }
 
@@ -176,32 +179,33 @@ export default {
   .product-link {
     width: 100%;
     text-align: center;
-    margin-top: 1rem;
+    //margin-top: 1rem;
 
     .product-btn {
       width: 33%;
       float: left;
 
       .btn {
-        margin-top: 1.2rem;
+        margin-top: .6rem;
         text-align: center;
 
         [class^="flaticon-"]:before,
         [class*=" flaticon-"]:before,
         [class^="flaticon-"]:after,
         [class*=" flaticon-"]:after {
-          font-size: 3.5rem;
+          font-size: 3rem;
           transition: 0.5s;
         }
 
         .product-btn-info {
-          font-size: 1rem;
-          padding: 0.8rem 3.7rem;
+          font-size: .6rem;
+          padding: .5rem 2rem;
           text-align: center;
           color: white;
           border: 1px solid white;
           display: block;
-          width: 14rem;
+          width: 10rem;
+          height: 2.7rem;
           transition: 0.5s;
         }
       }

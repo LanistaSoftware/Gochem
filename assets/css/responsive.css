@@ -48,12 +48,13 @@
   }
   .icon-container .search-input {
     padding: 0 !important;
+    margin-top: 1rem;
   }
   .icon-container .search-input input {
     padding: 0.9rem 1rem 0.7rem 0.8rem;
   }
   .bg-container {
-    width: 100%;
+    width: 90%;
     height: auto;
   }
   #mobil-search {
@@ -64,7 +65,7 @@
   [class*=" flaticon-"]:before,
   [class^="flaticon-"]:after,
   [class*=" flaticon-"]:after {
-    font-size: 1.8rem !important;
+    font-size: 1.7rem !important;
   }
   /*** Content Background ***/
   /***** OVERLAY BACKGROUND ******/
@@ -533,6 +534,26 @@
 /* Extra large devices (large laptops and desktops, 1400px and up) */
 /* Portrait */
 /* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: landscape) {
+  #product .content {
+    height: 75vh;
+  }
+  .product-link .product-btn {
+    width: 33%;
+  }
+  .product-link .product-btn .btn {
+    margin-top: 0 !important;
+  }
+  .product-link .product-btn .btn [class^="flaticon-"]:before,
+  .product-link .product-btn .btn [class*=" flaticon-"]:before,
+  .product-link .product-btn .btn [class^="flaticon-"]:after,
+  .product-link .product-btn .btn [class*=" flaticon-"]:after {
+    font-size: 2.5rem !important;
+  }
+  .product-link .product-btn .btn .product-btn-info {
+    font-size: 0.8rem !important;
+  }
+}
 /**********About Us Responsive********/
 /* Extra small devices (phones, 320px and down) */
 @media only screen and (max-width: 320px) {
@@ -614,7 +635,6 @@
   }
   #about {
     padding-bottom: 4rem;
-    padding-top: 4rem;
     height: initial;
   }
   #about .about-content p {
@@ -681,12 +701,6 @@
   .slide-card-container button a {
     font-size: 0.8rem !important;
   }
-  .slide-card-container .icon-container [class^="flaticon-"]:before,
-  .slide-card-container .icon-container [class*=" flaticon-"]:before,
-  .slide-card-container .icon-container [class^="flaticon-"]:after,
-  .slide-card-container .icon-container [class*=" flaticon-"]:after {
-    font-size: 3rem !important;
-  }
 }
 /* Extra small devices (phones, 480px and down) */
 @media only screen and (max-width: 480px) {
@@ -713,7 +727,7 @@
   .slide-card-container .icon-container [class*=" flaticon-"]:before,
   .slide-card-container .icon-container [class^="flaticon-"]:after,
   .slide-card-container .icon-container [class*=" flaticon-"]:after {
-    font-size: 3rem !important;
+    font-size: 3.2rem !important;
   }
 }
 /* Small devices (portrait tablets and large phones, 568px and up) */
