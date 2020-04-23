@@ -87,7 +87,7 @@ a {
 }
 
 .navli {
-  padding: 0 1.5rem 0 1.5rem;
+  padding: 0 1rem 0 1rem;
 }
 
 /* Change the link color to #111 (black) on hover */

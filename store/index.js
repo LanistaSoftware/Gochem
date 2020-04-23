@@ -18,6 +18,7 @@ const createStore = () => {
       productone: '',
       pigments: '',
       document: '',
+      galeries: '',
       fileUrl: 'https://api.lanista.com.tr/assest/file/',
       productoneset: {
         name: 'name',
@@ -121,7 +122,8 @@ const createStore = () => {
             }
           ]
         }
-      ]
+      ],
+      searchStatus: false
     }),
     mutations,
     actions,

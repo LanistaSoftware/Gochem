@@ -5,7 +5,7 @@
         <div v-for="item in gettersDocuments" :key="item._id" class="portfolio-content">
           <img class="radius-1em" :src="imgUrl+item.imgUrl" alt="Buraya belgeler gelecek." style="width:100%">
           <a href="#" @click.prevent="portfolioDetail(item._id)">
-            <h3 class="radius-05em">{{item.name}} </h3>
+            <h3 class="radius-05em">{{ item.name }} </h3>
           </a>
         </div>
       </div>
@@ -28,6 +28,12 @@ export default {
   },
   created () {
     this.getDocuments()
+    if (process.client) {
+      // eslint-disable-next-line nuxt/no-globals-in-created
+      window.document.body.addEventListener('contextmenu', function (e) {
+        e.preventDefault()
+      }, false)
+    }
   },
   methods: {
     ...mapActions({

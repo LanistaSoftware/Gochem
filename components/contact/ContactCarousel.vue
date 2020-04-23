@@ -8,6 +8,7 @@
         :width="360"
         :height="450"
         :space="450"
+        :controls-visible="isMobile"
       >
         <slide v-for="(slide, i) in contactSlides" :key="i" :index="i">
           <div class="slide-card-container radius-2em">
@@ -82,7 +83,8 @@ export default {
           content: 'Sorularınızı mail yoluyla bize iletin, uzman müşteri destek personelimiz kısa sürede size dönüş yapsın.',
           contactBtn: 'Bilgi formunu doldurun'
         }
-      ]
+      ],
+      isMobile: true
     }
   }
 }
