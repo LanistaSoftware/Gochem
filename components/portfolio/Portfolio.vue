@@ -28,6 +28,12 @@ export default {
   },
   created () {
     this.getDocuments()
+    if (process.client) {
+      // eslint-disable-next-line nuxt/no-globals-in-created
+      window.document.body.addEventListener('contextmenu', function (e) {
+        e.preventDefault()
+      }, false)
+    }
   },
   methods: {
     ...mapActions({

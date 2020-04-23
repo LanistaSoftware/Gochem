@@ -1,33 +1,11 @@
 <template>
   <b-carousel id="carousel-1" v-model="slide" fade :interval="4000">
-    <b-carousel-slide>
+    <b-carousel-slide v-for="item in getterGalery" :key="item._id">
       <template v-slot:img>
         <div class="img-sector-container">
           <img
             class="img-fluid radius-1em"
-            src="../../assets/img/bg1.jpg"
-            alt="image slot"
-          >
-        </div>
-      </template>
-    </b-carousel-slide>
-    <b-carousel-slide>
-      <template v-slot:img>
-        <div class="img-sector-container">
-          <img
-            class="img-fluid radius-1em"
-            src="../../assets/img/bg2.jpg"
-            alt="image slot"
-          >
-        </div>
-      </template>
-    </b-carousel-slide>
-    <b-carousel-slide>
-      <template v-slot:img>
-        <div class="img-sector-container">
-          <img
-            class="img-fluid radius-1em"
-            src="../../assets/img/bg3.jpg"
+            :src="imgUrl+item.imgUrl"
             alt="image slot"
           >
         </div>
@@ -37,6 +15,7 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex'
 export default {
   data () {
     return {
@@ -44,13 +23,25 @@ export default {
       sliding: null
     }
   },
+  computed: {
+    ...mapGetters({
+      getterGalery: 'getterGalery',
+      imgUrl: 'imgUrl'
+    })
+  },
+  created () {
+    this.getGalery()
+  },
   methods: {
     onSlideStart (slide) {
       this.sliding = true
     },
     onSlideEnd (slide) {
       this.sliding = false
-    }
+    },
+    ...mapActions({
+      getGalery: 'getGalery'
+    })
   }
 }
 </script>

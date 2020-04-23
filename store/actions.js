@@ -103,3 +103,8 @@ export const sendMail = ({}, item) => {
     console.log(res.data.message)
   })
 }
+export const getGalery = ({ commit }) => {
+  return api().get('galery').then((res) => {
+    commit('setGalery', res.data.sectorImages)
+  })
+}

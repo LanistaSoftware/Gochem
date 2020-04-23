@@ -1,12 +1,18 @@
 <template>
   <div id="portfolioDetail" class="portfolio-detail content-background  overflow-scroll content">
     <div class="portfolio-document">
-      <iframe
+      <!-- <iframe
         id="getdocument"
         name="getdocument"
-        :src="gettersFileurl + gettersDocument.path+'#toolbar=0'"
+        :src="gettersFileurl + gettersDocument.path+'#toolbar=0&embedded=true'"
         style="width:100%;height:100%"
-      />
+      /> -->
+      <img
+        id="getdocument"
+        name="getdocument"
+        class="radius-05em"
+        :src="imgUrl + gettersDocument.imgUrl"
+      >
     </div>
     <div class="button-container radius-2em clearfix">
       <div class="box box-left ">
@@ -45,7 +51,8 @@ export default {
     ...mapGetters({
       gettersDocument: 'gettersDocument',
       gettersDocuments: 'gettersDocuments',
-      gettersFileurl: 'gettersFileurl'
+      gettersFileurl: 'gettersFileurl',
+      imgUrl: 'imgUrl'
     })
   },
   created () {
