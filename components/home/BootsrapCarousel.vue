@@ -92,12 +92,11 @@ export default {
 }
 .sliderBtn {
   position: absolute;
-  margin-top: 20vh;
   background-color: transparent;
  // padding: .6vh;
   z-index: 2000;
   color: #fff;
-  top: 20%;
+  top: 55%;
 
 }
 .sliderBtn::before {
@@ -120,7 +119,7 @@ export default {
     padding: 3vh;
     color: #fff;
     text-align: left;
-    height: 45vh;
+    //height: 45vh;
     vertical-align: middle;
     display: table-cell;
   }
@@ -142,7 +141,7 @@ export default {
     font-family: Arial, serif;
     font-size: 4rem;
     font-weight: 800;
-    padding-bottom: 1.8vh;
+    padding-bottom: 1.2vh;
   }
   .carousel-content p{
     font-family: Helvetica , sans-serif;

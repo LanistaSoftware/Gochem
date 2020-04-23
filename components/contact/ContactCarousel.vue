@@ -52,7 +52,7 @@ export default {
         {
           icons: 'flaticon-placeholder',
           title: 'Ofis Adresi',
-          content: ' <table style="width:100%"><tr>   <td style="width:40%; padding-bottom:1rem; font-weight:bold">Merkez Ofis : </td> <td  style="padding-bottom:1rem"> Atatür Mahallesi Marmara Sanayi Sitesi M Blok No: 7/a ikitelli K.Çekmece/İstanbul</td></tr><tr><td style="padding-bottom:2rem;font-weight:bold">Telefon : </td> <td>0 212 485 3754</td></tr> <tr><td style="padding-bottom:2rem;font-weight:bold">Fax : </td><td>0 212 485 3754</td></tr><tr><td style="font-weight:bold">GSM : </td><td> 0 532 626 6355</td></tr></table>',
+          content: ' <table style="width:100%"><tr>   <td style="width:40%; padding-bottom:1rem; font-weight:bold">Merkez Ofis : </td> <td  style="padding-bottom:1rem"> Atatür Mahallesi Marmara Sanayi Sitesi M Blok No: 7/a ikitelli K.Çekmece/İstanbul</td></tr><tr><td style="padding-bottom:1rem;font-weight:bold">Telefon : </td> <td>0 212 485 3754</td></tr> <tr><td style="padding-bottom:1rem;font-weight:bold">Fax : </td><td>0 212 485 3754</td></tr><tr><td style="font-weight:bold">GSM : </td><td> 0 532 626 6355</td></tr></table>',
           contactBtn: 'Bizi haritada bulun.'
         },
         {
@@ -134,13 +134,13 @@ export default {
     width: 30%;
     text-align: center;
 
-    [class^="flaticon-"]:before,
-    [class*=" flaticon-"]:before,
-    [class^="flaticon-"]:after,
-    [class*=" flaticon-"]:after {
-      font-size: 55px;
-      color: #FB5757;
-    }
+    // [class^="flaticon-"]:before,
+    // [class*=" flaticon-"]:before,
+    // [class^="flaticon-"]:after,
+    // [class*=" flaticon-"]:after {
+    //   font-size: 55px;
+    //   color: #FB5757;
+    // }
   }
 
   .header-text-container {

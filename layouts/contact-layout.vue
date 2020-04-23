@@ -7,7 +7,7 @@
             <SearchInput v-if="searchStatus" />
           </transition>
           <Header />
-          <div class="social-search">
+          <div class="social-search clearfix">
             <Social class="socials" />
           </div>
           <Mobile class="mobile-call" />

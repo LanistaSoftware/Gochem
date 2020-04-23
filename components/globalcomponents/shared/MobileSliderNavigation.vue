@@ -103,7 +103,7 @@ export default {
 <style lang="less" scoped>
   .product-responsive-carousel {
     width: 100%;
-    margin-top: 5.8rem;
+    margin-bottom: 2rem;
   }
   .carousel-product {
     color: white !important;
