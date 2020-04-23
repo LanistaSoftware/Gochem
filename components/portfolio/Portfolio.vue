@@ -1,76 +1,46 @@
 <template>
   <section id="portfolio">
     <div class="content content-background overflow-scroll">
-      <div v-if="true" class="portfolio">
-        <div v-for="item in 9" :key="item" class="portfolio-content">
-          <img class="radius-1em" src="../../assets/img/bg1.jpg" alt="Buraya belgeler gelecek." style="width:100%">
-          <a href="#">
-            <h3 class="radius-05em">oekotex </h3>
+      <div class="portfolio">
+        <div v-for="item in gettersDocuments" :key="item._id" class="portfolio-content">
+          <img class="radius-1em" :src="imgUrl+item.imgUrl" alt="Buraya belgeler gelecek." style="width:100%">
+          <a href="#" @click.prevent="portfolioDetail(item._id)">
+            <h3 class="radius-05em">{{item.name}} </h3>
           </a>
         </div>
-      </div>
-      <div v-else class="portfolio-detail overflow-scroll">
-        <div class="button-container clearfix">
-          <div class="box-left ">
-            <button class="btn radius-05em">
-              Önceki <i class="flaticon-left-arrow" />
-            </button>
-          </div>
-          <div class="box-center">
-            <button class="btn radius-05em">
-              Makaleler <i class="flaticon-up-arrow" />
-            </button>
-          </div>
-          <div class="box-right">
-            <button class="btn radius-05em">
-              Sonraki <i class="flaticon-next" />
-            </button>
-          </div>
-        </div>
-        <client-only>
-          <div class="portfolio-document">
-            <iframe id="getdocument" name="getdocument" src="https://api.lanista.com.tr/assest/file/Python-Tricks_-The-Book-Dan-Bader.pdf?#toolbar=0" style="width:100%;height:100%" @contextmenu="disableClick()" />
-          </div>
-        </client-only>
       </div>
     </div>
   </section>
 </template>
 <script>
+import { mapActions, mapGetters } from 'vuex'
 export default {
-  plugins: [
-    { src: '~/plugins/both-sides.js' },
-    { src: '~/plugins/client-only.js', mode: 'client' },
-    { src: '~/plugins/server-only.js', mode: 'server' }
-  ],
   data () {
     return {
       menu: false
     }
   },
+  computed: {
+    ...mapGetters({
+      gettersDocuments: 'gettersDocuments',
+      imgUrl: 'imgUrl'
+    })
+  },
   created () {
-    if (process.client) {
-      console.log(window)
-      // eslint-disable-next-line nuxt/no-globals-in-created
-      window.document.body.addEventListener('contextmenu', function (e) {
-        e.preventDefault()
-      }, false)
-      // eslint-disable-next-line
-    }
+    this.getDocuments()
   },
   methods: {
-    disableClick () {
-      // eslint-disable-next-line
-      window.frames['getdocument'].addEventListener('contextmenu', function (e) {
-        e.preventDefault()
-      }, false)
+    ...mapActions({
+      getDocuments: 'getDocuments'
+    }),
+    portfolioDetail (id) {
+      this.$route.params.portfolioid = id
+      this.$router.push('portfolio/' + this.$route.params.portfolioid)
     }
   }
 }
 </script>
 <style lang="less" scoped>
-#porfolio{
-}
 .portfolio,
 .portfolio>.portfolio-content {
   padding: 1rem 3rem 0 3rem;

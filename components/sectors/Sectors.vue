@@ -48,7 +48,7 @@ import {
   mapGetters
 } from 'vuex'
 import SectorAlbum from '@/components/sectors/SectorAlbum'
-import Sliderp from '@/components/products/globalSlide.vue'
+import Sliderp from '@/components/globalcomponents/shared/MobileSliderNavigation.vue'
 export default {
   components: {
     SectorAlbum,
@@ -60,7 +60,7 @@ export default {
         title: '',
         desc: ''
       },
-      sectoropen: false
+      defaultSector: ''
     }
   },
   computed: {
@@ -79,7 +79,10 @@ export default {
     }
   },
   created () {
-    this.sectorData()
+    this.sectorData().then(() => {
+      this.defaultSector = this.getsector[0]._id
+      localStorage.setItem('sectorid', this.defaultSector)
+    })
     this.sectoropen = false
     this.$store.commit('setActiveSlide', 'sector')
   },

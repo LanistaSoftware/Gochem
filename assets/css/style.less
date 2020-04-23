@@ -89,6 +89,9 @@ h4 {
    // padding-top: 1.4rem;
   }
 }
+#mobil-search{
+  display: none !important;
+}
 
 [class^="flaticon-search"]:before {
   font-size: 1.5rem;
@@ -396,53 +399,57 @@ tr:hover {
 
 ///Blog Detail///<-----
 #blogs-detail {
+  margin-bottom: 1rem;
   .blogs-detail {
     width: 100%;
     height: 100%;
   }
-
   .button-container {
     width: 100%;
-    margin: 1rem;
     display: flex;
-
-    .box-left,
-    .box-right,
-    .box-center {
+    margin-top: 1rem;
+    border: 1.5px solid white;
+    padding: 0.8rem;
+    .box-left,.box-right,.box-center {
       width: 33%;
       display: inline-block;
 
     }
-
-    .box-center {
+    .box-center{
       text-align: center;
     }
-
-    .box-right {
+    .box-right{
       text-align: right;
+    }
+    i{
+      margin: 0.6rem;
     }
     .btn {
       display: inline-block;
-      font-size: 0.8rem;
+      font-size: 1rem;
       text-align: center;
       color: white;
-      border: 1px solid white;
-      border-radius: 1em;
       transition: 0.5s;
     }
-  }
-
-  .btn:hover {
-    color: lightgreen;
-    border-color: lightgreen;
-
-    [class^="flaticon-"]:before,
-    [class*=" flaticon-"]:before,
-    [class^="flaticon-"]:after,
-    [class*=" flaticon-"]:after {
-      color: lightgreen;
+    .box{
+      text-align: center !important;
     }
+    .box:not(:last-child){
+      line-height: 0.02px !important;
+      border-right: 0.1rem solid white;
 
+    }
+    .btn:hover {
+      color: lightgreen;
+  
+      [class^="flaticon-"]:before,
+      [class*=" flaticon-"]:before,
+      [class^="flaticon-"]:after,
+      [class*=" flaticon-"]:after {
+        color: lightgreen;
+      }
+  
+    }
   }
 }
 #blogs {
@@ -475,5 +482,71 @@ tr:hover {
   h3:hover {
     color: lightgreen;
     border-color: lightgreen;
+  }
+}
+///Pigment Table
+#pigment{
+  .button-container{
+    width: 100%;
+    text-align: center;
+  }
+  .colored{
+    font-size: 1rem !important;
+  }
+}
+/// portfolioDetail
+#portfolioDetail{
+  margin-bottom: 1rem;
+  width: 100%;
+  .portfolio-document {
+    margin-top: 2rem;
+    height: 60vh;
+    }
+  .button-container {
+    width: 100%;
+    display: flex;
+    margin-top: 1rem;
+    border: 1.5px solid white;
+    padding: 0.8rem;
+    .box-left,.box-right,.box-center {
+      width: 33%;
+      display: inline-block;
+
+    }
+    .box-center{
+      text-align: center;
+    }
+    .box-right{
+      text-align: right;
+    }
+    i{
+      margin: 0.6rem;
+    }
+    .btn {
+      display: inline-block;
+      font-size: 1rem;
+      text-align: center;
+      color: white;
+      transition: 0.5s;
+    }
+    .box{
+      text-align: center !important;
+    }
+    .box:not(:last-child){
+      line-height: 0.02px !important;
+      border-right: 0.1rem solid white;
+
+    }
+  }
+
+  .btn:hover {
+    color: lightgreen;
+    [class^="flaticon-"]:before,
+    [class*=" flaticon-"]:before,
+    [class^="flaticon-"]:after,
+    [class*=" flaticon-"]:after {
+      color: lightgreen;
+    }
+
   }
 }
