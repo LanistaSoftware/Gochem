@@ -3,10 +3,12 @@
     <div class="first-contact-background">
       <div class="first-contact-background-overlay">
         <div class="bg-container">
+          <transition enter-active-class="animated fadeInTop" leave-active-class="animated fadeOutTop" appear>
+            <SearchInput v-if="searchStatus" />
+          </transition>
           <Header />
           <div class="social-search">
             <Social class="socials" />
-            <Search class="search" />
           </div>
           <Mobile class="mobile-call" />
           <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut" appear>
@@ -19,40 +21,40 @@
   </div>
 </template>
 <script>
-// import ContactCarousel from '@/components/contact/ContactCarousel'
+import { mapGetters } from 'vuex'
 import Footer from '../components/globalcomponents/Footer/ContactFooter'
 import Header from '@/components/globalcomponents/Header/Header'
 import Social from '@/components/globalcomponents/shared/Social'
-import Search from '@/components/globalcomponents/shared/Search'
-// import MobileFooter from '@/components/globalcomponents/Footer/Mobile-footer'
-
 import Mobile from '@/components/globalcomponents/shared/Mobile'
+import SearchInput from '@/components/globalcomponents/shared/SearchInput'
 export default {
   components: {
     Header,
     Social,
-    Search,
-    // ContactCarousel
     Footer,
-    Mobile
+    Mobile,
+    SearchInput
 
   },
   data () {
     return {
-      bgImageUrl: require('../assets/img/bg1.jpg')
+      bgImageUrl: require('../assets/img/bg1.jpg'),
+      searchStatus: false
     }
   },
   computed: {
-    getSlideIndex () {
-      return this.$store.getters.getSlideIndex
-    },
-    getSlideSets () {
-      return this.$store.getters.getSlideSets
-    }
+    ...mapGetters({
+      getSlideIndex: 'getSlideIndex',
+      getSlideSets: 'getSlideSets',
+      getSearchStatus: 'getSearchStatus'
+    })
   },
   watch: {
     getSlideIndex () {
       this.bgImageUrl = this.getSlideSets[this.getSlideIndex].imageUrl
+    },
+    getSearchStatus () {
+      this.searchStatus = this.getSearchStatus
     }
   }
 }
