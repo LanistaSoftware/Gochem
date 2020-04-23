@@ -316,6 +316,7 @@ tr:hover .blogs > .blogs-content h3:hover {
 .carousel-3d-controls {
   display: none;
 }
+/**** Blog Detail****/
 #blogs-detail .blogs-detail {
   width: 100%;
   height: 100%;
@@ -382,4 +383,16 @@ tr:hover .blogs > .blogs-content h3:hover {
 #blogs h3:hover {
   color: lightgreen;
   border-color: lightgreen;
+}
+/**** Search Popup *****/
+.blog-results {
+  font-size: 1.2rem;
+}
+.blog-results h1,
+.blog-results h2,
+.blog-results h3,
+.blog-results h4,
+.blog-results h5,
+.blog-results h6 {
+  font-size: 1.2rem;
 }

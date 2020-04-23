@@ -1,9 +1,8 @@
 <template>
   <div class="s">
     <div id="search-window" class="content-background radius-1em">
-      <div class="inputBox">
+      <div class="input-box">
         <input
-          v-if="true"
           v-model="Search.searchitem"
           type="text"
           size="20"
@@ -14,25 +13,65 @@
         >
       </div>
       <div class="result-box">
-        <ul v-if="true" class="search-sn">
-          <li v-for="item in products" :key="item._id">
-            <a href="/products" @click="oneProductItem(item._id)">
-              Ürün- {{ item.prdoudctName }}
-            </a>
+        <ul class="search-results-lists">
+          <li class="search-result-section">
+            <h4 v-if="products.length>0">
+              Ürünler sayfasından sonuçlar.
+            </h4>
+            <ul>
+              <li v-for="item in products" :key="item._id" class="search-result-list">
+                <a href="/products" @click="oneProductItem(item._id)">
+                  {{ item.prdoudctName }}
+                </a>
+              </li>
+            </ul>
           </li>
-          <li v-for="item in sectors" :key="item._id">
-            <a href="/sectors" @click="oneSectoritem(item._id)">
-              Sektör- {{ item.sectorname }}
-            </a>
+          <li class="search-result-section">
+            <h4 v-if="sectors.length>0">
+              Sektörler sayfasından sonuçlar.
+            </h4>
+            <ul>
+              <li v-for="item in sectors" :key="item._id" class="search-result-list">
+                <a href="/sectors" @click="oneSectoritem(item._id)">
+                  {{ item.sectorname }}
+                </a>
+              </li>
+            </ul>
           </li>
-          <li v-for="item in pigments" :key="item._id">
-            <a href="/products">
-              Pigment- {{ item.prdoudctName }}
-            </a>
+          <li class="search-result-section">
+            <h4 v-if="pigments.length>0">
+              Pigmentler sayfasından sonuçlar.
+            </h4>
+            <ul>
+              <li v-for="item in pigments" :key="item._id" class="search-result-list">
+                <a href="/products">
+                  {{ item.prdoudctName }}
+                </a>
+              </li>
+            </ul>
           </li>
-          <span v-for="item in blogs" :key="item._id">
-            <a href="/products" v-html="getHeader(item.content)" />
-          </span>
+          <li class="search-result-section">
+            <h4 v-if="blogs.length>0">
+              Makalaler sayfasından sonuçlar.
+            </h4>
+            <ul>
+              <li v-for="item in blogs" :key="item._id" class="search-result-list">
+                <a class="blog-results" :href="'/blogs/'+item._id" v-html="getHeader(item.content)" />
+              </li>
+            </ul>
+          </li>
+          <li class="search-result-section">
+            <h4 v-if="products.length>0">
+              Belgeler sayfasından sonuçlar.
+            </h4>
+            <ul>
+              <li v-for="item in pigments" :key="item._id" class="search-result-list">
+                <a href="/products">
+                  {{ item.prdoudctName }}
+                </a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -43,12 +82,11 @@ import { mapActions, mapGetters } from 'vuex'
 export default {
   data () {
     return {
-      products: {},
-      sectors: {},
-      pigments: {},
-      blogs: {},
-      Search: { searchitem: '' },
-      show: false
+      products: [],
+      sectors: [],
+      pigments: [],
+      blogs: [],
+      Search: { searchitem: '' }
     }
   },
   computed: {
@@ -83,7 +121,7 @@ export default {
         headerTag = '<p>Bu makalede başlık bulunamadı.</p>'
         return headerTag
       } else {
-        return 'Bu makalede aradığınız kelime mevcut' + headerTag
+        return headerTag
       }
     },
     searchdata () {
@@ -103,10 +141,10 @@ export default {
           }
         })
       } else {
-        this.sectors = null
-        this.products = null
-        this.pigments = null
-        this.blogs = null
+        this.sectors = []
+        this.products = []
+        this.pigments = []
+        this.blogs = []
       }
     }
   }
@@ -126,15 +164,31 @@ input{
   font-family: Arial, Helvetica, sans-serif;
   padding: 1rem 0.8rem 1rem 1.2rem;
   width: 60%;
-  margin: 0.5rem;
+  margin-top: 1.8rem;
   border: none;
   color:white;
-  font-size:0.9rem;
+  font-size:1rem;
   background-color: transparent;
   border: 1px solid white;
 }
 ::placeholder{
   color:white;
   font-size: 1rem;
+}
+.search-results-lists{
+  display: inline-block;
+  width:60%;
+  text-align: left;
+  padding: 0 1rem 1rem 1rem;
+  .search-result-section{
+    margin: 0.5rem 0;
+    color: white;
+    .search-result-list{
+          margin: 1rem 1rem 0 1rem;
+      a{
+        font-size: 1.2rem;
+        }
+    }
+  }
 }
 </style>
