@@ -79,3 +79,6 @@ export const getpigmentShow = (state) => {
 export const getterGalery = (state) => {
   return state.galeries
 }
+export const getSearchStatus = (state) => {
+  return state.searchStatus
+}

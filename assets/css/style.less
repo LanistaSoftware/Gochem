@@ -63,6 +63,10 @@ h4 {
 
 /*social hover*/
 
+[class^="flaticon-search"]:hover:before {
+  color: lightgreen;
+}
+
 [class^="flaticon-youtube"]:hover:before {
   color: #ff0000;
 }
@@ -71,7 +75,7 @@ h4 {
   color: #33ccff;
 }
 
-[class^="flaticon-linkedin-1"]:hover:before {
+[class^="flaticon-linkedin"]:hover:before {
   color: #007bb7;
 }
 
@@ -86,10 +90,10 @@ h4 {
 
   .socials {
     float: right;
-   // padding-top: 1.4rem;
   }
 }
-#mobil-search{
+
+#mobil-search {
   display: none !important;
 }
 
@@ -300,6 +304,11 @@ h4 {
   }
 }
 
+/**** Home ****/
+#home {
+  margin-top: 5.5rem;
+}
+
 /*** Contact CSS*****/
 
 .colored-background {
@@ -397,33 +406,48 @@ tr:hover {
   }
 }
 
-///Blog Detail///<-----
+/**** Contact carousel****/
+
+.carousel-3d-controls {
+  display: none;
+}
+
+/**** Blog Detail****/
 #blogs-detail {
   margin-bottom: 1rem;
+
   .blogs-detail {
     width: 100%;
     height: 100%;
   }
+
   .button-container {
     width: 100%;
     display: flex;
     margin-top: 1rem;
     border: 1.5px solid white;
     padding: 0.8rem;
-    .box-left,.box-right,.box-center {
+
+    .box-left,
+    .box-right,
+    .box-center {
       width: 33%;
       display: inline-block;
 
     }
-    .box-center{
+
+    .box-center {
       text-align: center;
     }
-    .box-right{
+
+    .box-right {
       text-align: right;
     }
-    i{
+
+    i {
       margin: 0.6rem;
     }
+
     .btn {
       display: inline-block;
       font-size: 1rem;
@@ -431,27 +455,31 @@ tr:hover {
       color: white;
       transition: 0.5s;
     }
-    .box{
+
+    .box {
       text-align: center !important;
     }
-    .box:not(:last-child){
+
+    .box:not(:last-child) {
       line-height: 0.02px !important;
       border-right: 0.1rem solid white;
 
     }
+
     .btn:hover {
       color: lightgreen;
-  
+
       [class^="flaticon-"]:before,
       [class*=" flaticon-"]:before,
       [class^="flaticon-"]:after,
       [class*=" flaticon-"]:after {
         color: lightgreen;
       }
-  
+
     }
   }
 }
+
 #blogs {
   img {
     width: 100%;
@@ -484,18 +512,21 @@ tr:hover {
     border-color: lightgreen;
   }
 }
+
 ///Pigment Table
-#pigment{
-  .button-container{
+#pigment {
+  .button-container {
     width: 100%;
     text-align: center;
   }
-  .colored{
+
+  .colored {
     font-size: 1rem !important;
   }
 }
+
 /// portfolioDetail
-#portfolioDetail{
+#portfolioDetail {
   margin-bottom: 1rem;
   width: 100%;
   text-align: center;
@@ -505,26 +536,39 @@ tr:hover {
     img{
       width: 80%;
     }
+
+  .portfolio-document {
+    margin-top: 2rem;
+    height: 60vh;
+  }
+
   .button-container {
     width: 100%;
     display: flex;
     margin-top: 1rem;
     border: 1.5px solid white;
     padding: 0.8rem;
-    .box-left,.box-right,.box-center {
+
+    .box-left,
+    .box-right,
+    .box-center {
       width: 33%;
       display: inline-block;
 
     }
-    .box-center{
+
+    .box-center {
       text-align: center;
     }
-    .box-right{
+
+    .box-right {
       text-align: right;
     }
-    i{
+
+    i {
       margin: 0.6rem;
     }
+
     .btn {
       display: inline-block;
       font-size: 1rem;
@@ -532,10 +576,12 @@ tr:hover {
       color: white;
       transition: 0.5s;
     }
-    .box{
+
+    .box {
       text-align: center !important;
     }
-    .box:not(:last-child){
+
+    .box:not(:last-child) {
       line-height: 0.02px !important;
       border-right: 0.1rem solid white;
 
@@ -544,6 +590,7 @@ tr:hover {
 
   .btn:hover {
     color: lightgreen;
+
     [class^="flaticon-"]:before,
     [class*=" flaticon-"]:before,
     [class^="flaticon-"]:after,
@@ -551,5 +598,20 @@ tr:hover {
       color: lightgreen;
     }
 
+  }
+}
+
+/****  Search pop-up*/
+
+.blog-results {
+  font-size: 1.2rem;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 1.2rem;
   }
 }

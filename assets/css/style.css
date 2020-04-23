@@ -48,13 +48,16 @@ h4 {
   font-size: 1.5rem;
 }
 /*social hover*/
+[class^="flaticon-search"]:hover:before {
+  color: lightgreen;
+}
 [class^="flaticon-youtube"]:hover:before {
   color: #ff0000;
 }
 [class^="flaticon-twitter"]:hover:before {
   color: #33ccff;
 }
-[class^="flaticon-linkedin-1"]:hover:before {
+[class^="flaticon-linkedin"]:hover:before {
   color: #007bb7;
 }
 .social-search {
@@ -235,6 +238,10 @@ h4 {
 .nuxt-link-exact-active a [class*=" flaticon-"]:after {
   color: lightgreen;
 }
+/**** Home ****/
+#home {
+  margin-top: 5.5rem;
+}
 /*** Contact CSS*****/
 .colored-background {
   background-color: white;
@@ -315,6 +322,11 @@ tr:hover .blogs > .blogs-content h3:hover {
   color: lightgreen;
   border-color: lightgreen;
 }
+/**** Contact carousel****/
+.carousel-3d-controls {
+  display: none;
+}
+/**** Blog Detail****/
 #blogs-detail {
   margin-bottom: 1rem;
 }
@@ -412,6 +424,10 @@ tr:hover .blogs > .blogs-content h3:hover {
 #portfolioDetail img {
   width: 80%;
 }
+#portfolioDetail .portfolio-document {
+  margin-top: 2rem;
+  height: 60vh;
+}
 #portfolioDetail .button-container {
   width: 100%;
   display: flex;
@@ -456,4 +472,16 @@ tr:hover .blogs > .blogs-content h3:hover {
 #portfolioDetail .btn:hover [class^="flaticon-"]:after,
 #portfolioDetail .btn:hover [class*=" flaticon-"]:after {
   color: lightgreen;
+}
+/****  Search pop-up*/
+.blog-results {
+  font-size: 1.2rem;
+}
+.blog-results h1,
+.blog-results h2,
+.blog-results h3,
+.blog-results h4,
+.blog-results h5,
+.blog-results h6 {
+  font-size: 1.2rem;
 }

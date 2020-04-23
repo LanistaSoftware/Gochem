@@ -86,3 +86,6 @@ export const setpigmentShow = (state, value) => {
 export const setGalery = (state, value) => {
   state.galeries = value
 }
+export const setSearchStatus = (state, value) => {
+  state.searchStatus = value
+}
