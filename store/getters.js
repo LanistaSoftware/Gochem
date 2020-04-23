@@ -76,3 +76,6 @@ export const gettersFileurl = (state) => {
 export const getpigmentShow = (state) => {
   return state.pigmentShow
 }
+export const getSearchStatus = (state) => {
+  return state.searchStatus
+}

@@ -87,7 +87,7 @@ a {
 }
 
 .navli {
-  padding: 0 1.5rem 0 1.5rem;
+  padding: 0 1rem 0 1rem;
 }
 
 /* Change the link color to #111 (black) on hover */
@@ -112,8 +112,8 @@ li:not(:last-child) {
 [class^="flaticon-"]:after,
 [class*=" flaticon-"]:after {
   color: white;
-  margin-left: .3rem;
-  margin-right: .3rem;
-  font-size: 2rem;
+  margin-left: .2rem;
+  margin-right: .2rem;
+  font-size: 2.2rem;
 }
 </style>

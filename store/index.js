@@ -121,7 +121,8 @@ const createStore = () => {
             }
           ]
         }
-      ]
+      ],
+      searchStatus: false
     }),
     mutations,
     actions,

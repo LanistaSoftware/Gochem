@@ -25,7 +25,9 @@
       </div>
       <div class="contact-slogan-background">
         <section class="contact-slogan  bg-container">
-          <p> Dünya ve Ülke çapındaki sayısız müşteri ağımız arasında sizde yerinizi alın.</p>
+          <p id="contact-slogan">
+            Dünya ve Ülke çapındaki sayısız müşteri ağımız arasında sizde yerinizi alın.
+          </p>
           <small>Envanterimizde bulunan ürünlerle ilgili bilgi almak için</small>
           <br>
           <button class="contact-btn radius-05em">

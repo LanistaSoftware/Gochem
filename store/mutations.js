@@ -83,3 +83,6 @@ export const setDocument = (state, value) => {
 export const setpigmentShow = (state, value) => {
   state.pigmentShow = value
 }
+export const setSearchStatus = (state, value) => {
+  state.searchStatus = value
+}
