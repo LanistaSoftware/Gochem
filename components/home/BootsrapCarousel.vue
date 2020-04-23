@@ -92,12 +92,11 @@ export default {
 }
 .sliderBtn {
   position: absolute;
-  margin-top: 20vh;
   background-color: transparent;
  // padding: .6vh;
   z-index: 2000;
   color: #fff;
-  top: 20%;
+  top: 55%;
 
 }
 .sliderBtn::before {

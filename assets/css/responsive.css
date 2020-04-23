@@ -47,7 +47,7 @@
     font-size: 7px;
   }
   .sliderBtn {
-    top: 24%;
+    top: 24% !important;
   }
   .icon-container .search-input {
     padding: 0 !important;
