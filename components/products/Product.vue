@@ -98,9 +98,14 @@ export default {
   },
   mounted () {
     const id = localStorage.getItem('productid')
-    if (id !== null) {
+    const pigmentid = localStorage.getItem('pigmentid')
+    if (id !== null && pigmentid === null) {
       this.getOneProduct(id)
       localStorage.removeItem('productid')
+    }
+    if (pigmentid !== null) {
+      this.$store.commit('setpigmentShow', true)
+      localStorage.removeItem('pigmentid')
     }
   },
   methods: {
