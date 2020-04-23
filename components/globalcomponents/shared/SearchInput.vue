@@ -75,9 +75,9 @@
         </ul>
       </div>
       <div class="btn-icon-container">
-        <button @click="changeSearchStatus">
+        <a @click="changeSearchStatus">
           <i class="flaticon-up-arrow" />
-        </button>
+        </a>
       </div>
     </div>
   </div>
@@ -198,6 +198,13 @@ input{
         font-size: 1.2rem;
         }
     }
+  }
+}
+.btn-icon-container{
+      padding: 1rem;
+  a{
+    font-size: 1.5rem;
+
   }
 }
 </style>

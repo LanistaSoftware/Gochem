@@ -10,7 +10,6 @@
         <Header />
         <div class="social-search">
           <Social class="socials" />
-          <Search class="search" />
         </div>
         <Mobile class="mobile-call" />
         <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut" appear>
@@ -32,7 +31,6 @@ import MobileFooter from '@/components/globalcomponents/Footer/Mobile-footer'
 import SearchInput from '@/components/globalcomponents/shared/SearchInput'
 import Social from '@/components/globalcomponents/shared/Social'
 import Mobile from '@/components/globalcomponents/shared/Mobile'
-import Search from '@/components/globalcomponents/shared/Search'
 export default {
   components: {
     Header,
@@ -40,7 +38,6 @@ export default {
     Footer,
     MobileFooter,
     Mobile,
-    Search,
     SearchInput
   },
   data () {
