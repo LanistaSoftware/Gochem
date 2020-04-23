@@ -88,12 +88,6 @@ export default {
     display: block;
     text-align: center;
   }
-  [class^="flaticon-"]:before,
-[class*=" flaticon-"]:before,
-[class^="flaticon-"]:after,
-[class*=" flaticon-"]:after {
-  font-size: 1.3rem !important;
-}
 .mobil-box{
   width: 50%;
   float: left;

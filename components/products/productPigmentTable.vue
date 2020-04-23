@@ -40,7 +40,7 @@ export default {
         category: 'category'
       },
       currentPage: 1,
-      perPage: 6,
+      perPage: 9,
       sortBy: 'age',
       maxPage: '',
       sortDesc: false,

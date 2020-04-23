@@ -23,7 +23,7 @@ export default {
 .contact-content {
   color: white;
   width: 100%;
-  margin-top: 4.5rem;
+  //margin-top: 4.5rem;
   padding-bottom: 3rem;
   font-family: Arial, sans-serif;
 }

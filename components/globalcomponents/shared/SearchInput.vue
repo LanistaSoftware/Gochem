@@ -44,7 +44,7 @@
             </h4>
             <ul>
               <li v-for="item in pigments" :key="item._id" class="search-result-list">
-                <a href="/products">
+                <a href="/products " @click="pigmentShow(item._id)">
                   {{ item.prdoudctName }}
                 </a>
               </li>
@@ -61,13 +61,13 @@
             </ul>
           </li>
           <li class="search-result-section">
-            <h4 v-if="products.length>0">
+            <h4 v-if="documents.length>0">
               Belgeler sayfasından sonuçlar.
             </h4>
             <ul>
-              <li v-for="item in pigments" :key="item._id" class="search-result-list">
-                <a href="/products">
-                  {{ item.prdoudctName }}
+              <li v-for="item in documents" :key="item._id" class="search-result-list">
+                <a :href="'/portfolio/' + item._id">
+                  {{ item.name }}
                 </a>
               </li>
             </ul>
@@ -91,6 +91,7 @@ export default {
       sectors: [],
       pigments: [],
       blogs: [],
+      documents: [],
       Search: { searchitem: '' }
     }
   },
@@ -103,6 +104,9 @@ export default {
     ...mapActions({
       search: 'search'
     }),
+    pigmentShow (id) {
+      localStorage.setItem('pigmentid', id)
+    },
     oneSectoritem (id) {
       localStorage.setItem('sectorid', id)
     },
@@ -144,12 +148,16 @@ export default {
           if (this.getSearchItem.blogdetail) {
             this.blogs = this.getSearchItem.blogdetail
           }
+          if (this.getSearchItem.documentdetail) {
+            this.documents = this.getSearchItem.documentdetail
+          }
         })
       } else {
         this.sectors = []
         this.products = []
         this.pigments = []
         this.blogs = []
+        this.documents = []
       }
     },
     changeSearchStatus () {

@@ -60,10 +60,16 @@ h4 {
 [class^="flaticon-linkedin"]:hover:before {
   color: #007bb7;
 }
+.social-circle [class^="flaticon-twitter"]:before,
+.social-circle [class^="flaticon-linkedin"]:before,
+.social-circle [class^="flaticon-youtube"]:before {
+  font-size: 1.5rem;
+  transition: 0.5s;
+}
 .social-search {
   width: 100%;
-  float: right;
-  padding-top: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .social-search .search {
   float: right;
@@ -78,8 +84,8 @@ h4 {
   font-size: 1.5rem;
 }
 .mobile-call {
-  padding-top: 1.8rem;
-  padding-bottom: 1.8rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 /* Content */
 .content {
@@ -87,7 +93,6 @@ h4 {
   width: 100%;
   height: 73vh;
   padding: 1rem;
-  margin-top: 4.2rem;
   border-radius: 1em;
   font-family: Arial, sans-serif;
 }
@@ -172,9 +177,8 @@ h4 {
   display: inline-block;
   width: 100%;
   border-bottom: 0.003rem solid white;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   text-align: center;
-  height: 5.5rem;
 }
 /***** SOCIAL ******/
 .social {
@@ -183,9 +187,6 @@ h4 {
   text-align: right;
 }
 /***** CAROUSEL ******/
-.carousel {
-  margin-top: 3vh;
-}
 [class^="carousel-control-next-icon"],
 [class^="carousel-control-prev-icon"] {
   width: 40%;
@@ -213,6 +214,12 @@ h4 {
   width: 100%;
   bottom: 0;
 }
+.footer [class^="flaticon-twitter"]:before,
+.footer [class^="flaticon-linkedin"]:before,
+.footer [class^="flaticon-youtube"]:before {
+  font-size: 1.7rem;
+  margin-right: 0.2rem;
+}
 .footer-bg {
   background-color: rgba(0, 0, 0, 0.6);
   color: #939393;
@@ -224,6 +231,12 @@ h4 {
 }
 .mobile-footer {
   display: none;
+}
+.mobile-footer [class^="flaticon-"]:before,
+.mobile-footer [class*=" flaticon-"]:before,
+.mobile-footer [class^="flaticon-"]:after,
+.mobile-footer [class*=" flaticon-"]:after {
+  font-size: 1.3rem !important;
 }
 .mobile-footer {
   display: none;
@@ -238,6 +251,24 @@ h4 {
 .nuxt-link-exact-active a [class*=" flaticon-"]:after {
   color: lightgreen;
 }
+nav [class^="flaticon-"]:before,
+nav [class*=" flaticon-"]:before,
+nav [class^="flaticon-"]:after,
+nav [class*=" flaticon-"]:after {
+  color: white;
+  margin-left: 0px;
+  margin-right: 0.5rem;
+}
+/*Mobile nav*/
+.mobile-nav [class^="flaticon-"]:before,
+.mobile-nav [class*=" flaticon-"]:before,
+.mobile-nav [class^="flaticon-"]:after,
+.mobile-nav [class*=" flaticon-"]:after {
+  color: white;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+  font-size: 2.4rem !important;
+}
 /**** Home ****/
 #home {
   margin-top: 5.5rem;
@@ -247,15 +278,37 @@ h4 {
   background-color: white;
   background-image: linear-gradient(rgba(0, 34, 57, 0.8), rgba(5, 69, 74, 0.8));
 }
+#contact .carousel-container .icon-container [class^="flaticon-"]:before,
+#contact .carousel-container .icon-container [class*=" flaticon-"]:before,
+#contact .carousel-container .icon-container [class^="flaticon-"]:after,
+#contact .carousel-container .icon-container [class*=" flaticon-"]:after {
+  font-size: 4rem;
+  color: #FB5757;
+}
 /* Product-carosuel*/
 .product-responsive-carousel {
   display: none;
 }
+/** prodcur btn **/
+.product-btn .btn [class^="flaticon-"]:before,
+.product-btn .btn [class*=" flaticon-"]:before,
+.product-btn .btn [class^="flaticon-"]:after,
+.product-btn .btn [class*=" flaticon-"]:after {
+  font-size: 3rem;
+  transition: 0.5s;
+}
+.product-btn .btn:hover [class^="flaticon-"]:before,
+.product-btn .btn:hover [class*=" flaticon-"]:before,
+.product-btn .btn:hover [class^="flaticon-"]:after,
+.product-btn .btn:hover [class*=" flaticon-"]:after {
+  color: lightgreen;
+}
+.product-btn .btn:hover .product-btn-info {
+  color: lightgreen;
+  border-color: lightgreen;
+}
 .VueCarousel-wrapper {
   width: 95% !important;
-}
-.product-responsive-carousel {
-  margin-top: 2rem;
 }
 .carousel-product {
   color: white !important;
@@ -416,10 +469,13 @@ tr:hover .blogs > .blogs-content h3:hover {
 #portfolioDetail {
   margin-bottom: 1rem;
   width: 100%;
+  text-align: center;
 }
 #portfolioDetail .portfolio-document {
   margin-top: 2rem;
-  height: 60vh;
+}
+#portfolioDetail img {
+  width: 80%;
 }
 #portfolioDetail .button-container {
   width: 100%;

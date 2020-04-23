@@ -75,11 +75,11 @@ div.ref-container img{
    text-align: center;
  }
  h2 {
-   font-size: 1.2rem;
+   font-size: .8rem;
    font-weight: 600;
    color: #fff;
    font-family: Arial, Helvetica, sans-serif;
-   margin-bottom: .2rem;
+   margin-bottom: 1rem;
  }
  hr{
     margin-top: .2rem;
