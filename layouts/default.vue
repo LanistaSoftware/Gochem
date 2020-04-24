@@ -1,5 +1,4 @@
 /* eslint-disable nuxt/no-env-in-hooks */
-
 <template>
   <div class="bg" :style="{ backgroundImage: 'url(' + bgImageUrl + ')' }">
     <div class="overlay">
@@ -42,7 +41,7 @@ export default {
   },
   data () {
     return {
-      bgImageUrl: require('../assets/img/bg1.jpg'),
+      bgImageUrl: '',
       searchStatus: false
     }
   },
@@ -52,6 +51,9 @@ export default {
       getSlideSets: 'getSlideSets',
       getSearchStatus: 'getSearchStatus'
     })
+  },
+  created () {
+    this.bgImageUrl = this.getSlideSets[0].imageUrl
   },
   watch: {
     getSlideIndex () {
