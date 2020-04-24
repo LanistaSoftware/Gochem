@@ -87,10 +87,10 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-/* Create three equal columns that floats next to each other */
-.about-container{
+.about-container {
   padding: 2rem 1rem 2rem 1rem;
 }
+
 .about-profile {
   float: left;
   text-align: center;
@@ -111,22 +111,26 @@ export default {
     font-size: 1rem;
     padding-top: .5rem;
   }
-.twin-card {
-  .profile-image-container:not(:first-child){
-    float: left;
+
+  .twin-card {
+    .profile-image-container:not(:first-child) {
+      float: left;
+    }
+
+    .profile-image-container:not(:last-child) {
+      float: right;
+    }
   }
-  .profile-image-container:not(:last-child){
-    float: right;
-  }
-}
+
   .profile-img img {
     width: 100%;
   }
 }
+
 .about-content {
   padding: 0 0 0 3rem;
   overflow: hidden;
-  padding-top:0;
+  padding-top: 0;
 
   p {
     text-indent: 2rem;
@@ -185,7 +189,8 @@ export default {
   }
 
 }
-.teams-other-card{
+
+.teams-other-card {
   margin-top: 3rem;
   text-align: center;
 }
@@ -202,9 +207,11 @@ export default {
   text-align: center;
 
 }
-.image-card{
+
+.image-card {
   text-align: center;
 }
+
 .profile-image-container {
   display: inline-block;
   width: 13rem;

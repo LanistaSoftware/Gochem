@@ -13,7 +13,10 @@
   </section>
 </template>
 <script>
-import { mapActions, mapGetters } from 'vuex'
+import {
+  mapActions,
+  mapGetters
+} from 'vuex'
 export default {
   data () {
     return {
@@ -55,7 +58,7 @@ export default {
 .portfolio-document {
   margin-top: 2rem;
   height: 95vh;
-  }
+}
 
 .portfolio-content {
   float: left;
@@ -63,6 +66,7 @@ export default {
 
   img {
     height: 50vh;
+    -o-object-fit: cover;
     object-fit: cover;
   }
 
@@ -70,7 +74,6 @@ export default {
     z-index: 2;
     -webkit-transform: scale(1.01);
     -ms-transform: scale(1.01);
-    -moz-transform: scale(1.01);
     transform: scale(1.01);
     cursor: pointer;
     border: 1px solid white;
@@ -91,23 +94,31 @@ export default {
     border-color: lightgreen;
   }
 }
-.portfolio-detail{
+
+.portfolio-detail {
   width: 100%;
   height: 100%;
 }
+
 .button-container {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 
-  .box-left,.box-right,.box-center {
+  .box-left,
+  .box-right,
+  .box-center {
     width: 33%;
     display: inline-block;
 
   }
-  .box-center{
+
+  .box-center {
     text-align: center;
   }
-  .box-right{
+
+  .box-right {
     text-align: right;
   }
 
@@ -117,6 +128,8 @@ export default {
     text-align: center;
     color: white;
     border: 1px solid white;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
   }
 }
@@ -131,6 +144,5 @@ export default {
   [class*=" flaticon-"]:after {
     color: lightgreen;
   }
-
 }
 </style>

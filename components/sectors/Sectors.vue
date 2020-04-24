@@ -32,7 +32,7 @@
             <div class="sector-btn">
               <button class="btn">
                 <span class="sector-btn-info radius-1em">
-                  <a href="/contact#form-container">  Uygun ürün bul</a>
+                  <a href="/contact#form-container"> Uygun ürün bul</a>
                 </span>
               </button>
             </div>
@@ -118,6 +118,8 @@ export default {
     border-bottom: 1px solid rgba(255, 255, 255, 0.7);
     padding-top: 1rem;
     line-height: 2.5rem;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
     transition: 1s;
   }
 }
@@ -183,6 +185,8 @@ export default {
         border: 1px solid white;
         display: block;
         width: 13rem;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
         transition: 0.5s;
       }
     }

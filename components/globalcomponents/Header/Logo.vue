@@ -7,7 +7,8 @@
             <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
               <img v-show="showColor" width="300" :src="logom">
             </transition>
-            <p><small class="slogan">{{ logo.slogan }}</small></p></a>
+            <p><small class="slogan">{{ logo.slogan }}</small></p>
+          </a>
         </nuxt-link>
       </ul>
     </div>
@@ -18,12 +19,10 @@
 export default {
   data () {
     return {
-      logoUrl: [
-        {
-          slogan: 'people & silicone',
-          path: '/'
-        }
-      ],
+      logoUrl: [{
+        slogan: 'people & silicone',
+        path: '/'
+      }],
       logom: require('../../../assets/img/whitelogo.png'),
       showColor: true
     }
@@ -48,23 +47,26 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.logo-container{
+.logo-container {
   display: inline-block;
-  p{
-  text-shadow: 0px .4rem .35rem rgba(0, 0, 0, 0.7);
-}
+
+  p {
+    text-shadow: 0px .4rem .35rem rgba(0, 0, 0, 0.7);
+  }
 }
 
-img{
+img {
   width: 6rem;
   height: auto;
 }
-.slogan{
+
+.slogan {
   letter-spacing: 0.07rem;
   color: white;
   font-size: .6rem;
 }
-a{
+
+a {
   text-decoration: none;
 }
 </style>

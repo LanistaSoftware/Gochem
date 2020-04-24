@@ -1,3 +1,5 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 /******* Global Media Queries.*******/
 
 
@@ -15,10 +17,6 @@
   .bg-container {
     width: 100%;
   }
-
-  // .navli {
-  //   padding: 0 .8rem 0 .8rem !important;
-  // }
 
   .mobile-nav {
 
@@ -42,10 +40,6 @@
     font-size: 6px;
   }
 
-  // .header {
-  //   padding-bottom: 5.4rem;
-  // }
-
   .logo-container {
     img {
       width: 4rem !important;
@@ -63,9 +57,11 @@
   html {
     font-size: 7px;
   }
-.sliderBtn{
-  top: 24% !important;
-}
+
+  .sliderBtn {
+    top: 24% !important;
+  }
+
   .icon-container .search-input {
     padding: 0 !important;
     margin-top: 1rem;
@@ -74,11 +70,13 @@
       padding: 0.9rem 1rem 0.7rem .8rem;
     }
   }
+
   .bg-container {
     width: 90%;
     height: auto;
   }
-  #mobil-search{
+
+  #mobil-search {
     display: inline-block !important;
   }
 
@@ -89,24 +87,21 @@
   [class*=" flaticon-"]:after {
     font-size: 1.7rem !important;
   }
-  .carousel-3d-controls{
+
+  .carousel-3d-controls {
     display: block;
   }
 
   /*** Content Background ***/
 
   /***** OVERLAY BACKGROUND ******/
-  @supports (backdrop-filter: none) {
+  @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
 
     .content-background,
     .mobile-content-background {
       background-color: rgba(0, 0, 0, .4);
     }
   }
-
-  // .header {
-  //   padding-bottom: 5.4rem;
-  // }
 
   /*logo*/
   .logobox {
@@ -193,10 +188,6 @@
     font-size: 12px;
   }
 
-  // .nav-text {
-  //   display: inline !important;
-  // }
-
   .bg-container {
     width: 90%;
   }
@@ -273,9 +264,6 @@
     }
   }
 
-  // .bg-container {
-  //   height: inherit;
-  // }
   .footer {
     position: relative;
   }
@@ -755,17 +743,20 @@
 
 /* Landscape */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: landscape) {
-  #product{
-    .content{
+  #product {
+    .content {
       height: 75vh;
     }
   }
-   .product-link {
+
+  .product-link {
 
     .product-btn {
       width: 33%;
+
       .btn {
         margin-top: 0 !important;
+
         [class^="flaticon-"]:before,
         [class*=" flaticon-"]:before,
         [class^="flaticon-"]:after,
@@ -780,7 +771,7 @@
     }
 
   }
- }
+}
 
 
 
@@ -823,9 +814,11 @@
       width: 100%;
 
       .profile-img img {
+        -o-object-fit: cover;
         object-fit: cover;
         width: 14rem;
         height: 10rem;
+        -o-object-position: 0 28%;
         object-position: 0 28%;
 
       }
@@ -1000,22 +993,12 @@
         font-size: .8rem !important;
       }
     }
-
-    // .icon-container {
-
-    //   [class^="flaticon-"]:before,
-    //   [class*=" flaticon-"]:before,
-    //   [class^="flaticon-"]:after,
-    //   [class*=" flaticon-"]:after {
-    //     font-size: 3rem !important;
-    //   }
-    // }
   }
 }
 
 /* Extra small devices (phones, 480px and down) */
 @media only screen and (max-width: 480px) {
-    .slide-card-header .header-container h2 {
+  .slide-card-header .header-container h2 {
     font-size: 2rem;
   }
 
@@ -1081,6 +1064,7 @@
 
   .contact-slogan {
     padding-top: 3rem;
+
     #contact-slogan {
       display: none;
     }
@@ -1171,27 +1155,33 @@
 
     img {
       height: 40vh;
+      -o-object-fit: cover;
       object-fit: cover;
     }
   }
-  #portfolioDetail{
-    i{
+
+  #portfolioDetail {
+    i {
       display: none;
     }
-    .button-container .btn{
+
+    .button-container .btn {
       border: none;
       font-size: 10px;
       font-weight: 500;
     }
-    .box{
+
+    .box {
       text-align: center !important;
     }
-    .box:not(:last-child){
+
+    .box:not(:last-child) {
       line-height: 0.02px !important;
       border-right: 0.1rem solid white;
-      
+
     }
-    .button-container{
+
+    .button-container {
       border: 1.5px solid white;
       padding: 0.8rem;
     }
@@ -1259,30 +1249,37 @@
       margin-bottom: 3rem;
     }
   }
-  #blogs-detail{
-    img{
+
+  #blogs-detail {
+    img {
       width: 100%;
     }
-    .blogs-html{
+
+    .blogs-html {
       width: 100%;
     }
-    i{
+
+    i {
       display: none;
     }
-    .button-container .btn{
+
+    .button-container .btn {
       border: none;
       font-size: 10px;
-      
+
     }
-    .box{
+
+    .box {
       text-align: center !important;
     }
-    .box:not(:last-child){
+
+    .box:not(:last-child) {
       line-height: 0.02px !important;
       border-right: 0.1rem solid white;
-      
+
     }
-    .button-container{
+
+    .button-container {
       border: 1.5px solid white;
       padding: 0.8rem;
     }

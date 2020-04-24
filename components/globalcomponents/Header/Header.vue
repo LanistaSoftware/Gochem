@@ -46,5 +46,4 @@ export default {
    vertical-align: middle;
    text-align: right;
  }
-
 </style>

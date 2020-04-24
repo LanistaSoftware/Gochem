@@ -1,3 +1,4 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
 /******* Global Media Queries.*******/
 /* Extra small devices (phones, 320px and down) */
 @media only screen and (max-width: 320px) {
@@ -68,7 +69,7 @@
   }
   /*** Content Background ***/
   /***** OVERLAY BACKGROUND ******/
-  @supports (backdrop-filter: none) {
+  @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
     .content-background,
     .mobile-content-background {
       background-color: rgba(0, 0, 0, 0.4);
@@ -576,9 +577,11 @@
     width: 100%;
   }
   #about .about-profile .profile-img img {
+    -o-object-fit: cover;
     object-fit: cover;
     width: 14rem;
     height: 10rem;
+    -o-object-position: 0 28%;
     object-position: 0 28%;
   }
   #about .about-content {
@@ -798,6 +801,7 @@
   }
   #portfolio img {
     height: 40vh;
+    -o-object-fit: cover;
     object-fit: cover;
   }
   #portfolioDetail i {

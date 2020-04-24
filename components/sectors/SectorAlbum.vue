@@ -3,19 +3,17 @@
     <b-carousel-slide v-for="item in getterGalery" :key="item._id">
       <template v-slot:img>
         <div class="img-sector-container">
-          <img
-            class="img-fluid radius-1em"
-            :src="imgUrl+item.imgUrl"
-            alt="image slot"
-          >
+          <img class="img-fluid radius-1em" :src="imgUrl+item.imgUrl" alt="image slot">
         </div>
       </template>
     </b-carousel-slide>
   </b-carousel>
 </template>
-
-<script>
-import { mapActions, mapGetters } from 'vuex'
+<script >
+import {
+  mapActions,
+  mapGetters
+} from 'vuex'
 export default {
   data () {
     return {
@@ -47,12 +45,11 @@ export default {
 </script>
 <style lang="less" scoped>
 .img-fluid {
-
-    height: 100%;
-    width: auto;
-    // background-size: cover!important;
+  height: 100%;
+  width: auto;
 }
-.img-sector-container{
+
+.img-sector-container {
   width: 30rem;
   height: 30rem;
 }

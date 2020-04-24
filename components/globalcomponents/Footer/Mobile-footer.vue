@@ -13,7 +13,7 @@
               </a>
             </div>
             <hr>
-            <Social class="mobile-social-footer" />
+            <Social :show-search="showSearch" class="mobile-social-footer" />
             <hr>
             <div class="mobil-box">
               <div class="icon-gochem">
@@ -26,7 +26,10 @@
                 <p class="copyright">
                   <i>Copyright © 2020</i>
                 </p>
-                <a :href="item.lanistaLink" target="_blank"><img :src="item.lanistaLogo" alt="Created by Lanista Software"></a>
+                <a :href="item.lanistaLink" target="_blank"><img
+                  :src="item.lanistaLogo"
+                  alt="Created by Lanista Software"
+                ></a>
               </div>
             </div>
           </div>
@@ -54,61 +57,73 @@ export default {
           lanistaLogo: require('../../../assets/img/beyaz.png'),
           lanistaLink: 'https://www.lanista.com.tr/'
         }
-      ]
+      ],
+      showSearch: false
     }
   }
 }
 </script>
 <style lang="less" scoped>
-.footer-mobile{
-    background-color: rgba(0,0,0,0.6);
-    padding-bottom: 6rem;
-    height: 100%;
+.footer-mobile {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding-bottom: 6rem;
+  height: 100%;
+}
+
+hr {
+  background-color: #fff;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.company-group {
+  text-align: center;
+
+  p {
+    color: #939393;
   }
-  hr {
-    background-color: #fff;
-    width: 40%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .company-group{
-    text-align: center;
-    p{
-      color: #939393;
-    }
-    .companydesc{
-       p{
+
+  .companydesc {
+    p {
       font-size: 1rem;
       padding-top: 2.2rem;
       padding-right: 2rem;
     }
-    }
   }
-  .social{
-    display: block;
-    text-align: center;
-  }
-.mobil-box{
+}
+
+.social {
+  display: block;
+  text-align: center;
+}
+
+.mobil-box {
   width: 50%;
   float: left;
   padding-top: 2rem;
-  .icon-gochem img{
+
+  .icon-gochem img {
     width: 50%;
   }
-  .icon-copy{
+
+  .icon-copy {
     display: inline;
-    img{
-    font-size: 1rem;
-    width: 30%;
-  }
-  }
-  .copyright {
-      display: inline-block;
-      margin-right: 0.5rem;
+
+    img {
+      font-size: 1rem;
+      width: 30%;
     }
+  }
+
+  .copyright {
+    display: inline-block;
+    margin-right: 0.5rem;
+  }
 }
-.mobile-social-footer{
- padding-top: 1rem;
- padding-bottom: 1rem;
+
+.mobile-social-footer {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 </style>

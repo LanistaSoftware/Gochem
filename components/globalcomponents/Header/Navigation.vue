@@ -8,13 +8,7 @@
       appear
     >
       <ul>
-        <nuxt-link
-          v-for="nav in navItems"
-          :key="nav.id"
-          :to="nav.path"
-          tag="li"
-          class="navli"
-        >
+        <nuxt-link v-for="nav in navItems" :key="nav.id" :to="nav.path" tag="li" class="navli">
           <a><i class="naviconshow" :class="nav.icon" /><span class="nav-text">{{ nav.label }}</span></a>
         </nuxt-link>
       </ul>
@@ -25,42 +19,41 @@
 export default {
   data () {
     return {
-      navItems: [
-        {
-          label: 'Anasayfa',
-          path: '/',
-          icon: 'flaticon-sydney-opera-house'
-        },
-        {
-          label: 'Hakkımızda',
-          path: '/about',
-          icon: 'flaticon-info'
-        },
-        {
-          label: 'Ürünler',
-          path: '/products',
-          icon: 'flaticon-product'
-        },
-        {
-          label: 'Sektörler',
-          path: '/sectors',
-          icon: 'flaticon-support'
-        },
-        {
-          label: 'Belgeler',
-          path: '/portfolio',
-          icon: 'flaticon-deal'
-        },
-        {
-          label: 'Makaleler',
-          path: '/blogs',
-          icon: 'flaticon-content'
-        },
-        {
-          label: 'İletişim',
-          path: '/contact',
-          icon: 'flaticon-mail'
-        }
+      navItems: [{
+        label: 'Anasayfa',
+        path: '/',
+        icon: 'flaticon-sydney-opera-house'
+      },
+      {
+        label: 'Hakkımızda',
+        path: '/about',
+        icon: 'flaticon-info'
+      },
+      {
+        label: 'Ürünler',
+        path: '/products',
+        icon: 'flaticon-product'
+      },
+      {
+        label: 'Sektörler',
+        path: '/sectors',
+        icon: 'flaticon-support'
+      },
+      {
+        label: 'Belgeler',
+        path: '/portfolio',
+        icon: 'flaticon-deal'
+      },
+      {
+        label: 'Makaleler',
+        path: '/blogs',
+        icon: 'flaticon-content'
+      },
+      {
+        label: 'İletişim',
+        path: '/contact',
+        icon: 'flaticon-mail'
+      }
       ]
     }
   }
@@ -107,6 +100,5 @@ li a:hover {
 
 li:not(:last-child) {
   border-right: 0.01rem solid white;
-
 }
 </style>
