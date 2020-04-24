@@ -1,5 +1,4 @@
 /* eslint-disable nuxt/no-env-in-hooks */
-
 <template>
   <div class="bg" :style="{ backgroundImage: 'url(' + bgImageUrl + ')' }">
     <div class="overlay">
@@ -25,7 +24,7 @@
 </template>
 <script>
 import {
-  mapGetters
+  mapGetters, mapActions
 } from 'vuex'
 import Header from '@/components/globalcomponents/Header/Header'
 import Footer from '@/components/globalcomponents/Footer/Footer'
@@ -44,7 +43,7 @@ export default {
   },
   data () {
     return {
-      bgImageUrl: require('../assets/img/bg1.jpg'),
+      bgImageUrl: '',
       searchStatus: false,
       showSearch: true
     }
@@ -63,6 +62,19 @@ export default {
     getSearchStatus () {
       this.searchStatus = this.getSearchStatus
     }
+  },
+  created () {
+    this.getActiveSlide().then(() => {
+      this.bgImageUrl = this.getSlideSets[0].imageUrl
+    })
+  },
+  mounted () {
+    this.bgImageUrl = this.getSlideSets[0].imageUrl
+  },
+  methods: {
+    ...mapActions({
+      getActiveSlide: 'getActiveSlide'
+    })
   }
 }
 </script>
