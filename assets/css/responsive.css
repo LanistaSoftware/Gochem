@@ -27,6 +27,9 @@
   html {
     font-size: 6px;
   }
+  .navli {
+    padding: 0 0.7rem 0 0.7rem !important;
+  }
   .logo-container img {
     width: 4rem !important;
   }
@@ -443,7 +446,7 @@
 /* Extra large devices (large laptops and desktops, 1400px and up) */
 /* Portrait */
 /* Landscape */
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: landscape) {
+@media only screen and (min-device-width: 375px) and (max-device-width: 992px) and (orientation: landscape) {
   .carousel-content h2 {
     font-size: 5vh !important;
   }
