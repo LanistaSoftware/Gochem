@@ -119,6 +119,11 @@
     display: block;
   }
 }
+@media only screen and (max-width: 768px) {
+  .footer {
+    position: relative;
+  }
+}
 /* Medium devices (landscape tablets, 768px*432px and up) */
 @media only screen and (min-width: 768px) {
   html {
@@ -438,6 +443,29 @@
 /* Extra large devices (large laptops and desktops, 1400px and up) */
 /* Portrait */
 /* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: landscape) {
+  .carousel-content h2 {
+    font-size: 5vh !important;
+  }
+  .carousel-content span {
+    font-size: 5vh !important;
+  }
+  .carousel-content strong {
+    font-size: 5vh !important;
+  }
+  .carousel-content p {
+    font-size: 2vh !important;
+  }
+  .carousel-content sup {
+    font-size: 3vh !important;
+  }
+  .box-container {
+    height: 20vh !important;
+  }
+  .carousel-items {
+    height: 38vh !important;
+  }
+}
 /**********Product Responsive********/
 /* Extra small devices (phones, 320px and down) */
 /* Extra small devices (phones, 480px and down) */
@@ -621,51 +649,6 @@
 /* Extra large devices (large laptops and desktops, 1400px and up) */
 /* Medium devices (landscape tablets, 768px*432px and up) */
 @media only screen and (max-width: 1024px) and (min-width: 569px) {
-  .footer {
-    position: inherit;
-  }
-  #about {
-    padding-bottom: 4rem;
-    height: initial;
-  }
-  #about .about-content p {
-    font-size: 1.4rem;
-  }
-  #about .about-content .about-profile {
-    padding: 2rem;
-  }
-  #about .about-content .teams-title {
-    height: 8rem;
-  }
-  #about .overlay {
-    position: relative;
-  }
-  #about .overlay .quad-card {
-    float: left;
-    width: 50%;
-  }
-  #about .overlay .f-right {
-    float: none;
-  }
-  #about .overlay .f-left {
-    float: none;
-  }
-  #about .overlay .twin-card {
-    float: left;
-    width: 50%;
-  }
-  #about .teams-title {
-    height: 8rem;
-  }
-  #about .profile-image-container {
-    width: 18rem;
-  }
-  #about .profile-image-container img {
-    width: 100%;
-  }
-  #about .overflow-scroll {
-    overflow-x: none;
-  }
 }
 /* Portrait */
 /* Landscape */

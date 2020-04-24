@@ -167,13 +167,17 @@
 
   }
 }
+@media only screen and (max-width:768px){
+  .footer {
+    position: relative;
+  }
 
+}
 /* Medium devices (landscape tablets, 768px*432px and up) */
 @media only screen and (min-width: 768px) {
   html {
     font-size: 8px;
   }
-
   .nav-text {
     display: inline;
   }
@@ -615,7 +619,32 @@
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: portrait) {}
 
 /* Landscape */
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: landscape) {}
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: landscape) {
+  
+   .carousel-content {
+     h2{
+       font-size: 5vh !important;
+     }
+     span{
+       font-size: 5vh !important;
+     }
+     strong {
+       font-size: 5vh !important;
+     }
+     p{
+       font-size: 2vh !important;
+     }
+     sup{
+       font-size: 3vh !important;
+     }
+   }
+   .box-container{
+     height: 20vh !important;
+   }
+   .carousel-items{
+    height: 38vh !important;
+   }
+}
 
 /**********Product Responsive********/
 
@@ -894,70 +923,70 @@
 
 /* Medium devices (landscape tablets, 768px*432px and up) */
 @media only screen and (max-width: 1024px) and (min-width:569px) {
-  .footer {
-    position: inherit;
-  }
+  // .footer {
+  //   position: relative;
+  // }
 
-  #about {
-    padding-bottom: 4rem;
-    height: initial;
+  // #about {
+  //   padding-bottom: 4rem;
+  //   height: initial;
 
-    .about-content {
-      //overflow: inherit;
+  //   .about-content {
+  //     //overflow: inherit;
 
-      p {
-        font-size: 1.4rem;
-      }
+  //     p {
+  //       font-size: 1.4rem;
+  //     }
 
-      .about-profile {
-        padding: 2rem;
-      }
+  //     .about-profile {
+  //       padding: 2rem;
+  //     }
 
-      .teams-title {
-        height: 8rem;
-      }
+  //     .teams-title {
+  //       height: 8rem;
+  //     }
 
-    }
+  //   }
 
-    .overlay {
-      position: relative;
+  //   .overlay {
+  //     position: relative;
 
-      .quad-card {
-        float: left;
-        width: 50%;
-      }
+  //     .quad-card {
+  //       float: left;
+  //       width: 50%;
+  //     }
 
-      .f-right {
-        float: none;
-      }
+  //     .f-right {
+  //       float: none;
+  //     }
 
-      .f-left {
-        float: none;
-      }
+  //     .f-left {
+  //       float: none;
+  //     }
 
-      .twin-card {
-        float: left;
-        width: 50%;
-      }
+  //     .twin-card {
+  //       float: left;
+  //       width: 50%;
+  //     }
 
-    }
+  //   }
 
-    .teams-title {
-      height: 8rem;
-    }
+  //   .teams-title {
+  //     height: 8rem;
+  //   }
 
-    .profile-image-container {
-      img {
-        width: 100%;
-      }
+  //   .profile-image-container {
+  //     img {
+  //       width: 100%;
+  //     }
 
-      width: 18rem;
-    }
+  //     width: 18rem;
+  //   }
 
-    .overflow-scroll {
-      overflow-x: none;
-    }
-  }
+  //   .overflow-scroll {
+  //     overflow-x: none;
+  //   }
+  // }
 }
 
 /* Portrait */

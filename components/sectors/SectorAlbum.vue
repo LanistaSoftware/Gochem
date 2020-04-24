@@ -53,7 +53,7 @@ export default {
     // background-size: cover!important;
 }
 .img-sector-container{
-  width: 30rem;
+ // width: 30rem;
   height: 30rem;
 }
 </style>

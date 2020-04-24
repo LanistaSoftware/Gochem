@@ -81,11 +81,11 @@ div.ref-container img{
    font-family: Arial, Helvetica, sans-serif;
    margin-bottom: 1rem;
  }
- hr{
-    margin-top: .2rem;
-    margin-bottom: .3rem;
-    width: 70%;
-    display: inline-block;
-    background-color: rgba(255, 255, 255,.3 );
- }
+//  hr{
+//     margin-top: .2rem;
+//     margin-bottom: .3rem;
+//     width: 70%;
+//     display: inline-block;
+//     background-color: rgba(255, 255, 255,.3 );
+//  }
 </style>

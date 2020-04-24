@@ -106,9 +106,9 @@ export default {
   margin-top: 5rem;
   height: 80%;
 
-  ::-webkit-scrollbar-track {
-    margin-top: 5rem
-  }
+  // ::-webkit-scrollbar-track {
+  //   margin-top: 5rem;
+  // }
 }
 
 .sector-link {
@@ -132,11 +132,9 @@ export default {
   overflow-x: auto;
   padding-right: 1.5rem;
   height: 100%;
-
   h3 {
     text-align: center;
   }
-
   .sector-row {
     margin-top: 3rem;
     width: 50%;

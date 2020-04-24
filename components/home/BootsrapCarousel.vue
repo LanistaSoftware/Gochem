@@ -119,7 +119,7 @@ export default {
     padding: 3vh;
     color: #fff;
     text-align: left;
-    //height: 45vh;
+    height: 45vh;
     vertical-align: middle;
     display: table-cell;
   }
