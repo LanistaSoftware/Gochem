@@ -270,9 +270,6 @@ nav [class*=" flaticon-"]:after {
   font-size: 2.4rem !important;
 }
 /**** Home ****/
-#home {
-  margin-top: 5.5rem;
-}
 /*** Contact CSS*****/
 .colored-background {
   background-color: white;

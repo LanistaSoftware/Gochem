@@ -194,14 +194,13 @@ export default {
         text-align: center;
 
         .product-btn-info {
-          font-size: .6rem;
+          font-size: 1.1rem;
           padding: .5rem 2rem;
           text-align: center;
           color: white;
           border: 1px solid white;
           display: block;
-          width: 10rem;
-          height: 2.7rem;
+          width: 12rem;
           transition: 0.5s;
         }
       }

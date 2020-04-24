@@ -1,7 +1,7 @@
 <template>
   <ul class="social-network social-circle">
     <li class="icon-container">
-      <Search />
+      <Search class="for-mobil-footer" />
     </li>
     <li v-for="sosyal in social" :key="sosyal.id" class="icon-container">
       <a
