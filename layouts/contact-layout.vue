@@ -21,7 +21,9 @@
   </div>
 </template>
 <script>
-import { mapGetters } from 'vuex'
+import {
+  mapGetters
+} from 'vuex'
 import Footer from '../components/globalcomponents/Footer/ContactFooter'
 import Header from '@/components/globalcomponents/Header/Header'
 import Social from '@/components/globalcomponents/shared/Social'
@@ -70,7 +72,9 @@ export default {
   width: 100%;
 }
 .fadeIn {
-  animation-duration: 1s;
-  animation-delay: .1s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: .1s;
+          animation-delay: .1s;
 }
 </style>

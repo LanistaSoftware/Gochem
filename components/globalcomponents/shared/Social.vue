@@ -4,13 +4,8 @@
       <Search v-if="showSearch" />
     </li>
     <li v-for="sosyal in social" :key="sosyal.id" class="icon-container">
-      <a
-        :href="sosyal.href"
-        :title="sosyal.title"
-      >
-        <i
-          :class="sosyal.icon"
-        /></a>
+      <a :href="sosyal.href" :title="sosyal.title">
+        <i :class="sosyal.icon" /></a>
     </li>
   </ul>
 </template>
@@ -20,25 +15,26 @@ export default {
   components: {
     Search
   },
-  props: { showSearch: Boolean },
+  props: {
+    showSearch: Boolean
+  },
   data () {
     return {
-      social: [
-        {
-          href: '#',
-          title: 'Twitter',
-          icon: 'flaticon-twitter'
-        },
-        {
-          href: '#',
-          title: 'linkedin',
-          icon: 'flaticon-linkedin'
-        },
-        {
-          href: '#',
-          title: 'Youtube',
-          icon: 'flaticon-youtube-rounded-square-logo'
-        }
+      social: [{
+        href: '#',
+        title: 'Twitter',
+        icon: 'flaticon-twitter'
+      },
+      {
+        href: '#',
+        title: 'linkedin',
+        icon: 'flaticon-linkedin'
+      },
+      {
+        href: '#',
+        title: 'Youtube',
+        icon: 'flaticon-youtube-rounded-square-logo'
+      }
       ]
     }
   },
@@ -50,7 +46,6 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-
 ul.social-network li {
   display: inline-block;
   vertical-align: middle;

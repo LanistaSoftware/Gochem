@@ -7,7 +7,8 @@
             <button @click="selectLang()">
               {{ selectedLang }}
             </button>
-          </td><td rowspan="2">
+          </td>
+          <td rowspan="2">
             <button @mouseover="show=true" @click="show=true">
               <i class="flaticon-global" />
             </button>
@@ -64,7 +65,9 @@ table, tr, td{
   padding-bottom: .1rem;
   padding-left: .4rem;
   text-align: center;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   vertical-align: middle;
   font-size: 1.2rem;
 }
@@ -75,20 +78,28 @@ button{
 }
 button:hover{
   color:lightgreen;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
   transition: 0.4s;
 }
 table:hover{
 .flaticon-global:before {
     color: lightgreen;
+    -webkit-transition: 0.4s !important;
+    -o-transition: 0.4s !important;
     transition: 0.4s !important;
 }
 }
 button:active{
   color: coral;
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
   transition: 0.1s;
 }
 
 .fade-enter-active, .fade-leave-active {
+  -webkit-transition: opacity .6s ;
+  -o-transition: opacity .6s ;
   transition: opacity .6s ;
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {

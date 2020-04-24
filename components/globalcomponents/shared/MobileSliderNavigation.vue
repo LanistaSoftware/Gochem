@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="product-responsive-carousel radius-2em mobile-content-background"
-  >
+  <div class="product-responsive-carousel radius-2em mobile-content-background">
     <no-ssr>
       <carousel
         class="carousel-product radius-2em"
@@ -31,10 +29,13 @@
     </no-ssr>
   </div>
 </template>
-<script>
+<script >
 import Carousel from 'vue-carousel/src/Carousel.vue'
 import slider from 'vue-carousel/src/Slide.vue'
-import { mapGetters, mapActions } from 'vuex'
+import {
+  mapGetters,
+  mapActions
+} from 'vuex'
 export default {
   components: {
     Carousel,
@@ -67,7 +68,10 @@ export default {
       this.sectorshow = false
       this.getProducts().then(() => {
         this.activeMenu = this.getProductDb
-        this.activeMenu.push({ prdoudctName: 'pigmentler', _id: 4 })
+        this.activeMenu.push({
+          prdoudctName: 'pigmentler',
+          _id: 4
+        })
       })
     }
   },
@@ -87,32 +91,33 @@ export default {
       }
     }
   }
-
 }
-
 </script>
 <style lang="less" scoped>
-  .product-responsive-carousel {
-    width: 100%;
-    margin-bottom: 2rem;
-  }
-  .carousel-product {
-    color: white !important;
-    text-align: center;
-    border: none;
-    width:100%;
-    font-size: 1rem;
-  }
-  .carousel-responsive:not(:last-child) {
-    div {
-      border-right: 1px solid white;
-    }
-  }
-  .carousel-responsive {
-    margin-top: 2.8rem;
-  }
-  .activeproduct{
-    color: red;
-  }
+.product-responsive-carousel {
+  width: 100%;
+  margin-bottom: 2rem;
+}
 
+.carousel-product {
+  color: white !important;
+  text-align: center;
+  border: none;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.carousel-responsive:not(:last-child) {
+  div {
+    border-right: 1px solid white;
+  }
+}
+
+.carousel-responsive {
+  margin-top: 2.8rem;
+}
+
+.activeproduct {
+  color: red;
+}
 </style>

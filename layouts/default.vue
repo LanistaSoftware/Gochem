@@ -24,7 +24,9 @@
   </div>
 </template>
 <script>
-import { mapGetters } from 'vuex'
+import {
+  mapGetters
+} from 'vuex'
 import Header from '@/components/globalcomponents/Header/Header'
 import Footer from '@/components/globalcomponents/Footer/Footer'
 import MobileFooter from '@/components/globalcomponents/Footer/Mobile-footer'
@@ -63,11 +65,12 @@ export default {
     }
   }
 }
-
 </script>
 <style lang="less" scoped>
 .fadeIn {
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-delay: .1s;
   animation-delay: .1s;
 }
 </style>
