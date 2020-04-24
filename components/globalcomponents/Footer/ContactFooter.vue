@@ -106,7 +106,7 @@
     </div>
   </div>
 </template>
-<script>
+<script >
 import ContactForm from '@/components/contact/ContactForm'
 import MobileFooter from '@/components/globalcomponents/Footer/Mobile-footer'
 export default {
@@ -118,25 +118,24 @@ export default {
   data () {
     return {
       show: false,
-      social: [
-        {
-          href: '#',
-          title: 'Youtube',
-          icon: 'flaticon-youtube-rounded-square-logo',
-          adress: 'youtube/gochem'
-        },
-        {
-          href: '#',
-          title: 'linkedin',
-          icon: 'flaticon-linkedin',
-          adress: 'linkedin/gochem'
-        },
-        {
-          href: '#',
-          title: 'Twitter',
-          icon: 'flaticon-twitter',
-          adress: 'twitter/gochem'
-        }
+      social: [{
+        href: '#',
+        title: 'Youtube',
+        icon: 'flaticon-youtube-rounded-square-logo',
+        adress: 'youtube/gochem'
+      },
+      {
+        href: '#',
+        title: 'linkedin',
+        icon: 'flaticon-linkedin',
+        adress: 'linkedin/gochem'
+      },
+      {
+        href: '#',
+        title: 'Twitter',
+        icon: 'flaticon-twitter',
+        adress: 'twitter/gochem'
+      }
       ]
     }
   }
@@ -144,10 +143,10 @@ export default {
 </script>
 <style lang="less" scoped>
 /*Footer */
-.contact-btn{
-  a{
-  color: #FD7C7C;
-}
+.contact-btn {
+  a {
+    color: #FD7C7C;
+  }
 }
 
 .footer-container {
@@ -158,7 +157,8 @@ export default {
   background-color: transparent;
   padding: 5rem 0 2rem 0;
 }
-#contact-mobile-footer{
+
+#contact-mobile-footer {
   display: none;
 }
 
@@ -197,6 +197,7 @@ export default {
 .footer-row:first-child {
   text-align: left;
 }
+
 .contact-item {
   font-family: Georgia;
   font-size: 1.1rem;
@@ -232,14 +233,16 @@ export default {
   text-align: center;
   padding: 1rem;
 
-  h2,h3 {
+  h2,
+  h3 {
     margin: 1rem;
     letter-spacing: 1px;
     word-spacing: 2px;
     padding: 0.5rem;
   }
-  h3{
-    font-size:1.6rem;
+
+  h3 {
+    font-size: 1.6rem;
     margin-top: 3.3rem;
     padding: 0.2rem;
   }
@@ -288,6 +291,8 @@ export default {
     color: #FD7C7C;
     font-weight: 600;
     font-size: 1.3rem;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
 
     &:hover {
@@ -297,5 +302,4 @@ export default {
     }
   }
 }
-
 </style>

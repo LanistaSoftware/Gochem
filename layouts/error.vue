@@ -1,7 +1,8 @@
 <template>
   <section>
     <div class="content content-background overflow-scroll clearfix">
-      <h3> Error </h3>
+      <h4>Pardoooon! Sanırım birşeyler yanlış. !</h4>
+      <h3> Aaradığın sayfayı bulamadık. Aşağıdaki seçenekleri denemek istermisin ?</h3>
       <h1> 4 0 4 </h1>
     </div>
   </section>

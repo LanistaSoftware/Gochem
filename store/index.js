@@ -36,7 +36,7 @@ const createStore = () => {
       slideSets: [
         {
           index: 1,
-          imageUrl: '',
+          imageUrl: require('../assets/img/bg1.jpg'),
           header: 'Doğa Dostu Üretim',
           content: ' Sürdürülebilir bir gelecek için daha yaşanabilir bir dünya hedefi doğrultusunda hareket eden Zorluteks, doğa dostu akıllı üretim teknolojileri, etkin enerji yönetimi ve geri dönüşüm uygulamalarının yanı sıra 11 ton siyah boya geri kazanımı ve dünya ortalamalarının çok üzerinde su tasarrufu ile doğayı korumaya katkı sağlıyor. Şirket ayrıca, katı atıklarının yüzde 90’nını da geri dönüşüm ile yeniden değerlendiriyor..'
         },

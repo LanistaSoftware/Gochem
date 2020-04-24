@@ -20,3 +20,8 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+# Gochem Web Project by Lanista
+
+This project created and developed Nuxt JS, Vue JS and Node JS.
+

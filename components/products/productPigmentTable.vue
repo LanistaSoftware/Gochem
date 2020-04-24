@@ -30,7 +30,10 @@
   </div>
 </template>
 <script>
-import { mapActions, mapGetters } from 'vuex'
+import {
+  mapActions,
+  mapGetters
+} from 'vuex'
 export default {
   data () {
     return {
@@ -44,12 +47,26 @@ export default {
       sortBy: 'age',
       maxPage: '',
       sortDesc: false,
-      fields: [
-        { key: 'prdoudctName', sortable: true },
-        { key: 'color', sortable: false },
-        { key: 'migrationFastness', sortable: true },
-        { key: 'heatFastness', sortable: true },
-        { key: 'lightFastness', sortable: true }
+      fields: [{
+        key: 'prdoudctName',
+        sortable: true
+      },
+      {
+        key: 'color',
+        sortable: false
+      },
+      {
+        key: 'migrationFastness',
+        sortable: true
+      },
+      {
+        key: 'heatFastness',
+        sortable: true
+      },
+      {
+        key: 'lightFastness',
+        sortable: true
+      }
       ],
       items: []
     }
@@ -89,10 +106,10 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-#pigment{
-.button-container{
-  width: 100%;
-  text-align: center;
-}
+#pigment {
+  .button-container {
+    width: 100%;
+    text-align: center;
+  }
 }
 </style>

@@ -83,7 +83,10 @@
   </div>
 </template>
 <script>
-import { mapActions, mapGetters } from 'vuex'
+import {
+  mapActions,
+  mapGetters
+} from 'vuex'
 export default {
   data () {
     return {
@@ -92,7 +95,9 @@ export default {
       pigments: [],
       blogs: [],
       documents: [],
-      Search: { searchitem: '' }
+      Search: {
+        searchitem: ''
+      }
     }
   },
   computed: {
@@ -168,49 +173,78 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-.s{
-    position: relative;
+.s {
+  position: relative;
 }
-#search-window{
-    position: absolute;
-    width: 100%;
-    text-align:center;
-    z-index: 1000;
+
+#search-window {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: 1000;
 }
-input{
+
+input {
   font-family: Arial, Helvetica, sans-serif;
   padding: 1rem 0.8rem 1rem 1.2rem;
   width: 60%;
   margin-top: 1.8rem;
   border: none;
-  color:white;
-  font-size:1rem;
+  color: white;
+  font-size: 1rem;
   background-color: transparent;
   border: 1px solid white;
 }
-::placeholder{
-  color:white;
+
+::-webkit-input-placeholder {
+  color: white;
   font-size: 1rem;
 }
-.search-results-lists{
+
+::-moz-placeholder {
+  color: white;
+  font-size: 1rem;
+}
+
+:-ms-input-placeholder {
+  color: white;
+  font-size: 1rem;
+}
+
+::-ms-input-placeholder {
+  color: white;
+  font-size: 1rem;
+}
+
+::placeholder {
+  color: white;
+  font-size: 1rem;
+}
+
+.search-results-lists {
   display: inline-block;
-  width:60%;
+  width: 60%;
   text-align: left;
   padding: 0 1rem 1rem 1rem;
-  .search-result-section{
+
+  .search-result-section {
     margin: 0.5rem 0;
     color: white;
-    .search-result-list{
-          margin: 1rem 1rem 0 1rem;
-      a{
+
+    .search-result-list {
+      margin: 1rem 1rem 0 1rem;
+
+      a {
         font-size: 1.2rem;
-        }
+      }
     }
   }
 }
-.btn-icon-container{
-      padding: 1rem;
-  a{
+
+.btn-icon-container {
+  padding: 1rem;
+
+  a {
     font-size: 1.5rem;
 
   }

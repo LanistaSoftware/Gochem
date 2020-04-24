@@ -1,3 +1,5 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 .clearfix::after {
   display: block;
   content: "";
@@ -81,12 +83,14 @@ h4 {
 .social-circle{
   [class^="flaticon-twitter"]:before,[class^="flaticon-linkedin"]:before,[class^="flaticon-youtube"]:before {
     font-size: 1.5rem;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
   }
 }
 .social-search {
   width: 100%;
- // float: right;
+ /* float: right; */
   padding-top: 1rem;
   padding-bottom: 1rem;
 
@@ -142,7 +146,8 @@ h4 {
 
 //scroolun alt kısmı(gri tarafı)
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px rgba(255, 255, 255, .4);
+  -webkit-box-shadow: inset 0 0 5px rgba(255, 255, 255, .4);
+          box-shadow: inset 0 0 5px rgba(255, 255, 255, .4);
   border-radius: 10px;
 }
 
@@ -162,16 +167,17 @@ h4 {
 
 
 /***** OVERLAY BACKGROUND ******/
-@supports (backdrop-filter: none) {
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
   .content-background {
     background-color: rgba(0, 0, 0, .01);
-    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+            backdrop-filter: blur(15px);
     border-radius: 2rem;
   }
 }
 
 /* Tarayıcı desteği olmadığında seçilecek resim buraya gelecek.*/
-@supports not (backdrop-filter: none) {
+@supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
   .content-background {
     background-color: rgba(0, 0, 0, .2);
   }
@@ -182,6 +188,8 @@ h4 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
+  -webkit-transition: background-image 3s ease-in-out;
+  -o-transition: background-image 3s ease-in-out;
   transition: background-image 3s ease-in-out;
   height: 100vh;
   width: 100%;
@@ -207,7 +215,7 @@ h4 {
 
 /***** Global Icon's ****/
 
-//Reset margin icon's
+/*Reset margin icon's */
 [class^="flaticon-"]:before {
   color: white;
   margin-left: 0 !important;
@@ -239,9 +247,9 @@ h4 {
 }
 
 /***** CAROUSEL ******/
-// .carousel {
-//   margin-top: 3vh;
-// }
+/* .carousel {
+  margin-top: 3vh;
+ }*/
 
 [class^="carousel-control-next-icon"],
 [class^="carousel-control-prev-icon"] {
@@ -354,6 +362,8 @@ nav{
 
 .colored-background {
   background-color: white;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 34, 57, 0.8)), to(rgba(5, 69, 74, 0.8)));
+  background-image: -o-linear-gradient(rgba(0, 34, 57, 0.8), rgba(5, 69, 74, 0.8));
   background-image: linear-gradient(rgba(0, 34, 57, 0.8), rgba(5, 69, 74, 0.8));
 }
 
@@ -383,6 +393,8 @@ nav{
       [class^="flaticon-"]:after,
       [class*=" flaticon-"]:after {
         font-size: 3rem;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
         transition: 0.5s;
       }
     }
@@ -405,9 +417,9 @@ nav{
   width: 95% !important;
 }
 
-// .product-responsive-carousel {
-//   margin-top: 2rem;
-// }
+/* .product-responsive-carousel {
+   margin-top: 2rem;
+ }*/
 
 .carousel-product {
   color: white !important;
@@ -419,13 +431,17 @@ nav{
 }
 
 .VueCarousel-navigation-prev {
-  transform: translateY(-50%) translateX(-40%) !important;
+  -webkit-transform: translateY(-50%) translateX(-40%) !important;
+      -ms-transform: translateY(-50%) translateX(-40%) !important;
+          transform: translateY(-50%) translateX(-40%) !important;
 
 
 }
 
 .VueCarousel-navigation-next {
-  transform: translateY(-50%) translateX(40%) !important;
+  -webkit-transform: translateY(-50%) translateX(40%) !important;
+      -ms-transform: translateY(-50%) translateX(40%) !important;
+          transform: translateY(-50%) translateX(40%) !important;
 
 
 }
@@ -456,7 +472,8 @@ tr:hover {
     img {
       width: 100%;
       height: 50vh;
-      object-fit: cover;
+      -o-object-fit: cover;
+         object-fit: cover;
       border-radius: 0.5em;
     }
 
@@ -503,6 +520,8 @@ tr:hover {
 
   .button-container {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-top: 1rem;
     border: 1.5px solid white;
@@ -533,6 +552,8 @@ tr:hover {
       font-size: 1rem;
       text-align: center;
       color: white;
+      -webkit-transition: 0.5s;
+      -o-transition: 0.5s;
       transition: 0.5s;
     }
 
@@ -564,7 +585,8 @@ tr:hover {
   img {
     width: 100%;
     height: 50vh;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     border-radius: 0.5em;
   }
 
@@ -618,6 +640,8 @@ tr:hover {
     }
   .button-container {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-top: 1rem;
     border: 1.5px solid white;
@@ -648,6 +672,8 @@ tr:hover {
       font-size: 1rem;
       text-align: center;
       color: white;
+      -webkit-transition: 0.5s;
+      -o-transition: 0.5s;
       transition: 0.5s;
     }
 

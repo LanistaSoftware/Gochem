@@ -8,7 +8,7 @@
         </transition>
         <Header />
         <div class="social-search clearfix">
-          <Social class="socials" />
+          <Social :show-search="showSearch" class="socials" />
         </div>
         <Mobile class="mobile-call" />
         <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut" appear>
@@ -23,7 +23,9 @@
   </div>
 </template>
 <script>
-import { mapGetters } from 'vuex'
+import {
+  mapGetters
+} from 'vuex'
 import Header from '@/components/globalcomponents/Header/Header'
 import Footer from '@/components/globalcomponents/Footer/Footer'
 import MobileFooter from '@/components/globalcomponents/Footer/Mobile-footer'
@@ -41,8 +43,9 @@ export default {
   },
   data () {
     return {
-      bgImageUrl: '',
-      searchStatus: false
+      bgImageUrl: require('../assets/img/bg1.jpg'),
+      searchStatus: false,
+      showSearch: true
     }
   },
   computed: {
@@ -64,11 +67,12 @@ export default {
     }
   }
 }
-
 </script>
 <style lang="less" scoped>
 .fadeIn {
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-delay: .1s;
   animation-delay: .1s;
 }
 </style>
