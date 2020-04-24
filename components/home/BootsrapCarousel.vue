@@ -65,9 +65,6 @@ export default {
       this.setSlides(this.customSlideIndex)
     }
   },
-  created () {
-    this.getActiveSlide()
-  },
   methods: {
     prev () {
       this.$refs.myCarousel.prev()
