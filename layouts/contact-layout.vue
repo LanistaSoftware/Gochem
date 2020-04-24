@@ -8,7 +8,7 @@
           </transition>
           <Header />
           <div class="social-search clearfix">
-            <Social class="socials" />
+            <Social :show-search="showSearch" class="socials" />
           </div>
           <Mobile class="mobile-call" />
           <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut" appear>
@@ -39,7 +39,8 @@ export default {
   data () {
     return {
       bgImageUrl: require('../assets/img/bg1.jpg'),
-      searchStatus: false
+      searchStatus: false,
+      showSearch: true
     }
   },
   computed: {

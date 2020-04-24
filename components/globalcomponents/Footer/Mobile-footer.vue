@@ -13,7 +13,7 @@
               </a>
             </div>
             <hr>
-            <Social class="mobile-social-footer" />
+            <Social :show-search="showSearch" class="mobile-social-footer" />
             <hr>
             <div class="mobil-box">
               <div class="icon-gochem">
@@ -54,7 +54,8 @@ export default {
           lanistaLogo: require('../../../assets/img/beyaz.png'),
           lanistaLink: 'https://www.lanista.com.tr/'
         }
-      ]
+      ],
+      showSearch: false
     }
   }
 }

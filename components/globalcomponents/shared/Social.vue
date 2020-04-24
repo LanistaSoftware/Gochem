@@ -1,7 +1,7 @@
 <template>
   <ul class="social-network social-circle">
     <li class="icon-container">
-      <Search />
+      <Search v-if="showSearch" />
     </li>
     <li v-for="sosyal in social" :key="sosyal.id" class="icon-container">
       <a
@@ -20,6 +20,7 @@ export default {
   components: {
     Search
   },
+  props: { showSearch: Boolean },
   data () {
     return {
       social: [

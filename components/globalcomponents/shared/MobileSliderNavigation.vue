@@ -27,15 +27,6 @@
             </h2>
           </div>
         </slider>
-        <!-- <slider v-for=" item in getProductDb" v-show="!sectorshow" :key="item.id" class="carousel-responsive">
-          <div class="slide-content">
-            <h2>
-              <a :href="'#'+item.prdoudctGroup" @click="getOneProduct(item._id)">
-                {{ item.prdoudctName }}
-              </a>
-            </h2>
-          </div>
-        </slider> -->
       </carousel>
     </no-ssr>
   </div>
