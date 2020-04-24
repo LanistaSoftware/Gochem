@@ -2,11 +2,18 @@ const express = require('express')
 const consola = require('consola')
 const { Nuxt, Builder } = require('nuxt')
 const app = express()
-
-// Import and Set Nuxt.js options
+const cors = require('cors')
 const config = require('../nuxt.config.js')
+const multer = require('./multer')
+const corsOptions = {
+  origin: '*',
+  headers: '*',
+  optionsSuccessStatus: 200
+}
+app.use(cors(corsOptions))
+// Import and Set Nuxt.js options
 config.dev = process.env.NODE_ENV !== 'production'
-
+app.post('/image', multer.saveToUploads)
 async function start () {
   // Init Nuxt.js
   const nuxt = new Nuxt(config)
