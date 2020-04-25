@@ -3,17 +3,14 @@
   <div class="carousel-container">
     <i class="sliderBtn left-btn rt flaticon-right" @click="prev()" />
     <i class="sliderBtn right-btn flaticon-right" @click="next()" />
-    <b-carousel
-      id="carousel-1"
-      ref="myCarousel"
-      v-model="slides"
-      :interval="10000"
-    >
+    <b-carousel id="carousel-1" ref="myCarousel" v-model="slides" :interval="10000">
       <b-carousel-slide v-for="(slide ,index) in slideSets" :key="index.id">
         <template v-slot:img>
           <div class="carousel-content">
             <div class="carousel-items">
-              <h4><strong> 0{{ index+1 }} </strong><span class="slash">/</span> <sup> 0{{ slideSets.length }} </sup></h4>
+              <h4>
+                <strong> 0{{ index+1 }} </strong><span class="slash">/</span> <sup> 0{{ slideSets.length }} </sup>
+              </h4>
               <h2>{{ slide.header | firstWord }} </h2>
               <h2>{{ slide.header |otherWord }} </h2>
               <p class="content-text">
@@ -26,9 +23,10 @@
     </b-carousel>
   </div>
 </template>
-
 <script>
-import { mapActions } from 'vuex'
+import {
+  mapActions
+} from 'vuex'
 export default {
   filters: {
     firstWord (header) {
@@ -67,9 +65,6 @@ export default {
       this.setSlides(this.customSlideIndex)
     }
   },
-  created () {
-    this.getActiveSlide()
-  },
   methods: {
     prev () {
       this.$refs.myCarousel.prev()
@@ -87,25 +82,30 @@ export default {
 }
 </script>
 <style lang="less">
-.header{
+.header {
   width: 100%;
 }
+
 .sliderBtn {
   position: absolute;
   background-color: transparent;
- // padding: .6vh;
+  /* padding: .6vh;*/
   z-index: 2000;
   color: #fff;
   top: 55%;
 
 }
+
 .sliderBtn::before {
-    margin-left: 0;
-    font-size: 2rem;
-    padding: 0 0 0 0.1rem;
+  margin-left: 0;
+  font-size: 2rem;
+  padding: 0 0 0 0.1rem;
 }
-.rt{
-   transform: rotate(180deg) !important;
+
+.rt {
+  -webkit-transform: rotate(180deg) !important;
+  -ms-transform: rotate(180deg) !important;
+  transform: rotate(180deg) !important;
 }
 .right-btn{
     right: 0;

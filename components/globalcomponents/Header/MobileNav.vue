@@ -8,59 +8,52 @@
       appear
     >
       <ul>
-        <nuxt-link
-          v-for="nav in navItems"
-          :key="nav.id"
-          :to="nav.path"
-          tag="li"
-          class="navli"
-        >
+        <nuxt-link v-for="nav in navItems" :key="nav.id" :to="nav.path" tag="li" class="navli">
           <a><i class="naviconshow" :class="nav.icon" /></a>
         </nuxt-link>
       </ul>
     </transition>
   </nav>
 </template>
-<script>
+<script >
 export default {
   data () {
     return {
-      navItems: [
-        {
-          label: 'Anasayfa',
-          path: '/',
-          icon: 'flaticon-sydney-opera-house'
-        },
-        {
-          label: 'Hakkımızda',
-          path: '/about',
-          icon: 'flaticon-info'
-        },
-        {
-          label: 'Ürünler',
-          path: '/products',
-          icon: 'flaticon-product'
-        },
-        {
-          label: 'Sektörler',
-          path: '/sectors',
-          icon: 'flaticon-support'
-        },
-        {
-          label: 'Belgeler',
-          path: '/portfolio',
-          icon: 'flaticon-deal'
-        },
-        {
-          label: 'Makaleler',
-          path: '/blogs',
-          icon: 'flaticon-content'
-        },
-        {
-          label: 'İletişim',
-          path: '/contact',
-          icon: 'flaticon-mail'
-        }
+      navItems: [{
+        label: 'Anasayfa',
+        path: '/',
+        icon: 'flaticon-sydney-opera-house'
+      },
+      {
+        label: 'Hakkımızda',
+        path: '/about',
+        icon: 'flaticon-info'
+      },
+      {
+        label: 'Ürünler',
+        path: '/products',
+        icon: 'flaticon-product'
+      },
+      {
+        label: 'Sektörler',
+        path: '/sectors',
+        icon: 'flaticon-support'
+      },
+      {
+        label: 'Belgeler',
+        path: '/portfolio',
+        icon: 'flaticon-deal'
+      },
+      {
+        label: 'Makaleler',
+        path: '/blogs',
+        icon: 'flaticon-content'
+      },
+      {
+        label: 'İletişim',
+        path: '/contact',
+        icon: 'flaticon-mail'
+      }
       ]
     }
   }
@@ -90,7 +83,6 @@ a {
   padding: 0 1rem 0 1rem;
 }
 
-/* Change the link color to #111 (black) on hover */
 li a:hover {
   color: lightgreen;
 

@@ -15,25 +15,19 @@
             <div class="slide-card">
               <div class="slide-card-header clearfix">
                 <div class="header-container">
-                  <span class="icon-container">
-                    <i :class="slide.icons" />
-                  </span>
-                  <span class="header-text-container">
-                    <h2>
-                      {{ slide.title }}
-                    </h2>
-                  </span>
-                </div>
-
-                <span class="slide-card-border" />
-              </div>
-              <div class="slide-card-body">
-                <h3> {{ slide.info }} </h3>
-                <p v-html="slide.content" />
-              </div>
-              <div class="slide-card-button">
+                  <span class="icon-container"><i :class="slide.icons" /></span><span class="header-text-container"><h2> {
+                    {{ slide.title }}
+                  </h2></span>
+                </div><span class="slide-card-border" />
+              </div><div class="slide-card-body">
+                <h3>
+                  {{ slide.info }}
+                </h3><p v-html="slide.content" />
+              </div><div class="slide-card-button">
                 <button class="radius-05em">
-                  <a href="#contact-footer">{{ slide.contactBtn }}</a>
+                  <a href="#contact-footer"> {
+                    {{ slide.contactBtn }}
+                  </a>
                 </button>
               </div>
             </div>
@@ -43,7 +37,6 @@
     </no-ssr>
   </div>
 </template>
-
 <script>
 export default {
   data () {
@@ -105,6 +98,7 @@ export default {
 }
 
 .slide-card-container {
+  -webkit-box-shadow: 0px 3px 15px 6px rgba(216, 238, 255, 0.7);
   box-shadow: 0px 3px 15px 6px rgba(216, 238, 255, 0.7);
   height: 405px;
 }
@@ -133,14 +127,6 @@ export default {
   .icon-container {
     width: 30%;
     text-align: center;
-
-    // [class^="flaticon-"]:before,
-    // [class*=" flaticon-"]:before,
-    // [class^="flaticon-"]:after,
-    // [class*=" flaticon-"]:after {
-    //   font-size: 55px;
-    //   color: #FB5757;
-    // }
   }
 
   .header-text-container {
@@ -187,6 +173,8 @@ export default {
     padding: 5px 20px;
     background: none;
     border: 1px solid #166296;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
     position: absolute;
     left: 35%;

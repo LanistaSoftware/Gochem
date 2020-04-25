@@ -19,7 +19,10 @@
           <p class="copyright">
             <i>Copyright © 2020</i>
           </p>
-          <a :href="item.lanistaLink" target="_blank"><img :src="item.lanistaLogo" alt="Created by Lanista Software"></a>
+          <a :href="item.lanistaLink" target="_blank"><img
+            :src="item.lanistaLogo"
+            alt="Created by Lanista Software"
+          ></a>
         </div>
       </div>
     </div>
@@ -44,10 +47,11 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-a{
+a {
   color: #939393;
   font-size: .8rem;
 }
+
 .box {
   width: 33.3%;
   height: 100%;

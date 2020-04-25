@@ -14,7 +14,11 @@
         <div v-for="item in getsector" :key="item.id" class="product-category">
           <h2>{{ item.sectorname }}</h2>
           <span v-for="product in getProductdb" :key="product._id">
-            <a v-if="item.sectorname==product.prdoudctGroup" :href="'#'+product.prdoudctName " @click="getAproduct(product._id)">{{ product.prdoudctName }}</a>
+            <a
+              v-if="item.sectorname==product.prdoudctGroup"
+              :href="'#'+product.prdoudctName "
+              @click="getAproduct(product._id)"
+            >{{ product.prdoudctName }}</a>
           </span>
         </div>
       </section>
@@ -61,7 +65,11 @@
   </section>
 </template>
 <script>
-import { mapActions, mapGetters, mapMutations } from 'vuex'
+import {
+  mapActions,
+  mapGetters,
+  mapMutations
+} from 'vuex'
 import pigmentTable from './productPigmentTable.vue'
 import productSlide from '@/components/globalcomponents/shared/MobileSliderNavigation.vue'
 export default {
@@ -132,6 +140,7 @@ export default {
 <style lang="less" scoped>
 .sidenav {
   padding: 3rem;
+
   h1 {
     padding-bottom: 1.1rem;
     font-size: 1.8rem;
@@ -167,6 +176,7 @@ export default {
   .product-content {
     overflow-x: auto;
     height: 72%;
+
     h2 {
       font-size: 2rem;
       padding-bottom: 1rem;
@@ -200,13 +210,14 @@ export default {
           color: white;
           border: 1px solid white;
           display: block;
-          width: 12rem;
+          width: 10rem;
+          height: 2.7rem;
+          -webkit-transition: 0.5s;
+          -o-transition: 0.5s;
           transition: 0.5s;
         }
       }
     }
-
   }
 }
-
 </style>

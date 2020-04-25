@@ -45,7 +45,10 @@
   </div>
 </template>
 <script>
-import { mapActions, mapGetters } from 'vuex'
+import {
+  mapActions,
+  mapGetters
+} from 'vuex'
 import BootstrapCarousel from '@/components/home/BootsrapCarousel'
 import References from '@/components/home/References'
 import Box from '@/components/home/Box'
@@ -115,33 +118,37 @@ export default {
 
 </script>
 <style lang="less" scoped>
-
 /***  Slider Box CSS ****/
 .box-content {
   height: 70%;
   font-family: Helvetica, sans-serif;
   font-size: .9rem;
   overflow: hidden;
+  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
+
   p {
     margin: 0 1rem;
     margin-bottom: 1rem;
   }
 }
+
 .title {
   height: 20%;
   text-align: center;
   font-family: utopia-std-headline, serif;
   margin: 1vh
 }
+
 span {
   font-size: 1.9rem;
 }
+
 sup {
   font-size: 1rem;
 }
+
 strong {
   font-size: 1.5rem;
 }
-
 </style>

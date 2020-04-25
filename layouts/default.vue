@@ -1,5 +1,4 @@
 /* eslint-disable nuxt/no-env-in-hooks */
-
 <template>
   <div class="bg" :style="{ backgroundImage: 'url(' + bgImageUrl + ')' }">
     <div class="overlay">
@@ -9,7 +8,7 @@
         </transition>
         <Header />
         <div class="social-search clearfix">
-          <Social class="socials" />
+          <Social :show-search="showSearch" class="socials" />
         </div>
         <Mobile class="mobile-call" />
         <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut" appear>
@@ -24,7 +23,9 @@
   </div>
 </template>
 <script>
-import { mapGetters } from 'vuex'
+import {
+  mapGetters, mapActions
+} from 'vuex'
 import Header from '@/components/globalcomponents/Header/Header'
 import Footer from '@/components/globalcomponents/Footer/Footer'
 import MobileFooter from '@/components/globalcomponents/Footer/Mobile-footer'
@@ -42,8 +43,9 @@ export default {
   },
   data () {
     return {
-      bgImageUrl: require('../assets/img/bg1.jpg'),
-      searchStatus: false
+      bgImageUrl: '',
+      searchStatus: false,
+      showSearch: true
     }
   },
   computed: {
@@ -60,13 +62,27 @@ export default {
     getSearchStatus () {
       this.searchStatus = this.getSearchStatus
     }
+  },
+  created () {
+    this.getActiveSlide().then(() => {
+      this.bgImageUrl = this.getSlideSets[0].imageUrl
+    })
+  },
+  mounted () {
+    this.bgImageUrl = this.getSlideSets[0].imageUrl
+  },
+  methods: {
+    ...mapActions({
+      getActiveSlide: 'getActiveSlide'
+    })
   }
 }
-
 </script>
 <style lang="less" scoped>
 .fadeIn {
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-delay: .1s;
   animation-delay: .1s;
 }
 </style>

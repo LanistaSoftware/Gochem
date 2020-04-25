@@ -91,7 +91,6 @@ export default {
 .right-inputs {
   padding-left: 1rem;
 }
-
 input,
 textarea,
 select {

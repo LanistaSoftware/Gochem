@@ -27,7 +27,10 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex'
+import {
+  mapActions,
+  mapGetters
+} from 'vuex'
 export default {
   data () {
     return {
@@ -52,18 +55,22 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-a{
+a {
   text-decoration: none;
 }
-.carousel{
+
+.carousel {
   margin-top: 0;
 }
- .referance h2:hover{
+
+.referance h2:hover {
   color: lightgreen;
 }
-div.ref-container img{
+
+div.ref-container img {
   width: 100%;
   height: 13vh;
+  -o-object-fit: contain;
   object-fit: contain;
 }
  .ref-container{

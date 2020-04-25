@@ -22,7 +22,10 @@
   </div>
 </template>
 <script>
-import { mapActions, mapGetters } from 'vuex'
+import {
+  mapActions,
+  mapGetters
+} from 'vuex'
 export default {
   data () {
     return {
@@ -83,25 +86,33 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-.blogs-detail{
+.blogs-detail {
   width: 100%;
   height: 100%;
 }
+
 .button-container {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 
-  .box-left,.box-right,.box-center {
+  .box-left,
+  .box-right,
+  .box-center {
     width: 33%;
     display: inline-block;
 
   }
-  .box-center{
+
+  .box-center {
     text-align: center;
   }
-  .box-right{
+
+  .box-right {
     text-align: right;
   }
+
   .btn {
     display: inline-block;
     font-size: 0.8rem;
@@ -109,6 +120,8 @@ export default {
     color: white;
     border: 1px solid white;
     border-radius: 1em;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
   }
 }
@@ -125,3 +138,4 @@ export default {
   }
 
 }
+</style>
