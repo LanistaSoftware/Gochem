@@ -73,29 +73,26 @@ div.ref-container img {
   -o-object-fit: contain;
   object-fit: contain;
 }
-
-.ref-container {
-  display: table-cell;
-  vertical-align: middle;
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-h2 {
-  font-size: .8rem;
-  font-weight: 600;
-  color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
-  margin-bottom: 1rem;
-}
-
-hr {
-  margin-top: .2rem;
-  margin-bottom: .3rem;
-  width: 70%;
-  display: inline-block;
-  background-color: rgba(255, 255, 255, .3);
-}
+ .ref-container{
+   display: table-cell;
+   vertical-align: middle;
+   height: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
+ }
+ h2 {
+   font-size: .8rem;
+   font-weight: 600;
+   color: #fff;
+   font-family: Arial, Helvetica, sans-serif;
+   margin-bottom: 1rem;
+ }
+//  hr{
+//     margin-top: .2rem;
+//     margin-bottom: .3rem;
+//     width: 70%;
+//     display: inline-block;
+//     background-color: rgba(255, 255, 255,.3 );
+//  }
 </style>

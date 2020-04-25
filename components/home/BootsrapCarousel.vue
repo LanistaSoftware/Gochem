@@ -107,61 +107,51 @@ export default {
   -ms-transform: rotate(180deg) !important;
   transform: rotate(180deg) !important;
 }
-
-.right-btn {
-  right: 0;
-}
-
-.carousel-content {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.carousel-items {
-  padding: 3vh;
-  color: #fff;
-  text-align: left;
-  /*height: 45vh;*/
-  vertical-align: middle;
-  display: table-cell;
-}
-
-.carousel-content h4 {
-  font-weight: bold;
-  padding-bottom: 1.8vh;
-  font-family: utopia-std-headline, serif;
-}
-
-.carousel-content span {
-  font-size: 3rem;
-}
-
-.carousel-content sup {
-  font-size: 1.3rem;
-}
-
-.carousel-content strong {
-  font-size: 2.2rem;
-}
-
-.carousel-content h2 {
-  font-family: Arial, serif;
-  font-size: 4rem;
-  font-weight: 800;
-  padding-bottom: 1.2vh;
-}
-
-.carousel-content p {
-  font-family: Helvetica, sans-serif;
-  font-weight: 200;
-  margin-top: 1.5rem;
-  line-height: 1.4;
-  /*letter-spacing: 0.1rem;*/
-}
-
-.carousel-items {
-  color: #fff;
-  text-align: left;
+.right-btn{
+    right: 0;
+ }
+ .carousel-content{
+   width: 90%;
+   margin-left: auto;
+   margin-right: auto;
+  }
+  .carousel-items{
+    padding: 3vh;
+    color: #fff;
+    text-align: left;
+    height: 45vh;
+    vertical-align: middle;
+    display: table-cell;
+  }
+  .carousel-content h4{
+    font-weight: bold;
+    padding-bottom: 1.8vh;
+    font-family: utopia-std-headline, serif;
+  }
+  .carousel-content span{
+    font-size: 3rem;
+  }
+  .carousel-content sup{
+    font-size: 1.3rem;
+  }
+  .carousel-content strong{
+    font-size: 2.2rem;
+  }
+  .carousel-content h2{
+    font-family: Arial, serif;
+    font-size: 4rem;
+    font-weight: 800;
+    padding-bottom: 1.2vh;
+  }
+  .carousel-content p{
+    font-family: Helvetica , sans-serif;
+    font-weight:200;
+    margin-top: 1.5rem;
+    line-height: 1.4;
+    // letter-spacing: 0.1rem;
+  }
+  .carousel-items {
+    color: #fff;
+    text-align: left;
 }
 </style>

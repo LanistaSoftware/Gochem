@@ -48,9 +48,8 @@ export default {
   height: 100%;
   width: auto;
 }
-
 .img-sector-container {
-  width: 30rem;
+  //width: 30rem;
   height: 30rem;
 }
 </style>
