@@ -204,8 +204,8 @@ export default {
         text-align: center;
 
         .product-btn-info {
-          font-size: 1.1rem;
-          padding: .5rem 2rem;
+          font-size: .7rem;
+          padding: .5rem 1rem;
           text-align: center;
           color: white;
           border: 1px solid white;
