@@ -22,7 +22,7 @@
 </template>
 <script>
 import {
-  mapGetters
+  mapGetters, mapActions
 } from 'vuex'
 import Footer from '../components/globalcomponents/Footer/ContactFooter'
 import Header from '@/components/globalcomponents/Header/Header'
@@ -50,6 +50,14 @@ export default {
       getSlideIndex: 'getSlideIndex',
       getSlideSets: 'getSlideSets',
       getSearchStatus: 'getSearchStatus'
+    })
+  },
+  created () {
+    this.getContact()
+  },
+  methods: {
+    ...mapActions({
+      getContact: 'getContact'
     })
   },
   watch: {

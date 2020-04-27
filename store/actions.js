@@ -106,3 +106,9 @@ export const getGalery = ({ commit }) => {
     commit('setGalery', res.data.sectorImages)
   })
 }
+// eslint-disable-next-line no-empty-pattern
+export const getContact = ({ commit }) => {
+  return api().get('contact').then((res) => {
+    commit('setInfo', res.data.contacts[0])
+  })
+}

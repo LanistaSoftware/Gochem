@@ -82,3 +82,6 @@ export const getterGalery = (state) => {
 export const getSearchStatus = (state) => {
   return state.searchStatus
 }
+export const getInfo = (state) => {
+  return state.info
+}
