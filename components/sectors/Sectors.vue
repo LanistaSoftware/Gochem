@@ -16,7 +16,7 @@
         <div class="sector-row">
           <SectorAlbum class="skCar radius-1em" />
         </div>
-        <div class="sector-row">
+        <div class="sector-row deneme">
           <p>
             {{ sectoritems.sectordescription }}
           </p>
@@ -103,7 +103,7 @@ export default {
 </script>
 <style lang="less" scoped>
 .sidenav {
-  margin-top: 5rem;
+  margin-top: 4rem;
   height: 80%;
 
   // ::-webkit-scrollbar-track {
@@ -115,12 +115,15 @@ export default {
   a {
     display: block;
     font-size: 1.2rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    //border-bottom: 1px solid rgba(255, 255, 255, 0.7);
     padding-top: 1rem;
     line-height: 2.5rem;
     -webkit-transition: 1s;
     -o-transition: 1s;
     transition: 1s;
+  }
+  a:not(:last-child){
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
   }
 }
 
@@ -131,25 +134,25 @@ export default {
 .sector-container {
   width: 80%;
   float: left;
-  overflow-x: auto;
-  padding-right: 1.5rem;
+  //overflow-x: auto;
+  padding-left: 1.5rem;
   height: 100%;
   h3 {
     text-align: center;
   }
   .sector-row {
-    margin-top: 3rem;
+    margin-top: 2rem;
     width: 50%;
     float: left;
 
-    .skCar {
-      margin: 3rem 2rem 1rem 1rem;
-    }
-
+    // .skCar {
+    //   margin: 3rem 2rem 1rem 1rem;
+    // }
     p {
       font-size: 1.1rem;
       line-height: 1.4;
       font-family: Arial;
+      padding:0 1.8rem;
     }
   }
 }
@@ -204,5 +207,9 @@ export default {
 .title-sektor {
   width: 30%;
   margin: auto;
+}
+.deneme{
+  height: 80%;
+  overflow-x: auto;
 }
 </style>

@@ -139,14 +139,17 @@ export default {
 </script>
 <style lang="less" scoped>
 .sidenav {
-  padding: 3rem;
-
+  padding-left: 3rem;
+  padding-right: 3rem;
+  margin-top: 1.7rem;
+  height: 80%;
   h1 {
     padding-bottom: 1.1rem;
     font-size: 1.8rem;
   }
 
   .product-category {
+    margin-top: 1.3rem;
     h2 {
       padding: 1rem;
       font-size: 1.5rem;
