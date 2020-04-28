@@ -14,7 +14,7 @@
           <input v-model="communication.telephone" type="text" name="phone" class="input radius-1em" placeholder="Telefon">
         </div>
         <div class="inputBox">
-          <select id="konu" v-model="communication.subject" class="radius-1em" name="Konu" placeholder="Konu">
+          <select id="konu" v-model="communication.subject" class="radius-1em deneme" name="Konu" placeholder="Konu">
             <option value="Bilgi almak istiyorum.">
               Bilgi almak istiyorum.
             </option>

@@ -38,25 +38,33 @@
           <div class="product-btn">
             <button class="btn">
               <i class="flaticon-product" />
-              <span class="product-btn-info radius-1em">
-                <a href="/contact#form-container"> Online sipariş çok yakında.</a>
-              </span>
+
+              <nuxt-link to="/contact#contact-footer">
+                <span class="product-btn-info radius-1em">
+                  <a> Online sipariş çok yakında.</a>
+                </span>
+              </nuxt-link>
             </button>
           </div>
           <div class="product-btn">
             <button class="btn">
               <i class="flaticon-customer-service" />
-              <span class="product-btn-info radius-1em">
-                <a href="/contact#form-container">Hemen teklif alın.</a>
-              </span>
+
+              <nuxt-link to="/contact#contact-footer">
+                <span class="product-btn-info radius-1em">
+                  <a>Hemen teklif alın.</a>
+                </span>
+              </nuxt-link>
             </button>
           </div>
           <div class="product-btn">
             <button class="btn">
               <i class="flaticon-question" />
-              <span class="product-btn-info radius-1em">
-                <a href="/contact#form-container"> Daha fazla bilgi alın.</a>
-              </span>
+              <nuxt-link to="/contact#contact-footer">
+                <span class="product-btn-info radius-1em">
+                  <a> Daha fazla bilgi alın.</a>
+                </span>
+              </nuxt-link>
             </button>
           </div>
         </div>
@@ -139,14 +147,17 @@ export default {
 </script>
 <style lang="less" scoped>
 .sidenav {
-  padding: 3rem;
-
+  padding-left: 3rem;
+  padding-right: 3rem;
+  margin-top: 1.7rem;
+  height: 80%;
   h1 {
     padding-bottom: 1.1rem;
     font-size: 1.8rem;
   }
 
   .product-category {
+    margin-top: 1.3rem;
     h2 {
       padding: 1rem;
       font-size: 1.5rem;

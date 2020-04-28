@@ -40,7 +40,7 @@
           <div class="footer-row first-row">
             <h4>Bizi takip edin</h4>
             <hr>
-            <ul class="social-network social-circle">
+            <ul class="social-network social-circle contact-socials">
               <li v-for="sosyal in social" :key="sosyal.id" class="icon-container">
                 <a :href="sosyal.href" :title="sosyal.title">
                   <i :class="sosyal.icon"> {{ sosyal.adress }}</i></a>
@@ -201,6 +201,9 @@ export default {
 .contact-item {
   font-family: Georgia;
   font-size: 1.1rem;
+  li{
+    margin: 2.5rem 0 !important;
+  }
 }
 
 .hr-copy {
@@ -211,7 +214,7 @@ export default {
   text-align: center;
 
   img {
-    width: 7rem;
+    width: 5rem;
   }
 
   .copyright {
