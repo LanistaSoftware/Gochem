@@ -13,12 +13,19 @@
         </div>
         <div v-for="item in getsector" :key="item.id" class="product-category">
           <h2>{{ item.sectorname }}</h2>
-          <span v-for="product in getProductdb" :key="product._id">
+          <!-- <span v-for="product in getProductdb" :key="product._id">
             <a
               v-if="item.sectorname==product.prdoudctGroup"
               :href="'#'+product.prdoudctName "
               @click="getAproduct(product._id)"
             >{{ product.prdoudctName }}</a>
+          </span> -->
+          <span v-for="product in getProductdb" :key="product._id" class="cde">
+            <nuxt-link v-if="item.sectorname===product.prdoudctGroup" :to="'#'+product.prdoudctName" tag="span">
+              <a
+                @click="getAproduct(product._id)"
+              >{{ product.prdoudctName }}</a>
+            </nuxt-link>
           </span>
         </div>
       </section>
@@ -38,7 +45,6 @@
           <div class="product-btn">
             <button class="btn">
               <i class="flaticon-product" />
-
               <nuxt-link to="/contact#contact-footer">
                 <span class="product-btn-info radius-1em">
                   <a> Online sipariş çok yakında.</a>
@@ -49,7 +55,6 @@
           <div class="product-btn">
             <button class="btn">
               <i class="flaticon-customer-service" />
-
               <nuxt-link to="/contact#contact-footer">
                 <span class="product-btn-info radius-1em">
                   <a>Hemen teklif alın.</a>
