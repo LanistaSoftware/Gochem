@@ -69,6 +69,11 @@ h4 {
   -o-transition: 0.5s;
   transition: 0.5s;
 }
+.contact-socials [class^="flaticon-twitter"]:before,
+.contact-socials [class^="flaticon-linkedin"]:before,
+.contact-socials [class^="flaticon-youtube"]:before {
+  font-size: 2.2rem;
+}
 .social-search {
   width: 100%;
   /* float: right; */

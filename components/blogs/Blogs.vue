@@ -1,11 +1,13 @@
 <template>
   <section id="blogs">
-    <div class="content content-background overflow-scroll">
-      <div class="blogs">
-        <div v-for="item in gettersBlogs" :key="item._id" class="blogs-content">
-          <div class="img-tag" alt="Buraya belgeler gelecek." v-html="getImage(item.content)" />
-          <a href="#" @click.prevent="doneBlog(item._id)"><div v-html="getHeader(item.content)" /></a>
-          <h2>{{ getDate(item.date) }} </h2>
+    <div class="content content-background">
+      <div class="content-blog">
+        <div class="blogs content-blog overflow-scroll">
+          <div v-for="item in gettersBlogs" :key="item._id" class="blogs-content">
+            <div class="img-tag" alt="Buraya belgeler gelecek." v-html="getImage(item.content)" />
+            <a href="#" @click.prevent="doneBlog(item._id)"><div v-html="getHeader(item.content)" /></a>
+            <h2>{{ getDate(item.date) }} </h2>
+          </div>
         </div>
       </div>
     </div>
@@ -83,12 +85,18 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+.content-blog{
+  height: 100%;
+  padding: 1rem;
+}
 .blogs,
 .blogs>.blogs-content {
   padding: 1rem 3rem 0 3rem;
   margin-bottom: 2rem;
 }
-
+.blogs{
+  overflow-y: auto;
+}
 .blogs-html {
   margin-top: 2rem;
 }
