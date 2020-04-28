@@ -24,16 +24,20 @@
           <div class="btn-link-sector">
             <div class="sector-btn">
               <button class="btn">
-                <span class="sector-btn-info radius-1em">
-                  <a href="/contact#form-container"> Daha fazla bilgi al</a>
-                </span>
+                <nuxt-link to="/contact#contact-footer">
+                  <span class="sector-btn-info radius-1em">
+                    <a> Daha fazla bilgi al</a>
+                  </span>
+                </nuxt-link>
               </button>
             </div>
             <div class="sector-btn">
               <button class="btn">
-                <span class="sector-btn-info radius-1em">
-                  <a href="/contact#form-container"> Uygun ürün bul</a>
-                </span>
+                <nuxt-link to="/contact#contact-footer">
+                  <span class="sector-btn-info radius-1em">
+                    <a> Uygun ürün bul</a>
+                  </span>
+                </nuxt-link>
               </button>
             </div>
           </div>
@@ -163,14 +167,14 @@ export default {
 }
 
 .btn-link-sector {
-  width: 100%;
+  width: 95%;
   text-align: center;
   margin-top: 2rem;
   font-family: Georgia;
-
   .sector-btn {
     width: 50%;
     float: left;
+    padding: 1rem;
 
     .btn {
       margin-top: 1.3rem;
@@ -180,12 +184,12 @@ export default {
         font-family: Arial, Helvetica, sans-serif;
         font-size: 1.1rem;
         word-wrap: break-word;
-        padding: 0.6rem 3.6rem;
+        padding: 0.6rem 3rem;
         text-align: center;
         color: white;
         border: 1px solid white;
         display: block;
-        width: 13rem;
+        width: 12rem;
         -webkit-transition: 0.5s;
         -o-transition: 0.5s;
         transition: 0.5s;
