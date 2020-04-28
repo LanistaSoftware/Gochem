@@ -4,7 +4,7 @@
       <div class="box">
         <a :href="item.gochemLink" target="_blank">
           <p class="companydesc">
-            <i class="flaticon-pin" /> {{ item.company }}
+            <i class="flaticon-pin" /> {{ getInfo.name }}
           </p>
         </a>
       </div>
@@ -29,6 +29,7 @@
   </div>
 </template>
 <script>
+import { mapGetters } from 'vuex'
 export default {
   data () {
     return {
@@ -43,6 +44,11 @@ export default {
         }
       ]
     }
+  },
+  computed: {
+    ...mapGetters({
+      getInfo: 'getInfo'
+    })
   }
 }
 </script>

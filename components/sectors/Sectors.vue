@@ -4,9 +4,11 @@
     <div class="content content-background">
       <section class="sidenav overflow-scroll">
         <div class="sector-link">
-          <a v-for="item in getsector" :key="item._id" :href="'#'+item.sectorname" @click="getSectorItem(item._id)">
-            {{ item.sectorname }}
-          </a>
+          <nuxt-link v-for="item in getsector" :key="item._id" :to="'#'+item.sectorname">
+            <a @click="getSectorItem(item._id)">
+              {{ item.sectorname }}
+            </a>
+          </nuxt-link>
         </div>
       </section>
       <div class="sector-container">

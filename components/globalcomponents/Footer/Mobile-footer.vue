@@ -8,7 +8,7 @@
             <div class="companydesc">
               <a :href="item.gochemLink" target="_blank">
                 <p>
-                  <i class="flaticon-pin" /> {{ item.company }}
+                  <i class="flaticon-pin" /> {{ getInfo.name }}
                 </p>
               </a>
             </div>
@@ -39,6 +39,7 @@
   </section>
 </template>
 <script>
+import { mapGetters } from 'vuex'
 import MobileNav from '../Header/MobileNav'
 import Social from '@/components/globalcomponents/shared/Social'
 export default {
@@ -60,6 +61,11 @@ export default {
       ],
       showSearch: false
     }
+  },
+  computed: {
+    ...mapGetters({
+      getInfo: 'getInfo'
+    })
   }
 }
 </script>

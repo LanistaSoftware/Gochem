@@ -64,6 +64,7 @@ export default {
     }
   },
   created () {
+    this.getContact()
     this.getActiveSlide().then(() => {
       this.bgImageUrl = this.getSlideSets[0].imageUrl
     })
@@ -73,7 +74,8 @@ export default {
   },
   methods: {
     ...mapActions({
-      getActiveSlide: 'getActiveSlide'
+      getActiveSlide: 'getActiveSlide',
+      getContact: 'getContact'
     })
   }
 }

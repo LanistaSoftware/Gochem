@@ -470,10 +470,24 @@
 }
 /**********Product Responsive********/
 /* Extra small devices (phones, 320px and down) */
+@media only screen and (max-width: 320px) {
+  .slide-content p {
+    font-size: 1rem !important;
+  }
+  .carousel-product {
+    height: 6rem;
+  }
+  .carousel-responsive {
+    margin-top: 2.2rem !important;
+  }
+}
 /* Extra small devices (phones, 480px and down) */
 @media only screen and (max-width: 480px) {
   #product .product-container {
     padding: 1rem 0 !important;
+  }
+  .slide-content p {
+    font-size: 1.5rem;
   }
 }
 /* Small devices (portrait tablets and large phones, 568px and up) */

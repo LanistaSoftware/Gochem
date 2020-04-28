@@ -31,7 +31,7 @@
           <small>Envanterimizde bulunan ürünlerle ilgili bilgi almak için</small>
           <br>
           <button class="contact-btn radius-05em">
-            <a href="tel:123-456-7890">Arayın</a>
+            <a :href="'tel:'+getInfo.telephone">Arayın</a>
           </button>
         </section>
       </div>
@@ -107,6 +107,7 @@
   </div>
 </template>
 <script >
+import { mapGetters } from 'vuex'
 import ContactForm from '@/components/contact/ContactForm'
 import MobileFooter from '@/components/globalcomponents/Footer/Mobile-footer'
 export default {
@@ -138,6 +139,11 @@ export default {
       }
       ]
     }
+  },
+  computed: {
+    ...mapGetters({
+      getInfo: 'getInfo'
+    })
   }
 }
 </script>

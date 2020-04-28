@@ -1,8 +1,18 @@
 <template>
   <div class="call">
-    <a href="tel: 0912 542 5252"> <i class="flaticon-phone" i /></a>
+    <a :href="'tel:'+getInfo.telephone"> <i class="flaticon-phone" i /></a>
   </div>
 </template>
+<script>
+import { mapGetters } from 'vuex'
+export default {
+  computed: {
+    ...mapGetters({
+      getInfo: 'getInfo'
+    })
+  }
+}
+</script>
 <style lang="less" scoped>
 .call{
     text-align: right;

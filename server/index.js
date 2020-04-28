@@ -10,6 +10,9 @@ const corsOptions = {
   headers: '*',
   optionsSuccessStatus: 200
 }
+app.get('/', (req, res) => {
+  res.redirect('/home')
+})
 app.use(cors(corsOptions))
 // Import and Set Nuxt.js options
 config.dev = process.env.NODE_ENV !== 'production'

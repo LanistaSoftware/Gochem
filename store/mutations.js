@@ -89,3 +89,6 @@ export const setGalery = (state, value) => {
 export const setSearchStatus = (state, value) => {
   state.searchStatus = value
 }
+export const setInfo = (state, value) => {
+  state.info = value
+}

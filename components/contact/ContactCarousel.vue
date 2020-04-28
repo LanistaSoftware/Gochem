@@ -15,7 +15,7 @@
             <div class="slide-card">
               <div class="slide-card-header clearfix">
                 <div class="header-container">
-                  <span class="icon-container"><i :class="slide.icons" /></span><span class="header-text-container"><h2> {
+                  <span class="icon-container"><i :class="slide.icons" /></span><span class="header-text-container"><h2>
                     {{ slide.title }}
                   </h2></span>
                 </div><span class="slide-card-border" />
@@ -25,7 +25,7 @@
                 </h3><p v-html="slide.content" />
               </div><div class="slide-card-button">
                 <button class="radius-05em">
-                  <a href="#contact-footer"> {
+                  <a href="#contact-footer">
                     {{ slide.contactBtn }}
                   </a>
                 </button>
