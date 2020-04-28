@@ -16,7 +16,7 @@
         <div class="sector-row">
           <SectorAlbum class="skCar radius-1em" />
         </div>
-        <div class="sector-row deneme">
+        <div class="sector-row sector-scroll">
           <p>
             {{ sectoritems.sectordescription }}
           </p>
@@ -208,7 +208,7 @@ export default {
   width: 30%;
   margin: auto;
 }
-.deneme{
+.sector-scroll{
   height: 80%;
   overflow-x: auto;
 }
