@@ -3,7 +3,7 @@
     <productSlide />
     <div class="content clearfix content-background mobile-content-background">
       <div v-if="!getpigmentShow" id="rescat" class="responsive-category">
-        <h2>{{ getProductone.prdoudctGroup }}</h2>
+        <h2>{{ getProductone.productDesc }}</h2>
       </div>
       <section class="sidenav product-sidenav overflow-scroll">
         <div class="product-category">
@@ -11,11 +11,11 @@
             Slikon Pigment
           </h2>
         </div>
-        <div v-for="item in getsector" :key="item.id" class="product-category">
-          <h2>{{ item.sectorname }}</h2>
+        <div v-for="item in categories" :key="item.id" class="product-category">
+          <h2>{{ item.name }}</h2>
           <span v-for="product in getProductdb" :key="product._id">
             <a
-              v-if="item.sectorname==product.prdoudctGroup"
+              v-if="item.name==product.productDesc"
               :href="'#'+product.prdoudctName "
               @click="getAproduct(product._id)"
             >{{ product.prdoudctName }}</a>
@@ -88,6 +88,7 @@ export default {
   data () {
     return {
       defaultProduct: '',
+      categories: [],
       productone: {
         name: 'name',
         desc: 'desc',
@@ -109,6 +110,14 @@ export default {
     this.getProducts().then(() => {
       this.defaultProduct = this.getProductdb[0]._id
       localStorage.setItem('productid', this.defaultProduct)
+      this.getProductdb.map((product) => {
+        const index = this.categories
+          .map(function (element) { return element.name })
+          .indexOf(product.productDesc)
+        if (index === -1) {
+          this.categories.push({ name: product.productDesc })
+        }
+      })
     })
     this.sectorData()
   },

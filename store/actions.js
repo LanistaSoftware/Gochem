@@ -94,17 +94,21 @@ export const getDocument = ({ commit }, id) => {
 // eslint-disable-next-line no-empty-pattern
 export const sendCommunication = ({}, item) => {
   return api().post('communication', item).then((res) => {
-    console.log(res.data.message)
   })
 }
 // eslint-disable-next-line no-empty-pattern
 export const sendMail = ({}, item) => {
   return api().post('communication/mail', item).then((res) => {
-    console.log(res.data.message)
   })
 }
 export const getGalery = ({ commit }) => {
   return api().get('galery').then((res) => {
     commit('setGalery', res.data.sectorImages)
+  })
+}
+// eslint-disable-next-line no-empty-pattern
+export const getContact = ({ commit }) => {
+  return api().get('contact').then((res) => {
+    commit('setInfo', res.data.contacts[0])
   })
 }

@@ -348,8 +348,10 @@ nav [class*=" flaticon-"]:after {
   -ms-transform: translateY(-50%) translateX(40%) !important;
   transform: translateY(-50%) translateX(40%) !important;
 }
-.slide-content {
-  font-size: 2.2rem;
+.slide-content p {
+  padding: 0.3rem;
+  line-height: 15px;
+  font-size: 2rem;
 }
 [class="flaticon-next"]:before {
   padding-left: 0.3rem;
@@ -408,6 +410,9 @@ tr:hover .blogs > .blogs-content h3:hover {
 /**** Blog Detail****/
 #blogs-detail {
   margin-bottom: 1rem;
+}
+#blogs-detail .btn {
+  border: none;
 }
 #blogs-detail .blogs-detail {
   width: 100%;

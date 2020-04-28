@@ -15,14 +15,14 @@
       >
         <slider v-for=" item in activeMenu" :key="item._id" class="carousel-responsive">
           <div class="slide-content">
-            <h2>
+            <p>
               <a v-if="sectorshow" href="#" @click="oneSector(item._id)">
                 {{ item.sectorname }}
               </a>
               <a v-else href="#" @click="getAproduct(item._id)">
                 {{ item.prdoudctName }}
               </a>
-            </h2>
+            </p>
           </div>
         </slider>
       </carousel>
@@ -68,8 +68,8 @@ export default {
       this.sectorshow = false
       this.getProducts().then(() => {
         this.activeMenu = this.getProductDb
-        this.activeMenu.push({
-          prdoudctName: 'pigmentler',
+        this.activeMenu.unshift({
+          prdoudctName: 'Pigmentler',
           _id: 4
         })
       })
@@ -114,7 +114,7 @@ export default {
 }
 
 .carousel-responsive {
-  margin-top: 2.8rem;
+  margin-top: 3.2rem;
 }
 
 .activeproduct {

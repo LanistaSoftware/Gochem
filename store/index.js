@@ -19,6 +19,7 @@ const createStore = () => {
       pigments: '',
       document: '',
       galeries: '',
+      info: '',
       fileUrl: 'https://api.lanista.com.tr/assest/file/',
       productoneset: {
         name: 'name',
