@@ -1,6 +1,6 @@
 /* eslint-disable nuxt/no-env-in-hooks */
 <template>
-  <div class="bg" :style="{ backgroundImage: 'url(' + bgImageUrl + ')' }">
+  <div class="bg" :style="{ backgroundImage: 'url(' + bgImageUrl + '),url('+ bgImageUrlOther +')' }">
     <div class="overlay">
       <div class="bg-container clearfix">
         <transition enter-active-class="animated fadeInTop" leave-active-class="animated fadeOutTop" appear>
@@ -44,6 +44,7 @@ export default {
   data () {
     return {
       bgImageUrl: '',
+      bgImageUrlOther: '',
       searchStatus: false,
       showSearch: true
     }
@@ -58,6 +59,7 @@ export default {
   watch: {
     getSlideIndex () {
       this.bgImageUrl = this.getSlideSets[this.getSlideIndex].imageUrl
+      this.bgImageUrlOther = this.bgImageUrl.split('.webp')[0]
     },
     getSearchStatus () {
       this.searchStatus = this.getSearchStatus
@@ -67,6 +69,7 @@ export default {
     this.getContact()
     this.getActiveSlide().then(() => {
       this.bgImageUrl = this.getSlideSets[0].imageUrl
+      this.bgImageUrlOther = this.bgImageUrl.split('.webp')[0]
     })
   },
   mounted () {
