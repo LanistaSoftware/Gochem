@@ -35,7 +35,7 @@
           <textarea v-model="communication.message" class="input radius-1em" placeholder="Mesajınız" />
         </div>
         <div class="btn-container">
-          <button class="form-btn radius-05em" @click="send">
+          <button class="form-btn radius-05em" name="send" @click="send">
             Gönder
           </button>
         </div>

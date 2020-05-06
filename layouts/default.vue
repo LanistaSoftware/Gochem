@@ -64,17 +64,10 @@ export default {
     }
   },
   created () {
-    this.getContact()
-    this.getActiveSlide().then(() => {
-      this.bgImageUrl = this.getSlideSets[0].imageUrl
-    })
-  },
-  mounted () {
     this.bgImageUrl = this.getSlideSets[0].imageUrl
   },
   methods: {
     ...mapActions({
-      getActiveSlide: 'getActiveSlide',
       getContact: 'getContact'
     })
   }

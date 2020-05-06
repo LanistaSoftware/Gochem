@@ -36,7 +36,7 @@
         </div>
         <div class="product-link">
           <div class="product-btn">
-            <button class="btn">
+            <button class="btn" name="product-btn">
               <i class="flaticon-product" />
 
               <nuxt-link to="/contact#contact-footer">
@@ -47,7 +47,7 @@
             </button>
           </div>
           <div class="product-btn">
-            <button class="btn">
+            <button class="btn" name="product-btn">
               <i class="flaticon-customer-service" />
 
               <nuxt-link to="/contact#contact-footer">
@@ -58,7 +58,7 @@
             </button>
           </div>
           <div class="product-btn">
-            <button class="btn">
+            <button class="btn" name="product-btn">
               <i class="flaticon-question" />
               <nuxt-link to="/contact#contact-footer">
                 <span class="product-btn-info radius-1em">

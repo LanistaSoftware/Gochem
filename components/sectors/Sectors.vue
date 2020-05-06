@@ -25,7 +25,7 @@
           <SectorAlbum class="skCar-mobil" />
           <div class="btn-link-sector">
             <div class="sector-btn">
-              <button class="btn">
+              <button class="btn" name="sector-btn">
                 <nuxt-link to="/contact#contact-footer">
                   <span class="sector-btn-info radius-1em">
                     <a> Daha fazla bilgi al</a>
@@ -34,7 +34,7 @@
               </button>
             </div>
             <div class="sector-btn">
-              <button class="btn">
+              <button class="btn" name="sector-btn">
                 <nuxt-link to="/contact#contact-footer">
                   <span class="sector-btn-info radius-1em">
                     <a> Uygun ürün bul</a>

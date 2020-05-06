@@ -1,4 +1,10 @@
 import api from './api'
+
+export const nuxtServerInit = (vuexContext) => {
+  return vuexContext.dispatch('getActiveSlide').then(() => {
+    return vuexContext.dispatch('getContact')
+  })
+}
 export const addAbout = (vuexContext, about) => {
   vuexContext.commit('setAboutUs', about)
 }

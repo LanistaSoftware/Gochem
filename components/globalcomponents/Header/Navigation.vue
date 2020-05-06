@@ -11,7 +11,6 @@
         <nuxt-link
           v-for="nav in navItems"
           :key="nav.id"
-          :active="isActive"
           :to="nav.path"
           tag="li"
           class="navli"

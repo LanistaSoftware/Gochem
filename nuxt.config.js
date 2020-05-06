@@ -12,13 +12,18 @@ module.exports = {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'preload', type: 'text/css', href: '@/assets/css/style.css' }
     ]
   },
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: 'blue' },
+  loading: {
+    color: 'green',
+    height: '2px',
+    throttle: 0
+  },
   /*
   ** Global CSS
   */
@@ -32,8 +37,7 @@ module.exports = {
   script: [
     { src: 'https://kit.fontawesome.com/475a188618.js', crossorigin: 'anonymous' }
   ],
-  plugins: [{ src: '~plugins/vue-carousel.js', ssr: false, mode: 'client' },
-    { src: '~plugins/deneme.js', ssr: false, mode: 'client' }
+  plugins: [{ src: '~plugins/vue-carousel.js', ssr: false, mode: 'client' }
   ],
   /*
   ** Nuxt.js dev-modules
