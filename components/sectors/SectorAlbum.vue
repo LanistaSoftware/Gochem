@@ -3,7 +3,7 @@
     <b-carousel-slide v-for="item in getterGalery" :key="item._id">
       <template v-slot:img>
         <div class="img-sector-container">
-          <img class="img-fluid radius-1em" :src="imgUrl+item.imgUrl" alt="image slot">
+          <img class="img-fluid radius-1em" :src="safariImage(imgUrl+item.imgUrl)" alt="image slot">
         </div>
       </template>
     </b-carousel-slide>
@@ -24,7 +24,8 @@ export default {
   computed: {
     ...mapGetters({
       getterGalery: 'getterGalery',
-      imgUrl: 'imgUrl'
+      imgUrl: 'imgUrl',
+      getSafari: 'getSafari'
     })
   },
   created () {
@@ -36,6 +37,13 @@ export default {
     },
     onSlideEnd (slide) {
       this.sliding = false
+    },
+    safariImage (item) {
+      if (this.getSafari) {
+        return item
+      } else {
+        return item + '.webp'
+      }
     },
     ...mapActions({
       getGalery: 'getGalery'

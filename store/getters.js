@@ -85,3 +85,6 @@ export const getSearchStatus = (state) => {
 export const getInfo = (state) => {
   return state.info
 }
+export const getSafari = (state) => {
+  return state.Safari
+}

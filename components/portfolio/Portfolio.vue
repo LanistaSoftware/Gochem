@@ -3,7 +3,7 @@
     <div class="content content-background overflow-scroll">
       <div class="portfolio">
         <div v-for="item in gettersDocuments" :key="item._id" class="portfolio-content">
-          <img class="radius-1em" :src="imgUrl+item.imgUrl" alt="Buraya belgeler gelecek." style="width:100%">
+          <img class="radius-1em" :src="safariImage(imgUrl+item.imgUrl)" alt="Buraya belgeler gelecek." style="width:100%">
           <a href="#" @click.prevent="portfolioDetail(item._id)">
             <h3 class="radius-05em">{{ item.name }} </h3>
           </a>
@@ -26,7 +26,8 @@ export default {
   computed: {
     ...mapGetters({
       gettersDocuments: 'gettersDocuments',
-      imgUrl: 'imgUrl'
+      imgUrl: 'imgUrl',
+      getSafari: 'getSafari'
     })
   },
   created () {
@@ -42,6 +43,13 @@ export default {
     ...mapActions({
       getDocuments: 'getDocuments'
     }),
+    safariImage (item) {
+      if (this.getSafari) {
+        return item
+      } else {
+        return item + '.webp'
+      }
+    },
     portfolioDetail (id) {
       this.$route.params.portfolioid = id
       this.$router.push('portfolio/' + this.$route.params.portfolioid)
