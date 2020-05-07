@@ -52,13 +52,12 @@ export default {
       getSearchStatus: 'getSearchStatus'
     })
   },
-  created () {
-  },
   methods: {
     ...mapActions({
       getContact: 'getContact'
     })
   },
+  // eslint-disable-next-line vue/order-in-components
   watch: {
     getSlideIndex () {
       this.bgImageUrl = this.getSlideSets[this.getSlideIndex].imageUrl

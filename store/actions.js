@@ -2,7 +2,21 @@ import api from './api'
 
 export const nuxtServerInit = (vuexContext) => {
   return vuexContext.dispatch('getActiveSlide').then(() => {
-    return vuexContext.dispatch('getContact')
+    return vuexContext.dispatch('getContact').then(() => {
+      return vuexContext.dispatch('getAboutUs').then(() => {
+        return vuexContext.dispatch('getEmploye').then(() => {
+          return vuexContext.dispatch('getBlogs').then(() => {
+            return vuexContext.dispatch('getReferencesAction').then(() => {
+              return vuexContext.dispatch('getDocuments').then(() => {
+                return vuexContext.dispatch('getPigments').then(() => {
+                  return vuexContext.dispatch('sectorData')
+                })
+              })
+            })
+          })
+        })
+      })
+    })
   })
 }
 export const addAbout = (vuexContext, about) => {

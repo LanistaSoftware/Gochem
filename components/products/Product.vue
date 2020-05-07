@@ -34,40 +34,42 @@
             <pigment-table />
           </div>
         </div>
-        <div class="product-link">
-          <div class="product-btn">
-            <button class="btn" name="product-btn">
-              <i class="flaticon-product" />
+        <no-ssr>
+          <div class="product-link">
+            <div class="product-btn">
+              <button class="btn" name="product-btn-online">
+                <i class="flaticon-product" />
 
-              <nuxt-link to="/contact#contact-footer">
-                <span class="product-btn-info radius-1em">
-                  <a> Online sipariş çok yakında.</a>
-                </span>
-              </nuxt-link>
-            </button>
-          </div>
-          <div class="product-btn">
-            <button class="btn" name="product-btn">
-              <i class="flaticon-customer-service" />
+                <nuxt-link to="/contact#contact-footer">
+                  <span class="product-btn-info radius-1em">
+                    <a> Online sipariş çok yakında.</a>
+                  </span>
+                </nuxt-link>
+              </button>
+            </div>
+            <div class="product-btn">
+              <button class="btn" name="product-btn-buy">
+                <i class="flaticon-customer-service" />
 
-              <nuxt-link to="/contact#contact-footer">
-                <span class="product-btn-info radius-1em">
-                  <a>Hemen teklif alın.</a>
-                </span>
-              </nuxt-link>
-            </button>
+                <nuxt-link to="/contact#contact-footer">
+                  <span class="product-btn-info radius-1em">
+                    <a>Hemen teklif alın.</a>
+                  </span>
+                </nuxt-link>
+              </button>
+            </div>
+            <div class="product-btn">
+              <button class="btn" name="product-btn">
+                <i class="flaticon-question" />
+                <nuxt-link to="/contact#contact-footer">
+                  <span class="product-btn-info radius-1em">
+                    <a> Daha fazla bilgi alın.</a>
+                  </span>
+                </nuxt-link>
+              </button>
+            </div>
           </div>
-          <div class="product-btn">
-            <button class="btn" name="product-btn">
-              <i class="flaticon-question" />
-              <nuxt-link to="/contact#contact-footer">
-                <span class="product-btn-info radius-1em">
-                  <a> Daha fazla bilgi alın.</a>
-                </span>
-              </nuxt-link>
-            </button>
-          </div>
-        </div>
+        </no-ssr>
       </div>
     </div>
   </section>
@@ -125,7 +127,7 @@ export default {
     const id = localStorage.getItem('productid')
     const pigmentid = localStorage.getItem('pigmentid')
     if (id !== null && pigmentid === null) {
-      this.getOneProduct(id)
+      this.getAproduct(id)
       localStorage.removeItem('productid')
     }
     if (pigmentid !== null) {

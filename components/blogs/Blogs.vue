@@ -31,9 +31,9 @@ export default {
       imgUrl: 'imgUrl'
     })
   },
-  created () {
-    this.getBlogs()
-  },
+  // created () {
+  //   this.getBlogs()
+  // },
   methods: {
     ...mapActions({
       getBlogs: 'getBlogs'

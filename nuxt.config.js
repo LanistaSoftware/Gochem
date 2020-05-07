@@ -32,6 +32,7 @@ module.exports = {
     '@/assets/css/flaticon/flaticon.css',
     '@/assets/css/reset.css',
     '@/assets/css/style.css',
+    '@/assets/css/loading.css',
     '@/assets/css/responsive.css'
   ],
   script: [

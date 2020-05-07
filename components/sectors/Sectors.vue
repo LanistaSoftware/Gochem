@@ -23,26 +23,28 @@
             {{ sectoritems.sectordescription }}
           </p>
           <SectorAlbum class="skCar-mobil" />
-          <div class="btn-link-sector">
-            <div class="sector-btn">
-              <button class="btn" name="sector-btn">
-                <nuxt-link to="/contact#contact-footer">
-                  <span class="sector-btn-info radius-1em">
-                    <a> Daha fazla bilgi al</a>
-                  </span>
-                </nuxt-link>
-              </button>
+          <no-ssr>
+            <div class="btn-link-sector">
+              <div class="sector-btn">
+                <button class="btn" name="info-btn">
+                  <nuxt-link to="/contact#contact-footer">
+                    <span class="sector-btn-info radius-1em">
+                      <a> Daha fazla bilgi al</a>
+                    </span>
+                  </nuxt-link>
+                </button>
+              </div>
+              <div class="sector-btn">
+                <button class="btn" name="sector-btn">
+                  <nuxt-link to="/contact#contact-footer">
+                    <span class="sector-btn-info radius-1em">
+                      <a> Uygun ürün bul</a>
+                    </span>
+                  </nuxt-link>
+                </button>
+              </div>
             </div>
-            <div class="sector-btn">
-              <button class="btn" name="sector-btn">
-                <nuxt-link to="/contact#contact-footer">
-                  <span class="sector-btn-info radius-1em">
-                    <a> Uygun ürün bul</a>
-                  </span>
-                </nuxt-link>
-              </button>
-            </div>
-          </div>
+          </no-ssr>
         </div>
       </div>
     </div>
@@ -79,16 +81,14 @@ export default {
   },
   mounted () {
     const id = localStorage.getItem('sectorid')
+    this.defaultSector = this.getsector[0]._id
+    localStorage.setItem('sectorid', this.defaultSector)
     if (id !== null) {
       this.getSectorItem(id)
       localStorage.removeItem('sectorid')
     }
   },
   created () {
-    this.sectorData().then(() => {
-      this.defaultSector = this.getsector[0]._id
-      localStorage.setItem('sectorid', this.defaultSector)
-    })
     this.sectoropen = false
     this.$store.commit('setActiveSlide', 'sector')
   },
