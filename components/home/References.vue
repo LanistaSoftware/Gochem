@@ -44,9 +44,9 @@ export default {
       imgUrl: 'imgUrl'
     })
   },
-  created () {
-    this.getReferencesAction()
-  },
+  // created () {
+  //   this.getReferencesAction()
+  // },
   methods: {
     ...mapActions({
       getReferencesAction: 'getReferencesAction'

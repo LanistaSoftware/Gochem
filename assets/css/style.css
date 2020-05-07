@@ -1,4 +1,7 @@
 /* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+body {
+  font-display: swap;
+}
 .clearfix::after {
   display: block;
   content: "";
@@ -88,6 +91,7 @@ h4 {
 }
 #mobil-search {
   display: none !important;
+  padding-top: 1rem;
 }
 [class^="flaticon-search"]:before {
   font-size: 1.5rem;
@@ -259,13 +263,13 @@ h4 {
   display: none;
 }
 /***** Navigation ******/
-.nuxt-link-exact-active a {
+.nuxt-link-active a {
   color: lightgreen;
 }
-.nuxt-link-exact-active a [class^="flaticon-"]:before,
-.nuxt-link-exact-active a [class*=" flaticon-"]:before,
-.nuxt-link-exact-active a [class^="flaticon-"]:after,
-.nuxt-link-exact-active a [class*=" flaticon-"]:after {
+.nuxt-link-active a [class^="flaticon-"]:before,
+.nuxt-link-active a [class*=" flaticon-"]:before,
+.nuxt-link-active a [class^="flaticon-"]:after,
+.nuxt-link-active a [class*=" flaticon-"]:after {
   color: lightgreen;
 }
 nav [class^="flaticon-"]:before,
@@ -489,7 +493,7 @@ tr:hover .blogs > .blogs-content h3:hover {
   text-align: center;
   border-radius: 0.3em;
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 #blogs h3:hover {
   color: lightgreen;

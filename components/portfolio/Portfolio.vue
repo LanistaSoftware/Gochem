@@ -30,7 +30,7 @@ export default {
     })
   },
   created () {
-    this.getDocuments()
+    // this.getDocuments()
     if (process.client) {
       // eslint-disable-next-line nuxt/no-globals-in-created
       window.document.body.addEventListener('contextmenu', function (e) {
@@ -86,7 +86,7 @@ export default {
     padding: .5rem 0;
     text-align: center;
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   h3:hover {

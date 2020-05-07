@@ -4,17 +4,17 @@
     <div class="blogs-html" v-html="gettersBlog" />
     <div class="button-container radius-2em clearfix">
       <div class="box box-left ">
-        <button class="btn" @click="prevBlog()">
+        <button class="btn" name="prev" @click="prevBlog()">
           Önceki <i class="flaticon-left-arrow" />
         </button>
       </div>
       <div class="box box-center">
-        <button class="btn" @click="doneBlogs()">
+        <button class="btn" name="bloks" @click="doneBlogs()">
           Makaleler <i class="flaticon-up-arrow" />
         </button>
       </div>
       <div class="box box-right">
-        <button class="btn" :disabled="disablebtn" @click="nextBlog()">
+        <button class="btn" name="next" :disabled="disablebtn" @click="nextBlog()">
           Sonraki <i class="flaticon-next" />
         </button>
       </div>

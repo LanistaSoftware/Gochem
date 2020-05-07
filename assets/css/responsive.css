@@ -208,7 +208,7 @@
     position: relative;
   }
   .carousel-items {
-    height: 30vh !important;
+    height: 30vh;
   }
   .box-container p {
     font-size: 1.3rem;
@@ -391,9 +391,6 @@
   .carousel-content p {
     line-height: 1.5;
   }
-  .carousel-content .carousel-items {
-    height: 20vh;
-  }
   .sliderBtn {
     margin-top: 10vh !important;
     width: 5%;
@@ -468,7 +465,7 @@
     height: 20vh !important;
   }
   .carousel-items {
-    height: 38vh !important;
+    height: 38vh;
   }
 }
 /**********Product Responsive********/

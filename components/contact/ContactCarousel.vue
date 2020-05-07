@@ -24,7 +24,7 @@
                   {{ slide.info }}
                 </h3><p v-html="slide.content" />
               </div><div class="slide-card-button">
-                <button class="radius-05em">
+                <button class="radius-05em" name="contact-btn">
                   <a href="#contact-footer">
                     {{ slide.contactBtn }}
                   </a>

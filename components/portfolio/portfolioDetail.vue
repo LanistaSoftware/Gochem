@@ -1,21 +1,21 @@
 <template>
   <div id="portfolioDetail" class="portfolio-detail content-background  overflow-scroll content">
     <div class="portfolio-document">
-      <img id="getdocument" name="getdocument" class="radius-05em" :src="imgUrl + gettersDocument.imgUrl">
+      <img id="getdocument" name="getdocument" class="radius-05em" :src="imgUrl + gettersDocument.imgUrl" alt="portfolio detay">
     </div>
     <div class="button-container radius-2em clearfix">
       <div class="box box-left ">
-        <button class="btn radius-05em" @click="prevDocument">
+        <button class="btn radius-05em" name="prev-portfolio" @click="prevDocument">
           Önceki <i class="flaticon-left-arrow" />
         </button>
       </div>
       <div class="box box-center">
-        <button class="btn radius-05em" @click="doneDocument">
+        <button class="btn radius-05em" name="list-portfolio" @click="doneDocument">
           Belgeler <i class="flaticon-up-arrow" />
         </button>
       </div>
       <div class="box box-right">
-        <button class="btn radius-05em" @click="nextDocument">
+        <button class="btn radius-05em" name="next-portfolio" @click="nextDocument">
           Sonraki <i class="flaticon-next" />
         </button>
       </div>

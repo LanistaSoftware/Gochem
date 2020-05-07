@@ -66,18 +66,11 @@ export default {
     }
   },
   created () {
-    this.getContact()
-    this.getActiveSlide().then(() => {
-      this.bgImageUrl = this.getSlideSets[0].imageUrl
-      this.bgImageUrlOther = this.bgImageUrl.split('.webp')[0]
-    })
-  },
-  mounted () {
     this.bgImageUrl = this.getSlideSets[0].imageUrl
+    this.bgImageUrlOther = this.bgImageUrl.split('.webp')[0]
   },
   methods: {
     ...mapActions({
-      getActiveSlide: 'getActiveSlide',
       getContact: 'getContact'
     })
   }

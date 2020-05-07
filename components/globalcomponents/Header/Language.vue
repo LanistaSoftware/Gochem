@@ -4,12 +4,12 @@
       <tbody>
         <tr>
           <td>
-            <button @click="selectLang()">
+            <button name="select-lang" @click="selectLang()">
               {{ selectedLang }}
             </button>
           </td>
           <td rowspan="2">
-            <button @mouseover="show=true" @click="show=true">
+            <button name="lang" @mouseover="show=true" @click="show=true">
               <i class="flaticon-global" />
             </button>
           </td>
@@ -17,7 +17,7 @@
         <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut" appear>
           <tr v-show="show">
             <td>
-              <button @click="selectLang()">
+              <button name="order-lang" @click="selectLang()">
                 {{ otherLang }}
               </button>
             </td>

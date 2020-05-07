@@ -20,10 +20,10 @@
       </template>
     </b-table>
     <div class="button-container">
-      <button class="btn" @click="prevPigment()">
+      <button class="btn" name="product-prev" @click="prevPigment()">
         <i class="flaticon-back" />
       </button>
-      <button class="btn" @click="nextPigment()">
+      <button class="btn" name="product-next" @click="nextPigment()">
         <i class="flaticon-chevron" />
       </button>
     </div>

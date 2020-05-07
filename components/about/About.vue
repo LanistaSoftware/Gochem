@@ -57,7 +57,7 @@
   </section>
 </template>
 <script>
-import { mapActions, mapGetters } from 'vuex'
+import { mapGetters } from 'vuex'
 export default {
   data () {
     return {}
@@ -69,19 +69,6 @@ export default {
       employezero: 'employezero',
       employeone: 'employeone',
       imgUrl: 'imgUrl'
-    })
-  },
-  created () {
-    this.getAboutUsAction()
-    this.getEmploye()
-  },
-  mounted () {
-    this.$store.commit('setNullemploye')
-  },
-  methods: {
-    ...mapActions({
-      getAboutUsAction: 'getAboutUs',
-      getEmploye: 'getEmploye'
     })
   }
 }
