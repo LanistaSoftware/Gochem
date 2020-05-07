@@ -9,6 +9,7 @@ const createStore = () => {
       search: '',
       sectors: '',
       documents: '',
+      Safari: false,
       pigmentShow: false,
       blog: '',
       imgurl: 'https://api.lanista.com.tr/assest/images/',

@@ -13,7 +13,7 @@
               <img
                 :title="ref.title"
                 class="ref-img"
-                :src="imgUrl+ref.imageUrl"
+                :src="safariImage(imgUrl+ref.imageUrl)"
                 width="500"
                 height="300"
                 alt="image slot"
@@ -35,22 +35,36 @@ export default {
   data () {
     return {
       slide: 0,
-      sliding: null
+      sliding: null,
+      browser: '',
+      safari: false
     }
   },
   computed: {
     ...mapGetters({
       references: 'getReferences',
-      imgUrl: 'imgUrl'
+      imgUrl: 'imgUrl',
+      getSafari: 'getSafari'
     })
   },
   created () {
     this.getReferencesAction()
+    this.browser = this.$ua.browser()
+    if (this.browser === 'Safari') {
+      this.$store.commit('setSafari', true)
+    }
   },
   methods: {
     ...mapActions({
       getReferencesAction: 'getReferencesAction'
-    })
+    }),
+    safariImage (item) {
+      if (this.getSafari) {
+        return item
+      } else {
+        return item + '.webp'
+      }
+    }
   }
 }
 </script>

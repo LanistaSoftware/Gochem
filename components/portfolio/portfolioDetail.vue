@@ -1,7 +1,7 @@
 <template>
   <div id="portfolioDetail" class="portfolio-detail content-background  overflow-scroll content">
     <div class="portfolio-document">
-      <img id="getdocument" name="getdocument" class="radius-05em" :src="imgUrl + gettersDocument.imgUrl">
+      <img id="getdocument" name="getdocument" class="radius-05em" :src="safariImage(imgUrl + gettersDocument.imgUrl)">
     </div>
     <div class="button-container radius-2em clearfix">
       <div class="box box-left ">
@@ -51,7 +51,8 @@ export default {
       gettersDocument: 'gettersDocument',
       gettersDocuments: 'gettersDocuments',
       gettersFileurl: 'gettersFileurl',
-      imgUrl: 'imgUrl'
+      imgUrl: 'imgUrl',
+      getSafari: 'getSafari'
     })
   },
   created () {
@@ -72,6 +73,13 @@ export default {
       getDocument: 'getDocument',
       getDocuments: 'getDocuments'
     }),
+    safariImage (item) {
+      if (this.getSafari) {
+        return item
+      } else {
+        return item + '.webp'
+      }
+    },
     doneDocument () {
       this.$router.push('/portfolio')
     },

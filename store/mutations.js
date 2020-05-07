@@ -92,3 +92,6 @@ export const setSearchStatus = (state, value) => {
 export const setInfo = (state, value) => {
   state.info = value
 }
+export const setSafari = (state, value) => {
+  state.Safari = value
+}

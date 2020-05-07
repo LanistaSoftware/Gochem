@@ -4,7 +4,7 @@
       <div class="about-container clearfix">
         <div class="about-profile">
           <div class="profile-img">
-            <img class="radius-1em" :src="'https://api.lanista.com.tr/assest/images/'+getAbout.imgUrl" alt="">
+            <img class="radius-1em" :src="safariImage(imgUrl+getAbout.imgUrl)" alt="">
           </div>
           <div class="about-information">
             <h2>{{ getAboutUs.ownername }}</h2>
@@ -33,7 +33,7 @@
             <div v-for="item in employezero" :key="item._id" class="twin-card f-left">
               <div class="image-card">
                 <div class="profile-image-container">
-                  <img class="radius-circle" :src="imgUrl+item.imgUrl" alt="Profile Image">
+                  <img class="radius-circle" :src="safariImage(imgUrl+item.imgUrl)" alt="Profile Image">
                   <p>{{ item.name }}</p>
                   <p>{{ item.task }}</p>
                 </div>
@@ -44,7 +44,7 @@
             <div v-for="item in employeone " :key="item._id" class="quad-card">
               <div class="image-card">
                 <div class="profile-image-container">
-                  <img class="radius-circle" :src="imgUrl+item.imgUrl" alt="Profile Image">
+                  <img class="radius-circle" :src="safariImage(imgUrl+item.imgUrl)" alt="Profile Image">
                   <p>{{ item.name }}</p>
                   <p>{{ item.task }}</p>
                 </div>
@@ -68,7 +68,8 @@ export default {
       getAboutUs: 'getAboutUs',
       employezero: 'employezero',
       employeone: 'employeone',
-      imgUrl: 'imgUrl'
+      imgUrl: 'imgUrl',
+      getSafari: 'getSafari'
     })
   },
   created () {
@@ -82,7 +83,14 @@ export default {
     ...mapActions({
       getAboutUsAction: 'getAboutUs',
       getEmploye: 'getEmploye'
-    })
+    }),
+    safariImage (item) {
+      if (this.getSafari) {
+        return item
+      } else {
+        return item + '.webp'
+      }
+    }
   }
 }
 </script>
