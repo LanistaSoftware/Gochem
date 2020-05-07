@@ -3,7 +3,11 @@
     <div class="content content-background overflow-scroll">
       <div class="portfolio">
         <div v-for="item in gettersDocuments" :key="item._id" class="portfolio-content">
-          <img class="radius-1em" :src="safariImage(imgUrl+item.imgUrl)" alt="Buraya belgeler gelecek." style="width:100%">
+          <picture>
+            <source :srcset="imgUrl+item.imgUrl+'.webp'" type="image/webp">
+            <source :srcset="imgUrl+item.imgUrl" type="image/jpeg">
+            <img class="radius-1em" alt="Buraya belgeler gelecek." style="width:100%">
+          </picture>
           <a href="#" @click.prevent="portfolioDetail(item._id)">
             <h3 class="radius-05em">{{ item.name }} </h3>
           </a>

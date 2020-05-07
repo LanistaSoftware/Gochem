@@ -10,14 +10,17 @@
         <b-carousel-slide>
           <template v-slot:img>
             <a :href="ref.referenceUrl" target="_blank">
-              <img
-                :title="ref.title"
-                class="ref-img"
-                :src="safariImage(imgUrl+ref.imageUrl)"
-                width="500"
-                height="300"
-                alt="image slot"
-              >
+              <picture>
+                <source :srcset="imgUrl+ref.imageUrl+'.webp'" type="image/webp">
+                <source :srcset="imgUrl+ref.imageUrl" type="image/jpeg">
+                <img
+                  :title="ref.title"
+                  class="ref-img"
+                  width="500"
+                  height="300"
+                  alt="image slot"
+                >
+              </picture>
             </a>
           </template>
         </b-carousel-slide>
@@ -48,6 +51,7 @@ export default {
   },
   created () {
     this.browser = this.$ua.browser()
+    console.log(this.browser)
     if (this.browser === 'Safari') {
       this.$store.commit('setSafari', true)
     }
