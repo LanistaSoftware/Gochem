@@ -3,7 +3,11 @@
     <b-carousel-slide v-for="item in getterGalery" :key="item._id">
       <template v-slot:img>
         <div class="img-sector-container">
-          <img class="img-fluid radius-1em" :src="safariImage(imgUrl+item.imgUrl)" alt="image slot">
+          <picture>
+            <source :srcset="imgUrl+item.imgUrl+'.webp'" type="image/webp">
+            <source :srcset="imgUrl+item.imgUrl" type="image/jpeg">
+            <img class="img-fluid radius-1em" alt="image slot">
+          </picture>
         </div>
       </template>
     </b-carousel-slide>

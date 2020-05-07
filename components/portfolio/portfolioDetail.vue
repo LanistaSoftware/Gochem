@@ -1,7 +1,11 @@
 <template>
   <div id="portfolioDetail" class="portfolio-detail content-background  overflow-scroll content">
     <div class="portfolio-document">
-      <img id="getdocument" name="getdocument" class="radius-05em" :src="safariImage(imgUrl + gettersDocument.imgUrl)" alt="portfolio detay">
+      <picture>
+        <source :srcset="imgUrl + gettersDocument.imgUrl+'.webp'" type="image/webp">
+        <source :srcset="imgUrl + gettersDocument.imgUrl" type="image/jpeg">
+        <img id="getdocument" name="getdocument" class="radius-05em" alt="portfolio detay">
+      </picture>
     </div>
     <div class="button-container radius-2em clearfix">
       <div class="box box-left ">

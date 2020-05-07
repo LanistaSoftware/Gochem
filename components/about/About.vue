@@ -4,7 +4,11 @@
       <div class="about-container clearfix">
         <div class="about-profile">
           <div class="profile-img">
-            <img class="radius-1em" :src="safariImage(imgUrl+getAbout.imgUrl)" alt="">
+            <picture>
+              <source :srcset="imgUrl+getAbout.imgUrl+'.webp'" type="image/webp">
+              <source :srcset="imgUrl+getAbout.imgUrl" type="image/jpeg">
+              <img class="radius-1em" alt="ceo-img">
+            </picture>
           </div>
           <div class="about-information">
             <h2>{{ getAboutUs.ownername }}</h2>
@@ -33,7 +37,12 @@
             <div v-for="item in employezero" :key="item._id" class="twin-card f-left">
               <div class="image-card">
                 <div class="profile-image-container">
-                  <img class="radius-circle" :src="safariImage(imgUrl+item.imgUrl)" alt="Profile Image">
+                  <picture>
+                    <source :srcset="imgUrl+item.imgUrl+'.webp'" type="image/webp">
+                    <source :srcset="imgUrl+item.imgUrl" type="image/jpeg">
+                    <img class="radius-circle" alt="Profile Image">
+                  </picture>
+
                   <p>{{ item.name }}</p>
                   <p>{{ item.task }}</p>
                 </div>
