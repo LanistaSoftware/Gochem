@@ -57,7 +57,7 @@
   </section>
 </template>
 <script>
-import { mapActions, mapGetters } from 'vuex'
+import { mapGetters } from 'vuex'
 export default {
   data () {
     return {}
@@ -72,18 +72,7 @@ export default {
       getSafari: 'getSafari'
     })
   },
-  created () {
-    this.getAboutUsAction()
-    this.getEmploye()
-  },
-  mounted () {
-    this.$store.commit('setNullemploye')
-  },
   methods: {
-    ...mapActions({
-      getAboutUsAction: 'getAboutUs',
-      getEmploye: 'getEmploye'
-    }),
     safariImage (item) {
       if (this.getSafari) {
         return item

@@ -1,5 +1,9 @@
 /* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
 
+body{
+  font-display: swap;
+}
+
 .clearfix::after {
   display: block;
   content: "";
@@ -110,6 +114,7 @@ h4 {
 
 #mobil-search {
   display: none !important;
+  padding-top: 1rem;
 }
 
 [class^="flaticon-search"]:before {
@@ -293,9 +298,7 @@ h4 {
   font-size: 1.7rem;
   margin-right: 0.2rem;
 }
-
 }
-
 .footer-bg {
   background-color: rgba(0, 0, 0, 0.6);
   color: #939393;
@@ -305,7 +308,6 @@ h4 {
   text-align: center;
   overflow: hidden;
 }
-
 .mobile-footer {
   display: none;
   [class^="flaticon-"]:before,
@@ -315,13 +317,11 @@ h4 {
     font-size: 1.3rem !important;
   }
 }
-
 .mobile-footer {
   display: none;
 }
-
 /***** Navigation ******/
-.nuxt-link-exact-active {
+.nuxt-link-active {
   a {
     color: lightgreen;
 
@@ -469,7 +469,6 @@ nav{
   color: white;
 
 }
-
 tr:hover {
   color: lightgreen !important;
 
@@ -482,7 +481,6 @@ tr:hover {
          object-fit: cover;
       border-radius: 0.5em;
     }
-
     h3 {
       cursor: pointer;
     }
@@ -614,7 +612,7 @@ tr:hover {
     text-align: center;
     border-radius: 0.3em;
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   h3:hover {

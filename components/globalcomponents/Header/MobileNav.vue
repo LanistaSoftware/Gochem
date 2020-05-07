@@ -21,7 +21,7 @@ export default {
     return {
       navItems: [{
         label: 'Anasayfa',
-        path: '/',
+        path: '/home',
         icon: 'flaticon-sydney-opera-house'
       },
       {

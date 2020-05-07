@@ -31,9 +31,9 @@ export default {
       imgUrl: 'imgUrl'
     })
   },
-  created () {
-    this.getBlogs()
-  },
+  // created () {
+  //   this.getBlogs()
+  // },
   methods: {
     ...mapActions({
       getBlogs: 'getBlogs'
@@ -100,7 +100,6 @@ export default {
 .blogs-html {
   margin-top: 2rem;
 }
-
 .blogs-content {
   float: left;
   width: 33%;
@@ -113,7 +112,6 @@ export default {
   h3 {
     cursor: pointer;
   }
-
   h3,
   h2 {
     border: 1px solid white;

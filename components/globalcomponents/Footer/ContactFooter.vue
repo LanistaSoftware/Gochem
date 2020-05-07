@@ -30,7 +30,7 @@
           </p>
           <small>Envanterimizde bulunan ürünlerle ilgili bilgi almak için</small>
           <br>
-          <button class="contact-btn radius-05em">
+          <button class="contact-btn radius-05em" name="call">
             <a :href="'tel:'+getInfo.telephone">Arayın</a>
           </button>
         </section>

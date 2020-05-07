@@ -5,7 +5,7 @@
         <nuxt-link v-for="logo in logoUrl" :key="logo.id" :to="logo.path" tag="li">
           <a @mouseover="mouseover" @mouseleave="mouseleave">
             <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
-              <img v-show="showColor" width="300" :src="logom">
+              <img v-show="showColor" width="300" :src="logom" alt="gochem logo">
             </transition>
             <p><small class="slogan">{{ logo.slogan }}</small></p>
           </a>
@@ -21,7 +21,7 @@ export default {
     return {
       logoUrl: [{
         slogan: 'people & silicone',
-        path: '/'
+        path: '/home'
       }],
       logom: require('../../../assets/img/whitelogo.png'),
       showColor: true

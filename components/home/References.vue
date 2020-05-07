@@ -28,7 +28,6 @@
 
 <script>
 import {
-  mapActions,
   mapGetters
 } from 'vuex'
 export default {
@@ -48,16 +47,12 @@ export default {
     })
   },
   created () {
-    this.getReferencesAction()
     this.browser = this.$ua.browser()
     if (this.browser === 'Safari') {
       this.$store.commit('setSafari', true)
     }
   },
   methods: {
-    ...mapActions({
-      getReferencesAction: 'getReferencesAction'
-    }),
     safariImage (item) {
       if (this.getSafari) {
         return item
