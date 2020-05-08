@@ -1,5 +1,5 @@
 <template>
-  <a title="search" @click="changeSearchStatus">
+  <a aria-label="search" title="search" @click="changeSearchStatus">
     <i class="flaticon-search" /></a>
 </template>
 <script>

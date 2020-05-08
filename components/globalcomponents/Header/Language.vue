@@ -4,12 +4,12 @@
       <tbody>
         <tr>
           <td>
-            <button name="select-lang" @click="selectLang()">
+            <button name="select-lang" aria-label="Justify" @click="selectLang()">
               {{ selectedLang }}
             </button>
           </td>
           <td rowspan="2">
-            <button name="lang" @mouseover="show=true" @click="show=true">
+            <button name="lang" aria-label="Justify" @mouseover="show=true" @click="show=true">
               <i class="flaticon-global" />
             </button>
           </td>

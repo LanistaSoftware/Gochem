@@ -26,7 +26,7 @@
                 <p class="copyright">
                   <i>Copyright © 2020</i>
                 </p>
-                <a :href="item.lanistaLink" target="_blank"><img
+                <a :href="item.lanistaLink" target="_blank" rel="noopener"><img
                   :src="item.lanistaLogo"
                   alt="Created by Lanista Software"
                 ></a>

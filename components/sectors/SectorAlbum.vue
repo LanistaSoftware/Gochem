@@ -1,5 +1,5 @@
 <template>
-  <b-carousel id="carousel-1" v-model="slide" fade :interval="4000">
+  <b-carousel id="carousel-4" v-model="slide" fade :interval="4000">
     <b-carousel-slide v-for="item in getterGalery" :key="item._id">
       <template v-slot:img>
         <div class="img-sector-container">
