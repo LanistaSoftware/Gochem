@@ -121,7 +121,6 @@ export default {
         }
       })
     })
-    this.sectorData()
   },
   mounted () {
     const id = localStorage.getItem('productid')

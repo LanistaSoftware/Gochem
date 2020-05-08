@@ -2,28 +2,29 @@
   <section id="sektors">
     <Sliderp />
     <div class="content content-background">
-      <section class="sidenav overflow-scroll">
-        <div class="sector-link">
-          <nuxt-link v-for="item in getsector" :key="item._id" :to="'#'+item.sectorname">
-            <a @click="getSectorItem(item._id)">
-              {{ item.sectorname }}
-            </a>
-          </nuxt-link>
-        </div>
-      </section>
-      <div class="sector-container">
-        <div class="title-sektor">
-          <h3>{{ sectoritems.sectorname }}</h3>
-        </div>
-        <div class="sector-row">
-          <SectorAlbum class="skCar radius-1em" />
-        </div>
-        <div class="sector-row sector-scroll">
-          <p>
-            {{ sectoritems.sectordescription }}
-          </p>
-          <SectorAlbum class="skCar-mobil" />
-          <no-ssr>
+      <no-ssr>
+        <section class="sidenav overflow-scroll">
+          <div class="sector-link">
+            <nuxt-link v-for="item in getsector" :key="item._id" :to="'#'+item.sectorname">
+              <a @click="getSectorItem(item._id)">
+                {{ item.sectorname }}
+              </a>
+            </nuxt-link>
+          </div>
+        </section>
+        <div class="sector-container">
+          <div class="title-sektor">
+            <h3>{{ sectoritems.sectorname }}</h3>
+          </div>
+          <div class="sector-row">
+            <SectorAlbum class="skCar radius-1em" />
+          </div>
+          <div class="sector-row sector-scroll">
+            <p>
+              {{ sectoritems.sectordescription }}
+            </p>
+            <SectorAlbum class="skCar-mobil" />
+
             <div class="btn-link-sector">
               <div class="sector-btn">
                 <button class="btn" name="info-btn">
@@ -44,9 +45,9 @@
                 </button>
               </div>
             </div>
-          </no-ssr>
+          </div>
         </div>
-      </div>
+      </no-ssr>
     </div>
   </section>
 </template>
@@ -81,20 +82,16 @@ export default {
   },
   mounted () {
     const id = localStorage.getItem('sectorid')
-    this.defaultSector = this.getsector[0]._id
-    localStorage.setItem('sectorid', this.defaultSector)
     if (id !== null) {
       this.getSectorItem(id)
       localStorage.removeItem('sectorid')
     }
   },
   created () {
-    this.sectoropen = false
     this.$store.commit('setActiveSlide', 'sector')
   },
   methods: {
     ...mapActions({
-      sectorData: 'sectorData',
       oneSector: 'oneSector'
     }),
     getSectorItem (id) {

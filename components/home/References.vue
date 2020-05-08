@@ -51,7 +51,6 @@ export default {
   },
   created () {
     this.browser = this.$ua.browser()
-    console.log(this.browser)
     if (this.browser === 'Safari') {
       this.$store.commit('setSafari', true)
     }
