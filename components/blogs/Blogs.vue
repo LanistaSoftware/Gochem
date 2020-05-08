@@ -5,7 +5,7 @@
         <div class="blogs content-blog overflow-scroll">
           <div v-for="item in gettersBlogs" :key="item._id" class="blogs-content">
             <div class="img-tag" alt="Buraya belgeler gelecek." v-html="getImage(item.content)" />
-            <a href="#" @click.prevent="doneBlog(item._id)"><div v-html="getHeader(item.content)" /></a>
+            <a href="#" aria-label="blog lelft" @click.prevent="doneBlog(item._id)"><div v-html="getHeader(item.content)" /></a>
             <h2>{{ getDate(item.date) }} </h2>
           </div>
         </div>
@@ -55,7 +55,7 @@ export default {
       lastIndex = item.search('">')
       imgUrl = item.slice(0, lastIndex + 2)
       if (lastIndex === -1 || firstIndex === -1) {
-        imgUrl = '<img src="https://via.placeholder.com/300x200" alt="Tanımsız blog fotoğrafı."><br><small>Bu makalede fotoğraf bulunamadı</small>'
+        imgUrl = '<img src="https://via.placeholder.com/300x200" alt="Tanımsız bir blog fotoğrafı."><br><small>Bu makalede fotoğraf bulunamadı</small>'
         return imgUrl
       } else {
         return imgUrl

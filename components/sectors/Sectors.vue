@@ -23,28 +23,27 @@
             {{ sectoritems.sectordescription }}
           </p>
           <SectorAlbum class="skCar-mobil" />
-          <no-ssr>
-            <div class="btn-link-sector">
-              <div class="sector-btn">
-                <button class="btn" name="info-btn">
-                  <nuxt-link to="/contact#contact-footer">
-                    <span class="sector-btn-info radius-1em">
-                      <a> Daha fazla bilgi al</a>
-                    </span>
-                  </nuxt-link>
-                </button>
-              </div>
-              <div class="sector-btn">
-                <button class="btn" name="sector-btn">
-                  <nuxt-link to="/contact#contact-footer">
-                    <span class="sector-btn-info radius-1em">
-                      <a> Uygun ürün bul</a>
-                    </span>
-                  </nuxt-link>
-                </button>
-              </div>
+
+          <div class="btn-link-sector">
+            <div class="sector-btn">
+              <button class="btn" name="info-btn">
+                <nuxt-link to="/contact#contact-footer">
+                  <span class="sector-btn-info radius-1em">
+                    <a> Daha fazla bilgi al</a>
+                  </span>
+                </nuxt-link>
+              </button>
             </div>
-          </no-ssr>
+            <div class="sector-btn">
+              <button class="btn" name="sector-btn">
+                <nuxt-link to="/contact#contact-footer">
+                  <span class="sector-btn-info radius-1em">
+                    <a> Uygun ürün bul</a>
+                  </span>
+                </nuxt-link>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

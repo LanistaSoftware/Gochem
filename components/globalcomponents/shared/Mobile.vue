@@ -1,6 +1,6 @@
 <template>
   <div class="call">
-    <a :href="'tel:'+getInfo.telephone"> <i class="flaticon-phone" i /></a>
+    <a aria-label="phone" :href="'tel:'+getInfo.telephone"> <i class="flaticon-phone" i /></a>
   </div>
 </template>
 <script>

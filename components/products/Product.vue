@@ -34,42 +34,40 @@
             <pigment-table />
           </div>
         </div>
-        <no-ssr>
-          <div class="product-link">
-            <div class="product-btn">
-              <button class="btn" name="product-btn-online">
-                <i class="flaticon-product" />
+        <div class="product-link">
+          <div class="product-btn">
+            <button class="btn" name="product-btn-online">
+              <i class="flaticon-product" />
 
-                <nuxt-link to="/contact#contact-footer">
-                  <span class="product-btn-info radius-1em">
-                    <a> Online sipariş çok yakında.</a>
-                  </span>
-                </nuxt-link>
-              </button>
-            </div>
-            <div class="product-btn">
-              <button class="btn" name="product-btn-buy">
-                <i class="flaticon-customer-service" />
-
-                <nuxt-link to="/contact#contact-footer">
-                  <span class="product-btn-info radius-1em">
-                    <a>Hemen teklif alın.</a>
-                  </span>
-                </nuxt-link>
-              </button>
-            </div>
-            <div class="product-btn">
-              <button class="btn" name="product-btn">
-                <i class="flaticon-question" />
-                <nuxt-link to="/contact#contact-footer">
-                  <span class="product-btn-info radius-1em">
-                    <a> Daha fazla bilgi alın.</a>
-                  </span>
-                </nuxt-link>
-              </button>
-            </div>
+              <nuxt-link to="/contact#contact-footer">
+                <span class="product-btn-info radius-1em">
+                  <a> Online sipariş çok yakında.</a>
+                </span>
+              </nuxt-link>
+            </button>
           </div>
-        </no-ssr>
+          <div class="product-btn">
+            <button class="btn" name="product-btn-buy">
+              <i class="flaticon-customer-service" />
+
+              <nuxt-link to="/contact#contact-footer">
+                <span class="product-btn-info radius-1em">
+                  <a>Hemen teklif alın.</a>
+                </span>
+              </nuxt-link>
+            </button>
+          </div>
+          <div class="product-btn">
+            <button class="btn" name="product-btn">
+              <i class="flaticon-question" />
+              <nuxt-link to="/contact#contact-footer">
+                <span class="product-btn-info radius-1em">
+                  <a> Daha fazla bilgi alın.</a>
+                </span>
+              </nuxt-link>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </section>
