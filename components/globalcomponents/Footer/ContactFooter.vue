@@ -19,6 +19,7 @@
               allowfullscreen=""
               aria-hidden="false"
               tabindex="0"
+              title="gochem maps address"
             />
           </div>
         </div>
@@ -30,7 +31,7 @@
           </p>
           <small>Envanterimizde bulunan ürünlerle ilgili bilgi almak için</small>
           <br>
-          <button class="contact-btn radius-05em" name="call">
+          <button class="contact-btn radius-05em" aria-label="enter call" name="call">
             <a :href="'tel:'+getInfo.telephone">Arayın</a>
           </button>
         </section>
@@ -95,7 +96,7 @@
           <p class="copyright">
             <i>Copyright © 2020</i>
           </p>
-          <a href="https://www.lanista.com.tr/" target="_blank">
+          <a href="https://www.lanista.com.tr/" target="_blank" rel="noopener">
             <img class="lanista" src="../../../assets/img/beyaz.png" alt="Created by Lanista Software">
           </a>
         </div>

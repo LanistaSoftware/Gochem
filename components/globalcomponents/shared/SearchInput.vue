@@ -56,7 +56,7 @@
             </h4>
             <ul>
               <li v-for="item in blogs" :key="item._id" class="search-result-list">
-                <a class="blog-results" :href="'/blogs/'+item._id" v-html="getHeader(item.content)" />
+                <a aria-label="blog content" class="blog-results" :href="'/blogs/'+item._id" v-html="getHeader(item.content)" />
               </li>
             </ul>
           </li>
@@ -75,7 +75,7 @@
         </ul>
       </div>
       <div class="btn-icon-container">
-        <a @click="changeSearchStatus">
+        <a aria-label="search status" @click="changeSearchStatus">
           <i class="flaticon-up-arrow" />
         </a>
       </div>

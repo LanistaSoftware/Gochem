@@ -4,7 +4,7 @@
       <Search v-if="showSearch" />
     </li>
     <li v-for="sosyal in social" :key="sosyal.id" class="icon-container">
-      <a :href="sosyal.href" :title="sosyal.title">
+      <a aria-label="social" :href="sosyal.href" :title="sosyal.title">
         <i :class="sosyal.icon" /></a>
     </li>
   </ul>

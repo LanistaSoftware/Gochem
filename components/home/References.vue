@@ -1,7 +1,7 @@
 <template>
   <div class="ref-container">
     <b-carousel
-      id="carousel-1"
+      id="carousel-2"
       v-model="slide"
       :interval="4000"
     >

@@ -3,18 +3,46 @@
     <div id="form-container" class="form-container">
       <div class="twin-input left-inputs">
         <div class="inputBox">
-          <input v-model="communication.name" type="text" name="name" class="input radius-1em" placeholder="İsim">
+          <input
+            v-model="communication.name"
+            aria-label="name"
+            type="text"
+            name="name"
+            class="input radius-1em"
+            placeholder="İsim"
+          >
         </div>
         <div class="inputBox">
-          <input v-model="communication.email" type="email" name="email" class="input radius-1em" placeholder="E-mail">
+          <input
+            v-model="communication.email"
+            aria-label="email"
+            type="email"
+            name="email"
+            class="input radius-1em"
+            placeholder="E-mail"
+          >
         </div>
       </div>
       <div class="twin-input right-inputs clearfix">
         <div class="inputBox">
-          <input v-model="communication.telephone" type="text" name="phone" class="input radius-1em" placeholder="Telefon">
+          <input
+            v-model="communication.telephone"
+            aria-label="phone"
+            type="text"
+            name="phone"
+            class="input radius-1em"
+            placeholder="Telefon"
+          >
         </div>
         <div class="inputBox">
-          <select id="konu" v-model="communication.subject" class="radius-1em deneme" name="Konu" placeholder="Konu">
+          <select
+            id="konu"
+            v-model="communication.subject"
+            aria-label="subject"
+            class="radius-1em deneme"
+            name="konu"
+            placeholder="Konu"
+          >
             <option value="Bilgi almak istiyorum.">
               Bilgi almak istiyorum.
             </option>
@@ -32,10 +60,10 @@
       </div>
       <div class="text-container">
         <div class="inputBox">
-          <textarea v-model="communication.message" class="input radius-1em" placeholder="Mesajınız" />
+          <textarea v-model="communication.message" aria-label="message" name="text" class="input radius-1em" placeholder="Mesajınız" />
         </div>
         <div class="btn-container">
-          <button class="form-btn radius-05em" name="send" @click="send">
+          <button class="form-btn radius-05em" aria-label="send post" name="send-form" @click="send">
             Gönder
           </button>
         </div>

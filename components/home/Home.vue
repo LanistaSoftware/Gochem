@@ -31,6 +31,7 @@
           <iframe
             :src="videoid"
             frameborder="0"
+            title="media info"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           />
