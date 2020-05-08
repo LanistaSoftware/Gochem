@@ -96,7 +96,7 @@
           <p class="copyright">
             <i>Copyright © 2020</i>
           </p>
-          <a href="https://www.lanista.com.tr/" target="_blank">
+          <a href="https://www.lanista.com.tr/" target="_blank" rel="noopener">
             <img class="lanista" src="../../../assets/img/beyaz.png" alt="Created by Lanista Software">
           </a>
         </div>

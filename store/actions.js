@@ -10,6 +10,8 @@ export const nuxtServerInit = (vuexContext) => {
               return vuexContext.dispatch('getDocuments').then(() => {
                 return vuexContext.dispatch('getPigments').then(() => {
                   return vuexContext.dispatch('sectorData')
+                }).then(() => {
+                  return vuexContext.dispatch('oneSector', vuexContext.getters.getsector[0]._id)
                 })
               })
             })
