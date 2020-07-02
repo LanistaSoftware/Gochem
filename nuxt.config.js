@@ -1,4 +1,3 @@
-const bodyParser = require('body-parser')
 module.exports = {
   mode: 'universal',
   /*
@@ -34,7 +33,7 @@ module.exports = {
     '@/assets/css/utopia.css',
     '@/assets/css/flaticon/flaticon.css',
     '@/assets/css/reset.css',
-    '@/assets/css/style.css',
+    '@/assets/css/style.less',
     '@/assets/css/loading.css',
     '@/assets/css/responsive.css'
   ],
@@ -64,16 +63,6 @@ module.exports = {
     '@nuxtjs/axios',
     'nuxt-user-agent'
   ],
-  axios: { // burda da ax,os ,ile ilgili öz
-    baseURL: 'http://localhost:3000/api',
-    proxy: true
-  },
-  proxy: {
-    '/api/': { target: 'http://localhost:3000/api/', pathRewrite: { '^/api/': '' }, changeOrigin: true }
-  },
-  /*
-  ** Build configuration
-  */
   build: {
     /*
     ** You can extend webpack config here
@@ -85,9 +74,5 @@ module.exports = {
         })
       }
     }
-  },
-  serverMiddleware: [
-    bodyParser.json(),
-    '~api'
-  ]
+  }
 }

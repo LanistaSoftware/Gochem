@@ -1,19 +1,20 @@
-/* eslint-disable nuxt/no-env-in-hooks */
 <template>
   <div class="bg" :style="{ backgroundImage: 'url(' + bgImageUrl + '),url('+ bgImageUrlOther +')' }">
-    <div class="overlay">
+    <div class="overlay grid-container">
       <div class="bg-container clearfix">
         <transition enter-active-class="animated fadeInTop" leave-active-class="animated fadeOutTop" appear>
           <SearchInput v-if="searchStatus" />
         </transition>
-        <Header />
-        <div class="social-search clearfix">
-          <Social :show-search="showSearch" class="socials" />
+        <Header class="grid-header" />
+        <div class="grid-content">
+          <div class="social-search clearfix">
+            <Social :show-search="showSearch" class="socials" />
+          </div>
+          <Mobile class="mobile-call" />
+          <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut" appear>
+            <nuxt />
+          </transition>
         </div>
-        <Mobile class="mobile-call" />
-        <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut" appear>
-          <nuxt />
-        </transition>
       </div>
       <div class="footer">
         <Footer class="footer-desktop" />
