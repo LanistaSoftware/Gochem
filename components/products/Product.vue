@@ -7,14 +7,19 @@
       </div>
       <section class="sidenav product-sidenav overflow-scroll">
         <div class="product-category">
-          <h2 @click="setpigmentShow(true)">
-            Slikon Pigment
+          <h2>
+            Slikon Pigment <i v-if="!Pigment" class="flaticon-chevron" @click="setpigmentShow(true), Pigment=true" />
+            <i v-else class="flaticon-back" @click="setpigmentShow(false), Pigment=false" />
           </h2>
         </div>
         <div v-for="item in categories" :key="item.id" class="product-category">
-          <h2>{{ item.name }}</h2>
+          <div class="d-flex align-items-center">
+            <h2>{{ item.name }}</h2>
+            <i v-if="activeCategory!==null && activeCategory === item.name" class="flaticon-up-arrow" @click="activeCategory = null" />
+            <i v-else class="flaticon-down-arrow" @click="activeCategory = item.name" />
+          </div>
           <span v-for="product in getProductdb" :key="product._id">
-            <nuxt-link v-if="item.name==product.productDesc" :to="'#'+product.prdoudctName" tag="span">
+            <nuxt-link v-if="activeCategory==product.productDesc && product.prdoudctName !=='Pigmentler' && item.name==product.productDesc" :to="'#'+product.prdoudctName" tag="span">
               <a
                 @click="getAproduct(product._id)"
               >{{ product.prdoudctName }}</a>
@@ -89,6 +94,8 @@ export default {
     return {
       defaultProduct: '',
       categories: [],
+      Pigment: false,
+      activeCategory: null,
       productone: {
         name: 'name',
         desc: 'desc',
