@@ -3,13 +3,13 @@
     <div class="content content-background overflow-scroll">
       <div class="portfolio">
         <div v-for="item in gettersDocuments" :key="item._id" class="portfolio-content">
+          <div class="portfolio-title">
+            <h4>{{ item.name }} </h4>
+          </div>
           <div v-if="call && activeid ===item._id" class="call">
             <div>
-              <div class="portfolio-title">
-                <p>{{ item.name }} </p>
-              </div>
               <p>
-                belgesini talep etmek için
+                Belgeyi talep etmek için
                 <br>
                 bizi arayabilirsiniz
               </p>
@@ -23,14 +23,11 @@
             </div>
           </div>
           <picture v-if="activeid !== item._id">
-            <div class="portfolio-title">
-              <h2>{{ item.name }} </h2>
-            </div>
             <source :srcset="imgUrl+item.imgUrl+'.webp'" type="image/webp">
             <source :srcset="imgUrl+item.imgUrl" type="image/jpeg">
             <img class="radius-1em" alt="Buraya belgeler gelecek." style="width:100%">
           </picture>
-          <a v-if="!call && activeid !== item._id" href="#" @click.prevent="call=!call, activeid=item._id">
+          <a v-if="activeid !==item._id" href="#" @click.prevent="talepClick(item._id)">
             <h3 class="radius-05em">Talep Et</h3>
           </a>
           <a v-if="call && activeid ==item._id" href="#" @click.prevent="call=!call ,activeid=null">
@@ -84,6 +81,16 @@ export default {
     ...mapActions({
       getDocuments: 'getDocuments'
     }),
+    talepClick (id) {
+      if (this.activeid !== null) {
+        this.activeid = null
+        this.activeid = id
+        this.call = true
+        return true
+      }
+      this.activeid = id
+      this.call = !this.call
+    },
     safariImage (item) {
       if (this.getSafari) {
         return item
@@ -148,7 +155,7 @@ export default {
   display: flex !important;
   justify-content: center !important;
   text-align: center;
-  height: 50vh !important;
+  height: 50vh!important;
   p {
     margin-top: 1rem;
     margin-bottom: 1.5rem;
@@ -200,6 +207,7 @@ export default {
   display: flex;
   justify-content: center;
   margin-bottom:0.8rem;
+  font-size: 1rem;
 }
 .btn:hover {
   color: lightgreen;
