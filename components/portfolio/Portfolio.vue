@@ -3,13 +3,38 @@
     <div class="content content-background overflow-scroll">
       <div class="portfolio">
         <div v-for="item in gettersDocuments" :key="item._id" class="portfolio-content">
-          <picture>
+          <div v-if="call && activeid ===item._id" class="call">
+            <div>
+              <div class="portfolio-title">
+                <p>{{ item.name }} </p>
+              </div>
+              <p>
+                belgesini talep etmek için
+                <br>
+                bizi arayabilirsiniz
+              </p>
+              <a :href="'tel:'+getInfo.telephone" style="margin-top:0.5rem">
+                <p>
+                  <i class="flaticon-phone" />
+
+                  {{ getInfo.telephone | formatNumber }}
+                </p>
+              </a>
+            </div>
+          </div>
+          <picture v-if="activeid !== item._id">
+            <div class="portfolio-title">
+              <h2>{{ item.name }} </h2>
+            </div>
             <source :srcset="imgUrl+item.imgUrl+'.webp'" type="image/webp">
             <source :srcset="imgUrl+item.imgUrl" type="image/jpeg">
             <img class="radius-1em" alt="Buraya belgeler gelecek." style="width:100%">
           </picture>
-          <a href="#" @click.prevent="portfolioDetail(item._id)">
-            <h3 class="radius-05em">{{ item.name }} </h3>
+          <a v-if="!call && activeid !== item._id" href="#" @click.prevent="call=!call, activeid=item._id">
+            <h3 class="radius-05em">Talep Et</h3>
+          </a>
+          <a v-if="call && activeid ==item._id" href="#" @click.prevent="call=!call ,activeid=null">
+            <h3 class="radius-05em">Geri</h3>
           </a>
         </div>
       </div>
@@ -22,16 +47,28 @@ import {
   mapGetters
 } from 'vuex'
 export default {
+  filters: {
+    formatNumber (value) {
+      if (!value) { return '' }
+      const x = new Intl.NumberFormat().format(value)
+      const res = x.replace('.', ' ')
+      const res2 = res.replace('.', ' ')
+      return res2
+    }
+  },
   data () {
     return {
-      menu: false
+      menu: false,
+      activeid: null,
+      call: false
     }
   },
   computed: {
     ...mapGetters({
       gettersDocuments: 'gettersDocuments',
       imgUrl: 'imgUrl',
-      getSafari: 'getSafari'
+      getSafari: 'getSafari',
+      getInfo: 'getInfo'
     })
   },
   created () {
@@ -107,6 +144,20 @@ export default {
   }
 }
 
+.call {
+  display: flex !important;
+  justify-content: center !important;
+  text-align: center;
+  height: 50vh !important;
+  p {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    padding: .5rem 0;
+    letter-spacing: 1px;
+    text-align: center;
+    font-size: 1rem;
+  }
+}
 .portfolio-detail {
   width: 100%;
   height: 100%;
@@ -145,7 +196,11 @@ export default {
     transition: 0.5s;
   }
 }
-
+.portfolio-title{
+  display: flex;
+  justify-content: center;
+  margin-bottom:0.8rem;
+}
 .btn:hover {
   color: lightgreen;
   border-color: lightgreen;
@@ -155,6 +210,22 @@ export default {
   [class^="flaticon-"]:after,
   [class*=" flaticon-"]:after {
     color: lightgreen;
+  }
+}
+.call{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  border-radius:1em ;
+  z-index: 2;
+    -webkit-transform: scale(1.01);
+    -ms-transform: scale(1.01);
+    transform: scale(1.01);
+    cursor: pointer;
+    border: 1px solid white;
+  h3{
+    padding: 1rem;
   }
 }
 </style>
