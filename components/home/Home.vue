@@ -5,26 +5,22 @@
     </div>
     <div class="boxes">
       <Box
-        v-for="(item, index) in filteredSlideSets"
-        :key="index"
         class="box-carousel"
-        :item="item"
-        @click.native="changeIndex(item.index-1)"
       >
-        <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
-          <div v-show="boxAnimated" class="title">
-            <h4>
-              <strong> 0{{ item.index }} </strong><span>/</span> <sup> 0{{ slideSets.length }} </sup>
-            </h4>
-          </div>
-        </transition>
-        <transition enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
-          <div v-show="boxAnimated" class="box-content">
-            <p>
-              {{ item.content | filterBoxContent }}
-            </p>
-          </div>
-        </transition>
+        <div class="box-first">
+          <img src="~assets/img/bg1.jpg" alt="" srcset="" width="100" height="100">
+        </div>
+        <div class="box-second">
+          <p>
+            <span>Uygulama örneklerimiz</span>
+            <br>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque quis quo reprehenderit corrupti doloremque culpa architecto consequuntur, impedit eligendi vitae officiis corporis sed debitis sequi magnam obcaecati alias, enim ratione.
+            <br>
+            <button class="btn-home">
+              Keşfedin
+            </button>
+          </p>
+        </div>
       </Box>
       <Box>
         <div class="embed-responsive embed-responsive-16by9">
@@ -133,7 +129,12 @@ export default {
     margin-bottom: 1rem;
   }
 }
-
+.box-carousel {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .title {
   height: 20%;
   text-align: center;
@@ -148,8 +149,48 @@ span {
 sup {
   font-size: 1rem;
 }
+.box-first{
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  float: left;
+
+}
+.box-second{
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  float: right;
+  padding: 1rem;
+  word-spacing: 2px;
+  span {
+    font-size: 1.5rem !important;
+  }
+}
 
 strong {
   font-size: 1.5rem;
+}
+.btn-home {
+  text-align: center;
+  color: white;
+  margin: 0.8rem;
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  width: 40%;
+  background-color: #499CFD;
+}
+.btn-home:active {
+  border: none;
+}
+.btn-home:hover {
+  border: none;
 }
 </style>
